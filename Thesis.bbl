@@ -3,8 +3,8 @@
 % Do not modify the above lines!
 %
 % This is an auxiliary file used by the 'biblatex' package.
-% This file may safely be deleted. It will be recreated as
-% required.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
 %
 \begingroup
 \makeatletter
@@ -16,38 +16,5 @@
   {}
 \endgroup
 
-\datalist[entry]{nty/global//global/global}
-  \entry{Gattringer:2010zz}{book}{}
-    \name{author}{2}{}{%
-      {{hash=GC}{%
-         family={Gattringer},
-         familyi={G\bibinitperiod},
-         given={Christof},
-         giveni={C\bibinitperiod},
-      }}%
-      {{hash=LCB}{%
-         family={Lang},
-         familyi={L\bibinitperiod},
-         given={Christian\bibnamedelima B.},
-         giveni={C\bibinitperiod\bibinitdelim B\bibinitperiod},
-      }}%
-    }
-    \list{publisher}{1}{%
-      {Berlin: Springer}%
-    }
-    \strng{namehash}{GCLCB1}
-    \strng{fullhash}{GCLCB1}
-    \field{labelnamesource}{author}
-    \field{labeltitlesource}{title}
-    \field{sortinit}{G}
-    \field{sortinithash}{G}
-    \verb{doi}
-    \verb 10.1007/978-3-642-01850-3
-    \endverb
-    \field{isbn}{978-3-642-01849-7, 978-3-642-01850-3}
-    \field{title}{{Quantum chromodynamics on the lattice}}
-    \field{volume}{788}
-    \field{year}{2010}
-  \endentry
-\enddatalist
 \endinput
+

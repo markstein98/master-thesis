@@ -1,31 +1,39 @@
 \pagestyle{myFancy}
 \chapter{QCD on the Lattice}
 \section{The QCD Continuum Action}
+% TODO cite Srednicki
 In order to write the action of QCD on the lattice, I must first recall how the theory is formulated in the continuum.
 
 \subsection{Spinor Fields}
 Let us take into consideration a (free) quantum field theory describing a fermion, such as a quark or a lepton, in a $4$-dimensional spacetime with metric $\eta_{\mu\nu} = \diag(-1,1,1,1)$. Its action (in natural units, where $c = \hslash = 1$) can be written as:
 \begin{equation}
-      S_F[\psi,\psibar] = \dV \left( \i\psibar\slashed\partial\psi - m\psibar\psi \right) \label{1:FreeFermionAction}
+      S_F[\psi(x),\psibar(x)] = \dV \left( \i\psibar\slashed\partial\psi - m\psibar\psi \right) \label{1:FreeFermionAction}
 \end{equation}
 from which, upon the application of the variational principle, the Dirac equation follows:
 \begin{equation}
-    \left( \i\slashed\partial-m \right) \psi = 0 \label{1:DiracEq}
+    \left( \i\slashed\partial-m \right) \psi(x) = 0 \label{1:DiracEq}
 \end{equation}
-% TODO: phase transformation
+It can now be easily checked by direct computation that this action is invariant under a rigid phase transformation:
+\begin{align*}
+    \psi &\rightarrow \psi' = e^{-\i\alpha}\psi \numthis\label{1:PhaseTransform} \\
+    \psibar &\rightarrow \psibar' = \psibar e^{\i\alpha}
+\end{align*}
+where $\alpha$ is a constant that does not depend on the spacetime coordinate $x$, while if $\alpha=\alpha(x)$ the action \eqref{1:FreeFermionAction} would not be invariant because of the kinetic term.
 
+% TODO coupling to \psi before field strength
 \subsection{Quantum Electrodynamics}
 As the free field theory itself is non interacting, it does not provide any real-world prediction, so it is useful to write an interacting action where the spinor field is coupled, for instance, to a vector field $A_\mu$, i.e. the photon.
 The action for the vector field is written in terms of its field-strength, namely:
+\footnote{Actually, this is not a definition, as $\Fmunu$ is defined as the curvature tensor, obtained through the commutator of the covariant derivative: $\Fmunu\equiv-\i g\left[D_\mu,D_\nu\right]$}
 \begin{equation}
-    \Fmunu \equiv \partial_\mu A_\nu - \partial_\nu A_\mu \label{1:FieldStrU1}
+    \Fmunu = \partial_\mu A_\nu - \partial_\nu A_\mu \label{1:FieldStrU1}
 \end{equation}
 where two different fields $A_\mu$ and $A_\mu'$ describe the same physics if one can be obtained from another throug a gauge transformation:
 \begin{align*}
-    A_\mu' &= A_\mu + \partial_\mu\Lambda \numthis\label{1:GaugeTransf} \\
-    \Fmunu' = \Fmunu + &\left( \partial_\mu\partial_\nu-\partial_\nu\partial_\mu \right)\Lambda = \Fmunu
+    A_\mu'(x) &= A_\mu(x) - \frac1g \partial_\mu\Lambda(x) \numthis\label{1:GaugeTransf} \\
+    \Fmunu' = \Fmunu - \frac1g&\left( \partial_\mu\partial_\nu-\partial_\nu\partial_\mu \right)\Lambda = \Fmunu
 \end{align*}
-with $\Lambda$ being any (at least C$^2$) scalar function.\\
+with $\Lambda(x)$ being any (at least C$^2$) scalar function.\\
 Thus, the free action for the vector field is:
 \begin{equation}
     S_{EM} = -\frac14\dV F_{\mu\nu}F^{\mu\nu} \label{1:FreeMaxwellAction}
@@ -33,6 +41,6 @@ Thus, the free action for the vector field is:
 That is also gauge invariant, i.e. invariant under \eqref{1:GaugeTransf}, as $\Fmunu$ is gauge invariant.\\
 In order to write a fully covariant, gauge-invariant interacting action, the covariant derivative on the spinor has to be defined as follows:
 \begin{equation}
-    D_\mu\psi \equiv \left( \partial_\mu+\i e A_\mu \right)\psi \label{1:CovDeriv}
+    D_\mu\psi \equiv \left( \partial_\mu+\i g A_\mu \right)\psi \label{1:CovDeriv}
 \end{equation}
 

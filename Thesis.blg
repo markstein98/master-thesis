@@ -1,65 +1,9 @@
-This is BibTeX, Version 0.99d (TeX Live 2022/Arch Linux)
-Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
-The top-level auxiliary file: Thesis.aux
-The style file: biblatex.bst
-Reallocated glb_str_ptr (elt_size=8) to 20 items from 10.
-Reallocated global_strs (elt_size=200001) to 20 items from 10.
-Reallocated glb_str_end (elt_size=8) to 20 items from 10.
-Reallocated singl_function (elt_size=8) to 100 items from 50.
-Reallocated singl_function (elt_size=8) to 100 items from 50.
-Reallocated singl_function (elt_size=8) to 100 items from 50.
-Reallocated wiz_functions (elt_size=8) to 6000 items from 3000.
-Reallocated singl_function (elt_size=8) to 100 items from 50.
-Reallocated singl_function (elt_size=8) to 100 items from 50.
-Reallocated singl_function (elt_size=8) to 100 items from 50.
-Reallocated singl_function (elt_size=8) to 100 items from 50.
-Reallocated singl_function (elt_size=8) to 100 items from 50.
-Reallocated singl_function (elt_size=8) to 100 items from 50.
-Reallocated singl_function (elt_size=8) to 100 items from 50.
-Reallocated singl_function (elt_size=8) to 100 items from 50.
-Database file #1: Thesis-blx.bib
-Database file #2: bibliography.bib
-Biblatex version: 3.17
-Reallocated wiz_functions (elt_size=8) to 9000 items from 6000.
-Reallocated singl_function (elt_size=8) to 100 items from 50.
-You've used 2 entries,
-            6399 wiz_defined-function locations,
-            1212 strings with 9176 characters,
-and the built_in function-call counts, 9467 in all, are:
-= -- 709
-> -- 195
-< -- 43
-+ -- 247
-- -- 73
-* -- 615
-:= -- 1199
-add.period$ -- 0
-call.type$ -- 2
-change.case$ -- 26
-chr.to.int$ -- 42
-cite$ -- 2
-duplicate$ -- 778
-empty$ -- 812
-format.name$ -- 68
-if$ -- 1982
-int.to.chr$ -- 0
-int.to.str$ -- 3
-missing$ -- 0
-newline$ -- 53
-num.names$ -- 59
-pop$ -- 394
-preamble$ -- 1
-purify$ -- 31
-quote$ -- 0
-skip$ -- 302
-stack$ -- 0
-substring$ -- 1357
-swap$ -- 162
-text.length$ -- 48
-text.prefix$ -- 1
-top$ -- 1
-type$ -- 56
-warning$ -- 0
-while$ -- 154
-width$ -- 0
-write$ -- 52
+[0] Config.pm:307> INFO - This is Biber 2.19
+[0] Config.pm:310> INFO - Logfile is 'Thesis.blg'
+[50] biber:340> INFO - === dom apr 16, 2023, 15:55:57
+[59] Biber.pm:419> INFO - Reading 'Thesis.bcf'
+[108] Biber.pm:979> INFO - Found 0 citekeys in bib section 0
+[117] bbl.pm:660> INFO - Writing 'Thesis.bbl' with encoding 'UTF-8'
+[117] bbl.pm:763> INFO - Output to Thesis.bbl
+[117] Biber.pm:131> WARN - The file 'Thesis.bcf' does not contain any citations!
+[117] Biber.pm:133> INFO - WARNINGS: 1
