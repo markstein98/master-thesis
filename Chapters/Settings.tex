@@ -25,6 +25,31 @@
 \newcommand*{\justifyheading}{\raggedleft}
 \titleformat{\chapter}{\normalfont\HUGE\bfseries\justifyheading}{\chaptertitlename}{20pt}{\HUGE}
 
+\newcommand*{\blankpage}{%
+    \newpage
+    \thispagestyle{empty}
+    \hbox{}
+    \newpage
+}
+
+\makeatletter
+\def\emptypage@emptypage{%
+    \hbox{}%
+    \blankpage%
+    \newpage%    
+}%
+\def\cleardoublepage{%
+        \clearpage%
+        \if@twoside%
+            \ifodd\c@page%
+                % do nothing
+            \else%
+                \emptypage@emptypage%
+            \fi%
+        \fi%
+    }%
+\makeatother
+
 \DeclareFontShape{T1}{lmr}{bx}{sc} { <-> ssub * cmr/bx/sc }{}
 
 \titleformat{\chapter}[display]
@@ -47,10 +72,12 @@
 \def\subsectionmark#1{\def\Subsectionname{#1}\Subsectionmark{#1}}
 \fancypagestyle{myFancy}{
     \fancyhf{}
-    \fancyhead[L]{\nouppercase{\thesection\ \Chaptername}}
-    \fancyhead[C]{\nouppercase{\it{Aliberti Marco}}}
-    \fancyhead[R]{\nouppercase{\Sectionname}}
-    \fancyfoot[R]{\thepage}
+    \fancyhead[LE]{\nouppercase{\thesection\ \Chaptername}}
+    \fancyhead[RE]{\nouppercase{\it{Aliberti}}}
+    \fancyhead[LO]{\nouppercase{\it{Marco}}}
+    \fancyhead[RO]{\nouppercase{\Sectionname}}
+    \fancyfoot[RO]{\thepage}
+    \fancyfoot[LE]{\thepage}
     \renewcommand{\headrulewidth}{0.5pt}
     \renewcommand{\footrulewidth}{0.5pt}
 }

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Arch Linux) (preloaded format=pdflatex 2023.4.7)  19 APR 2023 19:17
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Arch Linux) (preloaded format=pdflatex 2023.4.7)  19 APR 2023 19:49
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1378,7 +1378,7 @@ LaTeX Font Info:    Font shape `T1/lmr/bx/sc' in size <20.74> not available
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}{/usr/share/texmf-dist/fonts
 /enc/dvips/cm-super/cm-super-t1.enc}{/usr/share/texmf-dist/fonts/enc/dvips/lm/l
 m-ec.enc} <./pics/logo.png>]
-(./Chapters/Abstract.tex [1
+[2] (./Chapters/Abstract.tex [1
 
 ]) (./Thesis.toc
 LaTeX Font Info:    Trying to load font information for OT1+lmr on input line 1
@@ -1437,21 +1437,21 @@ LaTeX Font Info:    External font `lmex10' loaded for size
 LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <5> on input line 30.
  [2{/usr/share/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc}{/usr/share/texmf-dist/f
-onts/enc/dvips/lm/lm-mathit.enc}]) [3] (./Chapters/GaugeSim.tex
+onts/enc/dvips/lm/lm-mathit.enc}]) [3] (./Chapters/GaugeSim.tex [4
+
+] [5]
 Chapter 2.
-[4
-
-]) (./Chapters/F4Lattice.tex
+[6]) (./Chapters/F4Lattice.tex
 Chapter 3.
-[5
-
-]) (./Chapters/SimulationResults.tex
-Chapter 4.
-[6
-
-]) (./Chapters/Conclusions.tex
-Chapter 5.
 [7
+
+]) (./Chapters/SimulationResults.tex [8
+
+] [9]
+Chapter 4.
+[10]) (./Chapters/Conclusions.tex
+Chapter 5.
+[11
 
 ]) (./Thesis.aux)
 Package rerunfilecheck Info: File `Thesis.out' has not changed.
@@ -1461,10 +1461,10 @@ Package logreq Info: Writing requests to 'Thesis.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 29228 strings out of 476025
- 545599 string characters out of 5796533
+ 29235 strings out of 476025
+ 545659 string characters out of 5796533
  1867388 words of memory out of 5000000
- 49188 multiletter control sequences out of 15000+600000
+ 49190 multiletter control sequences out of 15000+600000
  610727 words of font info for 122 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  80i,19n,80p,1151b,1047s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1481,10 +1481,10 @@ f-dist/fonts/type1/public/mathabx-type1/matha8.pfb></usr/share/texmf-dist/fonts
 /type1/public/mathabx-type1/mathx10.pfb></usr/share/texmf-dist/fonts/type1/publ
 ic/amsfonts/symbols/msbm10.pfb></usr/share/texmf-dist/fonts/type1/public/cm-sup
 er/sfxc2074.pfb>
-Output written on Thesis.pdf (10 pages, 1328195 bytes).
+Output written on Thesis.pdf (15 pages, 1329296 bytes).
 PDF statistics:
- 213 PDF objects out of 1000 (max. 8388607)
- 163 compressed objects within 2 object streams
- 30 named destinations out of 1000 (max. 500000)
+ 235 PDF objects out of 1000 (max. 8388607)
+ 180 compressed objects within 2 object streams
+ 35 named destinations out of 1000 (max. 500000)
  78 words of extra memory for PDF output out of 10000 (max. 10000000)
 
