@@ -9,16 +9,25 @@
 
 \begin{document}
 
+\pagenumbering{alph}
 \input{CoverITA}
 %\input{CoverENG}
 
 \newpage
+\pagenumbering{Roman}
+\setcounter{page}{1}
 \input{Abstract}
 
 \newpage
-\tableofcontents
+{
+	\hypersetup{linkcolor=black,linktoc=page}
+%	\setcounter{tocdepth}{1}
+	\tableofcontents
+	\thispagestyle{empty}
+}
 
 \newpage
+\pagenumbering{arabic}
 \input{LatticeQCD}
 
 \newpage

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Arch Linux) (preloaded format=pdflatex 2023.4.7)  19 APR 2023 18:53
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Arch Linux) (preloaded format=pdflatex 2023.4.7)  19 APR 2023 19:17
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1378,7 +1378,7 @@ LaTeX Font Info:    Font shape `T1/lmr/bx/sc' in size <20.74> not available
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}{/usr/share/texmf-dist/fonts
 /enc/dvips/cm-super/cm-super-t1.enc}{/usr/share/texmf-dist/fonts/enc/dvips/lm/l
 m-ec.enc} <./pics/logo.png>]
-(./Chapters/Abstract.tex [2
+(./Chapters/Abstract.tex [1
 
 ]) (./Thesis.toc
 LaTeX Font Info:    Trying to load font information for OT1+lmr on input line 1
@@ -1424,10 +1424,10 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 \tf@toc=\write6
 \openout6 = `Thesis.toc'.
 
- [3]
+ [2]
 (./Chapters/LatticeQCD.tex
 Chapter 1.
-[4
+[1
 
 ]
 LaTeX Font Info:    External font `lmex10' loaded for size
@@ -1436,22 +1436,22 @@ LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <7> on input line 30.
 LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <5> on input line 30.
- [5{/usr/share/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc}{/usr/share/texmf-dist/f
-onts/enc/dvips/lm/lm-mathit.enc}]) [6] (./Chapters/GaugeSim.tex
+ [2{/usr/share/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc}{/usr/share/texmf-dist/f
+onts/enc/dvips/lm/lm-mathit.enc}]) [3] (./Chapters/GaugeSim.tex
 Chapter 2.
-[7
+[4
 
 ]) (./Chapters/F4Lattice.tex
 Chapter 3.
-[8
+[5
 
 ]) (./Chapters/SimulationResults.tex
 Chapter 4.
-[9
+[6
 
 ]) (./Chapters/Conclusions.tex
 Chapter 5.
-[10
+[7
 
 ]) (./Thesis.aux)
 Package rerunfilecheck Info: File `Thesis.out' has not changed.
@@ -1481,7 +1481,7 @@ f-dist/fonts/type1/public/mathabx-type1/matha8.pfb></usr/share/texmf-dist/fonts
 /type1/public/mathabx-type1/mathx10.pfb></usr/share/texmf-dist/fonts/type1/publ
 ic/amsfonts/symbols/msbm10.pfb></usr/share/texmf-dist/fonts/type1/public/cm-sup
 er/sfxc2074.pfb>
-Output written on Thesis.pdf (10 pages, 1328542 bytes).
+Output written on Thesis.pdf (10 pages, 1328195 bytes).
 PDF statistics:
  213 PDF objects out of 1000 (max. 8388607)
  163 compressed objects within 2 object streams
