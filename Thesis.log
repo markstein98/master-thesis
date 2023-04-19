@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Arch Linux) (preloaded format=pdflatex 2023.4.7)  16 APR 2023 15:55
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Arch Linux) (preloaded format=pdflatex 2023.4.7)  19 APR 2023 12:05
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1362,7 +1362,7 @@ Package biblatex Info: ... file 'Thesis.bbl' found.
 Package biblatex Info: Reference section=0 on input line 10.
 Package biblatex Info: Reference segment=0 on input line 10.
  (./Chapters/CoverITA.tex
-<./pics/logo.png, id=36, 2724.579pt x 2845.2699pt>
+<./pics/logo.png, id=40, 2724.579pt x 2845.2699pt>
 File: ./pics/logo.png Graphic file (type png)
 <use ./pics/logo.png>
 Package pdftex.def Info: ./pics/logo.png  used on input line 3.
@@ -1429,11 +1429,11 @@ Chapter 1.
 
 ]
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10> on input line 27.
+(Font)              <10> on input line 30.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <7> on input line 27.
+(Font)              <7> on input line 30.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <5> on input line 27.
+(Font)              <5> on input line 30.
  [5{/usr/share/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc}{/usr/share/texmf-dist/f
 onts/enc/dvips/lm/lm-mathit.enc}]) [6] (./Chapters/GaugeSim.tex
 Chapter 2.
@@ -1453,36 +1453,36 @@ Chapter 5.
 
 ]) (./Thesis.aux)
 Package rerunfilecheck Info: File `Thesis.out' has not changed.
-(rerunfilecheck)             Checksum: D1E399CC78B514FB4B521C4CD3DFD161;1446.
+(rerunfilecheck)             Checksum: E7AC4D84E45A9488B1BCE5D38EACD323;1638.
 Package logreq Info: Writing requests to 'Thesis.run.xml'.
 \openout1 = `Thesis.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 29221 strings out of 476025
- 545539 string characters out of 5796533
- 1864388 words of memory out of 5000000
- 49183 multiletter control sequences out of 15000+600000
+ 29227 strings out of 476025
+ 545596 string characters out of 5796533
+ 1867388 words of memory out of 5000000
+ 49187 multiletter control sequences out of 15000+600000
  610727 words of font info for 122 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 80i,12n,80p,1151b,1046s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/share/texmf-dist/fonts/type1/public/lm/lmbx12.pfb></usr/share/texmf-dis
-t/fonts/type1/public/lm/lmcsc10.pfb></usr/share/texmf-dist/fonts/type1/public/l
-m/lmmi10.pfb></usr/share/texmf-dist/fonts/type1/public/lm/lmmi12.pfb></usr/shar
-e/texmf-dist/fonts/type1/public/lm/lmmi7.pfb></usr/share/texmf-dist/fonts/type1
-/public/lm/lmmi8.pfb></usr/share/texmf-dist/fonts/type1/public/lm/lmr10.pfb></u
-sr/share/texmf-dist/fonts/type1/public/lm/lmr12.pfb></usr/share/texmf-dist/font
-s/type1/public/lm/lmr7.pfb></usr/share/texmf-dist/fonts/type1/public/lm/lmr8.pf
-b></usr/share/texmf-dist/fonts/type1/public/lm/lmri12.pfb></usr/share/texmf-dis
-t/fonts/type1/public/mathabx-type1/matha10.pfb></usr/share/texmf-dist/fonts/typ
-e1/public/mathabx-type1/matha12.pfb></usr/share/texmf-dist/fonts/type1/public/m
-athabx-type1/matha8.pfb></usr/share/texmf-dist/fonts/type1/public/mathabx-type1
-/mathx10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.
-pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfxc2074.pfb>
-Output written on Thesis.pdf (10 pages, 1332761 bytes).
+ 80i,19n,80p,1151b,1046s stack positions out of 5000i,500n,10000p,200000b,80000s
+</usr/share/texmf-dist/fonts/type1/public/amsfonts/latxfont/line10.pfb></usr/
+share/texmf-dist/fonts/type1/public/lm/lmbx12.pfb></usr/share/texmf-dist/fonts/
+type1/public/lm/lmcsc10.pfb></usr/share/texmf-dist/fonts/type1/public/lm/lmmi10
+.pfb></usr/share/texmf-dist/fonts/type1/public/lm/lmmi12.pfb></usr/share/texmf-
+dist/fonts/type1/public/lm/lmmi8.pfb></usr/share/texmf-dist/fonts/type1/public/
+lm/lmr10.pfb></usr/share/texmf-dist/fonts/type1/public/lm/lmr12.pfb></usr/share
+/texmf-dist/fonts/type1/public/lm/lmr7.pfb></usr/share/texmf-dist/fonts/type1/p
+ublic/lm/lmr8.pfb></usr/share/texmf-dist/fonts/type1/public/lm/lmri12.pfb></usr
+/share/texmf-dist/fonts/type1/public/mathabx-type1/matha12.pfb></usr/share/texm
+f-dist/fonts/type1/public/mathabx-type1/matha8.pfb></usr/share/texmf-dist/fonts
+/type1/public/mathabx-type1/mathx10.pfb></usr/share/texmf-dist/fonts/type1/publ
+ic/amsfonts/symbols/msbm10.pfb></usr/share/texmf-dist/fonts/type1/public/cm-sup
+er/sfxc2074.pfb>
+Output written on Thesis.pdf (10 pages, 1328457 bytes).
 PDF statistics:
- 211 PDF objects out of 1000 (max. 8388607)
- 158 compressed objects within 2 object streams
- 28 named destinations out of 1000 (max. 500000)
- 70 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 213 PDF objects out of 1000 (max. 8388607)
+ 163 compressed objects within 2 object streams
+ 30 named destinations out of 1000 (max. 500000)
+ 78 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -13,34 +13,44 @@ from which, upon the application of the variational principle, the Dirac equatio
 \begin{equation}
     \left( \i\slashed\partial-m \right) \psi(x) = 0 \label{1:DiracEq}
 \end{equation}
-It can now be easily checked by direct computation that this action is invariant under a rigid phase transformation:
+It can now be easily checked by direct computation that this action is invariant under a rigid (global) phase transformation, also called global $U(1)$ transformation:
 \begin{align*}
     \psi &\rightarrow \psi' = e^{-\i\alpha}\psi \numthis\label{1:PhaseTransform} \\
     \psibar &\rightarrow \psibar' = \psibar e^{\i\alpha}
 \end{align*}
 where $\alpha$ is a constant that does not depend on the spacetime coordinate $x$, while if $\alpha=\alpha(x)$ the action \eqref{1:FreeFermionAction} would not be invariant because of the kinetic term.
 
-% TODO coupling to \psi before field strength
 \subsection{Quantum Electrodynamics}
 As the free field theory itself is non interacting, it does not provide any real-world prediction, so it is useful to write an interacting action where the spinor field is coupled, for instance, to a vector field $A_\mu$, i.e. the photon.
-The action for the vector field is written in terms of its field-strength, namely:
-\footnote{Actually, this is not a definition, as $\Fmunu$ is defined as the curvature tensor, obtained through the commutator of the covariant derivative: $\Fmunu\equiv-\i g\left[D_\mu,D_\nu\right]$}
+One way to implement this interaction is to ask for local, instead of global, invariance of the action \eqref{1:FreeFermionAction} under the phase transformation \eqref{1:PhaseTransform}, where now $\alpha=\alpha(x)$.
+In order to do so, one has to define the covariant derivative as follows:
 \begin{equation}
-    \Fmunu = \partial_\mu A_\nu - \partial_\nu A_\mu \label{1:FieldStrU1}
+    D_\mu \equiv \left( \partial_\mu+\i g A_\mu \right) \label{1:CovDeriv}
 \end{equation}
-where two different fields $A_\mu$ and $A_\mu'$ describe the same physics if one can be obtained from another throug a gauge transformation:
+where $g$ is the couplig constant.\footnote{Usually $g$ is called $e$, the electron charge, though I will be using $g$ in analogy to nonabelian gauge theories.}\\
+The vector field's kinetic term is written in terms of its field-strength, namely:
 \begin{align*}
-    A_\mu'(x) &= A_\mu(x) - \frac1g \partial_\mu\Lambda(x) \numthis\label{1:GaugeTransf} \\
-    \Fmunu' = \Fmunu - \frac1g&\left( \partial_\mu\partial_\nu-\partial_\nu\partial_\mu \right)\Lambda = \Fmunu
+    \Fmunu\equiv& -\frac{\i}{g}\left[D_\mu,D_\nu\right] = \\
+    =& -\frac{\i}{g}\pr{D_\mu\pr{\partial_\nu+\i g A_\nu} - D_\nu\pr{\partial_\mu+\i g A_\mu}}=\\
+    =& -\frac{\i}{g}\pr{\cancel{\partial_\mu\partial_\nu} + \i g\partial_\mu A_\nu -g^2A_\mu A_\nu - \cancel{\partial_\nu\partial_\mu} - \i g\partial_\nu A_\mu + g^2A_\nu A_\mu}=\\
+    =& \partial_\mu A_\nu - \partial_\nu A_\mu + \i g\comm{A_\mu}{A_\nu}=\\
+    =& \partial_\mu A_\nu - \partial_\nu A_\mu \numthis\label{1:FieldStrU1}
 \end{align*}
-with $\Lambda(x)$ being any (at least C$^2$) scalar function.\\
+where the term with the commutator is $=0$ in the abelian theory.\\
+Two different fields $A_\mu$ and $A_\mu'$ describe the same physics if one can be obtained from another throug a gauge transformation:
+\begin{align*}
+    A_\mu'(x) =& A_\mu(x) - \frac1g \partial_\mu\alpha(x) \numthis\label{1:GaugeTransf} \\
+    \Fmunu' = \Fmunu - \frac1g&\left( \partial_\mu\partial_\nu-\partial_\nu\partial_\mu \right)\alpha(x) = \Fmunu
+\end{align*}
 Thus, the free action for the vector field is:
 \begin{equation}
     S_{EM} = -\frac14\dV F_{\mu\nu}F^{\mu\nu} \label{1:FreeMaxwellAction}
 \end{equation}
 That is also gauge invariant, i.e. invariant under \eqref{1:GaugeTransf}, as $\Fmunu$ is gauge invariant.\\
-In order to write a fully covariant, gauge-invariant interacting action, the covariant derivative on the spinor has to be defined as follows:
+The term that broke the local phase invariance of the action \eqref{1:FreeFermionAction} can now be ``absorbed'' by $A_\mu$ through a gauge transformation \eqref{1:GaugeTransf}, thus making the full action gauge invariant:
 \begin{equation}
-    D_\mu\psi \equiv \left( \partial_\mu+\i g A_\mu \right)\psi \label{1:CovDeriv}
+    S = \dV\pr{\i\psibar\slashed{\partial}\psi-m\psibar\psi- g \psibar\slashed{A}\psi - \frac14\Fmunu F^{\mu\nu}} \label{1:QEDaction}
 \end{equation}
+
+\subsection{Nonabelian Gauge Theories}
 
