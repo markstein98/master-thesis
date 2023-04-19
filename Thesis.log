@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Arch Linux) (preloaded format=pdflatex 2023.4.7)  19 APR 2023 12:05
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Arch Linux) (preloaded format=pdflatex 2023.4.7)  19 APR 2023 18:53
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1267,7 +1267,9 @@ LaTeX Font Info:    Trying to load font information for T1+lmr on input line 11
 
 (/usr/share/texmf-dist/tex/latex/lm/t1lmr.fd
 File: t1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
-)) (./Chapters/Settings.tex)
+)) (./Chapters/Settings.tex
+Package hyperref Info: Option `colorlinks' set `true' on input line 7.
+)
 (./Chapters/Commands.tex)
 Package csquotes Info: Checking for multilingual support...
 Package csquotes Info: ... none found.
@@ -1331,7 +1333,7 @@ LaTeX Info: Command `\ddddot' is already robust on input line 10.
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: hyperref package is loaded.
 Package caption Info: End \AtBeginDocument code.
-Package hyperref Info: Link coloring OFF on input line 10.
+Package hyperref Info: Link coloring ON on input line 10.
  (./Thesis.out)
 (./Thesis.out)
 \@outlinefile=\write5
@@ -1459,13 +1461,13 @@ Package logreq Info: Writing requests to 'Thesis.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 29227 strings out of 476025
- 545596 string characters out of 5796533
+ 29228 strings out of 476025
+ 545599 string characters out of 5796533
  1867388 words of memory out of 5000000
- 49187 multiletter control sequences out of 15000+600000
+ 49188 multiletter control sequences out of 15000+600000
  610727 words of font info for 122 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 80i,19n,80p,1151b,1046s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 80i,19n,80p,1151b,1047s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texmf-dist/fonts/type1/public/amsfonts/latxfont/line10.pfb></usr/
 share/texmf-dist/fonts/type1/public/lm/lmbx12.pfb></usr/share/texmf-dist/fonts/
 type1/public/lm/lmcsc10.pfb></usr/share/texmf-dist/fonts/type1/public/lm/lmmi10
@@ -1479,7 +1481,7 @@ f-dist/fonts/type1/public/mathabx-type1/matha8.pfb></usr/share/texmf-dist/fonts
 /type1/public/mathabx-type1/mathx10.pfb></usr/share/texmf-dist/fonts/type1/publ
 ic/amsfonts/symbols/msbm10.pfb></usr/share/texmf-dist/fonts/type1/public/cm-sup
 er/sfxc2074.pfb>
-Output written on Thesis.pdf (10 pages, 1328457 bytes).
+Output written on Thesis.pdf (10 pages, 1328542 bytes).
 PDF statistics:
  213 PDF objects out of 1000 (max. 8388607)
  163 compressed objects within 2 object streams
