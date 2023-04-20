@@ -20,10 +20,7 @@
 	\endgroup
 } 
 
-%\renewcommand{\thechapter}{}
-%\renewcommand{\thesection}{\arabic{section}}
 \newcommand*{\justifyheading}{\raggedleft}
-\titleformat{\chapter}{\normalfont\HUGE\bfseries\justifyheading}{\chaptertitlename}{20pt}{\HUGE}
 
 \newcommand*{\blankpage}{%
     \newpage
@@ -44,7 +41,8 @@
             \ifodd\c@page%
                 % do nothing
             \else%
-                \emptypage@emptypage%
+%                \emptypage@emptypage%
+                \blankpage
             \fi%
         \fi%
     }%
@@ -55,7 +53,7 @@
 \titleformat{\chapter}[display]
     {\bfseries\filleft}
     {\fontsize{5\baselineskip}{4\baselineskip}\selectfont}{1ex}
-    {\titlerule\fontsize{2\baselineskip}{4\baselineskip}\selectfont\thispagestyle{empty}}[\titlerule\newpage]
+    {\titlerule\fontsize{2\baselineskip}{4\baselineskip}\selectfont\thispagestyle{empty}}[\titlerule\cleardoublepage]
 
 \setcounter{tocdepth}{3}
 \setcounter{secnumdepth}{3}
@@ -72,10 +70,10 @@
 \def\subsectionmark#1{\def\Subsectionname{#1}\Subsectionmark{#1}}
 \fancypagestyle{myFancy}{
     \fancyhf{}
-    \fancyhead[LE]{\nouppercase{\thesection\ \Chaptername}}
-    \fancyhead[RE]{\nouppercase{\it{Aliberti}}}
-    \fancyhead[LO]{\nouppercase{\it{Marco}}}
-    \fancyhead[RO]{\nouppercase{\Sectionname}}
+    \fancyhead[LE]{\nouppercase{Chapter\ \thechapter.\ \Chaptername}}
+    \fancyhead[RE]{\nouppercase{\it{Aliberti Marco}}}
+%    \fancyhead[LO]{\nouppercase{\it{Marco}}}
+    \fancyhead[RO]{\nouppercase{\thesection\ \Sectionname}}
     \fancyfoot[RO]{\thepage}
     \fancyfoot[LE]{\thepage}
     \renewcommand{\headrulewidth}{0.5pt}
