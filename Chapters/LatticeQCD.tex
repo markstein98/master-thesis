@@ -7,7 +7,7 @@ In order to write the action of QCD on the lattice, I must first recall how the 
 \subsection{Spinor Fields}
 Let us take into consideration a (free) quantum field theory describing a fermion, such as a quark or a lepton, in a $4$-dimensional spacetime with metric $\eta_{\mu\nu} = \diag(-1,1,1,1)$. Its action (in natural units, where $c = \hslash = 1$) can be written as:
 \begin{equation}
-      S_F[\psi(x),\psibar(x)] = \dV \left( \i\psibar\slashed\partial\psi - m\psibar\psi \right) \label{1:FreeFermionAction}
+      S_\psi[\psi(x),\psibar(x)] = \dV \left( \i\psibar\slashed\partial\psi - m\psibar\psi \right) \label{1:FreeQEDFermionAction}
 \end{equation}
 from which, upon the application of the variational principle, the Dirac equation follows:
 \begin{equation}
@@ -15,19 +15,19 @@ from which, upon the application of the variational principle, the Dirac equatio
 \end{equation}
 It can now be easily checked by direct computation that this action is invariant under a rigid (global) phase transformation, also called global $U(1)$ transformation:
 \begin{align*}
-    \psi &\rightarrow \psi' = e^{-\i\alpha}\psi \numthis\label{1:PhaseTransform} \\
-    \psibar &\rightarrow \psibar' = \psibar e^{\i\alpha}
+    \psi(x) &\rightarrow \psi'(x) = e^{-\i\alpha}\psi(x) \numthis\label{1:PhaseTransform} \\
+    \psibar(x) &\rightarrow \psibar'(x) = \psibar(x) e^{\i\alpha}
 \end{align*}
-where $\alpha$ is a constant that does not depend on the spacetime coordinate $x$, while if $\alpha=\alpha(x)$ the action \eqref{1:FreeFermionAction} would not be invariant because of the kinetic term.
+where $\alpha$ is a constant that does not depend on the spacetime coordinate $x$, while if $\alpha=\alpha(x)$ the action \eqref{1:FreeQEDFermionAction} would not be invariant because of the kinetic term.
 
-\subsection{Quantum Electrodynamics}
+\subsection{Quantum Electrodynamics\label{Sec:QED}}
 As the free field theory itself is non interacting, it does not provide any real-world prediction, so it is useful to write an interacting action where the spinor field is coupled, for instance, to a vector field $A_\mu$, i.e. the photon.
-One way to implement this interaction is to ask for local, instead of global, invariance of the action \eqref{1:FreeFermionAction} under the phase transformation \eqref{1:PhaseTransform}, where now $\alpha=\alpha(x)$.
+One way to implement this interaction is to ask for local, instead of global, invariance of the action \eqref{1:FreeQEDFermionAction} under the phase transformation \eqref{1:PhaseTransform}, where now $\alpha=\alpha(x)$.
 In order to do so, one has to define the covariant derivative as follows:
 \begin{equation}
-    D_\mu \equiv \left( \partial_\mu+\i g A_\mu \right) \label{1:CovDeriv}
+    D_\mu \equiv \partial_\mu+\i g A_\mu \label{1:QEDCovDeriv}
 \end{equation}
-where $g$ is the couplig constant.\footnote{Usually $g$ is called $e$, the electron charge, though I will be using $g$ in analogy to nonabelian gauge theories.}\\
+where $g$ is the couplig constant.\footnote{Usually, in QED, $g$ is called $e$, the electron charge, though I will be using $g$ in analogy to nonabelian gauge theories.}\\
 The vector field's kinetic term is written in terms of its field-strength, namely:
 \begin{align*}
     \Fmunu\equiv& -\frac{\i}{g}\left[D_\mu,D_\nu\right] = \\
@@ -39,18 +39,36 @@ The vector field's kinetic term is written in terms of its field-strength, namel
 where the term with the commutator is $=0$ in the abelian theory.\\
 Two different fields $A_\mu$ and $A_\mu'$ describe the same physics if one can be obtained from another throug a gauge transformation:
 \begin{align*}
-    A_\mu'(x) =& A_\mu(x) - \frac1g \partial_\mu\alpha(x) \numthis\label{1:GaugeTransf} \\
+    A_\mu'(x) =& A_\mu(x) - \frac1g \partial_\mu\alpha(x) \numthis\label{1:QEDGaugeTransf} \\
     \Fmunu' = \Fmunu - \frac1g&\left( \partial_\mu\partial_\nu-\partial_\nu\partial_\mu \right)\alpha(x) = \Fmunu
 \end{align*}
 Thus, the free action for the vector field is:
 \begin{equation}
     S_{EM} = -\frac14\dV F_{\mu\nu}F^{\mu\nu} \label{1:FreeMaxwellAction}
 \end{equation}
-That is also gauge invariant, i.e. invariant under \eqref{1:GaugeTransf}, as $\Fmunu$ is gauge invariant.\\
-The term that broke the local phase invariance of the action \eqref{1:FreeFermionAction} can now be ``absorbed'' by $A_\mu$ through a gauge transformation \eqref{1:GaugeTransf}, thus making the full action gauge invariant:
+That is also gauge invariant, i.e. invariant under \eqref{1:QEDGaugeTransf}, as $\Fmunu$ is gauge invariant.\\
+The term that broke the local phase invariance of the action \eqref{1:FreeQEDFermionAction} can now be ``absorbed'' by $A_\mu$ through a gauge transformation \eqref{1:QEDGaugeTransf}, thus making the full action gauge invariant:
 \begin{equation}
-    S = \dV\pr{\i\psibar\slashed{\partial}\psi-m\psibar\psi- g \psibar\slashed{A}\psi - \frac14\Fmunu F^{\mu\nu}} \label{1:QEDaction}
+    S_{QED} = \dV\pr{\i\psibar\slashed{\partial}\psi-m\psibar\psi- g \psibar\slashed{A}\psi - \frac14\Fmunu F^{\mu\nu}} \label{1:QEDaction}
 \end{equation}
 
 \subsection{Nonabelian Gauge Theories}
-
+Let us now consider a theory with $N$ fermions all with the same mass $m$, described by the spinorial fields $\psi_i(x)$ with $i=1, \dots, N$. Its free action is:
+\begin{equation}
+    S_\psi[\psi_i(x),\psibar_i(x)] = \sum_{i=1}^N\dV\pr{\i\psibar_i\slashed\partial\psi_i - m\psibar_i\psi} \label{1:FreeFermionAction}
+\end{equation}
+From now on, the sum over $i$ (and all latin indexes, that will run from $1$ to $N$) will be omitted.
+This action is invariant under the global transformation:
+\begin{align*}
+    \psi_i(x) &\rightarrow \psi_i'(x) = \U\psi_j(x) \numthis\label{1:UNTransform}\\
+    \psibar_i(x) &\rightarrow \psibar_i'(x) = \psibar_j(x)\Udag
+\end{align*}
+if $U$ is any (constant) $N\times N$ matrix such that $UU^\dagger = U^\dagger U = \id \Leftrightarrow U^\dagger=U^{-1}$, or in other words, if $U\in\UN$.
+For this reason, this transformation is also called a global $\UN$ transformation.
+The phase transformation \eqref{1:PhaseTransform} is the particular case where $U=e^{-\i\alpha}\in\Uem$, that is the only abelian (commutative) unitary group.
+As $\UN = \SUN\otimes\Uem$, $U\in\SUN$ instead of $U\in\UN$ can be imposed, and will be from now on, without loss of generality.\\
+In an analogous way to what has been done in Section \ref{Sec:QED}, this invariance can be made local by implementing a proper covariant derivative, similar to \eqref{1:QEDCovDeriv}:
+\begin{equation}
+    D_\mu \equiv \partial_\mu + \i g \A_\mu(x) \label{1:CovDeriv}
+\end{equation}
+where $\A_\mu(x) = A_\mu^a(x)T^a$, the $T^a$s are the generators of $\SUN$, and an identity matrix $\id$ multiplying $\partial_\mu$ has to be understood.
