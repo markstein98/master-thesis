@@ -67,8 +67,27 @@ if $U$ is any (constant) $N\times N$ matrix such that $UU^\dagger = U^\dagger U 
 For this reason, this transformation is also called a global $\UN$ transformation.
 The phase transformation \eqref{1:PhaseTransform} is the particular case where $U=e^{-\i\alpha}\in\Uem$, that is the only abelian (commutative) unitary group.
 As $\UN = \SUN\otimes\Uem$, $U\in\SUN$ instead of $U\in\UN$ can be imposed, and will be from now on, without loss of generality.\\
-In an analogous way to what has been done in Section \ref{Sec:QED}, this invariance can be made local by implementing a proper covariant derivative, similar to \eqref{1:QEDCovDeriv}:
+In an analogous way to what has been done in Section \ref{Sec:QED}, this invariance can be made local by implementing a proper covariant derivative, similar to \eqref{1:QEDCovDeriv}.
+In order to do so, the infinitesimal $\SUN$ transformation has to be considered:
+\begin{equation}
+    U_{ij}(x) = \delta_{ij} + \i\theta^a(x)\pr{T^a}_{ij} + O(\theta^2) \label{1:InfinitesimalSUN}
+\end{equation}
+where the indices $i$ and $j$ run from $1$ to $N$ (as before) and the index $a$ runs from $1$ to $N^2-1$ (the dimension of the group $\SUN$).
+The matrixes $T^a$ are the $N^2-1$ generators of $\SUN$, thus they are $\NxN$ hermitean and traceless, which obey the commutation relations:
+\begin{equation}
+    \comm{T^a}{T^b} = \i f^{abc}T^c \label{1:StrConstSUN}
+\end{equation}
+where $f^{abc}$ are called \emph{structure constants} of $\SUN$. The normalization of these matrices can be chosen such that they obey the condition:
+\begin{equation}
+    \Tr{T^aT^b} = \frac12\delta^{ab} \label{1:NormCondSUN}
+\end{equation}
+for example, in the case of $\mathit{SU}(2)$, $T^a=\frac{\sigma^a}{2}$, with $\sigma^a$ the Pauli matrices, or for $\mathit{SU}(3)$, $T^a=\frac{\lambda^a}{2}$, with $\lambda^a$ the Gell-Mann matrices.\\
+The covariant derivative, therefore, is written as:
 \begin{equation}
     D_\mu \equiv \partial_\mu + \i g \A_\mu(x) \label{1:CovDeriv}
 \end{equation}
-where $\A_\mu(x) = A_\mu^a(x)T^a$, the $T^a$s are the generators of $\SUN$, and an identity matrix $\id$ multiplying $\partial_\mu$ has to be understood.
+where an $N\times N$ identity matrix $\id$ multiplying $\partial_\mu$ has to be understood, and $\A_\mu(x)$ is a gauge field of $\SUN$, \ie a traceless, hermitean $N\times N$ matrix.\\
+The covariant derivative can be written more explicitly acting on the set of spinors $\psi_i$:
+\begin{equation*}
+    D_\mu\psi_i = \partial_\mu \id_{ij}\psi_j + \i g \A_\mu(x)_{ij}\psi_j
+\end{equation*}
