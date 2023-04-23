@@ -36,11 +36,11 @@ The vector field's kinetic term is written in terms of its field-strength, namel
     =& \partial_\mu A_\nu - \partial_\nu A_\mu + \i g\comm{A_\mu}{A_\nu}=\\
     =& \partial_\mu A_\nu - \partial_\nu A_\mu \numthis\label{1:FieldStrU1}
 \end{align*}
-where the term with the commutator is $=0$ in the abelian theory.\\
+where $\comm{A_\mu}{A_\nu}=A_\mu A_\nu-A_\nu A_\mu=0$ in the abelian theory.\\
 Two different fields $A_\mu$ and $A_\mu'$ describe the same physics if one can be obtained from another throug a gauge transformation:
 \begin{align*}
-    A_\mu'(x) =& A_\mu(x) - \frac1g \partial_\mu\alpha(x) \numthis\label{1:QEDGaugeTransf} \\
-    \Fmunu' = \Fmunu - \frac1g&\left( \partial_\mu\partial_\nu-\partial_\nu\partial_\mu \right)\alpha(x) = \Fmunu
+    A_\mu'(x) =& A_\mu(x) + \frac1g \partial_\mu\alpha(x) \numthis\label{1:QEDGaugeTransf} \\
+    \Fmunu' = \Fmunu + \frac1g&\left( \partial_\mu\partial_\nu-\partial_\nu\partial_\mu \right)\alpha(x) = \Fmunu
 \end{align*}
 Thus, the free action for the vector field is:
 \begin{equation}
@@ -48,16 +48,19 @@ Thus, the free action for the vector field is:
 \end{equation}
 That is also gauge invariant, i.e. invariant under \eqref{1:QEDGaugeTransf}, as $\Fmunu$ is gauge invariant.\\
 The term that broke the local phase invariance of the action \eqref{1:FreeQEDFermionAction} can now be ``absorbed'' by $A_\mu$ through a gauge transformation \eqref{1:QEDGaugeTransf}, thus making the full action gauge invariant:
-\begin{equation}
-    S_{QED} = \dV\pr{\i\psibar\slashed{\partial}\psi-m\psibar\psi- g \psibar\slashed{A}\psi - \frac14\Fmunu F^{\mu\nu}} \label{1:QEDaction}
-\end{equation}
+\begin{align*}
+    S_{QED} =& \dV\pr{\i\psibar\slashed{D}\psi-m\psibar\psi -\frac14\Fmunu F^{\mu\nu}} = \numthis\label{1:QEDaction}\\
+    =& \dV\pr{\i\psibar\slashed{\partial}\psi-m\psibar\psi- g \psibar\slashed{A}\psi - \frac14\Fmunu F^{\mu\nu}}\\
+    S_{QED} \rightarrow S_{QED}' =& \dV\pr{\i\psibar\slashed{\partial}\psi +\psibar\slashed{\partial}\alpha\psi -m\psibar\psi -g \psibar\slashed{A}\psi -\psibar\slashed\partial\alpha\psi -\frac14\Fmunu F^{\mu\nu}}=\\
+    =& \dV\pr{\i\psibar\slashed{\partial}\psi-m\psibar\psi- g \psibar\slashed{A}\psi - \frac14\Fmunu F^{\mu\nu}} = S_{QED}
+\end{align*}
 
 \subsection{Nonabelian Gauge Theories}
 Let us now consider a theory with $N$ fermions all with the same mass $m$, described by the spinorial fields $\psi_i(x)$ with $i=1, \dots, N$. Its free action is:
 \begin{equation}
     S_\psi[\psi_i(x),\psibar_i(x)] = \sum_{i=1}^N\dV\pr{\i\psibar_i\slashed\partial\psi_i - m\psibar_i\psi} \label{1:FreeFermionAction}
 \end{equation}
-From now on, the sum over $i$ (and all latin indexes, that will run from $1$ to $N$) will be omitted.
+From now on, the sum over $i$ (and all other repeated latin indexes) will be omitted, unless specified differently.
 This action is invariant under the global transformation:
 \begin{align*}
     \psi_i(x) &\rightarrow \psi_i'(x) = \U\psi_j(x) \numthis\label{1:UNTransform}\\
@@ -65,9 +68,9 @@ This action is invariant under the global transformation:
 \end{align*}
 if $U$ is any (constant) $N\times N$ matrix such that $UU^\dagger = U^\dagger U = \id \Leftrightarrow U^\dagger=U^{-1}$, or in other words, if $U\in\UN$.
 For this reason, this transformation is also called a global $\UN$ transformation.
-The phase transformation \eqref{1:PhaseTransform} is the particular case where $U=e^{-\i\alpha}\in\Uem$, that is the only abelian (commutative) unitary group.
-As $\UN = \SUN\otimes\Uem$, $U\in\SUN$ instead of $U\in\UN$ can be imposed, and will be from now on, without loss of generality.\\
-In an analogous way to what has been done in Section \ref{Sec:QED}, this invariance can be made local by implementing a proper covariant derivative, similar to \eqref{1:QEDCovDeriv}.
+The phase transformation \eqref{1:PhaseTransform} is the particular case where $U=e^{-\i\alpha}\in\Uem$, that is the only abelian (commutative) unitary group.\\
+As $\UN = \SUN\otimes\Uem$ $\forall N>1$, $U\in\SUN$ instead of $U\in\UN$ can be imposed, and will be from now on, without loss of generality.\\
+In an analogous way to what has been done in\secref{Sec:QED}, this invariance can be made local by implementing a proper covariant derivative, similar to \eqref{1:QEDCovDeriv}.
 In order to do so, the infinitesimal $\SUN$ transformation has to be considered:
 \begin{equation}
     U_{ij}(x) = \delta_{ij} + \i\theta^a(x)\pr{T^a}_{ij} + O(\theta^2) \label{1:InfinitesimalSUN}
@@ -81,7 +84,12 @@ where $f^{abc}$ are called \emph{structure constants} of $\SUN$. The normalizati
 \begin{equation}
     \Tr{T^aT^b} = \frac12\delta^{ab} \label{1:NormCondSUN}
 \end{equation}
-for example, in the case of $\mathit{SU}(2)$, $T^a=\frac{\sigma^a}{2}$, with $\sigma^a$ the Pauli matrices, or for $\mathit{SU}(3)$, $T^a=\frac{\lambda^a}{2}$, with $\lambda^a$ the Gell-Mann matrices.\\
+some examples are:
+\begin{itemize}
+    \item for $N=2$, $T^a=\frac{\sigma^a}{2}$, with $\sigma^a$ the Pauli matrices;
+    \item for $N=3$, $T^a=\frac{\lambda^a}{2}$, with $\lambda^a$ the Gell-Mann matrices.
+\end{itemize}
+In both those examples, the structure constants are $f^{abc}=\epsilon^{abc}$, the completely antisymmetric Levi-Civita symbol.\\
 The covariant derivative, therefore, is written as:
 \begin{equation}
     D_\mu \equiv \partial_\mu + \i g \A_\mu(x) \label{1:CovDeriv}
@@ -91,3 +99,8 @@ The covariant derivative can be written more explicitly acting on the set of spi
 \begin{equation*}
     D_\mu\psi_i = \partial_\mu \id_{ij}\psi_j + \i g \A_\mu(x)_{ij}\psi_j
 \end{equation*}
+In order for the action to be gauge invariant, the field $\A_\mu$ must satisfy the gauge transformation property
+\begin{equation}
+    \A_\mu(x) \rightarrow \A_\mu'(x) = U(x)\A_\mu(x)U^\dagger(x) + \frac{\i}{g}U(x)\partial_\mu U^\dagger(x) \label{1:GaugeTransformSUN}
+\end{equation}
+%TODO: check consistency of the signs of the gauge transformation and the covariant derivative for SU(N)
