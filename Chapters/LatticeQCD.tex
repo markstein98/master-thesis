@@ -101,6 +101,39 @@ The covariant derivative can be written more explicitly acting on the set of spi
 \end{equation*}
 In order for the action to be gauge invariant, the field $\A_\mu$ must satisfy the gauge transformation property
 \begin{equation}
-    \A_\mu(x) \rightarrow \A_\mu'(x) = U(x)\A_\mu(x)U^\dagger(x) + \frac{\i}{g}U(x)\partial_\mu U^\dagger(x) \label{1:GaugeTransformSUN}
+    \A_\mu(x) \rightarrow \A_\mu'(x) = U(x)\A_\mu(x)U^\dagger(x) - \frac{\i}{g}U(x)\partial_\mu U^\dagger(x) \label{1:GaugeTransformSUN}
 \end{equation}
-%TODO: check consistency of the signs of the gauge transformation and the covariant derivative for SU(N)
+This expression is a little more complicated than \eqref{1:QEDGaugeTransf}, due to the fact that $\A_\mu$ is now a non-commuting matrix. However if the abelian case $\Uem$ is taken into consideration, where $U(x)=e^{-\i\alpha(x)}$, \eqref{1:QEDGaugeTransf} follows directly from \eqref{1:GaugeTransformSUN}.\\
+It can now be easily checked that the kinetic term of the Lagrangian
+\begin{equation*}
+    \Lagr_K = \i\psibar_i\slashed{D}\psi_i = \i\psibar_i\slashed\partial\psi_i -g\psibar_i\slashed\A\psi_i
+\end{equation*}
+is gauge invariant (\ie invariant under \eqref{1:UNTransform} and \eqref{1:GaugeTransformSUN}) through direct computation:
+\begin{align*}
+    \Lagr_K \rightarrow \Lagr_K' =& \i\psibar_i U^\dagger\slashed\partial\pr{U\psi_i} -g\psibar_i\underbrace{U^\dagger U}_{\id}\slashed\A\underbrace{U^\dagger U}_{\id}\psi_i +\i\psibar_i\underbrace{U^\dagger U}_{\id}\pr{\slashed\partial U^\dagger}U\psi_i= \\
+    =& \i\psibar_i U^\dagger\pr{\slashed\partial U}\psi_i +\underbrace{\i\psibar_i\slashed\partial\psi_i -g\psibar_i\slashed\A\psi_i}_{\Lagr_K} +\i\psibar_i\pr{\slashed\partial U^\dagger}U\psi_i= \\
+    =& \Lagr_K +\i\psibar_i\gamma^\mu\pr{U^\dagger\partial_\mu U+ \partial_\mu U^\dagger U}\psi_i= \\
+    =& \Lagr_K +\i\psibar_i\gamma^\mu\partial_\mu\pr{U^\dagger U}\psi_i= \\
+    =& \Lagr_K +\i\psibar_i\gamma^\mu\underbrace{\partial_\mu\pr{\id}}_{=0}\psi_i = \Lagr_K
+\end{align*}
+Because of this fact, it is directly implied that the covariant derivative \eqref{1:CovDeriv} must transform, under a gauge transformation, as:
+\begin{equation}
+    D_\mu \rightarrow D_\mu' = U D_\mu U^\dagger \label{1:GaugeTrCovDer}
+\end{equation}
+The field-strength for the field $\A_\mu$ is obtained, as for the abelian case, through the commutator of two covariant derivatives (the computation is the same as \eqref{1:FieldStrU1}, but this time the commutator term is not $=0$):
+\begin{equation}
+    \Fmunu\equiv -\frac{\i}{g}\comm{D_\mu}{D_\nu} = \partial_\mu\A_\nu -\partial_\nu\A_\mu +\i g\comm{\A_\mu}{\A_\nu} \label{1:FieldStrDef}
+\end{equation}
+this expression can be simplified a little by considering that $\A_\mu$ and $\Fmunu$ are elements of $\SUN$, thus writing them in the basis $T^a$:
+\begin{align}
+    \A_\mu(x) =& A_\mu^a(x) T^a \label{1:AmuComp}\\
+    \Fmunu(x) =& \Fmunu^a(x) T^a \label{1:FmunuComp}
+\end{align}
+and considering the relations \eqref{1:StrConstSUN} and \eqref{1:NormCondSUN}:
+\begin{align*}
+    \Fmunu^aT^a =& \pr{\partial_\mu A_\nu^a-\partial_\nu A_\mu^a}T^a +\i g\comm{A_\mu^bT^b}{A_\nu^cT^c}= \\
+    =& \pr{\partial_\mu A_\nu^a-\partial_\nu A_\mu^a}T^a +\i gA_\mu^bA_\nu^c\underbrace{\comm{T^b}{T^c}}_{if^{bca}T^a}= \\
+    =& \pr{\partial_\mu A_\nu^a-\partial_\nu A_\mu^a -gf^{abc}A_\mu^bA_\nu^c}T^a \\
+    \Fmunu^a =& \partial_\mu A_\nu^a-\partial_\nu A_\mu^a -gf^{abc}A_\mu^bA_\nu^c
+\end{align*}
+
