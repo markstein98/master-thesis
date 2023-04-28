@@ -1,10 +1,11 @@
 \pagestyle{myFancy}
 \chapter{QCD on the Lattice}
 \section{The QCD Continuum Action}
+The aim of this chapter is to write the Yang-Mills action on the lattice. In order to do so, the Yang-Mills theory is obtained firstly in the continuum, beginning from the simplest case, Quantum Electrodynamics.\\
+The first section is mostly taken from Srednicki, personal notes and computations.
 % TODO cite Srednicki
-In order to write the action of QCD on the lattice, I must first recall how the theory is formulated in the continuum.
 
-\subsection{Spinor Fields}
+\subsection{Dirac Spinor Fields}
 Let us take into consideration a (free) quantum field theory describing a fermion, such as a quark or a lepton, in a $4$-dimensional spacetime with metric $\eta_{\mu\nu} = \diag(-1,1,1,1)$. Its action (in natural units, where $c = \hslash = 1$) can be written as:
 \begin{equation}
       S_\psi[\psi(x),\psibar(x)] = \dV \left( \i\psibar\slashed\partial\psi - m\psibar\psi \right) \label{1:FreeQEDFermionAction}
@@ -13,7 +14,7 @@ from which, upon the application of the variational principle, the Dirac equatio
 \begin{equation}
     \left( \i\slashed\partial-m \right) \psi(x) = 0 \label{1:DiracEq}
 \end{equation}
-It can now be easily checked by direct computation that this action is invariant under a rigid (global) phase transformation, also called global $U(1)$ transformation:
+It can now be easily checked by direct computation that this action is invariant under a rigid (global) phase transformation, also called a global $U(1)$ transformation:
 \begin{align*}
     \psi(x) &\rightarrow \psi'(x) = e^{-\i\alpha}\psi(x) \numthis\label{1:PhaseTransform} \\
     \psibar(x) &\rightarrow \psibar'(x) = \psibar(x) e^{\i\alpha}
@@ -21,13 +22,13 @@ It can now be easily checked by direct computation that this action is invariant
 where $\alpha$ is a constant that does not depend on the spacetime coordinate $x$, while if $\alpha=\alpha(x)$ the action \eqref{1:FreeQEDFermionAction} would not be invariant because of the kinetic term.
 
 \subsection{Quantum Electrodynamics\label{Sec:QED}}
-As the free field theory itself is non interacting, it does not provide any real-world prediction, so it is useful to write an interacting action where the spinor field is coupled, for instance, to a vector field $A_\mu$, i.e. the photon.
+As the free field theory itself is non interacting, it does not provide any real-world prediction, so it is useful to write an interacting action where the spinor field is coupled, for instance, to a vector field $A_\mu$, \ie the photon.
 One way to implement this interaction is to ask for local, instead of global, invariance of the action \eqref{1:FreeQEDFermionAction} under the phase transformation \eqref{1:PhaseTransform}, where now $\alpha=\alpha(x)$.
 In order to do so, one has to define the covariant derivative as follows:
 \begin{equation}
     D_\mu \equiv \partial_\mu+\i g A_\mu \label{1:QEDCovDeriv}
 \end{equation}
-where $g$ is the couplig constant.\footnote{Usually, in QED, $g$ is called $e$, the electron charge, though I will be using $g$ in analogy to nonabelian gauge theories.}\\
+where $g$ is the couplig constant.\footnote{Usually, in QED, $g$ is called $e$, the electron charge, though $g$ will be used in analogy to nonabelian gauge theories.}\\
 The vector field's kinetic term is written in terms of its field-strength, namely:
 \begin{align*}
     \Fmunu\equiv& -\frac{\i}{g}\left[D_\mu,D_\nu\right] = \\
@@ -58,7 +59,7 @@ The term that broke the local phase invariance of the action \eqref{1:FreeQEDFer
 \subsection{Nonabelian Gauge Theories}
 Let us now consider a theory with $N$ fermions all with the same mass $m$, described by the spinorial fields $\psi_i(x)$ with $i=1, \dots, N$. Its free action is:
 \begin{equation}
-    S_\psi[\psi_i(x),\psibar_i(x)] = \sum_{i=1}^N\dV\pr{\i\psibar_i\slashed\partial\psi_i - m\psibar_i\psi} \label{1:FreeFermionAction}
+    S_\psi[\psi_i(x),\psibar_i(x)] = \sum_{i=1}^N\dV\pr{\i\psibar_i\slashed\partial\psi_i - m\psibar_i\psi_i} \label{1:FreeFermionAction}
 \end{equation}
 From now on, the sum over $i$ (and all other repeated latin indexes) will be omitted, unless specified differently.
 This action is invariant under the global transformation:
@@ -86,8 +87,8 @@ where $f^{abc}$ are called \emph{structure constants} of $\SUN$. The normalizati
 \end{equation}
 some examples are:
 \begin{itemize}
-    \item for $N=2$, $T^a=\frac{\sigma^a}{2}$, with $\sigma^a$ the Pauli matrices;
-    \item for $N=3$, $T^a=\frac{\lambda^a}{2}$, with $\lambda^a$ the Gell-Mann matrices.
+    \item $N=2$, $T^a=\frac{\sigma^a}{2}$, with $\sigma^a$ the Pauli matrices;
+    \item $N=3$, $T^a=\frac{\lambda^a}{2}$, with $\lambda^a$ the Gell-Mann matrices.
 \end{itemize}
 In both those examples, the structure constants are $f^{abc}=\epsilon^{abc}$, the completely antisymmetric Levi-Civita symbol.\\
 The covariant derivative, therefore, is written as:
@@ -97,7 +98,7 @@ The covariant derivative, therefore, is written as:
 where an $N\times N$ identity matrix $\id$ multiplying $\partial_\mu$ has to be understood, and $\A_\mu(x)$ is a gauge field of $\SUN$, \ie a traceless, hermitean $N\times N$ matrix.\\
 The covariant derivative can be written more explicitly acting on the set of spinors $\psi_i$:
 \begin{equation*}
-    D_\mu\psi_i = \partial_\mu \id_{ij}\psi_j + \i g \A_\mu(x)_{ij}\psi_j
+    \pr{D_\mu}_{ij}\psi_j = \partial_\mu \id_{ij}\psi_j + \i g \A_\mu(x)_{ij}\psi_j
 \end{equation*}
 In order for the action to be gauge invariant, the field $\A_\mu$ must satisfy the gauge transformation property
 \begin{equation}
