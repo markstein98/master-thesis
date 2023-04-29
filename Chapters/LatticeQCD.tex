@@ -95,7 +95,7 @@ The covariant derivative, therefore, is written as:
 \begin{equation}
     D_\mu \equiv \partial_\mu + \i g \A_\mu(x) \label{1:CovDeriv}
 \end{equation}
-where an $N\times N$ identity matrix $\id$ multiplying $\partial_\mu$ has to be understood, and $\A_\mu(x)$ is a gauge field of $\SUN$, \ie a traceless, hermitean $N\times N$ matrix.\\
+where an $N\times N$ identity matrix $\id$ multiplying $\partial_\mu$ has to be understood, and $\A_\mu(x)$ is a gauge field of $\SUN$, \ie a traceless, hermitean $N\times N$ matrix, or, in other words, $\A_\mu(x)\in\sun$, the Lie algebra of $\SUN$.\\
 The covariant derivative can be written more explicitly acting on the set of spinors $\psi_i$:
 \begin{equation*}
     \pr{D_\mu}_{ij}\psi_j = \partial_\mu \id_{ij}\psi_j + \i g \A_\mu(x)_{ij}\psi_j
@@ -121,11 +121,11 @@ Because of this fact, it is directly implied that the covariant derivative \eqre
 \begin{equation}
     D_\mu \rightarrow D_\mu' = U D_\mu U^\dagger \label{1:GaugeTrCovDer}
 \end{equation}
-The field-strength for the field $\A_\mu$ is obtained, as for the abelian case, through the commutator of two covariant derivatives (the computation is the same as \eqref{1:FieldStrU1}, but this time the commutator term is not $=0$):
+The field-strength for the field $\A_\mu$ is obtained, as for the abelian case, through the commutator of two covariant derivatives. The computation is the same as \eqref{1:FieldStrU1}, but this time the commutator term is not $=0$:
 \begin{equation}
     \Fmunu\equiv -\frac{\i}{g}\comm{D_\mu}{D_\nu} = \partial_\mu\A_\nu -\partial_\nu\A_\mu +\i g\comm{\A_\mu}{\A_\nu} \label{1:FieldStrDef}
 \end{equation}
-this expression can be simplified a little by considering that $\A_\mu$ and $\Fmunu$ are elements of $\SUN$, thus writing them in the basis $T^a$:
+this expression can be simplified a little by considering that $\A_\mu$ and $\Fmunu$ are elements of $\sun$, thus writing them in components of the basis $T^a$:
 \begin{align}
     \A_\mu(x) =& A_\mu^a(x) T^a \label{1:AmuComp}\\
     \Fmunu(x) =& \Fmunu^a(x) T^a \label{1:FmunuComp}
@@ -135,6 +135,17 @@ and considering the relations \eqref{1:StrConstSUN} and \eqref{1:NormCondSUN}:
     \Fmunu^aT^a =& \pr{\partial_\mu A_\nu^a-\partial_\nu A_\mu^a}T^a +\i g\comm{A_\mu^bT^b}{A_\nu^cT^c}= \\
     =& \pr{\partial_\mu A_\nu^a-\partial_\nu A_\mu^a}T^a +\i gA_\mu^bA_\nu^c\underbrace{\comm{T^b}{T^c}}_{if^{bca}T^a}= \\
     =& \pr{\partial_\mu A_\nu^a-\partial_\nu A_\mu^a -gf^{abc}A_\mu^bA_\nu^c}T^a \\
-    \Fmunu^a =& \partial_\mu A_\nu^a-\partial_\nu A_\mu^a -gf^{abc}A_\mu^bA_\nu^c
+    \Fmunu^a =& \partial_\mu A_\nu^a-\partial_\nu A_\mu^a -gf^{abc}A_\mu^bA_\nu^c \numthis\label{1:FmunuExplComp}
 \end{align*}
+In order to write a kinetic action for the field $\A_\mu$, a term proportional to $\Fmunu F^{\mu\nu}$, like in \eqref{1:FreeMaxwellAction}, is not enough:
+because of \eqref{1:GaugeTrCovDer} and the definition \eqref{1:FieldStrDef}, it must transform as $\Fmunu F^{\mu\nu}\rightarrow U\Fmunu F^{\mu\nu} U^\dagger$, therefore it would not be gauge invariant.
+In fact a gauge invariant action, called Yang-Mills action, is:
+\begin{equation}
+    S_{YM} = -\frac12\dV\Tr{\Fmunu F^{\mu\nu}} \label{1:YMAction}
+\end{equation}
+because of the ciclic property of the trace.\footnote{Actually, a term proportional to $\det{\Fmunu F^{\mu\nu}}$ would be gauge invariant as well, but it would not be a suitable kinetic term as it would involve terms of higher order than $2$ in the components $\Fmunu^a$}
+This action can be written in components, using \eqref{1:FmunuComp} and the trace property \eqref{1:NormCondSUN}:
+\begin{equation}
+    S_{YM} = -\frac12\dV\Tr{\Fmunu^a F^{b\mu\nu}T^aT^b} = -\frac14\dV\Fmunu^a F^{a\mu\nu} \label{1:YMActionComp}
+\end{equation}
 
