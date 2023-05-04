@@ -1,9 +1,8 @@
 \pagestyle{myFancy}
 \chapter{QCD on the Lattice}
-\section{The QCD Continuum Action}
+\section{The Yang-Mills Continuum Action}
 The aim of this chapter is to write the Yang-Mills action on the lattice. In order to do so, the Yang-Mills theory is obtained firstly in the continuum, beginning from the simplest case, Quantum Electrodynamics.\\
-The first section is mostly taken from Srednicki\cite{srednicki2007quantum}, personal notes and computations.
-% TODO cite Srednicki
+This first section is mostly taken from Srednicki \cite{srednicki2007quantum}, personal notes and computations.
 
 \subsection{Dirac Spinor Fields}
 Let us take into consideration a (free) quantum field theory describing a fermion, such as a quark or a lepton, in a $4$-dimensional spacetime with metric $\eta_{\mu\nu} = \diag(-1,1,1,1)$. Its action (in natural units, where $c = \hslash = 1$) can be written as:
@@ -143,12 +142,16 @@ In fact a gauge invariant action, called Yang-Mills action, is:
 \begin{equation}
     S_{YM} = -\frac12\dV\Tr{\Fmunu F^{\mu\nu}} \label{1:YMAction}
 \end{equation}
-because of the ciclic property of the trace.\footnote{Actually, a term proportional to $\det{\Fmunu F^{\mu\nu}}$ would be gauge invariant as well, but it would not be a suitable kinetic term as it would involve terms of higher order than $2$ in the components $\Fmunu^a$}
+because of the ciclic property of the trace.\footnote{Actually, a term proportional to $\det{\Fmunu^a F^{a\mu\nu}}$ would be gauge invariant as well, but it would not be a suitable kinetic term as it would involve terms of higher order than $2$ in the components $\Fmunu^a$}
 This action can be written in components, using \eqref{1:FmunuComp} and the trace property \eqref{1:NormCondSUN}:
 \begin{equation}
     S_{YM} = -\frac12\dV\Tr{\Fmunu^a F^{b\mu\nu}T^aT^b} = -\frac14\dV\Fmunu^a F^{a\mu\nu} \label{1:YMActionComp}
 \end{equation}
 Here, there are two remarks that need to be done.
 The first one is that, if the gauge group is taken to be $\Uem$, the action \eqref{1:YMActionComp} reduces to \eqref{1:FreeMaxwellAction}, as $a=1$ because the group $\Uem$ has only $1$ generator.
-The second one is that, if non-abelian gauge groups are taken into consideration, this action naturally introduces self-interacting cubic and quartic terms, because the structure constants $f^{abc}\neq0$. This is, for example, the case for the group $\SU(2)$, that is used to describe isospin, and for the group $\SU(3)$, that is used to describe gluon interaction, \ie Quantum Chromodynamics (QCD).
-%TODO: introduce other gauge groups
+The second one is that, if nonabelian gauge groups are taken into consideration, this action naturally introduces self-interacting cubic and quartic terms, because the structure constants $f^{abc}$ are non $0$. This is, for example, the case for the group $\SU(2)$, that is used to describe isospin, and for the group $\SU(3)$, that is used to describe gluon interaction, \ie Quantum Chromodynamics (QCD).
+These self-interactions make the the Yang-Mills action interesting to be studied even alone, without any other fermionic or bosonic interacting field, as it will be shown later.\\
+Everything that has been said for $\SUN$ can be also extended to $\mathit{SO}(N)$ by replacing \emph{unitary} with \emph{orthogonal} and \emph{traceless} with \emph{antisymmetric}. In fact, this discussion can be made for every compact\footnote{Compactness, \ie $\Tr{T^aT^b}$ positive defined, is required in order to have a bounded from below Hamiltonian.} group, such as the symplectic group $\mathit{Sp}(2N)$ and the five exceptional Lie groups $\mathit{G}(2)$, $\spF$, $\mathit{E}(6)$, $\mathit{E}(7)$ and $\mathit{E}(8)$.
+
+\newpage
+\section{Lattice Field Theory}
