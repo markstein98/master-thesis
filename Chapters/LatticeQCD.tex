@@ -1,7 +1,7 @@
 \pagestyle{myFancy}
 \chapter{Quantum Chromodynamics on the Lattice}
 \section{The Yang-Mills Continuum Action}
-The aim of this chapter is to write the Yang-Mills action on the lattice. In order to do so, the Yang-Mills theory is obtained firstly in the continuum, beginning from the simplest case, Quantum Electrodynamics.\\
+The aim of this chapter is to discretize the Yang-Mills action on a hypercubic lattice in $4$ dimensions. In order to do so, the action is obtained firstly in the continuum, beginning from the simplest case, Quantum Electrodynamics.\\
 This first section is mostly taken from Srednicki \cite{srednicki2007quantum}, personal notes and computations.
 
 \subsection{Dirac Spinor Fields}
@@ -18,12 +18,12 @@ It can now be easily checked by direct computation that this action is invariant
     \psi(x) &\rightarrow \psi'(x) = e^{-\i\alpha}\psi(x) \numthis\label{1:PhaseTransform} \\
     \psibar(x) &\rightarrow \psibar'(x) = \psibar(x) e^{\i\alpha}
 \end{align*}
-where $\alpha$ is a constant that does not depend on the spacetime coordinate $x$, while if $\alpha=\alpha(x)$ the action \eqref{1:FreeQEDFermionAction} would not be invariant because of the kinetic term.
+where $\alpha$ is a constant that does not depend on the spacetime coordinate $x$, because if $\alpha$ was a function of $x$, the kinetic term of the action \eqref{1:FreeQEDFermionAction} would not be invariant under such transformation.
 
 \subsection{Quantum Electrodynamics\label{Sec:QED}}
 As the free field theory itself is non interacting, it does not provide any real-world prediction, so it is useful to write an interacting action where the spinor field is coupled, for instance, to a vector field $A_\mu$, \ie the photon.
 One way to implement this interaction is to ask for local, instead of global, invariance of the action \eqref{1:FreeQEDFermionAction} under the phase transformation \eqref{1:PhaseTransform}, where now $\alpha=\alpha(x)$.
-In order to do so, one has to define the covariant derivative as follows:
+In order to do so, the covariant derivative has to be defined as follows:
 \begin{equation}
     D_\mu \equiv \partial_\mu+\i g A_\mu \label{1:QEDCovDeriv}
 \end{equation}
@@ -51,16 +51,16 @@ The term that broke the local phase invariance of the action \eqref{1:FreeQEDFer
 \begin{align*}
     S_{QED} =& \dV\pr{\i\psibar\slashed{D}\psi-m\psibar\psi -\frac14\Fmunu F^{\mu\nu}} = \numthis\label{1:QEDaction}\\
     =& \dV\pr{\i\psibar\slashed{\partial}\psi-m\psibar\psi- g \psibar\slashed{A}\psi - \frac14\Fmunu F^{\mu\nu}}\\
-    S_{QED} \rightarrow S_{QED}' =& \dV\pr{\i\psibar\slashed{\partial}\psi +\psibar\slashed{\partial}\alpha\psi -m\psibar\psi -g \psibar\slashed{A}\psi -\psibar\slashed\partial\alpha\psi -\frac14\Fmunu F^{\mu\nu}}=\\
+    S_{QED} \rightarrow S_{QED}' =& \dV\pr{\i\psibar\slashed{\partial}\psi +\cancel{\psibar\slashed{\partial}\alpha\psi} -m\psibar\psi -g \psibar\slashed{A}\psi -\cancel{\psibar\slashed\partial\alpha\psi} -\frac14\Fmunu F^{\mu\nu}}=\\
     =& \dV\pr{\i\psibar\slashed{\partial}\psi-m\psibar\psi- g \psibar\slashed{A}\psi - \frac14\Fmunu F^{\mu\nu}} = S_{QED}
 \end{align*}
 
 \subsection{Nonabelian Gauge Theories}
-Let us now consider a theory with $N$ fermions all with the same mass $m$, described by the spinorial fields $\psi_i(x)$ with $i=1, \dots, N$. Its free action is:
+Let us now consider a theory with $N$ fermions, all with the same mass $m$, described by the spinorial fields $\psi_i(x)$ with $i=1, \dots, N$. Its free action is:
 \begin{equation}
     S_\psi[\psi_i(x),\psibar_i(x)] = \sum_{i=1}^N\dV\pr{\i\psibar_i\slashed\partial\psi_i - m\psibar_i\psi_i} \label{1:FreeFermionAction}
 \end{equation}
-From now on, the sum over $i$ (and all other repeated latin indexes) will be omitted, unless specified differently.
+From now on, the sum over $i$ (and all other repeated latin indexes) will be omitted, unless differently specified.
 This action is invariant under the global transformation:
 \begin{align*}
     \psi_i(x) &\rightarrow \psi_i'(x) = \U\psi_j(x) \numthis\label{1:UNTransform}\\
@@ -76,11 +76,11 @@ In order to do so, the infinitesimal $\SUN$ transformation has to be considered:
     U_{ij}(x) = \delta_{ij} + \i\theta^a(x)\pr{T^a}_{ij} + O(\theta^2) \label{1:InfinitesimalSUN}
 \end{equation}
 where the indices $i$ and $j$ run from $1$ to $N$ (as before) and the index $a$ runs from $1$ to $N^2-1$ (the dimension of the group $\SUN$).
-The matrixes $T^a$ are the $N^2-1$ generators of $\SUN$, thus they are $\NxN$ hermitean and traceless, which obey the commutation relations:
+The matrixes $T^a$ are the $N^2-1$ generators of $\sun$ (the Lie algebra of $\SUN$), thus they are $\NxN$ hermitean and traceless, which obey the commutation relations:
 \begin{equation}
     \comm{T^a}{T^b} = \i f^{abc}T^c \label{1:StrConstSUN}
 \end{equation}
-where $f^{abc}$ are called \emph{structure constants} of $\SUN$. The normalization of these matrices can be chosen such that they obey the condition:
+where $f^{abc}$ are called \emph{structure constants} of $\sun$. The normalization of these matrices can be chosen such that they obey the condition:
 \begin{equation}
     \Tr{T^aT^b} = \frac12\delta^{ab} \label{1:NormCondSUN}
 \end{equation}
@@ -89,22 +89,22 @@ some examples are:
     \item $N=2$, $T^a=\frac{\sigma^a}{2}$, with $\sigma^a$ the Pauli matrices;
     \item $N=3$, $T^a=\frac{\lambda^a}{2}$, with $\lambda^a$ the Gell-Mann matrices.
 \end{itemize}
-In both those examples, the structure constants are $f^{abc}=\epsilon^{abc}$, the completely antisymmetric Levi-Civita symbol.\\
+In both these examples, the structure constants are $f^{abc}=\varepsilon^{abc}$, the completely antisymmetric Levi-Civita symbol.\\
 The covariant derivative, therefore, is written as:
 \begin{equation}
     D_\mu \equiv \partial_\mu + \i g \A_\mu(x) \label{1:CovDeriv}
 \end{equation}
-where an $N\times N$ identity matrix $\id$ multiplying $\partial_\mu$ has to be understood, and $\A_\mu(x)$ is a gauge field of $\SUN$, \ie a traceless, hermitean $N\times N$ matrix, or, in other words, $\A_\mu(x)\in\sun$, the Lie algebra of $\SUN$.\\
+where an $N\times N$ identity matrix $\id$ multiplying $\partial_\mu$ has to be understood, and $\A_\mu(x)$ is a gauge field of $\SUN$, \ie a traceless, hermitean $N\times N$ matrix, or, in other words, $\A_\mu(x)\in\sun$.\\
 The covariant derivative can be written more explicitly acting on the set of spinors $\psi_i$:
 \begin{equation*}
-    \pr{D_\mu}_{ij}\psi_j = \partial_\mu \id_{ij}\psi_j + \i g \A_\mu(x)_{ij}\psi_j
+    \pr{D_\mu}_{ij}\psi_j = \partial_\mu \id_{ij}\psi_j + \i g \pr{\A_\mu(x)}_{ij}\psi_j
 \end{equation*}
 In order for the action to be gauge invariant, the field $\A_\mu$ must satisfy the gauge transformation property
 \begin{equation}
     \A_\mu(x) \rightarrow \A_\mu'(x) = U(x)\A_\mu(x)U^\dagger(x) - \frac{\i}{g}U(x)\partial_\mu U^\dagger(x) \label{1:GaugeTransformSUN}
 \end{equation}
 This expression is a little more complicated than \eqref{1:QEDGaugeTransf}, due to the fact that $\A_\mu$ is now a non-commuting matrix. However if the abelian case $\Uem$ is taken into consideration, where $U(x)=e^{-\i\alpha(x)}$, \eqref{1:QEDGaugeTransf} follows directly from \eqref{1:GaugeTransformSUN}.\\
-It can now be easily checked that the kinetic term of the Lagrangian
+Now, it can be easily checked that the kinetic term of the Lagrangian
 \begin{equation*}
     \Lagr_K = \i\psibar_i\slashed{D}\psi_i = \i\psibar_i\slashed\partial\psi_i -g\psibar_i\slashed\A\psi_i
 \end{equation*}
@@ -116,7 +116,7 @@ is gauge invariant (\ie invariant under \eqref{1:UNTransform} and \eqref{1:Gauge
     =& \Lagr_K +\i\psibar_i\gamma^\mu\partial_\mu\pr{U^\dagger U}\psi_i= \\
     =& \Lagr_K +\i\psibar_i\gamma^\mu\underbrace{\partial_\mu\pr{\id}}_{=0}\psi_i = \Lagr_K
 \end{align*}
-Because of this fact, it is directly implied that the covariant derivative \eqref{1:CovDeriv} must transform, under a gauge transformation, as:
+Because of this fact, it is directly implied that the covariant derivative \eqref{1:CovDeriv} must transform, under a gauge transformation, in the adjoint representation:
 \begin{equation}
     D_\mu \rightarrow D_\mu' = U D_\mu U^\dagger \label{1:GaugeTrCovDer}
 \end{equation}
@@ -124,12 +124,12 @@ The field-strength for the field $\A_\mu$ is obtained, as for the abelian case, 
 \begin{equation}
     \Fmunu\equiv -\frac{\i}{g}\comm{D_\mu}{D_\nu} = \partial_\mu\A_\nu -\partial_\nu\A_\mu +\i g\comm{\A_\mu}{\A_\nu} \label{1:FieldStrDef}
 \end{equation}
-this expression can be simplified a little by considering that $\A_\mu$ and $\Fmunu$ are elements of $\sun$, thus writing them in components of the basis $T^a$:
+This expression can be simplified a little by considering that $\A_\mu$ and $\Fmunu$ are elements of $\sun$, thus writing them in terms of their components \wrt the basis $T^a$:
 \begin{align}
     \A_\mu(x) =& A_\mu^a(x) T^a \label{1:AmuComp}\\
     \Fmunu(x) =& \Fmunu^a(x) T^a \label{1:FmunuComp}
 \end{align}
-and considering the relations \eqref{1:StrConstSUN} and \eqref{1:NormCondSUN}:
+and by considering the relation \eqref{1:StrConstSUN}:
 \begin{align*}
     \Fmunu^aT^a =& \pr{\partial_\mu A_\nu^a-\partial_\nu A_\mu^a}T^a +\i g\comm{A_\mu^bT^b}{A_\nu^cT^c}= \\
     =& \pr{\partial_\mu A_\nu^a-\partial_\nu A_\mu^a}T^a +\i gA_\mu^bA_\nu^c\underbrace{\comm{T^b}{T^c}}_{if^{bca}T^a}= \\
@@ -153,5 +153,4 @@ The second one is that, if nonabelian gauge groups are taken into consideration,
 These self-interactions make the the Yang-Mills action interesting to be studied even alone, without any other fermionic or bosonic interacting field, as it will be shown later.\\
 Everything that has been said for $\SUN$ can be also extended to $\mathit{SO}(N)$ by replacing \emph{unitary} with \emph{orthogonal} and \emph{traceless} with \emph{antisymmetric}. In fact, this discussion can be made for every compact\footnote{Compactness, \ie $\Tr{T^aT^b}$ positive defined, is required in order to have a bounded from below Hamiltonian.} group, such as the symplectic group $\mathit{Sp}(2N)$ and the five exceptional Lie groups $\mathit{G}(2)$, $\spF$, $\mathit{E}(6)$, $\mathit{E}(7)$ and $\mathit{E}(8)$.
 
-\newpage
 \section{Lattice Field Theory}
