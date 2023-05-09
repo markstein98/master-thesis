@@ -1,8 +1,8 @@
 \pagestyle{myFancy}
-\chapter{Quantum Chromodynamics on the Lattice}
+\chapter{Yang-Mills Theories on the Lattice}
 \section{The Yang-Mills Continuum Action}
 The aim of this chapter is to discretize the Yang-Mills action on a hypercubic lattice in $4$ dimensions. In order to do so, the action is obtained firstly in the continuum, beginning from the simplest case, Quantum Electrodynamics.\\
-This first section is mostly taken from Srednicki \cite{srednicki2007quantum}, personal notes and computations.
+This first section is based on material that can be found in standard textbooks on quantum field theory \cite{srednicki2007quantum} \cite{peskin1995introduction} \cite{weinberg1995quantum} \cite{kaku1993quantum} \cite{ramond1997field}, personal notes and computations.
 
 \subsection{Dirac Spinor Fields}
 Let us take into consideration a (free) quantum field theory describing a fermion, such as a quark or a lepton, in a $4$-dimensional spacetime with metric $\eta_{\mu\nu} = \diag(-1,1,1,1)$. Its action (in natural units, where $c = \hslash = 1$) can be written as:
@@ -37,7 +37,7 @@ The vector field's kinetic term is written in terms of its field-strength, namel
     =& \partial_\mu A_\nu - \partial_\nu A_\mu \numthis\label{1:FieldStrU1}
 \end{align*}
 where $\comm{A_\mu}{A_\nu}=A_\mu A_\nu-A_\nu A_\mu=0$ in the abelian theory.\\
-Two different fields $A_\mu$ and $A_\mu'$ describe the same physics if one can be obtained from another throug a gauge transformation:
+Two different fields $A_\mu$ and $A_\mu'$ describe the same physics if one can be obtained from another through a gauge transformation:
 \begin{align*}
     A_\mu'(x) =& A_\mu(x) + \frac1g \partial_\mu\alpha(x) \numthis\label{1:QEDGaugeTransf} \\
     \Fmunu' = \Fmunu + \frac1g&\left( \partial_\mu\partial_\nu-\partial_\nu\partial_\mu \right)\alpha(x) = \Fmunu
@@ -55,8 +55,10 @@ The term that broke the local phase invariance of the action \eqref{1:FreeQEDFer
     =& \dV\pr{\i\psibar\slashed{\partial}\psi-m\psibar\psi- g \psibar\slashed{A}\psi - \frac14\Fmunu F^{\mu\nu}} = S_{QED}
 \end{align*}
 
-\subsection{Nonabelian Gauge Theories}
-Let us now consider a theory with $N$ fermions, all with the same mass $m$, described by the spinorial fields $\psi_i(x)$ with $i=1, \dots, N$. Its free action is:
+\subsection{Non-Abelian Gauge Theories}
+Let us now consider a theory with $N$ fermions, all with the same mass $m$, described by the spinorial fields $\psi_i(x)$ with $i=1, \dots, N$.
+These $N$ fermions represent the $N$ possible charges of the same particle\footnote{For example, if $N=3$ the $3$ possible charges are the color charges of QCD, as will be shown later.} and are not to be confused with, for instance, the different possible flavors of the quarks, that describe different particles with different masses.\\
+Its free action is:
 \begin{equation}
     S_\psi[\psi_i(x),\psibar_i(x)] = \sum_{i=1}^N\dV\pr{\i\psibar_i\slashed\partial\psi_i - m\psibar_i\psi_i} \label{1:FreeFermionAction}
 \end{equation}
@@ -68,7 +70,7 @@ This action is invariant under the global transformation:
 \end{align*}
 if $U$ is any (constant) $N\times N$ matrix such that $UU^\dagger = U^\dagger U = \id \Leftrightarrow U^\dagger=U^{-1}$, or in other words, if $U\in\UN$.
 For this reason, this transformation is also called a global $\UN$ transformation.
-The phase transformation \eqref{1:PhaseTransform} is the particular case where $U=e^{-\i\alpha}\in\Uem$, that is the only abelian (commutative) unitary group.\\
+The phase transformation \eqref{1:PhaseTransform} is the particular case where $U=e^{-\i\alpha}\in\Uem$, that is the only Abelian (commutative) unitary group.\\
 As $\UN = \SUN\otimes\Uem$ $\forall N>1$, $U\in\SUN$ instead of $U\in\UN$ can be imposed, and will be from now on, without loss of generality.\\
 In an analogous way to what has been done in\secref{Sec:QED}, this invariance can be made local by implementing a proper covariant derivative, similar to \eqref{1:QEDCovDeriv}.
 In order to do so, the infinitesimal $\SUN$ transformation has to be considered:
@@ -82,14 +84,14 @@ The matrixes $T^a$ are the $N^2-1$ generators of $\sun$ (the Lie algebra of $\SU
 \end{equation}
 where $f^{abc}$ are called \emph{structure constants} of $\sun$. The normalization of these matrices can be chosen such that they obey the condition:
 \begin{equation}
-    \Tr{T^aT^b} = \frac12\delta^{ab} \label{1:NormCondSUN}
+    \Tr(T^aT^b) = \frac12\delta^{ab} \label{1:NormCondSUN}
 \end{equation}
 some examples are:
 \begin{itemize}
-    \item $N=2$, $T^a=\frac{\sigma^a}{2}$, with $\sigma^a$ the Pauli matrices;
+    \item $N=2$, $T^a=\frac{\sigma^a}{2}$, with $\sigma^a$ the Pauli matrices and $f^{abc}=\varepsilon^{abc}$;
     \item $N=3$, $T^a=\frac{\lambda^a}{2}$, with $\lambda^a$ the Gell-Mann matrices.
 \end{itemize}
-In both these examples, the structure constants are $f^{abc}=\varepsilon^{abc}$, the completely antisymmetric Levi-Civita symbol.\\
+where $\varepsilon^{abc}$ is the completely antisymmetric Levi-Civita symbol.\\
 The covariant derivative, therefore, is written as:
 \begin{equation}
     D_\mu \equiv \partial_\mu + \i g \A_\mu(x) \label{1:CovDeriv}
@@ -103,7 +105,7 @@ In order for the action to be gauge invariant, the field $\A_\mu$ must satisfy t
 \begin{equation}
     \A_\mu(x) \rightarrow \A_\mu'(x) = U(x)\A_\mu(x)U^\dagger(x) - \frac{\i}{g}U(x)\partial_\mu U^\dagger(x) \label{1:GaugeTransformSUN}
 \end{equation}
-This expression is a little more complicated than \eqref{1:QEDGaugeTransf}, due to the fact that $\A_\mu$ is now a non-commuting matrix. However if the abelian case $\Uem$ is taken into consideration, where $U(x)=e^{-\i\alpha(x)}$, \eqref{1:QEDGaugeTransf} follows directly from \eqref{1:GaugeTransformSUN}.\\
+This expression is a little more complicated than \eqref{1:QEDGaugeTransf}, due to the fact that $\A_\mu$ is now a non-commuting matrix. However if the Abelian case $\Uem$ is taken into consideration, where $U(x)=e^{-\i\alpha(x)}$, \eqref{1:QEDGaugeTransf} follows directly from \eqref{1:GaugeTransformSUN}.\\
 Now, it can be easily checked that the kinetic term of the Lagrangian
 \begin{equation*}
     \Lagr_K = \i\psibar_i\slashed{D}\psi_i = \i\psibar_i\slashed\partial\psi_i -g\psibar_i\slashed\A\psi_i
@@ -120,7 +122,7 @@ Because of this fact, it is directly implied that the covariant derivative \eqre
 \begin{equation}
     D_\mu \rightarrow D_\mu' = U D_\mu U^\dagger \label{1:GaugeTrCovDer}
 \end{equation}
-The field-strength for the field $\A_\mu$ is obtained, as for the abelian case, through the commutator of two covariant derivatives. The computation is the same as \eqref{1:FieldStrU1}, but this time the commutator term is not $=0$:
+The field-strength for the field $\A_\mu$ is obtained, as for the Abelian case, through the commutator of two covariant derivatives. The computation is the same as \eqref{1:FieldStrU1}, but this time the commutator term is non-vanishing:
 \begin{equation}
     \Fmunu\equiv -\frac{\i}{g}\comm{D_\mu}{D_\nu} = \partial_\mu\A_\nu -\partial_\nu\A_\mu +\i g\comm{\A_\mu}{\A_\nu} \label{1:FieldStrDef}
 \end{equation}
@@ -140,17 +142,20 @@ In order to write a kinetic action for the field $\A_\mu$, a term proportional t
 because of \eqref{1:GaugeTrCovDer} and the definition \eqref{1:FieldStrDef}, it must transform as $\Fmunu F^{\mu\nu}\rightarrow U\Fmunu F^{\mu\nu} U^\dagger$, therefore it would not be gauge invariant.
 In fact a gauge invariant action, called Yang-Mills action, is:
 \begin{equation}
-    S_{YM} = -\frac12\dV\Tr{\Fmunu F^{\mu\nu}} \label{1:YMAction}
+    S_{YM} = -\frac12\dV\Tr\pr{\Fmunu F^{\mu\nu}} \label{1:YMAction}
 \end{equation}
-because of the ciclic property of the trace.\footnote{Actually, a term proportional to $\det{\Fmunu^a F^{a\mu\nu}}$ would be gauge invariant as well, but it would not be a suitable kinetic term as it would involve terms of higher order than $2$ in the components $\Fmunu^a$}
+because of the ciclic property of the trace.\footnote{Actually, a term proportional to $\det\pr{\Fmunu^a F^{a\mu\nu}}$ would be gauge invariant as well, but it would not be a suitable kinetic term as it would involve terms of higher order than $2$ in the components $\Fmunu^a$}
 This action can be written in components, using \eqref{1:FmunuComp} and the trace property \eqref{1:NormCondSUN}:
 \begin{equation}
-    S_{YM} = -\frac12\dV\Tr{\Fmunu^a F^{b\mu\nu}T^aT^b} = -\frac14\dV\Fmunu^a F^{a\mu\nu} \label{1:YMActionComp}
+    S_{YM} = -\frac12\dV\Tr\pr{\Fmunu^a F^{b\mu\nu}T^aT^b} = -\frac14\dV\Fmunu^a F^{a\mu\nu} \label{1:YMActionComp}
 \end{equation}
 Here, there are two remarks that need to be done.
 The first one is that, if the gauge group is taken to be $\Uem$, the action \eqref{1:YMActionComp} reduces to \eqref{1:FreeMaxwellAction}, as $a=1$ because the group $\Uem$ has only $1$ generator.
-The second one is that, if nonabelian gauge groups are taken into consideration, this action naturally introduces self-interacting cubic and quartic terms, because the structure constants $f^{abc}$ are non $0$. This is, for example, the case for the group $\SU(2)$, that is used to describe isospin, and for the group $\SU(3)$, that is used to describe gluon interaction, \ie Quantum Chromodynamics (QCD).
-These self-interactions make the the Yang-Mills action interesting to be studied even alone, without any other fermionic or bosonic interacting field, as it will be shown later.\\
-Everything that has been said for $\SUN$ can be also extended to $\mathit{SO}(N)$ by replacing \emph{unitary} with \emph{orthogonal} and \emph{traceless} with \emph{antisymmetric}. In fact, this discussion can be made for every compact\footnote{Compactness, \ie $\Tr{T^aT^b}$ positive defined, is required in order to have a bounded from below Hamiltonian.} group, such as the symplectic group $\mathit{Sp}(2N)$ and the five exceptional Lie groups $\mathit{G}(2)$, $\spF$, $\mathit{E}(6)$, $\mathit{E}(7)$ and $\mathit{E}(8)$.
+The second one is that, if non-Abelian gauge groups are taken into consideration, this action naturally introduces self-interacting cubic and quartic terms, because the structure constants $f^{abc}$ are non-vanishing. This is, for example, the case for the group $\SU(3)$, that is used to describe gluon interaction, \ie Quantum Chromodynamics (QCD).
+These self-interactions make the the Yang-Mills action interesting to be studied even alone, without any other fermionic or bosonic interacting field, as it will be shown later.
+\begin{comment}
+\\Everything that has been said for $\SUN$ can be also extended to $\mathit{SO}(N)$ by replacing \emph{unitary} with \emph{orthogonal} and \emph{traceless} with \emph{antisymmetric}. In fact, this discussion can be made for every compact\footnote{Compactness, \ie $\Tr{T^aT^b}$ positive defined, is required in order to have a bounded from below Hamiltonian.} group, such as the symplectic group $\mathit{Sp}(2N)$ and the five exceptional Lie groups $\mathit{G}(2)$, $\spF$, $\mathit{E}(6)$, $\mathit{E}(7)$ and $\mathit{E}(8)$.
+\end{comment}
+\newpage
 
 \section{Lattice Field Theory}

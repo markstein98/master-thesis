@@ -1,65 +1,53 @@
-This is BibTeX, Version 0.99d (TeX Live 2023/Arch Linux)
-Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
-The top-level auxiliary file: Thesis.aux
-The style file: biblatex.bst
-Reallocated glb_str_ptr (elt_size=8) to 20 items from 10.
-Reallocated global_strs (elt_size=200001) to 20 items from 10.
-Reallocated glb_str_end (elt_size=8) to 20 items from 10.
-Reallocated singl_function (elt_size=8) to 100 items from 50.
-Reallocated singl_function (elt_size=8) to 100 items from 50.
-Reallocated singl_function (elt_size=8) to 100 items from 50.
-Reallocated wiz_functions (elt_size=8) to 6000 items from 3000.
-Reallocated singl_function (elt_size=8) to 100 items from 50.
-Reallocated singl_function (elt_size=8) to 100 items from 50.
-Reallocated singl_function (elt_size=8) to 100 items from 50.
-Reallocated singl_function (elt_size=8) to 100 items from 50.
-Reallocated singl_function (elt_size=8) to 100 items from 50.
-Reallocated singl_function (elt_size=8) to 100 items from 50.
-Reallocated singl_function (elt_size=8) to 100 items from 50.
-Reallocated singl_function (elt_size=8) to 100 items from 50.
-Database file #1: Thesis-blx.bib
-Database file #2: bibliography.bib
-Biblatex version: 3.19
-Reallocated wiz_functions (elt_size=8) to 9000 items from 6000.
-Reallocated singl_function (elt_size=8) to 100 items from 50.
-You've used 2 entries,
-            6399 wiz_defined-function locations,
-            1210 strings with 9135 characters,
-and the built_in function-call counts, 7015 in all, are:
-= -- 477
-> -- 185
-< -- 62
-+ -- 176
-- -- 54
-* -- 317
-:= -- 803
-add.period$ -- 0
-call.type$ -- 2
-change.case$ -- 46
-chr.to.int$ -- 42
-cite$ -- 2
-duplicate$ -- 628
-empty$ -- 597
-format.name$ -- 48
-if$ -- 1539
-int.to.chr$ -- 0
-int.to.str$ -- 3
-missing$ -- 0
-newline$ -- 46
-num.names$ -- 80
-pop$ -- 378
-preamble$ -- 1
-purify$ -- 48
-quote$ -- 0
-skip$ -- 345
-stack$ -- 0
-substring$ -- 709
-swap$ -- 161
-text.length$ -- 45
-text.prefix$ -- 1
-top$ -- 1
-type$ -- 56
-warning$ -- 0
-while$ -- 118
-width$ -- 0
-write$ -- 45
+[0] Config.pm:307> INFO - This is Biber 2.19
+[0] Config.pm:310> INFO - Logfile is 'Thesis.blg'
+[53] biber:340> INFO - === mar mag  9, 2023, 10:38:12
+[63] Biber.pm:419> INFO - Reading 'Thesis.bcf'
+[108] Biber.pm:979> INFO - Found 5 citekeys in bib section 0
+[117] Biber.pm:4419> INFO - Processing section 0
+[124] Biber.pm:4610> INFO - Looking for bibtex file 'bibliography.bib' for section 0
+[312] bibtex.pm:1713> INFO - LaTeX decoding ...
+[4782] bibtex.pm:1519> INFO - Found BibTeX data source 'bibliography.bib'
+[5061] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
+[5061] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[5061] Biber.pm:4239> INFO - Sorting list 'nty/global//global/global' of type 'entry' with template 'nty' and locale 'en-US'
+[5061] Biber.pm:4245> INFO - No sort tailoring available for locale 'en-US'
+[5067] bbl.pm:660> INFO - Writing 'Thesis.bbl' with encoding 'UTF-8'
+[5069] bbl.pm:763> INFO - Output to Thesis.bbl
+[5069] Biber.pm:131> WARN - Duplicate entry key: 'Georgi:1974sy' in file 'bibliography.bib', skipping ...
+[5069] Biber.pm:131> WARN - Duplicate entry key: 'Majumder:2010qh' in file 'bibliography.bib', skipping ...
+[5069] Biber.pm:131> WARN - Duplicate entry key: 'Qin:2007rn' in file 'bibliography.bib', skipping ...
+[5069] Biber.pm:131> WARN - Duplicate entry key: 'Stephanov:1996ki' in file 'bibliography.bib', skipping ...
+[5069] Biber.pm:131> WARN - Duplicate entry key: 'Coleman:1967ad' in file 'bibliography.bib', skipping ...
+[5069] Biber.pm:131> WARN - Duplicate entry key: 'Klassen:1990dx' in file 'bibliography.bib', skipping ...
+[5069] Biber.pm:131> WARN - Duplicate entry key: 'Ginsparg:1988ui' in file 'bibliography.bib', skipping ...
+[5069] Biber.pm:131> WARN - Duplicate entry key: 'Bratkovskaya:2005wj' in file 'bibliography.bib', skipping ...
+[5069] Biber.pm:131> WARN - Duplicate entry key: 'Majumder:2010ik' in file 'bibliography.bib', skipping ...
+[5069] Biber.pm:131> WARN - Duplicate entry key: 'Reuter:1993nn' in file 'bibliography.bib', skipping ...
+[5069] Biber.pm:131> WARN - Duplicate entry key: 'Maiani:1990ca' in file 'bibliography.bib', skipping ...
+[5069] Biber.pm:131> WARN - Duplicate entry key: 'Klco:2018kyo' in file 'bibliography.bib', skipping ...
+[5069] Biber.pm:131> WARN - Duplicate entry key: 'Becattini:2000jw' in file 'bibliography.bib', skipping ...
+[5069] Biber.pm:131> WARN - Duplicate entry key: 'Davoudi:2020ngi' in file 'bibliography.bib', skipping ...
+[5069] Biber.pm:131> WARN - Duplicate entry key: 'Cloet:2019wre' in file 'bibliography.bib', skipping ...
+[5069] Biber.pm:131> WARN - Duplicate entry key: 'Banuls:2019bmf' in file 'bibliography.bib', skipping ...
+[5069] Biber.pm:131> WARN - Duplicate entry key: 'Tagliacozzo:2012df' in file 'bibliography.bib', skipping ...
+[5069] Biber.pm:131> WARN - Duplicate entry key: 'Tagliacozzo:2012vg' in file 'bibliography.bib', skipping ...
+[5069] Biber.pm:131> WARN - Duplicate entry key: 'Bordone:2022qez' in file 'bibliography.bib', skipping ...
+[5069] Biber.pm:131> WARN - BibTeX subsystem: /tmp/biber_tmp_wPmS/f4d088b3f9f145b5c3058da33afd57d4_14448.utf8, line 18, warning: 323 characters of junk seen at toplevel
+[5069] Biber.pm:131> WARN - BibTeX subsystem: /tmp/biber_tmp_wPmS/f4d088b3f9f145b5c3058da33afd57d4_14448.utf8, line 28, warning: 20 characters of junk seen at toplevel
+[5069] Biber.pm:131> WARN - BibTeX subsystem: /tmp/biber_tmp_wPmS/f4d088b3f9f145b5c3058da33afd57d4_14448.utf8, line 40, warning: 28 characters of junk seen at toplevel
+[5070] Biber.pm:131> WARN - BibTeX subsystem: /tmp/biber_tmp_wPmS/f4d088b3f9f145b5c3058da33afd57d4_14448.utf8, line 52, warning: 21 characters of junk seen at toplevel
+[5070] Biber.pm:131> WARN - BibTeX subsystem: /tmp/biber_tmp_wPmS/f4d088b3f9f145b5c3058da33afd57d4_14448.utf8, line 64, warning: 40 characters of junk seen at toplevel
+[5070] Biber.pm:131> WARN - BibTeX subsystem: /tmp/biber_tmp_wPmS/f4d088b3f9f145b5c3058da33afd57d4_14448.utf8, line 75, warning: 37 characters of junk seen at toplevel
+[5070] Biber.pm:131> WARN - BibTeX subsystem: /tmp/biber_tmp_wPmS/f4d088b3f9f145b5c3058da33afd57d4_14448.utf8, line 85, warning: 37 characters of junk seen at toplevel
+[5070] Biber.pm:131> WARN - BibTeX subsystem: /tmp/biber_tmp_wPmS/f4d088b3f9f145b5c3058da33afd57d4_14448.utf8, line 96, warning: 37 characters of junk seen at toplevel
+[5070] Biber.pm:131> WARN - BibTeX subsystem: /tmp/biber_tmp_wPmS/f4d088b3f9f145b5c3058da33afd57d4_14448.utf8, line 108, warning: 29 characters of junk seen at toplevel
+[5070] Biber.pm:131> WARN - BibTeX subsystem: /tmp/biber_tmp_wPmS/f4d088b3f9f145b5c3058da33afd57d4_14448.utf8, line 120, warning: 37 characters of junk seen at toplevel
+[5070] Biber.pm:131> WARN - BibTeX subsystem: /tmp/biber_tmp_wPmS/f4d088b3f9f145b5c3058da33afd57d4_14448.utf8, line 142, warning: 30 characters of junk seen at toplevel
+[5070] Biber.pm:131> WARN - BibTeX subsystem: /tmp/biber_tmp_wPmS/f4d088b3f9f145b5c3058da33afd57d4_14448.utf8, line 154, warning: 30 characters of junk seen at toplevel
+[5070] Biber.pm:131> WARN - BibTeX subsystem: /tmp/biber_tmp_wPmS/f4d088b3f9f145b5c3058da33afd57d4_14448.utf8, line 166, warning: 30 characters of junk seen at toplevel
+[5070] Biber.pm:131> WARN - BibTeX subsystem: /tmp/biber_tmp_wPmS/f4d088b3f9f145b5c3058da33afd57d4_14448.utf8, line 176, warning: 37 characters of junk seen at toplevel
+[5070] Biber.pm:131> WARN - BibTeX subsystem: /tmp/biber_tmp_wPmS/f4d088b3f9f145b5c3058da33afd57d4_14448.utf8, line 187, warning: 21 characters of junk seen at toplevel
+[5070] Biber.pm:131> WARN - BibTeX subsystem: /tmp/biber_tmp_wPmS/f4d088b3f9f145b5c3058da33afd57d4_14448.utf8, line 201, warning: 21 characters of junk seen at toplevel
+[5070] Biber.pm:131> WARN - BibTeX subsystem: /tmp/biber_tmp_wPmS/f4d088b3f9f145b5c3058da33afd57d4_14448.utf8, line 16450, warning: possible runaway string started at line 16449
+[5070] Biber.pm:131> WARN - BibTeX subsystem: /tmp/biber_tmp_wPmS/f4d088b3f9f145b5c3058da33afd57d4_14448.utf8, line 25086, warning: possible runaway string started at line 25085
+[5070] Biber.pm:133> INFO - WARNINGS: 37

@@ -3,8 +3,8 @@
 % Do not modify the above lines!
 %
 % This is an auxiliary file used by the 'biblatex' package.
-% This file may safely be deleted. It will be recreated as
-% required.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
 %
 \begingroup
 \makeatletter
@@ -16,31 +16,174 @@
   {}
 \endgroup
 
-\datalist[entry]{nty/global//global/global}
-  \entry{srednicki2007quantum}{book}{}
-    \name{author}{1}{}{%
-      {{hash=SM}{%
-         family={Srednicki},
-         familyi={S\bibinitperiod},
-         given={Mark},
-         giveni={M\bibinitperiod},
-      }}%
-    }
-    \list{publisher}{1}{%
-      {Cambridge: Cambridge University Press}%
-    }
-    \strng{namehash}{SM1}
-    \strng{fullhash}{SM1}
-    \field{labelnamesource}{author}
-    \field{labeltitlesource}{title}
-    \field{sortinit}{S}
-    \field{sortinithash}{S}
-    \field{isbn}{9781139462761}
-    \field{title}{{Quantum Field Theory}}
-    \verb{url}
-    \verb https://books.google.com/books?id=5OepxIG42B4C
-    \endverb
-    \field{year}{2007}
-  \endentry
-\enddatalist
+
+\refsection{0}
+  \datalist[entry]{nty/global//global/global}
+    \entry{kaku1993quantum}{book}{}
+      \name{author}{1}{}{%
+        {{hash=4ac7617b63d80aaed38792ecfb0c1677}{%
+           family={Kaku},
+           familyi={K\bibinitperiod},
+           given={M.},
+           giveni={M\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Oxford University Press}%
+      }
+      \strng{namehash}{4ac7617b63d80aaed38792ecfb0c1677}
+      \strng{fullhash}{4ac7617b63d80aaed38792ecfb0c1677}
+      \strng{bibnamehash}{4ac7617b63d80aaed38792ecfb0c1677}
+      \strng{authorbibnamehash}{4ac7617b63d80aaed38792ecfb0c1677}
+      \strng{authornamehash}{4ac7617b63d80aaed38792ecfb0c1677}
+      \strng{authorfullhash}{4ac7617b63d80aaed38792ecfb0c1677}
+      \field{sortinit}{K}
+      \field{sortinithash}{c02bf6bff1c488450c352b40f5d853ab}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{isbn}{9780195091588}
+      \field{title}{Quantum Field Theory: A Modern Introduction}
+      \field{year}{1993}
+      \verb{urlraw}
+      \verb https://books.google.it/books?id=4mOMcRFYnzQC
+      \endverb
+      \verb{url}
+      \verb https://books.google.it/books?id=4mOMcRFYnzQC
+      \endverb
+    \endentry
+    \entry{peskin1995introduction}{book}{}
+      \name{author}{2}{}{%
+        {{hash=6a6728c61fadb34436010602e5aa4415}{%
+           family={Peskin},
+           familyi={P\bibinitperiod},
+           given={M.E.},
+           giveni={M\bibinitperiod}}}%
+        {{hash=8273252d88e7d0d8ed29fec023beeb74}{%
+           family={Schroeder},
+           familyi={S\bibinitperiod},
+           given={D.V.},
+           giveni={D\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Avalon Publishing}%
+      }
+      \strng{namehash}{feab844bba171ae0b7f8cf098f9c24ef}
+      \strng{fullhash}{feab844bba171ae0b7f8cf098f9c24ef}
+      \strng{bibnamehash}{feab844bba171ae0b7f8cf098f9c24ef}
+      \strng{authorbibnamehash}{feab844bba171ae0b7f8cf098f9c24ef}
+      \strng{authornamehash}{feab844bba171ae0b7f8cf098f9c24ef}
+      \strng{authorfullhash}{feab844bba171ae0b7f8cf098f9c24ef}
+      \field{sortinit}{P}
+      \field{sortinithash}{ff3bcf24f47321b42cb156c2cc8a8422}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{isbn}{9780813345437}
+      \field{series}{Frontiers in Physics}
+      \field{title}{An Introduction To Quantum Field Theory}
+      \field{year}{1995}
+      \verb{urlraw}
+      \verb https://books.google.it/books?id=EVeNNcslvX0C
+      \endverb
+      \verb{url}
+      \verb https://books.google.it/books?id=EVeNNcslvX0C
+      \endverb
+    \endentry
+    \entry{ramond1997field}{book}{}
+      \name{author}{1}{}{%
+        {{hash=76845637f6937063f6d146edc3efee01}{%
+           family={Ramond},
+           familyi={R\bibinitperiod},
+           given={P.},
+           giveni={P\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Avalon Publishing}%
+      }
+      \strng{namehash}{76845637f6937063f6d146edc3efee01}
+      \strng{fullhash}{76845637f6937063f6d146edc3efee01}
+      \strng{bibnamehash}{76845637f6937063f6d146edc3efee01}
+      \strng{authorbibnamehash}{76845637f6937063f6d146edc3efee01}
+      \strng{authornamehash}{76845637f6937063f6d146edc3efee01}
+      \strng{authorfullhash}{76845637f6937063f6d146edc3efee01}
+      \field{sortinit}{R}
+      \field{sortinithash}{5e1c39a9d46ffb6bebd8f801023a9486}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{isbn}{9780201304503}
+      \field{series}{Frontiers in Physics}
+      \field{title}{Field Theory: A Modern Primer}
+      \field{year}{1997}
+      \verb{urlraw}
+      \verb https://books.google.it/books?id=EJ4\_BAAAQBAJ
+      \endverb
+      \verb{url}
+      \verb https://books.google.it/books?id=EJ4%5C_BAAAQBAJ
+      \endverb
+    \endentry
+    \entry{srednicki2007quantum}{book}{}
+      \name{author}{1}{}{%
+        {{hash=dcf0b6d39b9c28db1835e7d435784d7b}{%
+           family={Srednicki},
+           familyi={S\bibinitperiod},
+           given={Mark},
+           giveni={M\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Cambridge: Cambridge University Press}%
+      }
+      \strng{namehash}{dcf0b6d39b9c28db1835e7d435784d7b}
+      \strng{fullhash}{dcf0b6d39b9c28db1835e7d435784d7b}
+      \strng{bibnamehash}{dcf0b6d39b9c28db1835e7d435784d7b}
+      \strng{authorbibnamehash}{dcf0b6d39b9c28db1835e7d435784d7b}
+      \strng{authornamehash}{dcf0b6d39b9c28db1835e7d435784d7b}
+      \strng{authorfullhash}{dcf0b6d39b9c28db1835e7d435784d7b}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{isbn}{9781139462761}
+      \field{title}{{Quantum Field Theory}}
+      \field{year}{2007}
+      \verb{urlraw}
+      \verb https://books.google.com/books?id=5OepxIG42B4C
+      \endverb
+      \verb{url}
+      \verb https://books.google.com/books?id=5OepxIG42B4C
+      \endverb
+    \endentry
+    \entry{weinberg1995quantum}{book}{}
+      \name{author}{1}{}{%
+        {{hash=3ff9fe28dd4b3b6688bd17fbcc3632da}{%
+           family={Weinberg},
+           familyi={W\bibinitperiod},
+           given={S.},
+           giveni={S\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Cambridge University Press}%
+      }
+      \strng{namehash}{3ff9fe28dd4b3b6688bd17fbcc3632da}
+      \strng{fullhash}{3ff9fe28dd4b3b6688bd17fbcc3632da}
+      \strng{bibnamehash}{3ff9fe28dd4b3b6688bd17fbcc3632da}
+      \strng{authorbibnamehash}{3ff9fe28dd4b3b6688bd17fbcc3632da}
+      \strng{authornamehash}{3ff9fe28dd4b3b6688bd17fbcc3632da}
+      \strng{authorfullhash}{3ff9fe28dd4b3b6688bd17fbcc3632da}
+      \field{sortinit}{W}
+      \field{sortinithash}{4315d78024d0cea9b57a0c6f0e35ed0d}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{isbn}{9780521550024}
+      \field{number}{v. 2}
+      \field{series}{The Quantum Theory of Fields 3 Volume Hardback Set}
+      \field{title}{The Quantum Theory of Fields}
+      \field{year}{1995}
+      \verb{urlraw}
+      \verb https://books.google.it/books?id=48xXMF1oHxkC
+      \endverb
+      \verb{url}
+      \verb https://books.google.it/books?id=48xXMF1oHxkC
+      \endverb
+    \endentry
+  \enddatalist
+\endrefsection
 \endinput
+
