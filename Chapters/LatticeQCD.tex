@@ -4,8 +4,16 @@
 The aim of this chapter is to discretize the Yang-Mills action on a hypercubic lattice in $4$ dimensions. In order to do so, the action is obtained firstly in the continuum, beginning from the simplest case, Quantum Electrodynamics.\\
 This first section is based on material that can be found in standard textbooks on quantum field theory \cite{srednicki2007quantum, peskin1995introduction, weinberg1995quantum, kaku1993quantum, ramond1997field}, personal notes and computations.
 
+\subsection{Scalar Fields}
+In quantum field theory, a real scalar massive field is described, in a $4$-dimensional spacetime with metric $\eta_{\mu\nu} = \diag(-1,1,1,1)$, by the following Lorentz-covariant action (in natural units, where $c = \hslash = 1$):
+\begin{equation}
+    S[\phi] = \dV \pr{-\frac12 \partial^\mu\phi\partial_\mu\phi +\frac12 m^2\phi^2 +V(\phi)} \label{1:ActionScalar}
+\end{equation}
+where $V(\phi)$ is any potential, such as $\frac{g}{6}\phi^3$ or $\frac{g}{4!}\phi^4$.
+Real scalar fields do not describe any real-world elementary particle, though they are useful to learn basic principles of quantum field theory, as they are the simplest fields that can be written.
+
 \subsection{Dirac Spinor Fields}
-Let us take into consideration a (free) quantum field theory describing a fermion, such as a quark or a lepton, in a $4$-dimensional spacetime with metric $\eta_{\mu\nu} = \diag(-1,1,1,1)$. Its action (in natural units, where $c = \hslash = 1$) can be written as:
+Let us now take into consideration a (free) quantum field theory describing a fermion, such as a quark or a lepton. Its action can be written as:
 \begin{equation}
       S_\psi[\psi(x),\psibar(x)] = \dV \left( \i\psibar\slashed\partial\psi - m\psibar\psi \right) \label{1:FreeQEDFermionAction}
 \end{equation}
@@ -156,6 +164,5 @@ These self-interactions make the the Yang-Mills action interesting to be studied
 \begin{comment}
 \\Everything that has been said for $\SUN$ can be also extended to $\mathit{SO}(N)$ by replacing \emph{unitary} with \emph{orthogonal} and \emph{traceless} with \emph{antisymmetric}. In fact, this discussion can be made for every compact\footnote{Compactness, \ie $\Tr{T^aT^b}$ positive defined, is required in order to have a bounded from below Hamiltonian.} group, such as the symplectic group $\mathit{Sp}(2N)$ and the five exceptional Lie groups $\mathit{G}(2)$, $\spF$, $\mathit{E}(6)$, $\mathit{E}(7)$ and $\mathit{E}(8)$.
 \end{comment}
-\newpage
 
 \section{Lattice Field Theory}
