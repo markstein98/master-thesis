@@ -4,6 +4,7 @@
 \contentsline {subsection}{\numberline {1.1.2}Dirac Spinor Fields}{2}{subsection.1.1.2}%
 \contentsline {subsection}{\numberline {1.1.3}Quantum Electrodynamics}{2}{subsection.1.1.3}%
 \contentsline {subsection}{\numberline {1.1.4}Non-Abelian Gauge Theories}{3}{subsection.1.1.4}%
+\contentsline {subsection}{\numberline {1.1.5}Wick Rotation}{6}{subsection.1.1.5}%
 \contentsline {section}{\numberline {1.2}Lattice Field Theory}{6}{section.1.2}%
 \contentsline {chapter}{\numberline {2}Computer Simulation of Gauge Theories }{7}{chapter.2}%
 \contentsline {chapter}{\numberline {3}Gauge Theories Simulation on non-hypercubic lattice F4}{9}{chapter.3}%

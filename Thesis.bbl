@@ -183,6 +183,101 @@
       \verb https://books.google.it/books?id=EJ4%5C_BAAAQBAJ
       \endverb
     \endentry
+    \entry{Gattringer:2010zz}{book}{}
+      \name{author}{2}{}{%
+        {{hash=ab3acce952ef8402d2dbc5455a71d4be}{%
+           family={Gattringer},
+           familyi={G\bibinitperiod},
+           given={Christof},
+           giveni={C\bibinitperiod}}}%
+        {{hash=1c1aad0ffe801a9183e81d979c5ee285}{%
+           family={Lang},
+           familyi={L\bibinitperiod},
+           given={Christian\bibnamedelima B.},
+           giveni={C\bibinitperiod\bibinitdelim B\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Berlin: Springer}%
+      }
+      \strng{namehash}{b4fa3b7228db513c35d00236bdc30099}
+      \strng{fullhash}{b4fa3b7228db513c35d00236bdc30099}
+      \strng{bibnamehash}{b4fa3b7228db513c35d00236bdc30099}
+      \strng{authorbibnamehash}{b4fa3b7228db513c35d00236bdc30099}
+      \strng{authornamehash}{b4fa3b7228db513c35d00236bdc30099}
+      \strng{authorfullhash}{b4fa3b7228db513c35d00236bdc30099}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{isbn}{978-3-642-01849-7, 978-3-642-01850-3}
+      \field{title}{{Quantum chromodynamics on the lattice}}
+      \field{volume}{788}
+      \field{year}{2010}
+      \verb{doi}
+      \verb 10.1007/978-3-642-01850-3
+      \endverb
+    \endentry
+    \entry{Montvay:1994cy}{book}{}
+      \name{author}{2}{}{%
+        {{hash=0fdba03e2a1dbd3e5c8566eb700ed7d5}{%
+           family={Montvay},
+           familyi={M\bibinitperiod},
+           given={I.},
+           giveni={I\bibinitperiod}}}%
+        {{hash=90c34f3c5e5505d4616c62ff17ee0872}{%
+           family={Münster},
+           familyi={M\bibinitperiod},
+           given={G.},
+           giveni={G\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Cambridge University Press}%
+      }
+      \strng{namehash}{7b2c5947f301c4ab2adf171ba9f5798b}
+      \strng{fullhash}{7b2c5947f301c4ab2adf171ba9f5798b}
+      \strng{bibnamehash}{7b2c5947f301c4ab2adf171ba9f5798b}
+      \strng{authorbibnamehash}{7b2c5947f301c4ab2adf171ba9f5798b}
+      \strng{authornamehash}{7b2c5947f301c4ab2adf171ba9f5798b}
+      \strng{authorfullhash}{7b2c5947f301c4ab2adf171ba9f5798b}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{isbn}{978-0-521-59917-7, 978-0-511-87919-7}
+      \field{month}{3}
+      \field{series}{Cambridge Monographs on Mathematical Physics}
+      \field{title}{{Quantum fields on a lattice}}
+      \field{year}{1997}
+      \verb{doi}
+      \verb 10.1017/CBO9780511470783
+      \endverb
+    \endentry
+    \entry{DeGrand:2006zz}{book}{}
+      \name{author}{2}{}{%
+        {{hash=7a176fe5c1009e5a1a741f391e6d9e78}{%
+           family={DeGrand},
+           familyi={D\bibinitperiod},
+           given={Thomas},
+           giveni={T\bibinitperiod}}}%
+        {{hash=5dbdafb087998e7d79d15a93911967cb}{%
+           family={Detar},
+           familyi={D\bibinitperiod},
+           given={Carleton\bibnamedelima E.},
+           giveni={C\bibinitperiod\bibinitdelim E\bibinitperiod}}}%
+      }
+      \strng{namehash}{94e44a50a7a0b29771f1f86e5fb5b2ca}
+      \strng{fullhash}{94e44a50a7a0b29771f1f86e5fb5b2ca}
+      \strng{bibnamehash}{94e44a50a7a0b29771f1f86e5fb5b2ca}
+      \strng{authorbibnamehash}{94e44a50a7a0b29771f1f86e5fb5b2ca}
+      \strng{authornamehash}{94e44a50a7a0b29771f1f86e5fb5b2ca}
+      \strng{authorfullhash}{94e44a50a7a0b29771f1f86e5fb5b2ca}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Lattice methods for quantum chromodynamics}
+      \field{year}{2006}
+    \endentry
   \enddatalist
 \endrefsection
 \endinput

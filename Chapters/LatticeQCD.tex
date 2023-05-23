@@ -11,6 +11,7 @@ In quantum field theory, a real scalar massive field is described, in a $4$-dime
 \end{equation}
 where $V(\phi)$ is any potential, such as $\frac{g}{6}\phi^3$ or $\frac{g}{4!}\phi^4$.
 Real scalar fields do not describe any real-world elementary particle, though they are useful to learn basic principles of quantum field theory, as they are the simplest fields that can be written.
+%TODO: check notation consistency with lattice action after Wick rotation
 
 \subsection{Dirac Spinor Fields}
 Let us now take into consideration a (free) quantum field theory describing a fermion, such as a quark or a lepton. Its action can be written as:
@@ -165,4 +166,9 @@ These self-interactions make the the Yang-Mills action interesting to be studied
 \\Everything that has been said for $\SUN$ can be also extended to $\mathit{SO}(N)$ by replacing \emph{unitary} with \emph{orthogonal} and \emph{traceless} with \emph{antisymmetric}. In fact, this discussion can be made for every compact\footnote{Compactness, \ie $\Tr{T^aT^b}$ positive defined, is required in order to have a bounded from below Hamiltonian.} group, such as the symplectic group $\mathit{Sp}(2N)$ and the five exceptional Lie groups $\mathit{G}(2)$, $\spF$, $\mathit{E}(6)$, $\mathit{E}(7)$ and $\mathit{E}(8)$.
 \end{comment}
 
+\subsection{Wick Rotation}
+Up to now, actions were written in Minkowskian spacetime, where $\eta_{\mu\nu} = \diag(-1,1,1,1)$. In order to have a positive-defined metric $\eta_{\mu\nu} = \delta_{\mu\nu}$ a Wick rotation can be performed by re-defining the time coordinate to be $\tau = \i t = \i x^0$.
+This rotation is not only a matter of convenience, as it is needed in perturbative QFT for the computation of (otherwise oscillating) functional integrals and because a Minkowskian lattice cannot be rigorously defined.
+
 \section{Lattice Field Theory}
+This section is based on standard quantum field theory textbooks cited before and lattice field theory textbooks \cite{Gattringer:2010zz, Montvay:1994cy, DeGrand:2006zz}.
