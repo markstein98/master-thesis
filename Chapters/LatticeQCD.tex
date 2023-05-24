@@ -7,7 +7,7 @@ This first section is based on material that can be found in standard textbooks 
 \subsection{Scalar Fields}
 In quantum field theory, a real scalar massive field is described, in a $4$-dimensional spacetime with metric $\eta_{\mu\nu} = \diag(-1,1,1,1)$, by the following Lorentz-covariant action (in natural units, where $c = \hslash = 1$):
 \begin{equation}
-    S[\phi] = \dV \pr{-\frac12 \partial^\mu\phi\partial_\mu\phi +\frac12 m^2\phi^2 +V(\phi)} \label{1:ActionScalar}
+    S[\phi] = \dV \pr{-\frac12 \partial^\mu\phi\partial_\mu\phi -\frac12 m^2\phi^2 +V(\phi)} \label{1:ActionScalar}
 \end{equation}
 where $V(\phi)$ is any potential, such as $\frac{g}{6}\phi^3$ or $\frac{g}{4!}\phi^4$.
 Real scalar fields do not describe any real-world elementary particle, though they are useful to learn basic principles of quantum field theory, as they are the simplest fields that can be written.
@@ -167,8 +167,13 @@ These self-interactions make the the Yang-Mills action interesting to be studied
 \end{comment}
 
 \subsection{Wick Rotation}
-Up to now, actions were written in Minkowskian spacetime, where $\eta_{\mu\nu} = \diag(-1,1,1,1)$. In order to have a positive-defined metric $\eta_{\mu\nu} = \delta_{\mu\nu}$ a Wick rotation can be performed by re-defining the time coordinate to be $\tau = \i t = \i x^0$.
+Up to now, actions were written in Minkowskian spacetime, where $\eta_{\mu\nu} = \diag(-1,1,1,1)$. In order to have a positive-defined metric $\eta_{\mu\nu} = \delta_{\mu\nu}$ a Wick rotation can be performed by re-defining the time coordinate to be $\tau = \i t = \i x^0$, as is rigorously proven in \cite{SCHLINGEMANN_1999}.
 This rotation is not only a matter of convenience, as it is needed in perturbative QFT for the computation of (otherwise oscillating) functional integrals and because a Minkowskian lattice cannot be rigorously defined.
+The relations between the Minkowski actions written before and the Euclidean actions are:
+\begin{align*}
+    S[\phi] =& \i S^E[\phi] = \i \dV \pr{\frac12\partial^\mu\phi\partial_\mu\phi+\frac12m^2\phi^2+V(\phi)}
+\end{align*}
+where the superscript $E$ means that the action is written in the Euclidean spacetime.
 
 \section{Lattice Field Theory}
-This section is based on standard quantum field theory textbooks cited before and lattice field theory textbooks \cite{Gattringer:2010zz, Montvay:1994cy, DeGrand:2006zz}.
+This section is based on standard quantum field theory textbooks cited before and lattice field theory textbooks \cite{Montvay:1994cy, Gattringer:2010zz, DeGrand:2006zz}.
