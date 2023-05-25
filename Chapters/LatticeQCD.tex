@@ -168,12 +168,27 @@ These self-interactions make the the Yang-Mills action interesting to be studied
 
 \subsection{Wick Rotation}
 Up to now, actions were written in Minkowskian spacetime, where $\eta_{\mu\nu} = \diag(-1,1,1,1)$. In order to have a positive-defined metric $\eta_{\mu\nu} = \delta_{\mu\nu}$ a Wick rotation can be performed by re-defining the time coordinate to be $\tau = \i t = \i x^0$, as is rigorously proven in \cite{SCHLINGEMANN_1999}.
-This rotation is not only a matter of convenience, as it is needed in perturbative QFT for the computation of (otherwise oscillating) functional integrals and because a Minkowskian lattice cannot be rigorously defined.
-The relations between the Minkowski actions written before and the Euclidean actions are:
-\begin{align*}
-    S[\phi] =& \i S^E[\phi] = \i \dV \pr{\frac12\partial^\mu\phi\partial_\mu\phi+\frac12m^2\phi^2+V(\phi)}
-\end{align*}
-where the superscript $E$ means that the action is written in the Euclidean spacetime.
+The principle behind Wick rotation is that the time coordinate is promoted to be a complex number and the integration (in the action) from $-\infty$ to $\infty$ is made to be from $-\i\infty$ to $\i\infty$ through a rotation of $\frac\pi2$ in the complex plane, assuming that correlators and other physical quantities do not present singularities in the first and third quadrant of the complex plane of $t$.
+This rotation is not only a matter of convenience, as it is needed in perturbative QFT for the computation of (otherwise oscillating) functional integrals and because a Minkowskian lattice cannot be rigorously defined.\\
+The relation between the Minkowski actions written before and the Euclidean actions is $S^M = \i S^E$, because $\dd^4x^E = \i \dd^4x^M$.\\
+Thus, the Euclidean actions are\footnote{Note that they are not the same as their Minkowskian counterpart, as some redefinitions of the fields and the $\gamma$ matrices have been implicitly made, in order to have the respective theories non ill-defined.}:
+\begin{align}
+    S^E[\phi] =& \dV \pr{\frac12\partial^\mu\phi\partial_\mu\phi+\frac12m^2\phi^2+V(\phi)} \label{1:ScalarActionEuclidean}\\
+    S^E_F =& \dV\psibar\pr{\gamma^\mu\pr{\partial_\mu+\i g \A_\mu} + m}\psi \label{1:FerionActionEuclidean}\\
+    S^E_{YM} =& \frac14 \dV \Fmunu^a F^{a\mu\nu} \label{1:YMActionEuclidean}
+\end{align}
+where the superscript $E$, meaning that the action is written in the Euclidean spacetime, will be omitted from now on.
 
 \section{Lattice Field Theory}
-This section is based on standard quantum field theory textbooks cited before and lattice field theory textbooks \cite{Montvay:1994cy, Gattringer:2010zz, DeGrand:2006zz}.
+\subsection{Why Lattice Field Theory}
+After the Wick rotation, the quantum field theory can be studied perturbatively, through the saddle-point evaluation of the path integral, for instance, where the partition function
+\begin{equation*}
+    Z = \int\DD\varphi e^{\i S^M[\varphi]} = \int\DD\varphi e^{-S^E[\varphi]}
+\end{equation*}
+has become non-oscillating.
+This approach, however, works well only if the coupling constants are \emph{small enough} and does not allow to obtain non-perturbative results, \ie physical quantities that depend on essential singularities in the coupling constant, like glueballs for Yang-Mills theories.\\
+For this reason, a non-perturbative approach has to be taken into consideration and one possibility is Lattice Field Theory: the spacetime is taken to be a lattice, with lattice spacing $a$, and the fields can assume different values only on the sites of the lattice.
+If the continuum limit ($a\to0$) is taken, the theory must reproduce results obtained in the continuum, like the ones obtained in perturbation theory, however the presence of a discrete spacetime provides a natural cutoff for the momenta, allowing to keep under control ultraviolet divergencies, although they need to be taken into consideration when approaching the continuum limit.\\
+In this section, based on standard quantum field theory textbooks cited before and lattice field theory textbooks \cite{Montvay:1994cy, Gattringer:2010zz, DeGrand:2006zz}, the regularization of the previous quantum field theories on a Simple Hypercubic (SH) lattice is presented.
+
+\subsection{Scalar Field Action on the Lattice}

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Arch Linux) (preloaded format=pdflatex 2023.4.7)  24 MAY 2023 12:09
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Arch Linux) (preloaded format=pdflatex 2023.4.7)  25 MAY 2023 12:38
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1381,7 +1381,7 @@ Package biblatex Info: ... file 'Thesis.bbl' found.
 Package biblatex Info: Reference section=0 on input line 10.
 Package biblatex Info: Reference segment=0 on input line 10.
  (./Chapters/CoverITAuc.tex
-<./pics/logo.png, id=52, 2724.579pt x 2845.2699pt>
+<./pics/logo.png, id=60, 2724.579pt x 2845.2699pt>
 File: ./pics/logo.png Graphic file (type png)
 <use ./pics/logo.png>
 Package pdftex.def Info: ./pics/logo.png  used on input line 3.
@@ -2157,40 +2157,84 @@ ine 170.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
 ine 170.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 175.
+ine 171.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 175.
+ine 171.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 175.
+ine 171.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 175.
+ine 171.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 175.
+ine 171.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 175.
+ine 171.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 175.
+ine 173.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 175.
+ine 173.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 176.
-) [6] (./Chapters/GaugeSim.tex
-Chapter 2.
-) [7
+ine 174.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 174.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 174.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 179.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 179.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 179.
+LaTeX Font Info:    Undo math alphabet allocation in version normal on input li
+ne 179.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 179.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 179.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 179.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 179.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 179.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 179.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 179.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 179.
+LaTeX Font Info:    Undo math alphabet allocation in version normal on input li
+ne 179.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 179.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 179.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 179.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 180.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 187.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 190.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 191.
+ [6]) [7] (./Chapters/GaugeSim.tex [8
 
-] (./Chapters/F4Lattice.tex [8
+]
+Chapter 2.
+) [9] (./Chapters/F4Lattice.tex [10
 
 ]
 Chapter 3.
-) [9] (./Chapters/SimulationResults.tex [10
+) [11] (./Chapters/SimulationResults.tex [12
 
 ]
 Chapter 4.
-) [11] (./Chapters/Conclusions.tex [12
+) [13] (./Chapters/Conclusions.tex [14
 
 ]
 Chapter 5.
-) [13] (./Chapters/Bibliography.tex) [14
+) [15] (./Chapters/Bibliography.tex) [16
 
 ]
 LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 2
@@ -2217,18 +2261,18 @@ LaTeX Font Info:    No math alphabet change to frozen version normal on input l
 ine 2.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
 ine 2.
- [15] [16] (./Thesis.aux)
+ [17] [18] (./Thesis.aux)
 Package rerunfilecheck Info: File `Thesis.out' has not changed.
-(rerunfilecheck)             Checksum: 2131A3F0EFF810FFAC4906524D1D0298;2215.
+(rerunfilecheck)             Checksum: 8DF96757CA135502687B9040E26C0046;2653.
 Package logreq Info: Writing requests to 'Thesis.run.xml'.
 \openout1 = `Thesis.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 29795 strings out of 476025
- 557421 string characters out of 5796533
+ 29809 strings out of 476025
+ 557632 string characters out of 5796533
  1876388 words of memory out of 5000000
- 49668 multiletter control sequences out of 15000+600000
+ 49674 multiletter control sequences out of 15000+600000
  640841 words of font info for 140 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  80i,21n,80p,1151b,1985s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -2252,10 +2296,10 @@ fonts/type1/public/mathabx-type1/matha8.pfb></usr/share/texmf-dist/fonts/type1/
 public/mathabx-type1/mathx10.pfb></usr/share/texmf-dist/fonts/type1/public/amsf
 onts/symbols/msbm10.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfxc
 2074.pfb>
-Output written on Thesis.pdf (22 pages, 1434193 bytes).
+Output written on Thesis.pdf (24 pages, 1442249 bytes).
 PDF statistics:
- 413 PDF objects out of 1000 (max. 8388607)
- 327 compressed objects within 4 object streams
- 71 named destinations out of 1000 (max. 500000)
- 102 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 439 PDF objects out of 1000 (max. 8388607)
+ 351 compressed objects within 4 object streams
+ 79 named destinations out of 1000 (max. 500000)
+ 118 words of extra memory for PDF output out of 10000 (max. 10000000)
 

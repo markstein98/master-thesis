@@ -6,7 +6,9 @@
 \contentsline {subsection}{\numberline {1.1.4}Non-Abelian Gauge Theories}{3}{subsection.1.1.4}%
 \contentsline {subsection}{\numberline {1.1.5}Wick Rotation}{6}{subsection.1.1.5}%
 \contentsline {section}{\numberline {1.2}Lattice Field Theory}{6}{section.1.2}%
-\contentsline {chapter}{\numberline {2}Computer Simulation of Gauge Theories }{7}{chapter.2}%
-\contentsline {chapter}{\numberline {3}Gauge Theories Simulation on non-hypercubic lattice F4}{9}{chapter.3}%
-\contentsline {chapter}{\numberline {4}Simulation Results}{11}{chapter.4}%
-\contentsline {chapter}{\numberline {5}Conclusions}{13}{chapter.5}%
+\contentsline {subsection}{\numberline {1.2.1}Why Lattice Field Theory}{6}{subsection.1.2.1}%
+\contentsline {subsection}{\numberline {1.2.2}Scalar Field Action on the Lattice}{7}{subsection.1.2.2}%
+\contentsline {chapter}{\numberline {2}Computer Simulation of Gauge Theories }{9}{chapter.2}%
+\contentsline {chapter}{\numberline {3}Gauge Theories Simulation on non-hypercubic lattice F4}{11}{chapter.3}%
+\contentsline {chapter}{\numberline {4}Simulation Results}{13}{chapter.4}%
+\contentsline {chapter}{\numberline {5}Conclusions}{15}{chapter.5}%
