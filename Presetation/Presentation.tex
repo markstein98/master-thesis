@@ -1,12 +1,7 @@
 \documentclass{beamer}
-\usetheme{Madrid}
-\title[QFT on a Highly Symmetric Lattice]{Quantum Field Theory on a Highly Symmetric Lattice}
-%\subtitle{}
-\author{Marco Aliberti}
-\institute[]{Università degli Studi di Torino}
-\date{\today}
 
-%\setbeamertemplate{navigation symbols}{} % Uncomment to remove navigation buttons
+\input{Libraries}
+\input{Settings}
 
 \begin{document}
 
@@ -14,5 +9,57 @@
   \titlepage
 \end{frame}
 
+\begin{frame}
+  \frametitle{Why Lattice Quantum Chromodynamics?}
+  \centering
+  In quantum field theory scattering amplitudes in the form
+  \begin{equation*}
+    \bra{f}\ket{i} = \int_{\phi_i}^{\phi_f}\mathcal{D}\prs{\phi} e^{-S[\phi]}
+  \end{equation*}
+  need to be evaluated.
+\onslide<2->
+  There are two possible approaches:
+  \vspace{\baselineskip}
+  \begin{columns}[t]
+    \column{0.5\textwidth}
+    \centering
+    Perturbative\\
+    \vspace{\baselineskip}
+    \includegraphics[width=0.4\textwidth]{gluonfd.png}
+    \column{0.5\textwidth}
+\onslide<3->
+    \centering
+    Non-Perturbative\\
+    \vspace{\baselineskip}
+    \includegraphics[width=0.45\textwidth]{Glueball.png}
+  \end{columns}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Perturbative vs Non-Perturbative}
+  \centering
+  \begin{columns}[t]
+    \column{0.5\textwidth}
+    \centering
+    Perturbative\\
+    \vspace{\baselineskip}
+    \includegraphics[height=0.4\textwidth]{gluonfd.png}\\
+    \vspace{\baselineskip}
+    \begin{itemize}
+     \item pro
+     \item contro
+    \end{itemize}
+    \column{0.5\textwidth}
+    \centering
+    Non-Perturbative\\
+    \vspace{\baselineskip}
+    \includegraphics[height=0.4\textwidth]{Glueball.png}\\
+    \vspace{\baselineskip}
+    \begin{itemize}
+     \item pro
+     \item contro
+    \end{itemize}
+  \end{columns}
+\end{frame}
 
 \end{document}
