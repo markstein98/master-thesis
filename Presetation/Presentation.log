@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Arch Linux) (preloaded format=pdflatex 2023.6.29)  5 JUL 2023 17:14
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Arch Linux) (preloaded format=pdflatex 2023.6.29)  6 JUL 2023 15:54
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -977,6 +977,51 @@ Package pdftex.def Info: ./pics/Glueball.png  used on input line 72.
  [10
 
 ]
+<./pics/Lattice.png, id=134, 470.50781pt x 470.50781pt>
+File: ./pics/Lattice.png Graphic file (type png)
+<use ./pics/Lattice.png>
+Package pdftex.def Info: ./pics/Lattice.png  used on input line 112.
+(pdftex.def)             Requested size: 133.49495pt x 133.49304pt.
+ [11
+
+ <./pics/Lattice.png>]
+File: ./pics/Lattice.png Graphic file (type png)
+<use ./pics/Lattice.png>
+Package pdftex.def Info: ./pics/Lattice.png  used on input line 112.
+(pdftex.def)             Requested size: 133.49495pt x 133.49304pt.
+ [12
+
+]
+<./pics/LatticeScalar.png, id=186, 470.50781pt x 470.50781pt>
+File: ./pics/LatticeScalar.png Graphic file (type png)
+<use ./pics/LatticeScalar.png>
+Package pdftex.def Info: ./pics/LatticeScalar.png  used on input line 112.
+(pdftex.def)             Requested size: 133.49495pt x 133.49304pt.
+ [13
+
+ <./pics/LatticeScalar.png>]
+<./pics/LatticeGauge.png, id=214, 470.50781pt x 470.50781pt>
+File: ./pics/LatticeGauge.png Graphic file (type png)
+<use ./pics/LatticeGauge.png>
+Package pdftex.def Info: ./pics/LatticeGauge.png  used on input line 112.
+(pdftex.def)             Requested size: 133.49495pt x 133.49304pt.
+ [14
+
+ <./pics/LatticeGauge.png>]
+File: ./pics/LatticeGauge.png Graphic file (type png)
+<use ./pics/LatticeGauge.png>
+Package pdftex.def Info: ./pics/LatticeGauge.png  used on input line 112.
+(pdftex.def)             Requested size: 133.49495pt x 133.49304pt.
+ [15
+
+]
+File: ./pics/LatticeGauge.png Graphic file (type png)
+<use ./pics/LatticeGauge.png>
+Package pdftex.def Info: ./pics/LatticeGauge.png  used on input line 112.
+(pdftex.def)             Requested size: 133.49495pt x 133.49304pt.
+ [16
+
+]
 \tf@nav=\write6
 \openout6 = `Presentation.nav'.
 
@@ -986,19 +1031,18 @@ Package pdftex.def Info: ./pics/Glueball.png  used on input line 72.
 \tf@snm=\write8
 \openout8 = `Presentation.snm'.
 
-
-(./Presentation.aux)
+ (./Presentation.aux)
 Package rerunfilecheck Info: File `Presentation.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 22545 strings out of 477985
- 435130 string characters out of 5840058
- 1861388 words of memory out of 5000000
- 42250 multiletter control sequences out of 15000+600000
- 519037 words of font info for 56 fonts, out of 8000000 for 9000
+ 22690 strings out of 477985
+ 438678 string characters out of 5840058
+ 1871388 words of memory out of 5000000
+ 42375 multiletter control sequences out of 15000+600000
+ 525144 words of font info for 78 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 128i,15n,122p,387b,759s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 128i,15n,122p,387b,894s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/
 texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texmf-dist/fon
 ts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texmf-dist/fonts/type1/public
@@ -1007,11 +1051,12 @@ mss12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmss8.pfb></usr
 /share/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi10.pfb></usr/share/texmf-
 dist/fonts/type1/public/amsfonts/cm/cmssi8.pfb></usr/share/texmf-dist/fonts/typ
 e1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-dist/fonts/type1/public/amsf
-onts/cm/cmsy8.pfb>
-Output written on Presentation.pdf (10 pages, 641460 bytes).
+onts/cm/cmsy8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/symbols/ms
+bm10.pfb>
+Output written on Presentation.pdf (16 pages, 741766 bytes).
 PDF statistics:
- 155 PDF objects out of 1000 (max. 8388607)
- 103 compressed objects within 2 object streams
- 21 named destinations out of 1000 (max. 500000)
- 95 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 326 PDF objects out of 1000 (max. 8388607)
+ 195 compressed objects within 2 object streams
+ 33 named destinations out of 1000 (max. 500000)
+ 494 words of extra memory for PDF output out of 10000 (max. 10000000)
 
