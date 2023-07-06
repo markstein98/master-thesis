@@ -72,29 +72,62 @@
 \end{frame}
 
 \begin{frame}
+  \frametitle{What is a Lattice?}
+  \centering
+  \begin{columns}
+  \column{0.5\textwidth}
+\onslide<1->
+    \begin{block}{Definition: Lattice $\Lambda$}
+      $\Lambda =\left\{\left.\sum _{i=1}^{n}a_{i}e_{i}\;\right\vert \;a_{i}\in \mathbb {Z} \right\}$, with $\prc{e_i}$ any basis of $\R^n$
+    \end{block}
+    \vspace{5\baselineskip}
+\onslide<2->
+    \begin{exampleblock}{Hypercubic lattice}
+      $\prc{e_i}$ is the canonical basis of $\R^n$\\
+      $a$ is called \emph{lattice spacing}.
+    \end{exampleblock}
+    \vspace{2\baselineskip}
+  
+  \column{0.1\textwidth}
+  
+  \column{0.4\textwidth}
+\onslide<1->
+    \centering
+    \begin{figure}
+      \includegraphics<1->[width=\textwidth]{two-dimensional-lattice.png}
+      \caption{A bidimensional lattice.}
+    \end{figure}
+\onslide<2->
+    \begin{figure}
+      \includegraphics<1->[width=0.5\textwidth]{square-lattice.png}
+      \caption{A square lattice.}
+    \end{figure}
+  \end{columns}
+\end{frame}
+
+\begin{frame}
   \frametitle{Lattice Field Theory}
   \centering
   \begin{columns}
   \column{0.6\textwidth}
 \onslide<1->
-    \begin{block}{Definition: Lattice $\Lambda$}
-      $\Lambda =\left\{\left.\sum _{i=1}^{n}a_{i}e_{i}\;\right\vert \;a_{i}\in \mathbb {Z} \right\}$, $\prc{e_i}$ basis of $\R^n$
-    \end{block}
-    Hypercubic lattice: $\prc{e_i}$ is the canonical basis of $\R^n$, $a$ is called \emph{lattice spacing}.\\
+    \begin{exampleblock}{Basic idea}
+      Fields can take values only in given parts of the lattice, $x\rightarrow n\in\Lambda$.
+    \end{exampleblock}
+    \vspace{\baselineskip}
 \onslide<2->
-    Basic idea: fields can take values only in given parts of the lattice, $x\rightarrow n\in\Lambda$.
-\onslide<3->
     Examples:
     \begin{itemize}
-      \item Scalar fields $\Phi(x)\rightarrow\Phi(n)$ on sites
+      \item \textcolor{blue}{Scalar fields} $\Phi(x)\rightarrow\Phi(n)$ on sites
+\onslide<3->
+      \item \textcolor{red}{Vector fields} $A_\mu(x)\rightarrow A_\mu(n)$ on links
 \onslide<4->
-      \item Vector fields $A_\mu(x)\rightarrow A_\mu(n)$ on links
-\onslide<5->
       \item Object with $k$ indices on $k$-symplexes
     \end{itemize}
-\onslide<6->
+\onslide<5->
+    \vspace{\baselineskip}
     \begin{alertblock}{Attention!}
-      Spinorial fields are trickier.
+      Spinorial fields are trickier to be discretized.
     \end{alertblock}
   
   \column{0.01\textwidth}
@@ -103,10 +136,10 @@
 \onslide<1->
     \centering
     \begin{figure}
-      \includegraphics<1-2>[width=\textwidth]{Lattice.png}
-      \includegraphics<3>[width=\textwidth]{LatticeScalar.png}
-      \includegraphics<4->[width=\textwidth]{LatticeGauge.png}
-      \caption{Example of a cubic lattice in $\R^3$.}
+      \includegraphics<1>[width=\textwidth]{Lattice.png}
+      \includegraphics<2>[width=\textwidth]{LatticeScalar.png}
+      \includegraphics<3->[width=\textwidth]{LatticeGauge.png}\\
+      \caption{A (hyper)cubic lattice in $\R^3$.}
     \end{figure}
   \end{columns}
 \end{frame}

@@ -4,10 +4,12 @@
 \headcommand {\beamer@framepages {2}{4}}
 \headcommand {\slideentry {0}{0}{3}{5/10}{}{0}}
 \headcommand {\beamer@framepages {5}{10}}
-\headcommand {\slideentry {0}{0}{4}{11/16}{}{0}}
-\headcommand {\beamer@framepages {11}{16}}
-\headcommand {\beamer@partpages {1}{16}}
-\headcommand {\beamer@subsectionpages {1}{16}}
-\headcommand {\beamer@sectionpages {1}{16}}
-\headcommand {\beamer@documentpages {16}}
-\headcommand {\gdef \inserttotalframenumber {4}}
+\headcommand {\slideentry {0}{0}{4}{11/12}{}{0}}
+\headcommand {\beamer@framepages {11}{12}}
+\headcommand {\slideentry {0}{0}{5}{13/17}{}{0}}
+\headcommand {\beamer@framepages {13}{17}}
+\headcommand {\beamer@partpages {1}{17}}
+\headcommand {\beamer@subsectionpages {1}{17}}
+\headcommand {\beamer@sectionpages {1}{17}}
+\headcommand {\beamer@documentpages {17}}
+\headcommand {\gdef \inserttotalframenumber {5}}

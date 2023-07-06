@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Arch Linux) (preloaded format=pdflatex 2023.6.29)  6 JUL 2023 15:54
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Arch Linux) (preloaded format=pdflatex 2023.6.29)  6 JUL 2023 18:09
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -676,7 +676,7 @@ Package: amsthm 2020/05/29 v2.20.6
 \beamer@dimb=\dimen293
 )
 (/usr/share/texmf-dist/tex/latex/beamer/beamerouterthemedefault.sty)))
-(./Libraries.tex) (/usr/share/texmf-dist/tex/latex/physics/physics.sty
+(./Libraries.tex (/usr/share/texmf-dist/tex/latex/physics/physics.sty
 Package: physics 
 
 (/usr/share/texmf-dist/tex/latex/l3packages/xparse/xparse.sty
@@ -689,7 +689,7 @@ File: l3backend-pdftex.def 2023-01-16 L3 backend support: PDF output (pdfTeX)
 \l__pdf_internal_box=\box76
 ))
 Package: xparse 2023-02-02 L3 Experimental document command parser
-))
+)))
 (./Settings.tex (/usr/share/texmf-dist/tex/latex/beamer/beamerthemeMadrid.sty
 (/usr/share/texmf-dist/tex/latex/beamer/beamercolorthemewhale.sty)
 (/usr/share/texmf-dist/tex/latex/beamer/beamercolorthemeorchid.sty)
@@ -977,49 +977,69 @@ Package pdftex.def Info: ./pics/Glueball.png  used on input line 72.
  [10
 
 ]
-<./pics/Lattice.png, id=134, 470.50781pt x 470.50781pt>
-File: ./pics/Lattice.png Graphic file (type png)
-<use ./pics/Lattice.png>
-Package pdftex.def Info: ./pics/Lattice.png  used on input line 112.
-(pdftex.def)             Requested size: 133.49495pt x 133.49304pt.
+<./pics/two-dimensional-lattice.png, id=134, 803.0pt x 401.5pt>
+File: ./pics/two-dimensional-lattice.png Graphic file (type png)
+<use ./pics/two-dimensional-lattice.png>
+Package pdftex.def Info: ./pics/two-dimensional-lattice.png  used on input line
+ 106.
+(pdftex.def)             Requested size: 136.91603pt x 68.45625pt.
+<./pics/square-lattice.png, id=135, 225.84375pt x 225.84375pt>
+File: ./pics/square-lattice.png Graphic file (type png)
+<use ./pics/square-lattice.png>
+Package pdftex.def Info: ./pics/square-lattice.png  used on input line 106.
+(pdftex.def)             Requested size: 68.45801pt x 68.46008pt.
  [11
 
- <./pics/Lattice.png>]
-File: ./pics/Lattice.png Graphic file (type png)
-<use ./pics/Lattice.png>
-Package pdftex.def Info: ./pics/Lattice.png  used on input line 112.
-(pdftex.def)             Requested size: 133.49495pt x 133.49304pt.
+ <./pics/two-dimensional-lattice.png> <./pics/square-lattice.png>]
+File: ./pics/two-dimensional-lattice.png Graphic file (type png)
+<use ./pics/two-dimensional-lattice.png>
+Package pdftex.def Info: ./pics/two-dimensional-lattice.png  used on input line
+ 106.
+(pdftex.def)             Requested size: 136.91603pt x 68.45625pt.
+File: ./pics/square-lattice.png Graphic file (type png)
+<use ./pics/square-lattice.png>
+Package pdftex.def Info: ./pics/square-lattice.png  used on input line 106.
+(pdftex.def)             Requested size: 68.45801pt x 68.46008pt.
  [12
 
 ]
-<./pics/LatticeScalar.png, id=186, 470.50781pt x 470.50781pt>
-File: ./pics/LatticeScalar.png Graphic file (type png)
-<use ./pics/LatticeScalar.png>
-Package pdftex.def Info: ./pics/LatticeScalar.png  used on input line 112.
+<./pics/Lattice.png, id=197, 470.50781pt x 470.50781pt>
+File: ./pics/Lattice.png Graphic file (type png)
+<use ./pics/Lattice.png>
+Package pdftex.def Info: ./pics/Lattice.png  used on input line 145.
 (pdftex.def)             Requested size: 133.49495pt x 133.49304pt.
  [13
 
- <./pics/LatticeScalar.png>]
-<./pics/LatticeGauge.png, id=214, 470.50781pt x 470.50781pt>
-File: ./pics/LatticeGauge.png Graphic file (type png)
-<use ./pics/LatticeGauge.png>
-Package pdftex.def Info: ./pics/LatticeGauge.png  used on input line 112.
+ <./pics/Lattice.png>]
+<./pics/LatticeScalar.png, id=224, 470.50781pt x 470.50781pt>
+File: ./pics/LatticeScalar.png Graphic file (type png)
+<use ./pics/LatticeScalar.png>
+Package pdftex.def Info: ./pics/LatticeScalar.png  used on input line 145.
 (pdftex.def)             Requested size: 133.49495pt x 133.49304pt.
  [14
+
+ <./pics/LatticeScalar.png>]
+<./pics/LatticeGauge.png, id=250, 470.50781pt x 470.50781pt>
+File: ./pics/LatticeGauge.png Graphic file (type png)
+<use ./pics/LatticeGauge.png>
+Package pdftex.def Info: ./pics/LatticeGauge.png  used on input line 145.
+(pdftex.def)             Requested size: 133.49495pt x 133.49304pt.
+ [15
 
  <./pics/LatticeGauge.png>]
 File: ./pics/LatticeGauge.png Graphic file (type png)
 <use ./pics/LatticeGauge.png>
-Package pdftex.def Info: ./pics/LatticeGauge.png  used on input line 112.
+Package pdftex.def Info: ./pics/LatticeGauge.png  used on input line 145.
 (pdftex.def)             Requested size: 133.49495pt x 133.49304pt.
- [15
+
+[16
 
 ]
 File: ./pics/LatticeGauge.png Graphic file (type png)
 <use ./pics/LatticeGauge.png>
-Package pdftex.def Info: ./pics/LatticeGauge.png  used on input line 112.
+Package pdftex.def Info: ./pics/LatticeGauge.png  used on input line 145.
 (pdftex.def)             Requested size: 133.49495pt x 133.49304pt.
- [16
+ [17
 
 ]
 \tf@nav=\write6
@@ -1036,13 +1056,13 @@ Package rerunfilecheck Info: File `Presentation.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 22690 strings out of 477985
- 438678 string characters out of 5840058
- 1871388 words of memory out of 5000000
- 42375 multiletter control sequences out of 15000+600000
+ 22747 strings out of 477985
+ 440616 string characters out of 5840058
+ 1870388 words of memory out of 5000000
+ 42428 multiletter control sequences out of 15000+600000
  525144 words of font info for 78 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 128i,15n,122p,387b,894s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 128i,15n,122p,387b,891s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/
 texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texmf-dist/fon
 ts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texmf-dist/fonts/type1/public
@@ -1053,10 +1073,10 @@ dist/fonts/type1/public/amsfonts/cm/cmssi8.pfb></usr/share/texmf-dist/fonts/typ
 e1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-dist/fonts/type1/public/amsf
 onts/cm/cmsy8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/symbols/ms
 bm10.pfb>
-Output written on Presentation.pdf (16 pages, 741766 bytes).
+Output written on Presentation.pdf (17 pages, 785686 bytes).
 PDF statistics:
- 326 PDF objects out of 1000 (max. 8388607)
- 195 compressed objects within 2 object streams
- 33 named destinations out of 1000 (max. 500000)
- 494 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 363 PDF objects out of 1000 (max. 8388607)
+ 213 compressed objects within 3 object streams
+ 35 named destinations out of 1000 (max. 500000)
+ 582 words of extra memory for PDF output out of 10000 (max. 10000000)
 
