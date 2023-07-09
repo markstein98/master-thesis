@@ -120,7 +120,7 @@
     \begin{itemize}
       \item \textcolor{blue}{Scalar fields} $\Phi(x)\rightarrow\Phi(n)$ on sites
 \onslide<3->
-      \item \textcolor{red}{Vector fields} $A_\mu(x)\rightarrow A_\mu(n)$ on links
+      \item \textcolor{red}{Vector fields} $U_\mu(x)\rightarrow U_\mu(n)$ on links
 \onslide<4->
       \item Object with $k$ indices on $k$-symplexes
     \end{itemize}
@@ -144,5 +144,73 @@
   \end{columns}
 \end{frame}
 
+\begin{frame}
+  \frametitle{Gauge-Invariant Observables and Wilson Action}
+  \centering
+  \vspace{0.5\baselineskip}
+  \begin{columns}
+  \column{0.52\textwidth}
+\onslide<1->
+    The Yang-Mills continuum action is $S=\frac14\dV F^{a\mu\nu}(x)F_{\mu\nu}^a(x)$.
+\onslide<2->
+    \begin{exampleblock}{Definition: Plaquette $U_{\mu\nu}(n)$}
+      $U_\mu(n)U_\nu(n+\mu)U^\dagger_\mu(n+\nu)U^\dagger_\nu(n)$
+    \end{exampleblock}
+    
+  \column{0.01\textwidth}
+  \column{0.47\textwidth}
+\onslide<1->
+    On the lattice, every closed path is gauge-invariant.
+\onslide<3->
+    \begin{block}{Wilson's Idea}
+      $S=\frac{\beta}{2N}\sum_{n,\mu,\nu}\mathfrak{Re}\Tr\pr{\id-U_{\mu\nu}(n)}$
+    \end{block}
+  \end{columns}
+\onslide<1->
+  \begin{figure}
+    \includegraphics[height=0.4\textheight]{wilsonLoop.png}
+    \caption{Gauge-invariant paths on a bidimensional lattice.\cite{SigdelDibakar2016}}
+  \end{figure}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Polyakov Loops and Potential}
+  \centering
+  \vspace{0.5\baselineskip}
+  \begin{columns}
+  \column{0.52\textwidth}
+\onslide<1->
+    If the time coordinate is taken to be periodic, more closed paths arise.
+    \begin{block}{Polyakov Loop}
+      $P(n)=\Tr\prod_{t=0}^{T-1} U_t(n)$
+    \end{block}
+  
+  \column{0.01\textwidth}
+  \column{0.47\textwidth}
+\onslide<2->
+    The expectation value of two Polyakov loops is the potential.
+    \begin{exampleblock}{Potential}
+      $V(R)=-\frac1T\log<P(0)P^\dagger(R)>$
+    \end{exampleblock}
+  \end{columns}
+  \vspace{0.25\baselineskip}
+
+\onslide<1->
+  \begin{figure}
+    \includegraphics[height=0.4\textheight]{wilsonLoop.png}
+    \caption{Gauge-invariant paths on a bidimensional lattice.\cite{SigdelDibakar2016}}
+  \end{figure}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Lattice symmetries}
+  
+\end{frame}
+
+
+\begin{frame}
+  \frametitle{Bibliography}
+  \printbibliography
+\end{frame}
 
 \end{document}
