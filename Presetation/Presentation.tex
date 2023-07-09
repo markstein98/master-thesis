@@ -109,7 +109,7 @@
   \frametitle{Lattice Field Theory}
   \centering
   \begin{columns}
-  \column{0.6\textwidth}
+  \column{0.59\textwidth}
 \onslide<1->
     \begin{exampleblock}{Basic idea}
       Fields can take values only in given parts of the lattice, $x\rightarrow n\in\Lambda$.
@@ -126,19 +126,23 @@
     \end{itemize}
 \onslide<5->
     \vspace{\baselineskip}
-    \begin{alertblock}{Attention!}
+    \begin{alertblock}{Beware!}
       Spinorial fields are trickier to be discretized.
     \end{alertblock}
   
   \column{0.01\textwidth}
   
-  \column{0.39\textwidth}
-\onslide<1->
+  \column{0.4\textwidth}
     \centering
+\onslide<3->
+    \begin{block}{Parallel Transporter}
+      $U_\mu(x)=\exp(i g a A_\mu(x))$
+    \end{block}
+\onslide<1->
     \begin{figure}
-      \includegraphics<1>[width=\textwidth]{Lattice.png}
-      \includegraphics<2>[width=\textwidth]{LatticeScalar.png}
-      \includegraphics<3->[width=\textwidth]{LatticeGauge.png}\\
+      \includegraphics<1>[width=0.9\textwidth]{Lattice.png}
+      \includegraphics<2>[width=0.9\textwidth]{LatticeScalar.png}
+      \includegraphics<3->[width=0.9\textwidth]{LatticeGauge.png}\\
       \caption{A (hyper)cubic lattice in $\R^3$.}
     \end{figure}
   \end{columns}
@@ -151,7 +155,7 @@
   \begin{columns}
   \column{0.52\textwidth}
 \onslide<1->
-    The Yang-Mills continuum action is $S=\frac14\dV F^{a\mu\nu}(x)F_{\mu\nu}^a(x)$.
+    The Yang-Mills continuum action is $S_E=\frac14\dV F^{a\mu\nu}(x)F_{\mu\nu}^a(x)$.
 \onslide<2->
     \begin{exampleblock}{Definition: Plaquette $U_{\mu\nu}(n)$}
       $U_\mu(n)U_\nu(n+\mu)U^\dagger_\mu(n+\nu)U^\dagger_\nu(n)$
@@ -203,9 +207,59 @@
 \end{frame}
 
 \begin{frame}
-  \frametitle{Lattice symmetries}
+  \frametitle{Lattice Symmetries}
+  \centering
+\onslide<1->
+  Poincaré Group can be divided in:
+  \begin{columns}[t]
+  \column{0.45\textwidth}
+    \centering
+    \begin{exampleblock}{\centering Translations}
+      \vspace{-\baselineskip}
+\onslide<2->
+      \begin{align*}
+        x^\mu \rightarrow& x^\mu+\varepsilon^\mu \\
+        &\Downarrow \\
+        n \rightarrow& n+a\hat\mu
+      \end{align*}
+    \end{exampleblock}
+    \vspace{2.5\baselineskip}
+\onslide<4->
+    $a\hat\mu \rightarrow \varepsilon^\mu$ for $a\rightarrow0$
+  
+  \column{0.1\textwidth}
+  \column{0.45\textwidth}
+    \centering
+\onslide<1->
+    \begin{exampleblock}{\centering Rotations}
+      \vspace{-\baselineskip}
+\onslide<3->
+      \begin{align*}
+        x^\mu \rightarrow R^\mu_\nu x^\nu &\quad R\in SO(4) \\
+        &\Downarrow \\
+        n \rightarrow \Gamma n &\quad \Gamma\in T
+      \end{align*}
+    \end{exampleblock}
+    $T$: group of rotations of multiples of $90\degree$ around any axis.\\
+    \vspace{0.6\baselineskip}
+\onslide<5->
+    $\Gamma \xcancel{\rightarrow}R$ for $a\rightarrow0$
+  \end{columns}
+  \vspace{\baselineskip}
+  \begin{columns}
+\onslide<6->
+  \column{0.6\textwidth}
+    \begin{alertblock}{Important:}
+      Rotational invariance seems to be broken.
+    \end{alertblock}
+  \end{columns}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Rotational Invariance Restoration}
   
 \end{frame}
+
 
 
 \begin{frame}
