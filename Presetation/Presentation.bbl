@@ -51,6 +51,40 @@
       \verb https://digitalcommons.fiu.edu/etd/3224?utm_source=digitalcommons.fiu.edu%2Fetd%2F3224&utm_medium=PDF&utm_campaign=PDFCoverPages
       \endverb
     \endentry
+    \entry{Lang:1982tj}{article}{}
+      \name{author}{2}{}{%
+        {{hash=41ad5d61f8023da9d50a30a90ce7676b}{%
+           family={Lang},
+           familyi={L\bibinitperiod},
+           given={C.\bibnamedelimi B.},
+           giveni={C\bibinitperiod\bibinitdelim B\bibinitperiod}}}%
+        {{hash=bb554e45182886300ec8e5b8ff42b549}{%
+           family={Rebbi},
+           familyi={R\bibinitperiod},
+           given={C.},
+           giveni={C\bibinitperiod}}}%
+      }
+      \strng{namehash}{a806e540639cb64bdfbae4d7219b7fb8}
+      \strng{fullhash}{a806e540639cb64bdfbae4d7219b7fb8}
+      \strng{bibnamehash}{a806e540639cb64bdfbae4d7219b7fb8}
+      \strng{authorbibnamehash}{a806e540639cb64bdfbae4d7219b7fb8}
+      \strng{authornamehash}{a806e540639cb64bdfbae4d7219b7fb8}
+      \strng{authorfullhash}{a806e540639cb64bdfbae4d7219b7fb8}
+      \field{sortinit}{6}
+      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Phys. Lett.}
+      \field{note}{[, 322 (1982)]}
+      \field{title}{{Potential and Restoration of Rotational Symmetry in SU(2) Lattice Gauge Theory}}
+      \field{volume}{B115}
+      \field{year}{1982}
+      \field{pages}{137}
+      \range{pages}{1}
+      \verb{doi}
+      \verb 10.1016/0370-2693(82)90813-9
+      \endverb
+    \endentry
   \enddatalist
 \endrefsection
 \endinput
