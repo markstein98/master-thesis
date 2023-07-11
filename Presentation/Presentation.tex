@@ -266,8 +266,7 @@
 
 \begin{frame}
   \frametitle{Rotational Invariance Restoration}
-  Values of $\beta$ are slightly different from Lang and Rebbi's because $a(\beta)\approx\Lambda e^{-b_0\beta}$, with $\Lambda$, $b_0>0$.
-  \footnote{The simulation code is based on the code presented in refs.~\cite{Panero:2009tv,Mykkanen:2012ri}.}
+  Values of $\beta$ are slightly different from Lang and Rebbi's because $a(\beta)\approx\Lambda e^{-b_0\beta}$, with $\Lambda$, $b_0>0$\footnote{The simulation code is based on the code presented in refs.~\cite{Panero:2009tv,Mykkanen:2012ri}.}.
   \vspace{-0.5\baselineskip}
   \begin{columns}
   \column{0.4\textwidth}
@@ -324,6 +323,75 @@
 \onslide<1->
   \footnotesize
   The SH lattice has $8$ nearest neighbours and a $384$-element symmetry group.
+\end{frame}
+
+\begin{frame}
+  \frametitle{$F_4$ Coroots Lattice}
+  \centering
+  \begin{columns}
+  \column{0.6\textwidth}
+\onslide<1->
+    \begin{itemize}
+      \item[\ding{228}] Obtained from the roots lattice of the exceptional Lie algebra $F_4$ and its dual;
+\onslide<2->
+      \item[\ding{228}] Has $48$ nearest neighbours:
+      \begin{itemize}
+        \item The $24$ roots are all possible permutations of coordinate positions of $\pr{\pm1,\pm1,0,0}$
+        \vspace{0.25\baselineskip}
+\onslide<3->
+        \item The $24$ dual roots (coroots) are:
+        \begin{itemize}
+          \item[\ding{109}] The $8$ possible permutations of $\pr{\pm1,0,0,0}$
+          \item[\ding{109}] The $16$ possible permutations of $\pr{\pm\frac12,\pm\frac12,\pm\frac12,\pm\frac12}$
+        \end{itemize}
+      \end{itemize}
+\onslide<4->
+      \item[\ding{228}] Exists only in $4$ dimensions;
+\onslide<5->
+      \item[\ding{228}] Contains the Simple Hypercubic lattice and the BCT;
+\onslide<6->
+      \item[\ding{228}] Has been used only to simulate scalar fields, in \cite{Neuberger:1987kt}.
+    \end{itemize}
+
+  \column{0.4\textwidth}
+\onslide<1->
+    \begin{figure}
+      \includegraphics[width=\textwidth]{F4_root_lattice.png}
+      \caption{
+\only<2>
+        {The $24$ roots (\textcolor{red}{red}) of the $F_4$ lattice, projected on a bidimensional plane.\vspace{\baselineskip}}
+\only<3->
+        {The $24$ roots (\textcolor{red}{red}) and the $24$ coroots (\textcolor{yellow}{yellow}) of the $F_4$ lattice, projected on a bidimensional plane.}
+      }
+    \end{figure}
+  \end{columns}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Work in Progress}
+  \begin{columns}
+  \column{0.7\textwidth}
+\onslide<1->
+    \begin{itemize}
+    \item Implement the $F_4$ lattice in the simulation program and make efficiency studies;
+    \vspace{6\baselineskip}
+\onslide<2->
+    \item Make a rotational invariance study on the new lattice, hoping to get better results than the Simple Hypercubic lattice.
+    \end{itemize}
+    
+\onslide<1->
+  \column{0.3\textwidth}
+    \includegraphics[width=\textwidth]{F4_root_lattice.png}\\
+    \vspace{\baselineskip}
+\onslide<2->
+    \includegraphics[width=\textwidth]{plots/XY_Plane_nt6_ns16_beta2.35_copied.png}
+  \end{columns}
+\end{frame}
+
+\begin{frame}
+  \centering
+  \Huge
+  Grazie per l'attenzione!
 \end{frame}
 
 \begin{frame}[allowframebreaks]
