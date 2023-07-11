@@ -202,7 +202,7 @@
 \onslide<1->
   \begin{figure}
     \includegraphics[height=0.4\textheight]{wilsonLoop.png}
-    \caption{Gauge-invariant paths on a bidimensional lattice.\cite{SigdelDibakar2016}}
+    \caption{Gauge-invariant paths on a bidimensional lattice. \cite{SigdelDibakar2016}}
   \end{figure}
 \end{frame}
 
@@ -260,13 +260,15 @@
   Equipotential surfaces become spheres as the continuum limit is approached.
   \begin{figure}
     \includegraphics[width=.8\textwidth]{LangRebbi.png}
-    \caption{Restoration of rotational invariance from (a) $\beta=2$, $n_s=8$, $n_t=4$ to (b)$\beta=2.25$, $n_s=16$, $n_t=6$; the curves represent equipotential curves. \cite{Lang:1982tj}}
+    \caption{Restoration of rotational invariance from (a) $\beta=2$, $n_s=8$, $n_t=4$ to (b) $\beta=2.25$, $n_s=16$, $n_t=6$; the curves represent equipotential curves. \cite{Lang:1982tj}}
   \end{figure}
 \end{frame}
 
 \begin{frame}
   \frametitle{Rotational Invariance Restoration}
-  Values of $\beta$ are slightly different from Lang and Rebbi's because $a(\beta)\simeq\Lambda e^{-b_0\beta}$, with $\Lambda$, $b_0>0$.
+  Values of $\beta$ are slightly different from Lang and Rebbi's because $a(\beta)\approx\Lambda e^{-b_0\beta}$, with $\Lambda$, $b_0>0$.
+  \footnote{The simulation code is based on the code presented in refs.~\cite{Panero:2009tv,Mykkanen:2012ri}.}
+  \vspace{-0.5\baselineskip}
   \begin{columns}
   \column{0.4\textwidth}
     \begin{figure}
@@ -281,8 +283,50 @@
   \end{columns}
 \end{frame}
 
-
 \begin{frame}
+  \frametitle{Higher Symmetry Lattices}
+\onslide<1->
+  Other, more rotational-symmetric, lattices have been used:\\
+  \begin{columns}
+    \column{0.47\textwidth}
+\onslide<2->
+    \centering
+      \begin{block}{\centering
+        Body Centered Tesseract \cite{Celmaster:1982ht}
+        }
+        \begin{itemize}
+          \item $24$ nearest neighbours
+          \item $1152$-element symmetry group
+        \end{itemize}
+      \end{block}
+      \begin{figure}
+        \includegraphics[width=0.55\textwidth]{Tesseract.png}
+        \caption{Two-dimensional projection of a BCT. \cite{Celmaster:1982ht}}
+      \end{figure}
+    
+    \column{0.02\textwidth}
+    \column{0.47\textwidth}
+\onslide<3->
+    \centering
+      \begin{block}{\centering
+          $F_4$ coroots lattice \cite{Neuberger:1987kt}
+          }
+          \begin{itemize}
+            \item $48$ nearest neighbours
+            \item $2304$-element symmetry group
+          \end{itemize}
+        \end{block}
+      \begin{figure}
+        \includegraphics[width=0.55\textwidth]{F4_root_lattice.png}
+        \caption{Two-dimensional projection of a $F_4$ coroots lattice. \cite{f4image}}
+      \end{figure}
+  \end{columns}
+\onslide<2->
+  \footnotesize
+  The SH lattice has $8$ nearest neighbours and a $384$-element symmetry group.
+\end{frame}
+
+\begin{frame}[allowframebreaks]
   \frametitle{Bibliography}
   \printbibliography
 \end{frame}

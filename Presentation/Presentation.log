@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Arch Linux) (preloaded format=pdflatex 2023.6.29)  10 JUL 2023 16:01
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Arch Linux) (preloaded format=pdflatex 2023.6.29)  11 JUL 2023 12:45
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1453,32 +1453,70 @@ Package pdftex.def Info: ./pics/LangRebbi.png  used on input line 265.
  [29
 
  <./pics/LangRebbi.png>]
-<./pics/plots/XY_Plane_nt4_ns8_beta2.20_copied.png, id=732, 308.65312pt x 308.6
+<./pics/plots/XY_Plane_nt4_ns8_beta2.20_copied.png, id=734, 308.65312pt x 308.6
 5312pt>
 File: ./pics/plots/XY_Plane_nt4_ns8_beta2.20_copied.png Graphic file (type png)
 
 <use ./pics/plots/XY_Plane_nt4_ns8_beta2.20_copied.png>
 Package pdftex.def Info: ./pics/plots/XY_Plane_nt4_ns8_beta2.20_copied.png  use
-d on input line 282.
+d on input line 284.
 (pdftex.def)             Requested size: 136.97203pt x 136.97578pt.
-<./pics/plots/XY_Plane_nt6_ns16_beta2.35_copied.png, id=733, 308.65312pt x 308.
+<./pics/plots/XY_Plane_nt6_ns16_beta2.35_copied.png, id=735, 308.65312pt x 308.
 65312pt>
 File: ./pics/plots/XY_Plane_nt6_ns16_beta2.35_copied.png Graphic file (type png
 )
 <use ./pics/plots/XY_Plane_nt6_ns16_beta2.35_copied.png>
 Package pdftex.def Info: ./pics/plots/XY_Plane_nt6_ns16_beta2.35_copied.png  us
-ed on input line 282.
+ed on input line 284.
 (pdftex.def)             Requested size: 136.97203pt x 136.97578pt.
  [30
 
  <./pics/plots/XY_Plane_nt4_ns8_beta2.20_copied.png> <./pics/plots/XY_Plane_nt6
 _ns16_beta2.35_copied.png>]
-LaTeX Font Info:    Trying to load font information for T1+cmtt on input line 2
-88.
+<./pics/Tesseract.png, id=760, 328.22626pt x 328.22626pt>
+File: ./pics/Tesseract.png Graphic file (type png)
+<use ./pics/Tesseract.png>
+Package pdftex.def Info: ./pics/Tesseract.png  used on input line 327.
+(pdftex.def)             Requested size: 88.52023pt x 88.51709pt.
+<./pics/F4_root_lattice.png, id=773, 718.93594pt x 718.93594pt>
+File: ./pics/F4_root_lattice.png Graphic file (type png)
+<use ./pics/F4_root_lattice.png>
+Package pdftex.def Info: ./pics/F4_root_lattice.png  used on input line 327.
+(pdftex.def)             Requested size: 88.52023pt x 88.51744pt.
+ [31
 
-(/usr/share/texmf-dist/tex/latex/base/t1cmtt.fd
+ <./pics/Tesseract.png> <./pics/F4_root_lattice.png>]
+File: ./pics/Tesseract.png Graphic file (type png)
+<use ./pics/Tesseract.png>
+Package pdftex.def Info: ./pics/Tesseract.png  used on input line 327.
+(pdftex.def)             Requested size: 88.52023pt x 88.51709pt.
+File: ./pics/F4_root_lattice.png Graphic file (type png)
+<use ./pics/F4_root_lattice.png>
+Package pdftex.def Info: ./pics/F4_root_lattice.png  used on input line 327.
+(pdftex.def)             Requested size: 88.52023pt x 88.51744pt.
+ [32
+
+]
+File: ./pics/Tesseract.png Graphic file (type png)
+<use ./pics/Tesseract.png>
+Package pdftex.def Info: ./pics/Tesseract.png  used on input line 327.
+(pdftex.def)             Requested size: 88.52023pt x 88.51709pt.
+File: ./pics/F4_root_lattice.png Graphic file (type png)
+<use ./pics/F4_root_lattice.png>
+Package pdftex.def Info: ./pics/F4_root_lattice.png  used on input line 327.
+(pdftex.def)             Requested size: 88.52023pt x 88.51744pt.
+ [33
+
+]
+LaTeX Font Info:    Trying to load font information for T1+cmtt on input line 3
+32.
+ (/usr/share/texmf-dist/tex/latex/base/t1cmtt.fd
 File: t1cmtt.fd 2022/07/10 v2.5l Standard LaTeX font definitions
-) [31
+)
+[34
+
+] [35
+
 
 ]
 \tf@nav=\write8
@@ -1498,13 +1536,13 @@ Package logreq Info: Writing requests to 'Presentation.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 33499 strings out of 477985
- 667759 string characters out of 5840058
+ 33608 strings out of 477985
+ 670625 string characters out of 5840058
  1894388 words of memory out of 5000000
- 53002 multiletter control sequences out of 15000+600000
- 539933 words of font info for 107 fonts, out of 8000000 for 9000
+ 53089 multiletter control sequences out of 15000+600000
+ 543752 words of font info for 118 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 128i,16n,122p,685b,1462s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 128i,16n,122p,685b,1773s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/
 texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texmf-dist/fon
 ts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texmf-dist/fonts/type1/public
@@ -1522,14 +1560,15 @@ public/cm-super/sfrm1095.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super
 /sfsi1095.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfss0600.pfb><
 /usr/share/texmf-dist/fonts/type1/public/cm-super/sfss0700.pfb></usr/share/texm
 f-dist/fonts/type1/public/cm-super/sfss0800.pfb></usr/share/texmf-dist/fonts/ty
-pe1/public/cm-super/sfss1000.pfb></usr/share/texmf-dist/fonts/type1/public/cm-s
-uper/sfss1095.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfss1200.p
-fb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfss1440.pfb></usr/share/
-texmf-dist/fonts/type1/public/cm-super/sftt1095.pfb>
-Output written on Presentation.pdf (31 pages, 1146210 bytes).
+pe1/public/cm-super/sfss0900.pfb></usr/share/texmf-dist/fonts/type1/public/cm-s
+uper/sfss1000.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfss1095.p
+fb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfss1200.pfb></usr/share/
+texmf-dist/fonts/type1/public/cm-super/sfss1440.pfb></usr/share/texmf-dist/font
+s/type1/public/cm-super/sftt1095.pfb>
+Output written on Presentation.pdf (35 pages, 1447125 bytes).
 PDF statistics:
- 873 PDF objects out of 1000 (max. 8388607)
- 500 compressed objects within 5 object streams
- 66 named destinations out of 1000 (max. 500000)
- 1648 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1002 PDF objects out of 1200 (max. 8388607)
+ 580 compressed objects within 6 object streams
+ 79 named destinations out of 1000 (max. 500000)
+ 1850 words of extra memory for PDF output out of 10000 (max. 10000000)
 
