@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Arch Linux) (preloaded format=pdflatex 2023.6.29)  11 JUL 2023 12:45
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Arch Linux) (preloaded format=pdflatex 2023.6.29)  11 JUL 2023 12:47
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1497,25 +1497,14 @@ Package pdftex.def Info: ./pics/F4_root_lattice.png  used on input line 327.
  [32
 
 ]
-File: ./pics/Tesseract.png Graphic file (type png)
-<use ./pics/Tesseract.png>
-Package pdftex.def Info: ./pics/Tesseract.png  used on input line 327.
-(pdftex.def)             Requested size: 88.52023pt x 88.51709pt.
-File: ./pics/F4_root_lattice.png Graphic file (type png)
-<use ./pics/F4_root_lattice.png>
-Package pdftex.def Info: ./pics/F4_root_lattice.png  used on input line 327.
-(pdftex.def)             Requested size: 88.52023pt x 88.51744pt.
- [33
-
-]
 LaTeX Font Info:    Trying to load font information for T1+cmtt on input line 3
 32.
  (/usr/share/texmf-dist/tex/latex/base/t1cmtt.fd
 File: t1cmtt.fd 2022/07/10 v2.5l Standard LaTeX font definitions
-)
-[34
+) [33
 
-] [35
+]
+[34
 
 
 ]
@@ -1536,8 +1525,8 @@ Package logreq Info: Writing requests to 'Presentation.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 33608 strings out of 477985
- 670625 string characters out of 5840058
+ 33606 strings out of 477985
+ 670606 string characters out of 5840058
  1894388 words of memory out of 5000000
  53089 multiletter control sequences out of 15000+600000
  543752 words of font info for 118 fonts, out of 8000000 for 9000
@@ -1565,10 +1554,10 @@ uper/sfss1000.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfss1095.p
 fb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfss1200.pfb></usr/share/
 texmf-dist/fonts/type1/public/cm-super/sfss1440.pfb></usr/share/texmf-dist/font
 s/type1/public/cm-super/sftt1095.pfb>
-Output written on Presentation.pdf (35 pages, 1447125 bytes).
+Output written on Presentation.pdf (34 pages, 1443845 bytes).
 PDF statistics:
- 1002 PDF objects out of 1200 (max. 8388607)
- 580 compressed objects within 6 object streams
- 79 named destinations out of 1000 (max. 500000)
- 1850 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 971 PDF objects out of 1000 (max. 8388607)
+ 562 compressed objects within 6 object streams
+ 77 named destinations out of 1000 (max. 500000)
+ 1790 words of extra memory for PDF output out of 10000 (max. 10000000)
 
