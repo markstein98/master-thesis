@@ -191,7 +191,15 @@ For this reason, a non-perturbative approach has to be taken into consideration 
 More in detail, a scalar field lives on lattice sites, a vector field lives on links between sites and objects with $k$ indices live on $k$-simplexes.
 If the continuum limit ($a\to0$) is taken, the theory must reproduce results obtained in the continuum, like the ones obtained in perturbation theory in the regime where it can be applied, however the presence of a discrete spacetime provides a natural cutoff for the momenta, allowing ultraviolet divergencies to be kept under control, although they need to be taken into consideration when approaching the continuum limit.\\
 In this section, based on standard quantum field theory textbooks cited before and lattice field theory textbooks \cite{Montvay:1994cy, Gattringer:2010zz, DeGrand:2006zz}, the regularization of the previous quantum field theories on a Simple Hypercubic (SH) lattice is presented.
+%TODO: check bibliography and add coxeter-regular polytopes
+\subsection{Lattice}
+A lattice $\Lambda$ in $\R^n$ is defined as the set of all possible linear combinations with integer coefficients of the vectors $\prc{v_i}$, which form a basis of $\R^n$.
+Formally:
+\begin{equation}
+    \Lambda =\left\{\left.\sum _{i=1}^{n}c_{i}v_{i}\;\right\vert \;c_{i}\in \mathbb {Z} \right\} \label{1:genericLattice}
+\end{equation}
 
-\subsection{Simple Hypercubic Lattice}
+\subsubsection{Simple Hypercubic Lattice}
+If the basis $\prc{v_i}$ is taken to be orthonormal, the lattice is called \emph{Simple Hypercubic}\footnote{The word \emph{simple} is used to make a distinction with the Body-Centered Hypercubic lattice, in the following sections.}.
 
-\subsection{Scalar Field Action on the Lattice}
+\subsection{Scalar Fields on the Simple Hypercubic Lattice}
