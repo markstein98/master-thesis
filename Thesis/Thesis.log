@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Arch Linux) (preloaded format=pdflatex 2023.7.21)  23 JUL 2023 13:00
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Arch Linux) (preloaded format=pdflatex 2023.7.21)  24 JUL 2023 15:36
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2249,7 +2249,15 @@ LaTeX Font Info:    No math alphabet change to frozen version normal on input l
 ine 203.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
 ine 203.
-) [7] (./Chapters/GaugeSim.tex [8
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 204.
+<./pics/Lattice.png, id=236, 470.50781pt x 470.50781pt>
+File: ./pics/Lattice.png Graphic file (type png)
+<use ./pics/Lattice.png>
+Package pdftex.def Info: ./pics/Lattice.png  used on input line 207.
+(pdftex.def)             Requested size: 113.81102pt x 113.80724pt.
+) [7 <./pics/Lattice.png>]
+(./Chapters/GaugeSim.tex [8
 
 ]
 Chapter 2.
@@ -2300,10 +2308,10 @@ Package logreq Info: Writing requests to 'Thesis.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 29823 strings out of 477985
- 557860 string characters out of 5840058
+ 29840 strings out of 477985
+ 558188 string characters out of 5840058
  1876388 words of memory out of 5000000
- 49430 multiletter control sequences out of 15000+600000
+ 49445 multiletter control sequences out of 15000+600000
  645104 words of font info for 141 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
  80i,21n,80p,1151b,1985s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -2327,10 +2335,10 @@ public/mathabx-type1/matha12.pfb></usr/share/texmf-dist/fonts/type1/public/math
 abx-type1/matha8.pfb></usr/share/texmf-dist/fonts/type1/public/mathabx-type1/ma
 thx10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb
 ></usr/share/texmf-dist/fonts/type1/public/cm-super/sfxc2074.pfb>
-Output written on Thesis.pdf (24 pages, 1462406 bytes).
+Output written on Thesis.pdf (24 pages, 1472306 bytes).
 PDF statistics:
- 457 PDF objects out of 1000 (max. 8388607)
- 367 compressed objects within 4 object streams
- 83 named destinations out of 1000 (max. 500000)
- 134 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 461 PDF objects out of 1000 (max. 8388607)
+ 369 compressed objects within 4 object streams
+ 84 named destinations out of 1000 (max. 500000)
+ 139 words of extra memory for PDF output out of 10000 (max. 10000000)
 

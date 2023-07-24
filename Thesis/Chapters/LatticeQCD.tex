@@ -193,13 +193,21 @@ If the continuum limit ($a\to0$) is taken, the theory must reproduce results obt
 In this section, based on standard quantum field theory textbooks cited before and lattice field theory textbooks \cite{Montvay:1994cy, Gattringer:2010zz, DeGrand:2006zz}, the regularization of the previous quantum field theories on a Simple Hypercubic (SH) lattice is presented.
 %TODO: check bibliography and add coxeter-regular polytopes
 \subsection{Lattice}
-A lattice $\Lambda$ in $\R^n$ is defined as the set of all possible linear combinations with integer coefficients of the vectors $\prc{v_i}$, which form a basis of $\R^n$.
+A lattice $\Lambda$ in $\R^D$ is defined as the set of all possible linear combinations with integer coefficients of the vectors $\prc{v_i}$, which form a basis of $\R^D$.
 Formally:
 \begin{equation}
-    \Lambda =\left\{\left.\sum _{i=1}^{n}c_{i}v_{i}\;\right\vert \;c_{i}\in \mathbb {Z} \right\} \label{1:genericLattice}
+    \Lambda =\left\{\left.\sum _{i=1}^{D}c_{i}v_{i}\;\right\vert \;c_{i}\in \mathbb {Z} \right\} \label{1:genericLattice}
 \end{equation}
 
 \subsubsection{Simple Hypercubic Lattice}
-If the basis $\prc{v_i}$ is taken to be orthonormal, the lattice is called \emph{Simple Hypercubic}\footnote{The word \emph{simple} is used to make a distinction with the Body-Centered Hypercubic lattice, in the following sections.}.
+If the basis $\prc{v_i}$ is taken to be orthonormal, the lattice is called \emph{Simple Hypercubic}\footnote{The word \emph{simple} is used to make a distinction with the Body-Centered Hypercubic lattice, in the following sections.}.\\
+In figure \eqref{1F:cubicLattice} is represented a portion of a Simple Hypercubic lattice in $D=3$.
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.25\textwidth]{Lattice.png}
+    \caption{A cubic lattice.}
+    \label{1F:cubicLattice}
+\end{figure}
+
 
 \subsection{Scalar Fields on the Simple Hypercubic Lattice}
