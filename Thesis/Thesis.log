@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Arch Linux) (preloaded format=pdflatex 2023.7.21)  28 JUL 2023 15:40
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Arch Linux) (preloaded format=pdflatex 2023.7.21)  20 AUG 2023 17:53
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1381,7 +1381,7 @@ Package biblatex Info: ... file 'Thesis.bbl' found.
 Package biblatex Info: Reference section=0 on input line 10.
 Package biblatex Info: Reference segment=0 on input line 10.
  (./Chapters/CoverITAuc.tex
-<./pics/logo.png, id=68, 2724.579pt x 2845.2699pt>
+<./pics/logo.png, id=76, 2724.579pt x 2845.2699pt>
 File: ./pics/logo.png Graphic file (type png)
 <use ./pics/logo.png>
 Package pdftex.def Info: ./pics/logo.png  used on input line 3.
@@ -2248,17 +2248,40 @@ LaTeX Font Info:    No math alphabet change to frozen version normal on input l
 ine 203.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
 ine 204.
-<./pics/Lattice.png, id=236, 470.50781pt x 470.50781pt>
+<./pics/Lattice.png, id=246, 470.50781pt x 470.50781pt>
 File: ./pics/Lattice.png Graphic file (type png)
 <use ./pics/Lattice.png>
 Package pdftex.def Info: ./pics/Lattice.png  used on input line 207.
 (pdftex.def)             Requested size: 113.81102pt x 113.80724pt.
-) [7 <./pics/Lattice.png>]
-(./Chapters/GaugeSim.tex [8
-
-]
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 211.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 211.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 211.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 212.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 212.
+ [7 <./pics/Lattice.png>]
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 216.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 219.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 219.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 219.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 219.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 220.
+) [8]
+(./Chapters/GaugeSim.tex
 Chapter 2.
-) [9] (./Chapters/F4Lattice.tex [10
+) [9
+
+] (./Chapters/F4Lattice.tex [10
 
 ]
 Chapter 3.
@@ -2297,18 +2320,21 @@ LaTeX Font Info:    No math alphabet change to frozen version normal on input l
 ine 2.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
 ine 2.
- [17] [18] (./Thesis.aux)
+ [17]
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2.
+ [18] (./Thesis.aux)
 Package rerunfilecheck Info: File `Thesis.out' has not changed.
-(rerunfilecheck)             Checksum: 48C6EA93722916040CA67BAA78C2929B;3016.
+(rerunfilecheck)             Checksum: 3694CFA1715CAC3B83C39388ED1C12CB;3511.
 Package logreq Info: Writing requests to 'Thesis.run.xml'.
 \openout1 = `Thesis.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 29840 strings out of 477985
- 558188 string characters out of 5840058
+ 29848 strings out of 477985
+ 558435 string characters out of 5840058
  1876388 words of memory out of 5000000
- 49445 multiletter control sequences out of 15000+600000
+ 49450 multiletter control sequences out of 15000+600000
  645104 words of font info for 141 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
  80i,21n,80p,1151b,1985s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -2332,10 +2358,10 @@ public/mathabx-type1/matha12.pfb></usr/share/texmf-dist/fonts/type1/public/math
 abx-type1/matha8.pfb></usr/share/texmf-dist/fonts/type1/public/mathabx-type1/ma
 thx10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb
 ></usr/share/texmf-dist/fonts/type1/public/cm-super/sfxc2074.pfb>
-Output written on Thesis.pdf (24 pages, 1473321 bytes).
+Output written on Thesis.pdf (24 pages, 1476659 bytes).
 PDF statistics:
- 461 PDF objects out of 1000 (max. 8388607)
- 369 compressed objects within 4 object streams
- 84 named destinations out of 1000 (max. 500000)
- 139 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 475 PDF objects out of 1000 (max. 8388607)
+ 383 compressed objects within 4 object streams
+ 87 named destinations out of 1000 (max. 500000)
+ 155 words of extra memory for PDF output out of 10000 (max. 10000000)
 

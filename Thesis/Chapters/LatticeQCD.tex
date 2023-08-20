@@ -181,15 +181,15 @@ where the superscript $E$, meaning that the action is written in the Euclidean s
 
 \section{Lattice Field Theory}
 \subsection{Why Lattice Field Theory}
-After the Wick rotation, the quantum field theory can be studied perturbatively, through the saddle-point evaluation of the path integral, for instance, where the partition function
+After the Wick rotation, quantum field theory can be studied perturbatively through the saddle-point evaluation of the path integral, where the partition function
 \begin{equation*}
     Z = \int\DD\varphi e^{\i S^M[\varphi]} = \int\DD\varphi e^{-S^E[\varphi]}
 \end{equation*}
 has become non-oscillating.
 This approach, however, works well only if the coupling constants are \emph{small enough} and does not allow to obtain non-perturbative results, \ie physical quantities that depend on essential singularities in the coupling constant, like glueballs for Yang-Mills theories.\\
 For this reason, a non-perturbative approach has to be taken into consideration and one possibility is Lattice Field Theory: the spacetime is discretized to a lattice, with lattice spacing $a$, and the fields can assume different values only on the sites of the lattice.
-More in detail, a scalar field lives on lattice sites, a vector field lives on links between sites and objects with $k$ indices live on $k$-simplexes.
-If the continuum limit ($a\to0$) is taken, the theory must reproduce results obtained in the continuum, like the ones obtained in perturbation theory in the regime where it can be applied, however the presence of a discrete spacetime provides a natural cutoff for the momenta, allowing ultraviolet divergencies to be kept under control, although they need to be taken into consideration when approaching the continuum limit.\\
+More in detail, a scalar field lives on lattice sites, a vector field lives on links between sites and objects with $k$ indices live on $k$-simplexes.\\
+If the limit $a\to0$ is taken, the theory must reproduce results obtained in the continuum, like the ones obtained in perturbation theory in the regime where it can be applied, however the presence of a discrete spacetime provides a natural cutoff for the momenta, allowing ultraviolet divergencies to be kept under control, although they need to be taken into consideration when approaching the continuum limit.\\
 In this section, based on standard quantum field theory textbooks cited before and lattice field theory textbooks \cite{Montvay:1994cy, Gattringer:2010zz, DeGrand:2006zz}, the regularization of the previous quantum field theories on a Simple Hypercubic (SH) lattice is presented.
 %TODO: check bibliography and add coxeter-regular polytopes
 \subsection{Lattice}
@@ -202,12 +202,24 @@ Formally:
 \subsubsection{Simple Hypercubic Lattice}
 If the basis $\prc{v_i}$ is taken to be orthonormal, the lattice is called \emph{Simple Hypercubic}\footnote{The word \emph{simple} is used to make a distinction with the Body-Centered Hypercubic lattice, in the following sections.}.\\
 In figure \eqref{1F:cubicLattice} is represented a portion of a Simple Hypercubic lattice in $D=3$.
-\begin{figure}[h]
+\begin{figure}[h!]
     \centering
     \includegraphics[width=0.25\textwidth]{Lattice.png}
     \caption{A cubic lattice.}
     \label{1F:cubicLattice}
-\end{figure}
+\end{figure}\\
+In $D=4$, the SH lattice has the fundamental region (the smallest $D$-dimensional polyhedron) that is a $4$-dimensional hypercube, also called a tesseract. This means that a SH lattice can be seen as a tassellation of the spacetime with tesseracts as elementary cells.
+Each point of the lattice has $8$ nearest neighbours that are identified by the vectors obtained through all possible permutations of position and sign of $(\pm1,0,0,0)$.\\
+The plaquette (the simplest bidimensional figure) is a square. This will be important when implementing gauge theories on the lattice.
 
+\subsubsection{Body-Centered Tesseract}
+The SH lattice is not, of course, the only possible choice of a lattice in $4$ spacetime dimensions.
+Another common choice, already used to simulate gauge theories~\cite{Celmaster:1982ht}, is the Body-Centered Tesseract (BCT).
+It consists of packing the spacetime with tesseracts, as the name suggests, but considering both the corners and the centers of every hypercube as lattice sites.
+Every site has, therefore, $24$ nearest neighbours: $16$ are identified by all possible permutations of signs of $\pr{\pm\frac12,\pm\frac12,\pm\frac12,\pm\frac12}$, the $8$ remaining are the ones of the SH lattice.\\
+The cell of this lattice is known as $24$-cell and the plaquettes are triangular.
 
 \subsection{Scalar Fields on the Simple Hypercubic Lattice}
+
+
+\subsection{Gauge Fields on the Simple Hypercubic Lattice}

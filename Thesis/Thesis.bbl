@@ -317,6 +317,34 @@
       \field{title}{Lattice methods for quantum chromodynamics}
       \field{year}{2006}
     \endentry
+    \entry{Celmaster:1982ht}{article}{}
+      \name{author}{1}{}{%
+        {{hash=050bc6ad2b05c9e62695d1b061ba5aba}{%
+           family={Celmaster},
+           familyi={C\bibinitperiod},
+           given={William},
+           giveni={W\bibinitperiod}}}%
+      }
+      \strng{namehash}{050bc6ad2b05c9e62695d1b061ba5aba}
+      \strng{fullhash}{050bc6ad2b05c9e62695d1b061ba5aba}
+      \strng{bibnamehash}{050bc6ad2b05c9e62695d1b061ba5aba}
+      \strng{authorbibnamehash}{050bc6ad2b05c9e62695d1b061ba5aba}
+      \strng{authornamehash}{050bc6ad2b05c9e62695d1b061ba5aba}
+      \strng{authorfullhash}{050bc6ad2b05c9e62695d1b061ba5aba}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Phys. Rev.}
+      \field{title}{{Gauge Theories on the Body - Centered Hypercubic Lattice}}
+      \field{volume}{D26}
+      \field{year}{1982}
+      \field{pages}{2955}
+      \range{pages}{1}
+      \verb{doi}
+      \verb 10.1103/PhysRevD.26.2955
+      \endverb
+    \endentry
   \enddatalist
 \endrefsection
 \endinput
