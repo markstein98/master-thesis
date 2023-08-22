@@ -248,3 +248,28 @@ A similar approach will be used in the following section to obtain the action fo
 Let us now take into consideration a Yang-Mills theory, as in\secref{Sec:NonAbelianGaugeTheories}.
 As anticipated before, gauge fields, being vector fields, can assume value only on links between sites of the lattice.
 One could naively think that putting gauge vectors $A_\mu(x)$ on the links is enough, but this would explicitly break gauge invariance.
+For this reason, Wilson's idea was to put the gauge group (and not algebra) elements, namely $U_\mu(x) = e^{\i g A_\mu(x)}$.\\
+The field $U_\mu(x)$ lives on the link connecting the site $x$ with the site $x+a\hat\mu$, therefore the link is oriented and link variables in negative directions can also be defined:\\
+$U_{-\mu}(x) \equiv U^\dagger_\mu(x-a\hat\mu)$.
+\begin{figure}[h!]
+    \includegraphics[width=\textwidth]{linkVariables.png}
+    \caption{Schematic visualization of link variables.}
+    \label{1F:LinkVariables}
+\end{figure}\\
+Under a gauge transformation, the fields $U_\mu$ transform according to the following relation:
+\begin{equation}
+    U_\mu(x)\rightarrow \Omega(x) U_\mu(x) \Omega^\dagger(x+a\hat\mu) \label{1:GaugeTransformLinkVariable}
+\end{equation}
+where $\Omega(x)$ is any $\SUN$ matrix at the point $x$ on the lattice.
+As a consequence of this relation, the trace of any product of links forming a closed path is a gauge-invariant quantity, thanks to the cyclic property of the trace.\\
+With this in mind, Wilson's idea was to choose the simplest closed path possible: the plaquette, that in the simple hypercubic lattice is a square.
+The product of link variables along a plaquette is defined in the following way:
+\begin{align*}
+    U_{\mu\nu}(x) \equiv& U_\mu(x)U_\nu(x+\hat\mu)U_{-\mu}(x+\hat\mu+\hat\nu)U_{-\nu}(x+\hat\nu) =\\
+    =& U_\mu(x)U_\nu(x+\hat\mu)U^\dagger_\mu(x+\hat\nu)U^\dagger_\nu(x) \numthis\label{1:Plaquette}
+\end{align*}
+%TODO: Set a=1
+Thus a gauge-invariant action, called Wilson action, can be written as follows:
+\begin{equation}
+    S_W[U]=\frac\beta{2N}\sum_{x\in\Lambda}\sum_{\mu<\nu}\Re\Tr[\id-U_{\mu\nu}(x)] \label{1:WilsonAction}
+\end{equation}
