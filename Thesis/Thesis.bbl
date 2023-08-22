@@ -317,6 +317,38 @@
       \field{title}{Lattice methods for quantum chromodynamics}
       \field{year}{2006}
     \endentry
+    \entry{coxeter2012regular}{book}{}
+      \name{author}{1}{}{%
+        {{hash=d2ef43d3dbc3f84ea174519c99e3ffd5}{%
+           family={Coxeter},
+           familyi={C\bibinitperiod},
+           given={H.S.M.},
+           giveni={H\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Dover Publications}%
+      }
+      \strng{namehash}{d2ef43d3dbc3f84ea174519c99e3ffd5}
+      \strng{fullhash}{d2ef43d3dbc3f84ea174519c99e3ffd5}
+      \strng{bibnamehash}{d2ef43d3dbc3f84ea174519c99e3ffd5}
+      \strng{authorbibnamehash}{d2ef43d3dbc3f84ea174519c99e3ffd5}
+      \strng{authornamehash}{d2ef43d3dbc3f84ea174519c99e3ffd5}
+      \strng{authorfullhash}{d2ef43d3dbc3f84ea174519c99e3ffd5}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{isbn}{9780486141589}
+      \field{series}{Dover Books on Mathematics}
+      \field{title}{Regular Polytopes}
+      \field{year}{2012}
+      \verb{urlraw}
+      \verb https://books.google.it/books?id=2ee7AQAAQBAJ
+      \endverb
+      \verb{url}
+      \verb https://books.google.it/books?id=2ee7AQAAQBAJ
+      \endverb
+    \endentry
     \entry{Celmaster:1982ht}{article}{}
       \name{author}{1}{}{%
         {{hash=050bc6ad2b05c9e62695d1b061ba5aba}{%
@@ -331,8 +363,8 @@
       \strng{authorbibnamehash}{050bc6ad2b05c9e62695d1b061ba5aba}
       \strng{authornamehash}{050bc6ad2b05c9e62695d1b061ba5aba}
       \strng{authorfullhash}{050bc6ad2b05c9e62695d1b061ba5aba}
-      \field{sortinit}{4}
-      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{sortinit}{5}
+      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{Phys. Rev.}

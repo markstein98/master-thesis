@@ -64,7 +64,7 @@ The term that broke the local phase invariance of the action \eqref{1:FreeQEDFer
     =& \dV\pr{\i\psibar\slashed{\partial}\psi-m\psibar\psi- g \psibar\slashed{A}\psi - \frac14\Fmunu F^{\mu\nu}} = S_{QED}
 \end{align*}
 
-\subsection{Non-Abelian Gauge Theories}
+\subsection{Non-Abelian Gauge Theories\label{Sec:NonAbelianGaugeTheories}}
 Let us now consider a theory with $N$ fermions, all with the same mass $m$, described by the spinorial fields $\psi_i(x)$ with $i=1, \dots, N$.
 These $N$ fermions represent the $N$ possible charges of the same particle\footnote{For example, if $N=3$ the $3$ possible charges are the color charges of QCD, as will be shown later.} and are not to be confused with, for instance, the different possible flavors of the quarks, that describe different particles with different masses.\\
 Its free action is:
@@ -191,7 +191,7 @@ For this reason, a non-perturbative approach has to be taken into consideration 
 More in detail, a scalar field lives on lattice sites, a vector field lives on links between sites and objects with $k$ indices live on $k$-simplexes.\\
 If the limit $a\to0$ is taken, the theory must reproduce results obtained in the continuum, like the ones obtained in perturbation theory in the regime where it can be applied, however the presence of a discrete spacetime provides a natural cutoff for the momenta, allowing ultraviolet divergencies to be kept under control, although they need to be taken into consideration when approaching the continuum limit.\\
 In this section, based on standard quantum field theory textbooks cited before and lattice field theory textbooks \cite{Montvay:1994cy, Gattringer:2010zz, DeGrand:2006zz}, the regularization of the previous quantum field theories on a Simple Hypercubic (SH) lattice is presented.
-%TODO: check bibliography and add coxeter-regular polytopes
+A more detailed description of the geometric properties of the figures mentioned below can be found in \cite{coxeter2012regular}.
 \subsection{Lattice}
 A lattice $\Lambda$ in $\R^D$ is defined as the set of all possible linear combinations with integer coefficients of the vectors $\prc{v_i}$, which form a basis of $\R^D$.
 Formally:
@@ -208,9 +208,11 @@ In figure \eqref{1F:cubicLattice} is represented a portion of a Simple Hypercubi
     \caption{A cubic lattice.}
     \label{1F:cubicLattice}
 \end{figure}\\
-In $D=4$, the SH lattice has the fundamental region (the smallest $D$-dimensional polyhedron) that is a $4$-dimensional hypercube, also called a tesseract. This means that a SH lattice can be seen as a tassellation of the spacetime with tesseracts as elementary cells.
+For the SH lattice in $D=4$, the fundamental region (the smallest $D$-dimensional polyhedron) is a $4$-dimensional hypercube, also called a tesseract.
+This means that a SH lattice can be seen as a tassellation of the spacetime with tesseracts as elementary cells.
 Each point of the lattice has $8$ nearest neighbours that are identified by the vectors obtained through all possible permutations of position and sign of $(\pm1,0,0,0)$.\\
-The plaquette (the simplest bidimensional figure) is a square. This will be important when implementing gauge theories on the lattice.
+The plaquette (the simplest bidimensional figure) is a square.
+This will be important when implementing gauge theories on the lattice.
 
 \subsubsection{Body-Centered Tesseract}
 The SH lattice is not, of course, the only possible choice of a lattice in $4$ spacetime dimensions.
@@ -220,6 +222,27 @@ Every site has, therefore, $24$ nearest neighbours: $16$ are identified by all p
 The cell of this lattice is known as $24$-cell and the plaquettes are triangular.
 
 \subsection{Scalar Fields on the Simple Hypercubic Lattice}
-
+Let us consider a simple hypercubic lattice $\Lambda_{SH}$ extending over $L=L_1=L_2=L_3$ lattice spacings in the spatial directions and over $T=L_0$ lattice spacings in the temporal direction.
+Let us also consider a scalar field $\phi(x)$ in order to introduce some useful tools that will be needed later.
+As anticipated at the beginning of this section, a scalar field can only assume values on the sites of the lattice, therefore $x\in\Lambda_{SH}$, and let us assume, for simplicity, periodic boundary conditions on the field, therefore $\phi(x+a\hat\mu L_\mu)=\phi(x)$.
+The Fourier transform of the field becomes
+\begin{equation}
+    \tilde\phi(p)=\sum_x a^4 e^{-\i p\cdot x}\phi(x) \label{1:FourierScalar}
+\end{equation}
+and the allowed momenta are given by
+\begin{equation}
+    p_\mu=\frac{2\pi}{aL_\mu}n_\mu, \qquad n_\mu=0, \dots, L_3 \label{1:Brillouin}
+\end{equation}
+This ensures that the momenta can take only the assigned values of the Brillouin zone \eqref{1:Brillouin} and therefore cannot go to infinity, providing a natural cutoff given by the lattice spacing $a$.
+The discretization also implies that derivatives of the fields cannot be computed, therefore the lattice forward derivative is used:
+\begin{equation}
+    \partial_\mu\phi(x)\rightarrow\frac{\phi(x+a\hat\mu)-\phi(x)}{a} \label{1:ForwardLatticeDerivative}
+\end{equation}\\
+Assuming a self-interaction potential $V(\phi)=\frac\lambda{4!}\phi^4$, the action \eqref{1:ActionScalar} can be written in terms of the lattice in the following way:
+\begin{equation}
+    S=a^4\sum_x\pr{\frac1{2a^2}\prs{\phi(x+a\hat\mu)-\phi(x)}^2+\frac12m^2\phi^2(x)+\frac\lambda{4!}\phi^4(x)} \label{1:ScalarActionLattice}
+\end{equation}
+A similar approach will be used in the following section to obtain the action for Yang-Mills theories.
 
 \subsection{Gauge Fields on the Simple Hypercubic Lattice}
+Let us now take into consideration a Yang-Mills theory, as in\secref{Sec:NonAbelianGaugeTheories}

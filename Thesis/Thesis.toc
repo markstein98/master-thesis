@@ -11,8 +11,8 @@
 \contentsline {subsubsection}{\numberline {1.2.2.1}Simple Hypercubic Lattice}{7}{subsubsection.1.2.2.1}%
 \contentsline {subsubsection}{\numberline {1.2.2.2}Body-Centered Tesseract}{8}{subsubsection.1.2.2.2}%
 \contentsline {subsection}{\numberline {1.2.3}Scalar Fields on the Simple Hypercubic Lattice}{8}{subsection.1.2.3}%
-\contentsline {subsection}{\numberline {1.2.4}Gauge Fields on the Simple Hypercubic Lattice}{8}{subsection.1.2.4}%
-\contentsline {chapter}{\numberline {2}Computer Simulation of Gauge Theories }{9}{chapter.2}%
-\contentsline {chapter}{\numberline {3}Gauge Theories Simulation on non-hypercubic lattice F4}{11}{chapter.3}%
-\contentsline {chapter}{\numberline {4}Simulation Results}{13}{chapter.4}%
-\contentsline {chapter}{\numberline {5}Conclusions}{15}{chapter.5}%
+\contentsline {subsection}{\numberline {1.2.4}Gauge Fields on the Simple Hypercubic Lattice}{9}{subsection.1.2.4}%
+\contentsline {chapter}{\numberline {2}Computer Simulation of Gauge Theories }{11}{chapter.2}%
+\contentsline {chapter}{\numberline {3}Gauge Theories Simulation on non-hypercubic lattice F4}{13}{chapter.3}%
+\contentsline {chapter}{\numberline {4}Simulation Results}{15}{chapter.4}%
+\contentsline {chapter}{\numberline {5}Conclusions}{17}{chapter.5}%
