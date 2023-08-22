@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Arch Linux) (preloaded format=pdflatex 2023.7.21)  22 AUG 2023 11:41
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Arch Linux) (preloaded format=pdflatex 2023.7.21)  22 AUG 2023 12:15
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2340,6 +2340,8 @@ LaTeX Font Info:    No math alphabet change to frozen version normal on input l
 ine 244.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
 ine 244.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 250.
 ) [8] [9]
 (./Chapters/GaugeSim.tex [10
 
@@ -2424,7 +2426,7 @@ public/mathabx-type1/matha12.pfb></usr/share/texmf-dist/fonts/type1/public/math
 abx-type1/matha8.pfb></usr/share/texmf-dist/fonts/type1/public/mathabx-type1/ma
 thx10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb
 ></usr/share/texmf-dist/fonts/type1/public/cm-super/sfxc2074.pfb>
-Output written on Thesis.pdf (26 pages, 1482365 bytes).
+Output written on Thesis.pdf (26 pages, 1482695 bytes).
 PDF statistics:
  497 PDF objects out of 1000 (max. 8388607)
  402 compressed objects within 5 object streams
