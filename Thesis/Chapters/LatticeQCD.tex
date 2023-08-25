@@ -220,6 +220,7 @@ Another common choice, already used to simulate gauge theories~\cite{Celmaster:1
 It consists of packing the spacetime with tesseracts, as the name suggests, but considering both the corners and the centers of every hypercube as lattice sites.
 Every site has, therefore, $24$ nearest neighbours: $16$ are identified by all possible permutations of signs of $\pr{\pm\frac12,\pm\frac12,\pm\frac12,\pm\frac12}$, the $8$ remaining are the ones of the SH lattice.\\
 The cell of this lattice is known as $24$-cell and the plaquettes are triangular.
+%TODO: add 24-cell image
 
 \subsection{Scalar Fields on the Simple Hypercubic Lattice}
 Let us consider a simple hypercubic lattice $\Lambda_{SH}$ extending over $L=L_1=L_2=L_3$ lattice spacings in the spatial directions and over $T=L_0$ lattice spacings in the temporal direction.
@@ -231,7 +232,7 @@ The Fourier transform of the field becomes
 \end{equation}
 and the allowed momenta are given by
 \begin{equation}
-    p_\mu=\frac{2\pi}{aL_\mu}n_\mu, \qquad n_\mu=0, \dots, L_3 \label{1:Brillouin}
+    p_\mu=\frac{2\pi}{aL_\mu}n_\mu, \qquad n_\mu=0, \dots, L_\mu \label{1:Brillouin}
 \end{equation}
 This ensures that the momenta can take only the assigned values of the Brillouin zone \eqref{1:Brillouin} and therefore cannot go to infinity, providing a natural cutoff given by the lattice spacing $a$.
 The discretization also implies that derivatives of the fields cannot be computed, therefore the lattice forward derivative is used:
@@ -268,6 +269,7 @@ The product of link variables along a square plaquette is defined in the followi
     U_{\mu\nu}(x) \equiv& U_\mu(x)U_\nu(x+\hat\mu)U_{-\mu}(x+\hat\mu+\hat\nu)U_{-\nu}(x+\hat\nu) =\\
     =& U_\mu(x)U_\nu(x+\hat\mu)U^\dagger_\mu(x+\hat\nu)U^\dagger_\nu(x) \numthis\label{1:Plaquette}
 \end{align*}
+%TODO: add plaquette image
 Thus a gauge-invariant action, called Wilson action, can be written as follows:
 \begin{equation}
     S_W[U]=\frac\beta{2N}\sum_{x\in\Lambda}\sum_{\mu<\nu}\Re\Tr[\id-U_{\mu\nu}(x)] \label{1:WilsonAction}
@@ -291,4 +293,15 @@ The expansion for small $a$ of the plaquette $U_{\mu\nu}$ is:
     &+\frac12\pr{-\comm{B_\mu}{B_\nu}+\cancel{\comm{B_\mu}{B_\nu}}+\cancel{\comm{B_\nu}{B_\mu}}-\comm{B_\mu}{B_\nu}}\Big\} = \\
     =& \exp{\i a\pr{\nabla_\mu B_\nu - \nabla_\nu B_\mu} - \comm{B_\mu}{B_\nu}}
 \end{align*}
-
+Now, substituting back \eqref{1:BField}, the discretized electromagnetic tensor can be found:
+\begin{align*}
+    U_{\mu\nu} \simeq& \exp{\i a^2 g \pr{\nabla_\mu \A_\nu - \nabla_\nu \A_\mu+ \i g \comm{\A_\mu}{\A_\nu}}} =  \exp{\i a^2 g \Fmunu} \simeq \\
+    \simeq& \id + \i a^2 g \Fmunu - \frac12 a^4 g^2 \Fmunu F^{\mu\nu} + O(a^6) \numthis \label{1:PlaquetteSmalla}
+\end{align*}
+Finally, the small-$a$ approximation for the Wilson action \eqref{1:WilsonAction} can be obtained:
+\begin{align*}
+    S_W \simeq& \frac{\beta}{2N} \sum_{x\in\Lambda}\sum_{\mu<\nu} \Re\Tr(\cancel\id - \cancel\id - \i a^2 g \Fmunu^i T^i + \frac12a^4 g^2 \Fmunu^i F^{j\mu\nu}T^iT^j) = \\
+    =& \underbrace{-i\frac{a^2\beta}{2N} \sum_{x\in\Lambda}\sum_{\mu<\nu} \Re(\Fmunu^i \Tr(T^i))}_{=0\text{ for \eqref{1:InfinitesimalSUN}}} + \frac{g^2a^4\beta}{4N} \sum_{x\in\Lambda}\sum_{\mu<\nu} \Re(\underbrace{\Fmunu^i F^{j\mu\nu}\Tr(T^iT^j)}_{=\frac12\Fmunu^i F^{i\mu\nu}\text{ for \eqref{1:NormCondSUN}}}) = \\
+    =& \frac{g^2\beta}{8N} \underbrace{a^4\sum_{x,\mu,\nu}}_{\to\dV}\Fmunu^i F^{i\mu\nu} \numthis \label{1:WilsonSmalla}
+\end{align*}
+where the Yang-Mills action \eqref{1:YMActionEuclidean} can be recognized if $\beta = \frac{2N}{g^2}$.
