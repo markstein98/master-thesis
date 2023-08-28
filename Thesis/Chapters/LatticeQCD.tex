@@ -305,3 +305,18 @@ Finally, the small-$a$ approximation for the Wilson action \eqref{1:WilsonAction
     =& \frac{g^2\beta}{8N} \underbrace{a^4\sum_{x,\mu,\nu}}_{\to\dV}\Fmunu^i F^{i\mu\nu} \numthis \label{1:WilsonSmalla}
 \end{align*}
 where the Yang-Mills action \eqref{1:YMActionEuclidean} can be recognized if $\beta = \frac{2N}{g^2}$.
+
+\subsubsection{Wilson Loops}
+Now that the lattice action has been defined, observables need to be taken into account.
+As mentioned below \eqref{1:GaugeTransformLinkVariable}, the trace of the product of link variables along any closed path is a gauge-invariant quantity.
+This means that any quantity of the sort is a good candidate for an observable and, in fact, given any closed path $\gamma$ on the lattice, the Wilson loop is defined as follows:
+\begin{equation}
+    W[\gamma] \equiv \Tr\prs{\prod_{(x,\mu)\in\gamma}U_\mu(x)} \label{1:WilsonLoop}
+\end{equation}
+It is worthwile to mention that this definition is does not depend on the type of lattice and of boundary conditions chosen for such lattice.
+If the path $\gamma$ does not include any temporal link, the loop is called \emph{spacelike Wilson loop}, otherwise it is called \emph{timelike Wilson loop}.
+If all the links in $\gamma$ lie on the same plane, the Wilson loop is \emph{planar}, otherwise it is \emph{nonplanar}.
+%TODO: add image of Wilson loop
+Wilson loops are important for a variety of reasons, that will not be elaborated further as this is not the focus of this project, however it is worth knowing that they can be used as operators for purely gluonic bound states, the so-called \emph{glueballs}: the mass spectrum of these states can be obtained through the exponential decay of their correlation functions.
+
+\subsubsection{Polyakov Loops}

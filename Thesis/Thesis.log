@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Arch Linux) (preloaded format=pdflatex 2023.7.21)  25 AUG 2023 12:16
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Arch Linux) (preloaded format=pdflatex 2023.8.28)  28 AUG 2023 11:44
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1381,7 +1381,7 @@ Package biblatex Info: ... file 'Thesis.bbl' found.
 Package biblatex Info: Reference section=0 on input line 10.
 Package biblatex Info: Reference segment=0 on input line 10.
  (./Chapters/CoverITAuc.tex
-<./pics/logo.png, id=76, 2724.579pt x 2845.2699pt>
+<./pics/logo.png, id=84, 2724.579pt x 2845.2699pt>
 File: ./pics/logo.png Graphic file (type png)
 <use ./pics/logo.png>
 Package pdftex.def Info: ./pics/logo.png  used on input line 3.
@@ -2248,7 +2248,7 @@ LaTeX Font Info:    No math alphabet change to frozen version normal on input l
 ine 203.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
 ine 204.
-<./pics/Lattice.png, id=247, 470.50781pt x 470.50781pt>
+<./pics/Lattice.png, id=257, 470.50781pt x 470.50781pt>
 File: ./pics/Lattice.png Graphic file (type png)
 <use ./pics/Lattice.png>
 Package pdftex.def Info: ./pics/Lattice.png  used on input line 207.
@@ -2352,7 +2352,7 @@ LaTeX Font Info:    No math alphabet change to frozen version normal on input l
 ine 253.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
 ine 254.
-<./pics/linkVariables.png, id=265, 760.34062pt x 106.89937pt>
+<./pics/linkVariables.png, id=275, 760.34062pt x 106.89937pt>
 File: ./pics/linkVariables.png Graphic file (type png)
 <use ./pics/linkVariables.png>
 Package pdftex.def Info: ./pics/linkVariables.png  used on input line 256.
@@ -3063,23 +3063,41 @@ LaTeX Font Info:    No math alphabet change to frozen version normal on input l
 ine 306.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
 ine 307.
-) [10] (./Chapters/GaugeSim.tex
-Chapter 2.
-) [11
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 312.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 313.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 313.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 313.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 313.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 315.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 315.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 317.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 318.
+ [10]) [11] (./Chapters/GaugeSim.tex [12
 
-] (./Chapters/F4Lattice.tex [12
+]
+Chapter 2.
+) [13] (./Chapters/F4Lattice.tex [14
 
 ]
 Chapter 3.
-) [13] (./Chapters/SimulationResults.tex [14
+) [15] (./Chapters/SimulationResults.tex [16
 
 ]
 Chapter 4.
-) [15] (./Chapters/Conclusions.tex [16
+) [17] (./Chapters/Conclusions.tex [18
 
 ]
 Chapter 5.
-) [17] (./Chapters/Bibliography.tex) [18
+) [19] (./Chapters/Bibliography.tex) [20
 
 ]
 LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 2
@@ -3106,23 +3124,23 @@ LaTeX Font Info:    No math alphabet change to frozen version normal on input l
 ine 2.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
 ine 2.
- [19]
+ [21]
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
 ine 2.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
 ine 2.
- [20] (./Thesis.aux)
+ [22] (./Thesis.aux)
 Package rerunfilecheck Info: File `Thesis.out' has not changed.
-(rerunfilecheck)             Checksum: 3694CFA1715CAC3B83C39388ED1C12CB;3511.
+(rerunfilecheck)             Checksum: 8B2F7A6F81D4CBEC5D36CCFF6E73FF2D;3791.
 Package logreq Info: Writing requests to 'Thesis.run.xml'.
 \openout1 = `Thesis.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 29888 strings out of 477985
- 559248 string characters out of 5840058
+ 29896 strings out of 477985
+ 559379 string characters out of 5840058
  1876388 words of memory out of 5000000
- 49474 multiletter control sequences out of 15000+600000
+ 49477 multiletter control sequences out of 15000+600000
  648092 words of font info for 142 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
  80i,21n,80p,1151b,1985s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -3147,10 +3165,10 @@ a12.pfb></usr/share/texmf-dist/fonts/type1/public/mathabx-type1/matha8.pfb></us
 r/share/texmf-dist/fonts/type1/public/mathabx-type1/mathx10.pfb></usr/share/tex
 mf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/share/texmf-dist/f
 onts/type1/public/cm-super/sfxc2074.pfb>
-Output written on Thesis.pdf (26 pages, 1522829 bytes).
+Output written on Thesis.pdf (28 pages, 1527124 bytes).
 PDF statistics:
- 541 PDF objects out of 1000 (max. 8388607)
- 421 compressed objects within 5 object streams
- 101 named destinations out of 1000 (max. 500000)
- 160 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 562 PDF objects out of 1000 (max. 8388607)
+ 440 compressed objects within 5 object streams
+ 106 named destinations out of 1000 (max. 500000)
+ 176 words of extra memory for PDF output out of 10000 (max. 10000000)
 
