@@ -320,3 +320,11 @@ If all the links in $\gamma$ lie on the same plane, the Wilson loop is \emph{pla
 Wilson loops are important for a variety of reasons, that will not be elaborated further as this is not the focus of this project, however it is worth knowing that they can be used as operators for purely gluonic bound states, the so-called \emph{glueballs}: the mass spectrum of these states can be obtained through the exponential decay of their correlation functions.
 
 \subsubsection{Polyakov Loops}
+Another important observable can be defined in lattices where periodic boundary conditions in the time direction are assumed.
+Thanks to periodicity, a whole new class of closed paths arises: all the paths that wind around the time direction.
+A Polyakov loop is thus defined as a line at a fixed spatial position $\vec{x}=(x^1,x^2,x^3)$ that runs along the whole time direction:
+\begin{equation}
+    P(\vec{x}) \equiv \Tr\prs{\prod_{t=0}^{T-1} U_0(t,\vec{x})} \label{1:PolyakovLoop}
+\end{equation}
+The Polyakov loop has a lot of interesting properties: its physical interpretation is the world-line of a single static quark (\ie its mass is infinite), therefore its expectation value is an order parameter of the deconfinement transition.
+This means that, if the system is confined (quarks and gluons cannot move around freely), its expectation value is $0$, while if the system is deconfined, $\expval{P(\vec{x})}\neq0$.
