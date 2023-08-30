@@ -11,7 +11,6 @@ In quantum field theory, a real scalar massive field is described, in a $4$-dime
 \end{equation}
 where $V(\phi)$ is any potential, such as $\frac{g}{6}\phi^3$ or $\frac{g}{4!}\phi^4$.
 Real scalar fields do not describe any real-world elementary particle, though they are useful to learn basic principles of quantum field theory, as they are the simplest fields that can be written.
-%TODO: check notation consistency with lattice action after Wick rotation
 
 \subsection{Dirac Spinor Fields}
 Let us now take into consideration a (free) quantum field theory describing a fermion, such as a quark or a lepton. Its action can be written as:
@@ -168,8 +167,8 @@ These self-interactions make the the Yang-Mills action interesting to be studied
 
 \subsection{Wick Rotation}
 Up to now, actions were written in Minkowskian spacetime, where $\eta_{\mu\nu} = \diag(-1,1,1,1)$. In order to have a positive-defined metric $\eta_{\mu\nu} = \delta_{\mu\nu}$ a Wick rotation can be performed by re-defining the time coordinate to be $\tau = \i t = \i x^0$, as is rigorously proven in \cite{SCHLINGEMANN_1999}.
-The principle behind Wick rotation is that the time coordinate is promoted to be a complex number and the integration (in the action) from $-\infty$ to $\infty$ is made to be from $-\i\infty$ to $\i\infty$ through a rotation of $\frac\pi2$ in the complex plane, assuming that correlators and other physical quantities do not present singularities in the first and third quadrant of the complex plane of $t$.
-This rotation is not only a matter of convenience, as it is needed in perturbative QFT for the computation of (otherwise oscillating) functional integrals and because a Minkowskian lattice cannot be rigorously defined.\\
+The principle behind Wick rotation is that the time coordinate is promoted to be a complex number and the integration (in the action) from $-\infty$ to $\infty$ is made to be from $-\i\infty$ to $+\i\infty$ through a rotation of $\frac\pi2$ in the complex plane, assuming that correlators and other physical quantities do not present singularities in the first and third quadrant of the complex plane of $t$.
+This rotation is not only a matter of convenience, in fact it is needed in perturbative QFT for the computation of (otherwise oscillating) functional integrals and in lattice field theory because a Minkowskian lattice cannot be rigorously defined.\\
 The relation between the Minkowski actions written before and the Euclidean actions is $S^M = \i S^E$, because $\dd^4x^E = \i \dd^4x^M$.\\
 Thus, the Euclidean actions are\footnote{Note that they are not the same as their Minkowskian counterpart, as some redefinitions of the fields and the $\gamma$ matrices have been implicitly made, in order to have the respective theories non ill-defined.}:
 \begin{align}
@@ -187,7 +186,7 @@ After the Wick rotation, quantum field theory can be studied perturbatively thro
 \end{equation*}
 has become non-oscillating.
 This approach, however, works well only if the coupling constants are \emph{small enough} and does not allow to obtain non-perturbative results, \ie physical quantities that depend on essential singularities in the coupling constant, like glueballs for Yang-Mills theories.\\
-For this reason, a non-perturbative approach has to be taken into consideration and one possibility is Lattice Field Theory: the spacetime is discretized to a lattice, with lattice spacing $a$, and the fields can assume different values only on the sites of the lattice.
+For this reason, a non-perturbative approach has to be taken into consideration and one possibility is Lattice Field Theory: the spacetime is discretized to a lattice, with lattice spacing $a$, and the fields can assume different values only on particular parts of the lattice.
 More in detail, a scalar field lives on lattice sites, a vector field lives on links between sites and objects with $k$ indices live on $k$-simplexes.\\
 If the limit $a\to0$ is taken, the theory must reproduce results obtained in the continuum, like the ones obtained in perturbation theory in the regime where it can be applied, however the presence of a discrete spacetime provides a natural cutoff for the momenta, allowing ultraviolet divergencies to be kept under control, although they need to be taken into consideration when approaching the continuum limit.\\
 In this section, based on standard quantum field theory textbooks cited before and lattice field theory textbooks \cite{Montvay:1994cy, Gattringer:2010zz, DeGrand:2006zz}, the regularization of the previous quantum field theories on a Simple Hypercubic (SH) lattice is presented.
@@ -200,9 +199,9 @@ Formally:
 \end{equation}
 
 \subsubsection{Simple Hypercubic Lattice}
-If the basis $\prc{v_i}$ is taken to be orthonormal, the lattice is called \emph{Simple Hypercubic}\footnote{The word \emph{simple} is used to make a distinction with the Body-Centered Hypercubic lattice, in the following sections.}.\\
-In figure \eqref{1F:cubicLattice} is represented a portion of a Simple Hypercubic lattice in $D=3$.
-\begin{figure}[h!]
+If the basis $\prc{v_i}$ is taken to be orthonormal, the lattice is called \emph{Simple Hypercubic}\footnote{The word \emph{simple} is used to make a distinction with the Body-Centered Hypercubic lattice.}.\\
+In Figure \eqref{1F:cubicLattice} is represented a portion of a Simple Hypercubic lattice in $D=3$.
+\begin{figure}[!htbp]
     \centering
     \includegraphics[width=0.25\textwidth]{Lattice.png}
     \caption{A cubic lattice.}
@@ -213,19 +212,42 @@ This means that a SH lattice can be seen as a tassellation of the spacetime with
 Each point of the lattice has $8$ nearest neighbours that are identified by the vectors obtained through all possible permutations of position and sign of $(\pm1,0,0,0)$.\\
 The plaquette (the simplest bidimensional figure) is a square.
 This will be important when implementing gauge theories on the lattice.
+\begin{figure}[!htbp]
+    \centering
+    \hspace{0.1\textwidth}
+    \begin{subfigure}[b]{0.25\textwidth}
+        \includegraphics[width=\textwidth]{CubicCell.png}
+        \caption{Simple cube.}
+        \label{1F:CubicCell}
+    \end{subfigure}
+    \hspace{0.2\textwidth}
+    \begin{subfigure}[b]{0.25\textwidth}
+        \includegraphics[width=\textwidth]{BodyCenteredCubicCell.png}
+        \caption{Body-centered cube.}
+        \label{1F:BCCubicCell}
+    \end{subfigure}
+    \hspace{0.2\textwidth}
+    \caption{Tridimensional representation of a simple cubic cell (\ref{1F:CubicCell}) and a body-centered one (\ref{1F:BCCubicCell}).}
+    \label{1F:ScBccCells}
+\end{figure}
 
 \subsubsection{Body-Centered Tesseract}
 The SH lattice is not, of course, the only possible choice of a lattice in $4$ spacetime dimensions.
 Another common choice, already used to simulate gauge theories~\cite{Celmaster:1982ht}, is the Body-Centered Tesseract (BCT).
 It consists of packing the spacetime with tesseracts, as the name suggests, but considering both the corners and the centers of every hypercube as lattice sites.
-Every site has, therefore, $24$ nearest neighbours: $16$ are identified by all possible permutations of signs of $\pr{\pm\frac12,\pm\frac12,\pm\frac12,\pm\frac12}$, the $8$ remaining are the ones of the SH lattice.\\
-The cell of this lattice is known as $24$-cell and the plaquettes are triangular.
-%TODO: add 24-cell image
+Every site has, therefore, $24$ nearest neighbours: $16$ are identified by all possible sign permutations of $\pr{\pm\frac12,\pm\frac12,\pm\frac12,\pm\frac12}$, the $8$ remaining are the ones of the SH lattice.
+The cell of this lattice is known as $24$-cell, shown in Figure \eqref{1F:24cell}, and the plaquettes are triangular.
+\begin{figure}[!htbp]
+    \centering
+    \includegraphics[width=0.33\textwidth]{24cell.png}
+    \caption{Bidimensional projection of the $24$-cell.}
+    \label{1F:24cell}
+\end{figure}
 
 \subsection{Scalar Fields on the Simple Hypercubic Lattice}
 Let us consider a simple hypercubic lattice $\Lambda_{SH}$ extending over $L=L_1=L_2=L_3$ lattice spacings in the spatial directions and over $T=L_0$ lattice spacings in the temporal direction.
-Let us also consider a scalar field $\phi(x)$ in order to introduce some useful tools that will be needed later.
-As anticipated at the beginning of this section, a scalar field can only assume values on the sites of the lattice, therefore $x\in\Lambda_{SH}$, and let us assume, for simplicity, periodic boundary conditions on the field, therefore $\phi(x+a\hat\mu L_\mu)=\phi(x)$.
+Let us also consider a scalar field $\phi(x)$, in order to introduce some useful tools that will be needed later.
+As anticipated in the beginning of this section, a scalar field can only assume values on the sites of the lattice, therefore $x\in\Lambda_{SH}$, and let us assume, for simplicity, periodic boundary conditions on the fields, therefore $\phi(x+a\hat\mu L_\mu)=\phi(x)$.
 The Fourier transform of the field becomes
 \begin{equation}
     \tilde\phi(p)=\sum_x a^4 e^{-\i p\cdot x}\phi(x) \label{1:FourierScalar}
@@ -234,8 +256,8 @@ and the allowed momenta are given by
 \begin{equation}
     p_\mu=\frac{2\pi}{aL_\mu}n_\mu, \qquad n_\mu=0, \dots, L_\mu \label{1:Brillouin}
 \end{equation}
-This ensures that the momenta can take only the assigned values of the Brillouin zone \eqref{1:Brillouin} and therefore cannot go to infinity, providing a natural cutoff given by the lattice spacing $a$.
-The discretization also implies that derivatives of the fields cannot be computed, therefore the lattice forward derivative is used:
+This ensures that the momenta can take only the assigned values of the Brillouin zone \eqref{1:Brillouin} and therefore cannot go to infinity, providing a natural cutoff given by the lattice spacing $a$.\\
+The discretization also implies that derivatives of the fields cannot be computed, therefore the lattice forward derivative is used:\footnote{Note that, in the continuum limit, the two derivatives coincide.}
 \begin{equation}
     \partial_\mu\phi(x)\rightarrow \nabla_\mu\phi(x)=\frac{\phi(x+a\hat\mu)-\phi(x)}{a} \label{1:ForwardLatticeDerivative}
 \end{equation}\\
@@ -246,13 +268,13 @@ Assuming a self-interaction potential $V(\phi)=\frac\lambda{4!}\phi^4$, the acti
 A similar approach will be used in the following section to obtain the action for Yang-Mills theories.
 
 \subsection{Gauge Fields on the Simple Hypercubic Lattice}
-Let us now take into consideration a Yang-Mills theory, as in\secref{Sec:NonAbelianGaugeTheories}.
-As anticipated before, gauge fields, being vector fields, can assume value only on links between sites of the lattice.
+Let us now take into consideration a Yang-Mills theory, as in\secref{Sec:NonAbelianGaugeTheories}, with gauge group $\SUN$.
+As anticipated before, gauge fields, being vector fields, can assume value only on links between sites of the lattice.\\
 One could naively think that putting gauge vectors $A_\mu(x)$ on the links is enough, but this would explicitly break gauge invariance.
-For this reason, Wilson's idea was to put the gauge group (and not algebra) elements, namely $U_\mu(x) = e^{\i a g A_\mu(x)}$.\\
+For this reason, Wilson's idea was to put the gauge group (and not algebra) elements, namely $U_\mu(x) = e^{\i a g A_\mu(x)}$, on the links.\\
 The field $U_\mu(x)$ lives on the link connecting the site $x$ with the site $x+a\hat\mu$, therefore the link is oriented and link variables in negative directions can also be defined:\\
 $U_{-\mu}(x) \equiv U^\dagger_\mu(x-a\hat\mu)$.
-\begin{figure}[h!]
+\begin{figure}[!htbp]
     \includegraphics[width=\textwidth]{linkVariables.png}
     \caption{Schematic visualization of link variables.}
     \label{1F:LinkVariables}
@@ -269,13 +291,39 @@ The product of link variables along a square plaquette is defined in the followi
     U_{\mu\nu}(x) \equiv& U_\mu(x)U_\nu(x+\hat\mu)U_{-\mu}(x+\hat\mu+\hat\nu)U_{-\nu}(x+\hat\nu) =\\
     =& U_\mu(x)U_\nu(x+\hat\mu)U^\dagger_\mu(x+\hat\nu)U^\dagger_\nu(x) \numthis\label{1:Plaquette}
 \end{align*}
-%TODO: add plaquette image
 Thus a gauge-invariant action, called Wilson action, can be written as follows:
 \begin{equation}
     S_W[U]=\frac\beta{2N}\sum_{x\in\Lambda}\sum_{\mu<\nu}\Re\Tr[\id-U_{\mu\nu}(x)] \label{1:WilsonAction}
 \end{equation}
 where $\beta$ is a parameter that is going to be set in the following passages, $N$ the number of colors (the same $N$ in $\SUN$), the real part is needed to preserve unitarity and $U_{\mu\nu}$ is the plaquette of \eqref{1:Plaquette}.\\
-In the following part it is shown that in the naive continuum limit ($a\to0$) the Wilson action reproduces the Yang-Mills action of \eqref{1:YMActionEuclidean}.
+\begin{figure}[!htbp]
+\centering
+    \begin{tikzpicture}
+        \filldraw[black] (0,0) circle (3pt) node[anchor=north east]{$x$};
+        \filldraw[black] (0,3) circle (3pt) node[anchor=south east]{$x+\hat\nu$};
+        \filldraw[black] (3,0) circle (3pt) node[anchor=north west]{$x+\hat\mu$};
+        \filldraw[black] (3,3) circle (3pt) node[anchor=south west]{$x+\hat\mu+\hat\nu$};
+        \draw[ultra thick] (-0.5,0) -- (0,0);
+        \draw[ultra thick] (0,-0.5) -- (0,0);
+        \draw[ultra thick,->] (0,0) -- (1.5,0) node[anchor=north]{$U_\mu(x)$};
+        \draw[ultra thick   ] (1.5,0) -- (3,0);
+        \draw[ultra thick]  (3.5,0) -- (3,0);
+        \draw[ultra thick] (3,-0.5) -- (3,0);
+        \draw[ultra thick,->] (3,0) -- (3,1.5) node[anchor=west]{$U_\nu(x+\hat\mu)$};
+        \draw[ultra thick   ] (3,1.5) -- (3,3);
+        \draw[ultra thick]  (3.5,3) -- (3,3);
+        \draw[ultra thick]  (3,3.5) -- (3,3);
+        \draw[ultra thick,->] (3,3) -- (1.5,3) node[anchor=south]{$U^\dagger_\mu(x+\hat\nu)$};
+        \draw[ultra thick   ] (1.5,3) -- (0,3);
+        \draw[ultra thick] (-0.5,3) -- (0,3);
+        \draw[ultra thick]  (0,3.5) -- (0,3);
+        \draw[ultra thick,->] (0,3) -- (0,1.5) node[anchor=east]{$U^\dagger_\nu(x)$};
+        \draw[ultra thick   ] (0,1.5) -- (0,0);
+    \end{tikzpicture}
+    \caption{Link variables building a plaquette $U_{\mu\nu}(x)$.}
+    \label{1F:Plaquette}
+\end{figure}\\
+In the following part, the naive continuum limit is taken, showing that Wilson action reproduces Yang-Mills action of \eqref{1:YMActionEuclidean} when $a\to0$.
 Let us start by defining an auxiliary field $B_\mu(x)$:
 \begin{equation}
     B_\mu(x) = a g A^a_\mu(x)T^a \label{1:BField}
@@ -288,7 +336,7 @@ The expansion for small $a$ of the plaquette $U_{\mu\nu}$ is:
     &\text{applying \eqref{1:ForwardLatticeDerivative}, } B_\mu(x+\hat\nu) = a\nabla_\nu B_\mu(x) \\
     =& e^{\i B_\mu(x)}e^{\i B_\nu(x)+a\nabla_\mu B_\nu(x)}e^{-\i B_\mu(x)-a\nabla_\nu B_\mu(x)}e^{-\i B_\nu(x)} \simeq \\
     &\text{From now on, the dependance from $x$ will be omitted.}\\
-    &\text{using BCH formula, } e^Xe^Y = e^{X+Y+\frac12\comm{X}{Y}}\text{, up to $O(a^2)$:} \\
+    &\text{Using BCH formula, } e^Xe^Y = e^{X+Y+\frac12\comm{X}{Y}}\text{, up to $O(a^2)$:} \\
     \simeq& \exp\Big\{\cancel{\i B_\mu} + \cancel{\i B_\nu} + \i a \nabla_\mu B_\nu - \cancel{\i B_\mu} - \i a \nabla_\nu B_\mu - \cancel{\i B_\nu}+\\
     &+\frac12\pr{-\comm{B_\mu}{B_\nu}+\cancel{\comm{B_\mu}{B_\nu}}+\cancel{\comm{B_\nu}{B_\mu}}-\comm{B_\mu}{B_\nu}}\Big\} = \\
     =& \exp{\i a\pr{\nabla_\mu B_\nu - \nabla_\nu B_\mu} - \comm{B_\mu}{B_\nu}}
@@ -302,13 +350,13 @@ Finally, the small-$a$ approximation for the Wilson action \eqref{1:WilsonAction
 \begin{align*}
     S_W \simeq& \frac{\beta}{2N} \sum_{x\in\Lambda}\sum_{\mu<\nu} \Re\Tr(\cancel\id - \cancel\id - \i a^2 g \Fmunu^i T^i + \frac12a^4 g^2 \Fmunu^i F^{j\mu\nu}T^iT^j) = \\
     =& \underbrace{-i\frac{a^2\beta}{2N} \sum_{x\in\Lambda}\sum_{\mu<\nu} \Re(\Fmunu^i \Tr(T^i))}_{=0\text{ for \eqref{1:InfinitesimalSUN}}} + \frac{g^2a^4\beta}{4N} \sum_{x\in\Lambda}\sum_{\mu<\nu} \Re(\underbrace{\Fmunu^i F^{j\mu\nu}\Tr(T^iT^j)}_{=\frac12\Fmunu^i F^{i\mu\nu}\text{ for \eqref{1:NormCondSUN}}}) = \\
-    =& \frac{g^2\beta}{8N} \underbrace{a^4\sum_{x,\mu,\nu}}_{\to\dV}\Fmunu^i F^{i\mu\nu} \numthis \label{1:WilsonSmalla}
+    =& \frac{g^2\beta}{8N} a^4\sum_{x,\mu,\nu}\Fmunu^i F^{i\mu\nu} \xrightarrow[a\to0]{} \frac{g^2\beta}{8N} \dV\Fmunu^i F^{i\mu\nu} \numthis \label{1:WilsonSmalla}
 \end{align*}
 where the Yang-Mills action \eqref{1:YMActionEuclidean} can be recognized if $\beta = \frac{2N}{g^2}$.
 
 \subsubsection{Wilson Loops}
 Now that the lattice action has been defined, observables need to be taken into account.
-As mentioned below \eqref{1:GaugeTransformLinkVariable}, the trace of the product of link variables along any closed path is a gauge-invariant quantity.
+As mentioned below equation \eqref{1:GaugeTransformLinkVariable}, the trace of the product of link variables along any closed path is a gauge-invariant quantity.
 This means that any quantity of the sort is a good candidate for an observable and, in fact, given any closed path $\gamma$ on the lattice, the Wilson loop is defined as follows:
 \begin{equation}
     W[\gamma] \equiv \Tr\prs{\prod_{(x,\mu)\in\gamma}U_\mu(x)} \label{1:WilsonLoop}
@@ -316,15 +364,26 @@ This means that any quantity of the sort is a good candidate for an observable a
 It is worthwile to mention that this definition is does not depend on the type of lattice and of boundary conditions chosen for such lattice.
 If the path $\gamma$ does not include any temporal link, the loop is called \emph{spacelike Wilson loop}, otherwise it is called \emph{timelike Wilson loop}.
 If all the links in $\gamma$ lie on the same plane, the Wilson loop is \emph{planar}, otherwise it is \emph{nonplanar}.
-%TODO: add image of Wilson loop
-Wilson loops are important for a variety of reasons, that will not be elaborated further as this is not the focus of this project, however it is worth knowing that they can be used as operators for purely gluonic bound states, the so-called \emph{glueballs}: the mass spectrum of these states can be obtained through the exponential decay of their correlation functions.
+\begin{figure}[!htbp]
+    \centering
+    \includegraphics[width=0.8\textwidth]{WilsonLoops.png}
+    \caption{Example of a planar (left) and nonplanar (right) Wilson loop.}
+\end{figure}\\
+Wilson loops are important for a variety of reasons, that will not be elaborated further as this is not the focus of this project, however it is worth knowing that they can be used as operators for purely gluonic bound states, the so-called \emph{glueballs}: the mass spectrum of these states can be obtained through the exponential decay of Wilson loops' correlation functions.
 
 \subsubsection{Polyakov Loops}
 Another important observable can be defined in lattices where periodic boundary conditions in the time direction are assumed.
-Thanks to periodicity, a whole new class of closed paths arises: all the paths that wind around the time direction.
+Thanks to periodicity, a whole new class of closed paths arises: all paths that wind around the time direction.
 A Polyakov loop is thus defined as a line at a fixed spatial position $\vec{x}=(x^1,x^2,x^3)$ that runs along the whole time direction:
 \begin{equation}
     P(\vec{x}) \equiv \Tr\prs{\prod_{t=0}^{T-1} U_0(t,\vec{x})} \label{1:PolyakovLoop}
 \end{equation}
-The Polyakov loop has a lot of interesting properties: its physical interpretation is the world-line of a single static quark (\ie its mass is infinite), therefore its expectation value is an order parameter of the deconfinement transition.
-This means that, if the system is confined (quarks and gluons cannot move around freely), its expectation value is $0$, while if the system is deconfined, $\expval{P(\vec{x})}\neq0$.
+The Polyakov loop has a lot of interesting properties: its physical interpretation is the world-line of a single static quark, therefore its expectation value is an order parameter of the deconfinement transition, as well as of a new global symmetry, called \emph{center symmetry}, arising from the periodicity of the time direction.\\
+This means that, if the system is confined (quarks and gluons cannot move around freely), its expectation value is $0$, while if the system is deconfined, $\expval{P(\vec{x})}\neq0$.\\
+Another property, that will be used in the simulations, is that the expectation value of the product of two Polyakov loops at distance $r=a\abs{\vec{x}-\vec{y}}$ is a function of the static quark-antiquark potential $V(r)$, as indicated below:
+\begin{equation}
+    \expval{P(\vec{x})P^\dagger(\vec{y})} \varpropto e^{-TaV(r)}\pr{1+O(e^{-Ta\Delta E})} \label{1:PolyakovPotential}
+\end{equation}
+where $\Delta E$ is the difference between $V(r)$ and the first excited energy level of the quark-antiquark pair.\\
+The value of the potential $V(r)$ will be used, in this project, to study the recovery of rotational invariance when approaching the continuum limit.\\
+Various methods of performing computer simulations of lattice field theory and how to obtain these quantities, such as plauette values, Wilson and Polyakov loops, is shown in the following chapter.

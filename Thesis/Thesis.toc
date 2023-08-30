@@ -10,10 +10,10 @@
 \contentsline {subsection}{\numberline {1.2.2}Lattice}{7}{subsection.1.2.2}%
 \contentsline {subsubsection}{\numberline {1.2.2.1}Simple Hypercubic Lattice}{7}{subsubsection.1.2.2.1}%
 \contentsline {subsubsection}{\numberline {1.2.2.2}Body-Centered Tesseract}{8}{subsubsection.1.2.2.2}%
-\contentsline {subsection}{\numberline {1.2.3}Scalar Fields on the Simple Hypercubic Lattice}{8}{subsection.1.2.3}%
+\contentsline {subsection}{\numberline {1.2.3}Scalar Fields on the Simple Hypercubic Lattice}{9}{subsection.1.2.3}%
 \contentsline {subsection}{\numberline {1.2.4}Gauge Fields on the Simple Hypercubic Lattice}{9}{subsection.1.2.4}%
-\contentsline {subsubsection}{\numberline {1.2.4.1}Wilson Loops}{10}{subsubsection.1.2.4.1}%
-\contentsline {subsubsection}{\numberline {1.2.4.2}Polyakov Loops}{11}{subsubsection.1.2.4.2}%
+\contentsline {subsubsection}{\numberline {1.2.4.1}Wilson Loops}{11}{subsubsection.1.2.4.1}%
+\contentsline {subsubsection}{\numberline {1.2.4.2}Polyakov Loops}{12}{subsubsection.1.2.4.2}%
 \contentsline {chapter}{\numberline {2}Computer Simulation of Gauge Theories }{13}{chapter.2}%
 \contentsline {chapter}{\numberline {3}Gauge Theories Simulation on non-hypercubic lattice F4}{15}{chapter.3}%
 \contentsline {chapter}{\numberline {4}Simulation Results}{17}{chapter.4}%
