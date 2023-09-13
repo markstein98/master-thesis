@@ -14,7 +14,8 @@
 \contentsline {subsection}{\numberline {1.2.4}Gauge Fields on the Simple Hypercubic Lattice}{9}{subsection.1.2.4}%
 \contentsline {subsubsection}{\numberline {1.2.4.1}Wilson Loops}{11}{subsubsection.1.2.4.1}%
 \contentsline {subsubsection}{\numberline {1.2.4.2}Polyakov Loops}{12}{subsubsection.1.2.4.2}%
-\contentsline {chapter}{\numberline {2}Computer Simulation of Gauge Theories }{13}{chapter.2}%
+\contentsline {chapter}{\numberline {2}Computer Simulation of Pure Gauge Theories}{13}{chapter.2}%
+\contentsline {section}{\numberline {2.1}Introduction}{13}{section.2.1}%
 \contentsline {chapter}{\numberline {3}Gauge Theories Simulation on non-hypercubic lattice F4}{15}{chapter.3}%
 \contentsline {chapter}{\numberline {4}Simulation Results}{17}{chapter.4}%
 \contentsline {chapter}{\numberline {5}Conclusions}{19}{chapter.5}%
