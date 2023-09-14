@@ -38,14 +38,13 @@ In order for the stochastic process to not have any sink or source of probabilit
 \begin{equation}
     \sum_\alpha T(\beta|\alpha)P(\alpha) = \sum_\alpha T(\alpha|\beta)P(\beta) \label{2:BalanceEq}
 \end{equation}
-This equation states that the probability of transitioning to the configuration $\beta$, written in the left-hand side as the sum of the transition probability from the configuration $\alpha$ weighted by the probability $P(\alpha)$ that the system is actually in that configuration, must be equal to the probability of transitioning out of the configuration $\beta$, given by the probability of finding the system in the configuration $\beta$ times the transition probability $T(\alpha|\beta)$ over all the final configurations, in the right-hand side.
-Thanks to \eqref{2:TPropNorm}, the right-hand side is easily proven to be equal to $P(\beta)$.\\
+This equation states that the probability of transitioning to the configuration $\beta$, written in the \lhs as the sum of the transition probability from the configuration $\alpha$ weighted by the probability $P(\alpha)$ that the system is actually in that configuration, must be equal to the probability of transitioning out of the configuration $\beta$, given by the probability of finding the system in the configuration $\beta$ times the transition probability $T(\alpha|\beta)$ over all the final configurations, in the right-hand side.
+Thanks to \eqref{2:TPropNorm}, the \rhs is easily proven to be equal to $P(\beta)$.\\
 A sufficient (but not necessary) condition to obey the balance equation \eqref{2:BalanceEq} is obtained by requiring that it holds true term-by-term, thus obtaining the detailed balance condition:
 \begin{equation}
     T(\beta|\alpha)P(\alpha) = T(\alpha|\beta)P(\beta) \label{2:DetailedBalance}
 \end{equation}
 Although it is not a necessary condition, most algorithms, including the ones discussed in the following section, satisfy it.
-
 \section{Monte Carlo Algorithms}
 
 \subsection{Metropolis Algorithm}

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Arch Linux) (preloaded format=pdflatex 2023.8.28)  14 SEP 2023 17:19
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Arch Linux) (preloaded format=pdflatex 2023.8.28)  14 SEP 2023 17:36
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -3617,10 +3617,10 @@ Package logreq Info: Writing requests to 'Thesis.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 39959 strings out of 477985
- 779343 string characters out of 5840058
+ 39961 strings out of 477985
+ 779349 string characters out of 5840058
  1877388 words of memory out of 5000000
- 59314 multiletter control sequences out of 15000+600000
+ 59316 multiletter control sequences out of 15000+600000
  651082 words of font info for 143 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
  88i,21n,83p,1151b,1985s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -3646,7 +3646,7 @@ r/share/texmf-dist/fonts/type1/public/mathabx-type1/mathx10.pfb></usr/share/tex
 mf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/share/texmf-dist/f
 onts/type1/public/amsfonts/symbols/msbm10.pfb></usr/share/texmf-dist/fonts/type
 1/public/cm-super/sfxc2074.pfb>
-Output written on Thesis.pdf (30 pages, 1636225 bytes).
+Output written on Thesis.pdf (30 pages, 1636246 bytes).
 PDF statistics:
  649 PDF objects out of 1000 (max. 8388607)
  514 compressed objects within 6 object streams
