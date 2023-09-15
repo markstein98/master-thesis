@@ -45,9 +45,69 @@ A sufficient (but not necessary) condition to obey the balance equation \eqref{2
     T(\beta|\alpha)P(\alpha) = T(\alpha|\beta)P(\beta) \label{2:DetailedBalance}
 \end{equation}
 Although it is not a necessary condition, most algorithms, including the ones discussed in the following section, satisfy it.
+
 \section{Monte Carlo Algorithms}
+Monte Carlo algorithms are a class of algorithms that, singularly or combined together, allow to advance the Markov chain, while satisfying the condition presented in the previous section.
+Each algorithm, if applied once, allows the transition from a configuration $U_{n-1}$ to a configuration $U_n$ (eventually the same as $U_{n-1}$). The repeated application of the algorithm allows to advance through the Markov chain.
 
 \subsection{Metropolis Algorithm}
+The first algorithm presented is the Metropolis algorithm. It is not very much efficient and usually it is not used in simulations, however it contains the fundamental steps that are present in some of the more advanced algorithms and it is quite easy to understand.
+For this reasons it is ususally viewed as the \emph{``ancestor''} of all Monte Carlo algorithms and it is present in every textbook on the subject.\\
+This algorithm consists in two steps that implement in one of the most simple ways the detailed balance condition \eqref{2:DetailedBalance}:
+\begin{enumerate}[label=\arabic*)]
+    \item A candidate configuration $\beta$ is chosen, according to some \emph{a priori} selection probability $T_0(\beta|\alpha)$, where $\alpha=U_{n-1}$.
+    \item The candidate configuration $\beta$ is accepted as the new configuration $U_n$ with the acceptance probability
+          \begin{equation}
+              T_A(\beta|\alpha) = \min\pr{1,\frac{T_0(\alpha|\beta)\exp(-S[\beta])}{T_0(\beta|\alpha)\exp(-S[\alpha])}} \label{2:MetropolisAccProb}
+          \end{equation}
+          If it is not accepted, the unchanged configuration is considered again ($U_n=\alpha$) and the measurements are eventually made again.
+\end{enumerate}
+These two steps are repeated a sufficient amount of times up unitl the needed measurements are taken.\\
+Note that the fact that $P(\alpha) = \frac{e^{-S[\alpha]}}{Z} \varpropto e^{-S[\alpha]}$ has been used.\\
+The total transition probability $T$ is obtained through the product $T=T_0T_A$, as the two steps are independant from each other, and it is straightforward to see that it satisfies the detailed balance condition \eqref{2:DetailedBalance}:
+\begin{align*}
+    T(\beta|\alpha)P(\alpha) =& \frac1Z T_0(\beta|\alpha)T_A(\beta|\alpha)\exp(-S[\alpha]) = \\
+    =& \frac1Z T_0(\beta|\alpha)\min\pr{1,\frac{T_0(\alpha|\beta)\exp(-S[\beta])}{T_0(\beta|\alpha)\exp(-S[\alpha])}}\exp(-S[\alpha]) = \\
+    =& \frac1Z \min\pr{T_0(\beta|\alpha)\exp(-S[\alpha]), T_0(\alpha|\beta)\exp(-S[\beta])} = \\
+    =& \frac1Z T(\alpha|\beta)\exp(-S[\beta]) = \\
+    =& T(\alpha|\beta)P(\beta)
+\end{align*}
+\qed
+In many cases a symmetric selection probability is used $T_0(\alpha|\beta)=T_0(\beta|\alpha)$, thus \eqref{2:MetropolisAccProb} simpliefies to:
+\begin{equation}
+    T_A(\beta|\alpha) = \min\pr{1, e^{-\Delta S}} \quad \text{with} \quad \Delta S = S[\beta]-S[\alpha] \label{2:MetropolisAccProbSymm}
+\end{equation}
+That means that if the new configuration lowers the action, the change is accepted with probability $1$ (as $e^{-\Delta S}>1$), otherwise it is accepted with a certain probability that decays exponentially as the difference in the action of the two configurations becomes greater.
+This ensures that the algorithm \emph{moves across} the configuration space towards the minimums of the action, while allowing quantum fluctuations in order to not \emph{``get stuck''} on a local minimum.\\
+If the change in the action is local (it involves a single link variable), $\Delta S$ can be computed using only the field values in the local neighbour. This will be the case for $\SUN$ gauge theories.
+
+\subsubsection{Application to SU(N) Gauge Theories}
+For a $\SUN$ gauge theory, the algorithm is implemented in the following way.
+For each iteration, a single link is changed, then the acceptance probability is computed, a random number is extracted and, if it is less than the acceptance probability the change is accepted, otherwise it is rejceted. The algorithm is then iterated a certain number of times and measures are taken.\\
+The candidate link $U'_\mu(x)$ for step 1 is generated in the vicinity of the old value $U_\mu(x)$, in order to not have a too great $\Delta S$ that would lead to too low accentance rates.
+This can be done by exploiting the property that the product of any two elements of $\SUN$ is still an element of $\SUN$, therefore extracting a matrix $X\in\SUN$ near the identity allows to write the candidate link as:
+\begin{equation}
+    U'_\mu(x) = XU_\mu(x) \label{2:MetropolisCandidateLink}
+\end{equation}
+The matrix $X$ is chosen such that it has the same probability as $X^{-1}$, this way the selection probability $T_0$ is symmetric and the computation of the acceptance probability $T_A$ becomes easier.\\
+For this reason, only the variation of the action $\Delta S$ must be computed, where of course the action is the Wilson action \eqref{1:WilsonAction}.
+In particular, only the plaquettes containing the candidate link must be evaluated: the change in the action is local, so all the other plaquettes will have the same value both before and after the change of the link.
+Hence $\Delta S = S[U'_\mu(x)]_{loc}-S[U_\mu(x)]_{loc}$.\\
+In a SH lattice, each link is shared between $6$ plaquettes.
+For each plaquette the change of the action is given by the change of the link, while the product of the other three gauge links, that is called \emph{staple} and will be indicated as $P_i$, remains unchanged.
+Therefore, the local contribution to the action can be computed as:
+\begin{equation*}
+    S[U_\mu(x)]_{loc} = \frac\beta{2N} \sum_{i=1}^6 \Re\Tr\prs{\id-U_\mu(x)P_i} = \frac\beta{2N} \Re\Tr\prs{6\id-U_\mu(x)\sum_{i=1}^6P_i}
+\end{equation*}
+where the sum over all the staples is:
+\begin{equation}
+    A = \sum_{i=1}^6P_i = \sum_{\nu\neq\mu}\pr{U_\nu(x+\hat\mu)U^\dagger_\mu(x+\hat\nu)U^\dagger_\nu(x) + U^\dagger_\nu(x+\hat\mu)U^\dagger_\mu(x-\hat\nu)U_\nu(x-\hat\nu)} \label{2:SumOverStaples}
+\end{equation}
+The change of the action can now be computed as
+\begin{equation}
+    \Delta S = S[U'_\mu(x)]_{loc}-S[U_\mu(x)]_{loc} = \frac\beta{2N} \Re\Tr\prs{\pr{U_\mu(x)-U'_\mu(x)}A} \label{2:MetropolisActionVar}
+\end{equation}
+where $A$ is not affected by the change of $U_\mu(x)$.
 
 \subsection{Heat Bath Algorithm}
 
