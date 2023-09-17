@@ -2375,6 +2375,8 @@
     <bcf:citekey order="3" intorder="3">DeGrand:2006zz</bcf:citekey>
     <bcf:citekey order="4" intorder="1">coxeter2012regular</bcf:citekey>
     <bcf:citekey order="5" intorder="1">Celmaster:1982ht</bcf:citekey>
+    <bcf:citekey order="6" intorder="1">1998art</bcf:citekey>
+    <bcf:citekey order="6" intorder="2">luscher1994portable</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="none">

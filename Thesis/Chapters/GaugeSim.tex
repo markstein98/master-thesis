@@ -110,5 +110,74 @@ The change of the action can now be computed as
 where $A$ is not affected by the change of $U_\mu(x)$.
 
 \subsection{Heat Bath Algorithm}
+The heat bath algorithm is an \emph{enhanced} version of the Metropolis algorithm, that combines the two steps into a single one and chooses the new candidate according to the probability distribution obtained by the computing the surrounding staples:
+\begin{equation}
+    \dd P(U) = \dd U \exp(\frac\beta{2N}\Re\Tr[U A]) \label{2:DistrProbHB}
+\end{equation}
+where $\dd U$ denotes the Haar integration measure of the gauge group and $A$ is computed according to \eqref{2:SumOverStaples}.
+This probability distribution can be computationally quite demanding, but has the advantage that, unlike the Metropolis algorithm, the link variable always changes.\\
+The implementation details depend on the gauge group, for this reason, the heat bath method for the gauge group $\SU(2)$ will be now explained\footnote{As matrixes of $\SUN$ can be built using $\SU(2)$ matrixes, the general case is just a little more complicated, but it follows the same principles.}.
+Since the sum of any two $\SU(2)$ elements is proportional to another $\SU(2)$ element, the sum of all staples $A$ \eqref{2:SumOverStaples} can be written in the form
+\begin{equation}
+    A = V\sqrt{\det(A)} \qquad\text{with}\qquad V\in\SU(2) \label{2:SumOverStaplesSU2}
+\end{equation}
+where it can be proven that $\det(A)\geq0$.
+Plugging into \eqref{2:DistrProbHB} and using the invariance of the Haar measure under trasformation of the origin of the group space ($\dd U = \dd (UV) = \dd X$), the distribution probability of the matrix $X=UV$ is
+\begin{equation}
+    \dd P(X) = \dd X \exp(\frac\beta{2N}\sqrt{\det(A)}\Re\Tr[X]) \label{2:DistrProbHBX}
+\end{equation}
+If a matrix $X$ distributed according to \eqref{2:DistrProbHBX} is generated, then the new candidate link, distributed according to \eqref{2:DistrProbHB}, is obtained as $U'_\mu(x) = XV^\dagger = \frac1{\sqrt{\det(A)}}XA^\dagger$.\\
+Any $U\in\SU(2)$ matrix can be written in the following representation, using $4$ real numbers:
+\begin{equation}
+    U=x_0\id+\i \bm{x} \cdot \bm{\sigma} \qquad\text{with}\qquad \det(U)=\abs{x}^2=\sum_{i=0}^3x_i^2=1 \label{2:SU2Repr}
+\end{equation}
+where $\bm\sigma=\pr{\sigma_1,\sigma_2,\sigma_3}$ is a vector built using the Pauli matrices and $x=(x_0,\bm{x})$ can be seen as a normalized $4$-compnents vector.
+Using this representation, the Haar measure in \eqref{2:DistrProbHBX} can be written as:
+\begin{align*}
+    \dd X =& \frac1{\pi^2} \dd^4x \delta\pr{x_0^2+\bm{x}-1} =\\
+    =& \frac1{\pi^2} \dd^4x \frac{1}{2\sqrt{1-x_0^2}} \pr{\delta\pr{\abs{\bm{x}}-\sqrt{1-x_0^2}}+\delta\pr{\abs{\bm{x}}+\sqrt{1-x_0^2}}} \numthis\label{2:HaarMeasureHB}
+\end{align*}
+where a well known property of the Dirac delta function has been used.\\
+The volume element can be rewritten in terms of the components of the vector $x$:
+\begin{equation}
+    \dd^4x = \dd x_0\dd\abs{x}\abs{x}^2\underbrace{\dd(\cos\theta)\dd\phi}_{\dd^2\Omega} \label{2:VolumeElemParam}
+\end{equation}
+Plugging back into \eqref{2:HaarMeasureHB} and integrating out the $\abs{\bm{x}}$ thanks to the delta functions (actually, only the first one contributes, as $x_i^2\leq1$ $\forall i$), the Haar measure takes the form:
+\begin{equation}
+    \dd X = \frac1{\pi^2}\dd x_0\dd^2\Omega\frac{1-x_0^2}{2\sqrt{1-x_0^2}} = \frac1{2\pi^2} \dd x_0 \dd^2\Omega \sqrt{1-x_0^2} \label{2:HaarMeasureHBSimplified}
+\end{equation}
+Then, in terms of the variables, the probability distribution becomes:
+\begin{equation}
+    \dd P(X) = \frac1{2\pi^2} \dd x_0 \dd\cos\theta \dd\phi \sqrt{1-x_0^2} \exp\pr{\frac\beta2 \sqrt{\det(A)}x_0} \label{2:DistrProbHBXSimplified}
+\end{equation}
+with $x_0\in[-1,1]$, $\cos\theta\in[-1,1]$, $\phi\in[0,2\pi)$, where $\Tr(X)=2x_0$ has been used.\\
+Thus, the problem of generating a matrix $X$ distributed according to \eqref{2:DistrProbHBX} has been reduced to the determination of three random variables $x_0$, $\theta$, $\phi$, whose distribution factorizes, so they can be determined independetly from each other.
+The random variable $x_0$, being distributed according to $\sqrt{1-x_0^2} \exp\pr{\frac\beta2 \sqrt{\det(A)}x_0}$, is determined through the auxiliary variable $\lambda\in[0,1]$ such that $x_0 = 1-2\lambda^2$, therefore
+\begin{equation}
+    \dd x_0\sqrt{1-x_0^2} \exp\pr{\frac\beta2 \sqrt{\det(A)}x_0} \varpropto \dd\lambda\lambda^2\sqrt{1-\lambda^2} \exp\pr{-\beta \sqrt{\det(A)}\lambda^2} \label{2:LambdaDistrHB}
+\end{equation}
+The variable $\lambda$ is generated with the polynomially modified Gaussian distribution density
+\begin{equation}
+    p_1(\lambda) = \lambda^2 e^{-\beta \sqrt{\det(A)}\lambda^2}
+\end{equation}
+and accepted with an accept/reject step using the square root function
+\begin{equation}
+    p_2(\lambda) = \sqrt{1-\lambda^2}
+\end{equation}
+There are several algorithms that can perform this computation in an efficient way~\cite{1998art, luscher1994portable}.\\
+After this, the length $\abs{x} = \sqrt{1-x_0^2}$ is computed, in order to determine the remaining variables.\\
+The variables $\cos\theta$ and $\phi$ are uniformely distributed, therefore a possible way of proceeding is by generating three random uniformely distributed numbers $r_1$, $r_2$ and $r_3$ in the interval $[-1,1)$ and accepting them only if $r_1^2+r_2^2+r_3^2\leq1$.
+Then, the $3$-vector $(r_1,r_2,r_3)$ is normalized to length $\abs{x}$ computed before, obtaining $\bm{x} = (x_1,x_2,x_3)$.\\
+After these steps, the vector $x=(x_0,\bm{x})$ can be used to generate the matrix $X$ according to \eqref{2:DistrProbHBX}, using representation \eqref{2:SU2Repr}, thus the new link variable can be obtained.\\
+This algorithm rapidly leads the Markov process to a minimum of the action, however the risk of ``getting stuck'' on a local minimum is present.
+For this reason, it is usually combined with the overrelaxation algorithm, discussed below.
 
 \subsection{Overrelaxation Algorithm}
+
+\section{Measurements}
+
+\subsection{Plaquettes}
+
+\subsection{Polyakov Loops}
+
+\section{Brief Scheme of a Simulation}

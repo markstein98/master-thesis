@@ -377,6 +377,53 @@
       \verb 10.1103/PhysRevD.26.2955
       \endverb
     \endentry
+    \entry{1998art}{book}{}
+      \list{publisher}{1}{%
+        {Pearson Education}%
+      }
+      \field{sortinit}{6}
+      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
+      \field{labeltitlesource}{title}
+      \field{isbn}{9788177583359}
+      \field{number}{v. 2}
+      \field{title}{The Art Of Computer Programming, Volume 2: Seminumerical Algorithms, 3/E}
+      \field{year}{1998}
+      \verb{urlraw}
+      \verb https://books.google.it/books?id=OtLNKNVh1XoC
+      \endverb
+      \verb{url}
+      \verb https://books.google.it/books?id=OtLNKNVh1XoC
+      \endverb
+    \endentry
+    \entry{luscher1994portable}{article}{}
+      \name{author}{1}{}{%
+        {{hash=16aa001e4f0bcc4883c1f09f0fe106b7}{%
+           family={Lüscher},
+           familyi={L\bibinitperiod},
+           given={Martin},
+           giveni={M\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Elsevier}%
+      }
+      \strng{namehash}{16aa001e4f0bcc4883c1f09f0fe106b7}
+      \strng{fullhash}{16aa001e4f0bcc4883c1f09f0fe106b7}
+      \strng{bibnamehash}{16aa001e4f0bcc4883c1f09f0fe106b7}
+      \strng{authorbibnamehash}{16aa001e4f0bcc4883c1f09f0fe106b7}
+      \strng{authornamehash}{16aa001e4f0bcc4883c1f09f0fe106b7}
+      \strng{authorfullhash}{16aa001e4f0bcc4883c1f09f0fe106b7}
+      \field{sortinit}{6}
+      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Computer physics communications}
+      \field{number}{1}
+      \field{title}{A portable high-quality random number generator for lattice field theory simulations}
+      \field{volume}{79}
+      \field{year}{1994}
+      \field{pages}{100\bibrangedash 110}
+      \range{pages}{11}
+    \endentry
   \enddatalist
 \endrefsection
 \endinput
