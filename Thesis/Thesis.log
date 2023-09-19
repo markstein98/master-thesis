@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Arch Linux) (preloaded format=pdflatex 2023.8.28)  19 SEP 2023 10:20
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Arch Linux) (preloaded format=pdflatex 2023.8.28)  19 SEP 2023 11:30
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1284,7 +1284,7 @@ LaTeX Font Info:    Trying to load font information for T1+lmr on input line 11
 
 (/usr/share/texmf-dist/tex/latex/lm/t1lmr.fd
 File: t1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
-)))
+))
 (/usr/share/texmf-dist/tex/latex/pgf/frontendlayer/tikz.sty
 (/usr/share/texmf-dist/tex/latex/pgf/basiclayer/pgf.sty
 (/usr/share/texmf-dist/tex/latex/pgf/utilities/pgfrcs.sty
@@ -1525,15 +1525,17 @@ File: pgfmodulematrix.code.tex 2023-01-15 v3.1.10 (3.1.10)
 (/usr/share/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrary
 topaths.code.tex
 File: tikzlibrarytopaths.code.tex 2023-01-15 v3.1.10 (3.1.10)
-))) (./Chapters/Settings.tex
+)))) (/usr/share/texmf-dist/tex/latex/relsize/relsize.sty
+Package: relsize 2013/03/29 ver 4.1
+)
+(./Chapters/Settings.tex
 Package hyperref Info: Option `colorlinks' set `true' on input line 7.
 ) (./Chapters/Commands.tex)
 Package translations Info: No language package found. I am going to use `englis
 h' as default language. on input line 10.
 Package csquotes Info: Checking for multilingual support...
 Package csquotes Info: ... none found.
-
-(./Thesis.aux)
+ (./Thesis.aux)
 \openout1 = `Thesis.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 10.
@@ -1554,7 +1556,8 @@ LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 10.
 LaTeX Font Info:    ... okay on input line 10.
 LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 10.
 LaTeX Font Info:    ... okay on input line 10.
- (/usr/share/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+
+(/usr/share/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count513
 \scratchdimen=\dimen322
@@ -3650,6 +3653,20 @@ LaTeX Font Info:    No math alphabet change to frozen version normal on input l
 ine 74.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
 ine 74.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <14.4> on input line 75.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <17.28> on input line 75.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 75.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 75.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 75.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 75.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 75.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
 ine 75.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
@@ -4070,19 +4087,138 @@ LaTeX Font Info:    No math alphabet change to frozen version normal on input l
 ine 193.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
 ine 194.
-) [20] (./Chapters/F4Lattice.tex
-Chapter 3.
-) [21
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <20.74> on input line 205.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 205.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 205.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 205.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 205.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 205.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 205.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 205.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 205.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 205.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 205.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 205.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 205.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 205.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 205.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 205.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 205.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 205.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 205.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 205.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 205.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 205.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 205.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 207.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 207.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 207.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 207.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 208.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 208.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 208.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 208.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 208.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 208.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 208.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 208.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 208.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 208.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 208.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 208.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 208.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 208.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 208.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 208.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 208.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 208.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 208.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 208.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 208.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 208.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 208.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 209.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 209.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 210.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 210.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 210.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 210.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 210.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 210.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 210.
+) [20] [21] (./Chapters/F4Lattice.tex
+[22
 
-] (./Chapters/SimulationResults.tex [22
+]
+Chapter 3.
+) [23] (./Chapters/SimulationResults.tex [24
 
 ]
 Chapter 4.
-) [23] (./Chapters/Conclusions.tex [24
+) [25] (./Chapters/Conclusions.tex [26
 
 ]
 Chapter 5.
-) [25] (./Chapters/Bibliography.tex) [26
+) [27] (./Chapters/Bibliography.tex) [28
 
 ]
 LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 2
@@ -4109,14 +4245,14 @@ LaTeX Font Info:    No math alphabet change to frozen version normal on input l
 ine 2.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
 ine 2.
- [27]
+ [29]
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
 ine 2.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
 ine 2.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
 ine 2.
- [28] (./Thesis.aux)
+ [30] (./Thesis.aux)
 Package rerunfilecheck Info: File `Thesis.out' has not changed.
 (rerunfilecheck)             Checksum: 5FABCFF5C0A1460804CECE2358E4FA8A;5582.
 Package logreq Info: Writing requests to 'Thesis.run.xml'.
@@ -4124,13 +4260,13 @@ Package logreq Info: Writing requests to 'Thesis.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 40026 strings out of 477985
- 780536 string characters out of 5840058
+ 40145 strings out of 477985
+ 782482 string characters out of 5840058
  1877388 words of memory out of 5000000
- 59348 multiletter control sequences out of 15000+600000
- 651082 words of font info for 143 fonts, out of 8000000 for 9000
+ 59459 multiletter control sequences out of 15000+600000
+ 682006 words of font info for 182 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 88i,21n,83p,1151b,1985s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 89i,21n,83p,1151b,1985s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmib10.pfb></usr/share
 /texmf-dist/fonts/type1/public/doublestroke/dsrom12.pfb></usr/share/texmf-dist/
 fonts/type1/public/doublestroke/dsrom8.pfb></usr/share/texmf-dist/fonts/type1/p
@@ -4155,10 +4291,10 @@ type1/public/mathabx-type1/mathb12.pfb></usr/share/texmf-dist/fonts/type1/publi
 c/mathabx-type1/mathx10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/
 symbols/msam10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/symbols/m
 sbm10.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfxc2074.pfb>
-Output written on Thesis.pdf (34 pages, 1680240 bytes).
+Output written on Thesis.pdf (36 pages, 1683430 bytes).
 PDF statistics:
- 762 PDF objects out of 1000 (max. 8388607)
- 615 compressed objects within 7 object streams
- 162 named destinations out of 1000 (max. 500000)
+ 774 PDF objects out of 1000 (max. 8388607)
+ 625 compressed objects within 7 object streams
+ 165 named destinations out of 1000 (max. 500000)
  296 words of extra memory for PDF output out of 10000 (max. 10000000)
 

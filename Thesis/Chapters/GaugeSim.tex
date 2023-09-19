@@ -196,9 +196,23 @@ As the overrelaxation algorithm leaves the action invariant, it moves the Markov
 For this reason, it needs to be used in combination with other updating algorithms, such as some steps of the Metropolis or heat bath algorithm.
 
 \section{Measurements}
+In this section, the techiniques used to compute the value of some observables are explained.
+After the proper Monte Carlo algorithms have been iterated a sufficient number of times, the lattice is \emph{thermalized} and measures can be taken.
+The observables presented below are the plaquettes and Polyakov loops, because they are the ones that will be evaluated in the simulation in the fourth chapter.
+%TODO: add reference to chapter 4
 
 \subsection{Plaquettes}
+The mean value of the plaquette, indicated as $\plaq$, is obtained by evaluating expression \eqref{1:Plaquette} for all possible plaquette in the lattice, summing all the results and taking the trace of the result, divided by the total number of plaquettes present in the lattice.
+In formulae:
+\begin{equation}
+    \plaq = \frac{1}{12 N TL_xL_yL_z} \sum_{x\in\Lambda} \sum_{\mu=0}^3 \sum_{\substack{\nu=0 \\ \nu\neq\mu}}^3 \Re\Tr U_{\mu\nu}(x) \label{2:LatticePlaquette}
+\end{equation}
+where $N$ is the number of colors (the same $N$ in $\SUN$), $12=4\cdot3$ is the total number of ways of choosing the first direction $\mu$ times the number of possible ways of choosing the second direction $\nu$, and $TL_1L_2L_3$ is the number of sites of the lattice.\\
+The expectation value of the plaquette is important because it is directly linked to the Wilson action, thus it gives an intuition of the thermalization of the lattice.
 
 \subsection{Polyakov Loops}
+Polyakov loops are another important observable that will be evaluated in the simulations.
+In particular, the product of two Polyakov loops, that is a function of the static quark potential, will be used, as explained in \eqref{1:PolyakovPotential}.
+In order to achieve better statistics, the translational invariance of the lattice is exploited, by computing the so-called \emph{nonzero momentum Polyakov correlators}.
 
 \section{Brief Scheme of a Simulation}
