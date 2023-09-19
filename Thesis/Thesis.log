@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Arch Linux) (preloaded format=pdflatex 2023.8.28)  19 SEP 2023 11:30
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Arch Linux) (preloaded format=pdflatex 2023.8.28)  19 SEP 2023 18:23
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1616,7 +1616,7 @@ Package biblatex Info: ... file 'Thesis.bbl' found.
 Package biblatex Info: Reference section=0 on input line 10.
 Package biblatex Info: Reference segment=0 on input line 10.
  (./Chapters/CoverITAuc.tex
-<./pics/logo.png, id=131, 2724.579pt x 2845.2699pt>
+<./pics/logo.png, id=147, 2724.579pt x 2845.2699pt>
 File: ./pics/logo.png Graphic file (type png)
 <use ./pics/logo.png>
 Package pdftex.def Info: ./pics/logo.png  used on input line 3.
@@ -1678,11 +1678,10 @@ ist/fonts/enc/dvips/lm/lm-rm.enc}] [2
 \tf@toc=\write7
 \openout7 = `Thesis.toc'.
 
- [3] [4
-
-] (./Chapters/LatticeQCD.tex
+ [3] [4] (./Chapters/LatticeQCD.tex
 Chapter 1.
 [1
+
 
 ]
 LaTeX Font Info:    External font `lmex10' loaded for size
@@ -2483,7 +2482,7 @@ LaTeX Font Info:    No math alphabet change to frozen version normal on input l
 ine 202.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
 ine 203.
-<./pics/Lattice.png, id=316, 470.50781pt x 470.50781pt>
+<./pics/Lattice.png, id=337, 470.50781pt x 470.50781pt>
 File: ./pics/Lattice.png Graphic file (type png)
 <use ./pics/Lattice.png>
 Package pdftex.def Info: ./pics/Lattice.png  used on input line 206.
@@ -2498,12 +2497,12 @@ LaTeX Font Info:    No math alphabet change to frozen version normal on input l
 ine 212.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
 ine 212.
-<./pics/CubicCell.png, id=317, 359.84438pt x 364.36125pt>
+<./pics/CubicCell.png, id=338, 359.84438pt x 364.36125pt>
 File: ./pics/CubicCell.png Graphic file (type png)
 <use ./pics/CubicCell.png>
 Package pdftex.def Info: ./pics/CubicCell.png  used on input line 219.
 (pdftex.def)             Requested size: 113.81102pt x 115.24141pt.
-<./pics/BodyCenteredCubicCell.png, id=318, 359.84438pt x 364.36125pt>
+<./pics/BodyCenteredCubicCell.png, id=339, 359.84438pt x 364.36125pt>
 File: ./pics/BodyCenteredCubicCell.png Graphic file (type png)
 <use ./pics/BodyCenteredCubicCell.png>
 Package pdftex.def Info: ./pics/BodyCenteredCubicCell.png  used on input line 2
@@ -2522,7 +2521,7 @@ LaTeX Font Info:    No math alphabet change to frozen version normal on input l
 ine 238.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
 ine 239.
-<./pics/24cell.png, id=338, 328.22626pt x 328.22626pt>
+<./pics/24cell.png, id=359, 328.22626pt x 328.22626pt>
 File: ./pics/24cell.png Graphic file (type png)
 <use ./pics/24cell.png>
 Package pdftex.def Info: ./pics/24cell.png  used on input line 242.
@@ -2615,7 +2614,7 @@ LaTeX Font Info:    No math alphabet change to frozen version normal on input l
 ine 275.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
 ine 276.
-<./pics/linkVariables.png, id=351, 760.34062pt x 106.89937pt>
+<./pics/linkVariables.png, id=372, 760.34062pt x 106.89937pt>
 File: ./pics/linkVariables.png Graphic file (type png)
 <use ./pics/linkVariables.png>
 Package pdftex.def Info: ./pics/linkVariables.png  used on input line 278.
@@ -3364,7 +3363,7 @@ LaTeX Font Info:    No math alphabet change to frozen version normal on input l
 ine 365.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
 ine 366.
-<./pics/WilsonLoops.png, id=402, 602.25pt x 173.14688pt>
+<./pics/WilsonLoops.png, id=423, 602.25pt x 173.14688pt>
 File: ./pics/WilsonLoops.png Graphic file (type png)
 <use ./pics/WilsonLoops.png>
 Package pdftex.def Info: ./pics/WilsonLoops.png  used on input line 369.
@@ -4205,12 +4204,72 @@ LaTeX Font Info:    No math alphabet change to frozen version normal on input l
 ine 210.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
 ine 210.
-) [20] [21] (./Chapters/F4Lattice.tex
-[22
-
-]
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 217.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 217.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 217.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 217.
+ [20]
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 218.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 218.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 218.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 218.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 220.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 220.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 227.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 227.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 227.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 227.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 227.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 227.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 227.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 227.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 227.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 233.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 235.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 235.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 237.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 237.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 237.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 238.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 238.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 243.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 243.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 244.
+ [21]) [22] (./Chapters/F4Lattice.tex
 Chapter 3.
-) [23] (./Chapters/SimulationResults.tex [24
+) [23
+
+] (./Chapters/SimulationResults.tex [24
 
 ]
 Chapter 4.
@@ -4254,17 +4313,17 @@ LaTeX Font Info:    No math alphabet change to frozen version normal on input l
 ine 2.
  [30] (./Thesis.aux)
 Package rerunfilecheck Info: File `Thesis.out' has not changed.
-(rerunfilecheck)             Checksum: 5FABCFF5C0A1460804CECE2358E4FA8A;5582.
+(rerunfilecheck)             Checksum: 99B8143DC640392A9B62D7AF4600AE94;6098.
 Package logreq Info: Writing requests to 'Thesis.run.xml'.
 \openout1 = `Thesis.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 40145 strings out of 477985
- 782482 string characters out of 5840058
+ 40157 strings out of 477985
+ 782667 string characters out of 5840058
  1877388 words of memory out of 5000000
- 59459 multiletter control sequences out of 15000+600000
- 682006 words of font info for 182 fonts, out of 8000000 for 9000
+ 59465 multiletter control sequences out of 15000+600000
+ 685036 words of font info for 183 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
  89i,21n,83p,1151b,1985s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmib10.pfb></usr/share
@@ -4281,20 +4340,21 @@ ublic/lm/lmmi8.pfb></usr/share/texmf-dist/fonts/type1/public/lm/lmr10.pfb></usr
 type1/public/lm/lmr6.pfb></usr/share/texmf-dist/fonts/type1/public/lm/lmr7.pfb>
 </usr/share/texmf-dist/fonts/type1/public/lm/lmr8.pfb></usr/share/texmf-dist/fo
 nts/type1/public/lm/lmri10.pfb></usr/share/texmf-dist/fonts/type1/public/lm/lmr
-i12.pfb></usr/share/texmf-dist/fonts/type1/public/lm/lmsy10.pfb></usr/share/tex
-mf-dist/fonts/type1/public/lm/lmsy8.pfb></usr/share/texmf-dist/fonts/type1/publ
-ic/lm/lmtt12.pfb></usr/share/texmf-dist/fonts/type1/public/mathabx-type1/matha1
-0.pfb></usr/share/texmf-dist/fonts/type1/public/mathabx-type1/matha12.pfb></usr
-/share/texmf-dist/fonts/type1/public/mathabx-type1/matha6.pfb></usr/share/texmf
--dist/fonts/type1/public/mathabx-type1/matha8.pfb></usr/share/texmf-dist/fonts/
-type1/public/mathabx-type1/mathb12.pfb></usr/share/texmf-dist/fonts/type1/publi
-c/mathabx-type1/mathx10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/
-symbols/msam10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/symbols/m
-sbm10.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfxc2074.pfb>
-Output written on Thesis.pdf (36 pages, 1683430 bytes).
+i12.pfb></usr/share/texmf-dist/fonts/type1/public/lm/lmro12.pfb></usr/share/tex
+mf-dist/fonts/type1/public/lm/lmsy10.pfb></usr/share/texmf-dist/fonts/type1/pub
+lic/lm/lmsy8.pfb></usr/share/texmf-dist/fonts/type1/public/lm/lmtt12.pfb></usr/
+share/texmf-dist/fonts/type1/public/mathabx-type1/matha10.pfb></usr/share/texmf
+-dist/fonts/type1/public/mathabx-type1/matha12.pfb></usr/share/texmf-dist/fonts
+/type1/public/mathabx-type1/matha6.pfb></usr/share/texmf-dist/fonts/type1/publi
+c/mathabx-type1/matha8.pfb></usr/share/texmf-dist/fonts/type1/public/mathabx-ty
+pe1/mathb12.pfb></usr/share/texmf-dist/fonts/type1/public/mathabx-type1/mathx10
+.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></us
+r/share/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/share/t
+exmf-dist/fonts/type1/public/cm-super/sfxc2074.pfb>
+Output written on Thesis.pdf (36 pages, 1707244 bytes).
 PDF statistics:
- 774 PDF objects out of 1000 (max. 8388607)
- 625 compressed objects within 7 object streams
- 165 named destinations out of 1000 (max. 500000)
- 296 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 802 PDF objects out of 1000 (max. 8388607)
+ 651 compressed objects within 7 object streams
+ 170 named destinations out of 1000 (max. 500000)
+ 328 words of extra memory for PDF output out of 10000 (max. 10000000)
 

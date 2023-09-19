@@ -25,7 +25,11 @@
 \contentsline {section}{\numberline {2.4}Measurements}{20}{section.2.4}%
 \contentsline {subsection}{\numberline {2.4.1}Plaquettes}{20}{subsection.2.4.1}%
 \contentsline {subsection}{\numberline {2.4.2}Polyakov Loops}{20}{subsection.2.4.2}%
-\contentsline {section}{\numberline {2.5}Brief Scheme of a Simulation}{21}{section.2.5}%
+\contentsline {section}{\numberline {2.5}Summary of a Simulation}{21}{section.2.5}%
+\contentsline {subsection}{\numberline {2.5.1}Initialization}{21}{subsection.2.5.1}%
+\contentsline {subsection}{\numberline {2.5.2}Thermalization}{21}{subsection.2.5.2}%
+\contentsline {subsection}{\numberline {2.5.3}Measurements}{22}{subsection.2.5.3}%
+\contentsline {section}{\numberline {2.6}Statistical Analysis}{22}{section.2.6}%
 \contentsline {chapter}{\numberline {3}Gauge Theories Simulation on non-hypercubic lattice F4}{23}{chapter.3}%
 \contentsline {chapter}{\numberline {4}Simulation Results}{25}{chapter.4}%
 \contentsline {chapter}{\numberline {5}Conclusions}{27}{chapter.5}%

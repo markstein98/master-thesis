@@ -16,7 +16,7 @@ Because of the probability density $\varpropto e^{-S[U_n]}$, only configurations
 For this reason, generating totally random gauge fields on the lattice links is not an efficient way to evaluate \eqref{2:ExpValObs}, as most of the $\prc{U_n}$ will have a very small Boltzmann factor (the $e^{-S[U_n]}$) and expression \eqref{2:ExpValObs} will give incorrect results unless a huge number (orders of magnitude higher than what is reasonably possible) of different configurations is tried.\\
 In order to avoid the evaluation of a great number of configurations that would contribute little-to-nothing to the observables' values, a sequence of configurations $\prc{U_n}$ is generated through a Markov chain process, built such that its stationary distribution minimizes the action $S[U]$. This process is usually called \emph{thermalization}.\\
 Every process of this type must begin from a starting configuration, usually chosen by the user.
-The main starting configurations are usually two: if the simulation begins with the fields in an ordered way (for example, all the gauge links set to the identity), the initial configuration is called \emph{cold start}, if the simulation begins with random gauge fields in every link, the initial configuration is called \emph{hot start}.
+The starting configurations usually used are two: if the simulation begins with the fields in an ordered way (for example, all the gauge links set to the identity), the initial configuration is called \emph{cold start}, if the simulation begins with random gauge fields in every link, the initial configuration is called \emph{hot start}.
 Of course, the Markov chain must have the same stationary distribution if the hot or cold start is chosen.\\
 In this chapter the main Monte Carlo algorithms used to thermalize the starting configuration are presented, then the method for evaluating some observables of interest, such as plaquettes and Polyakov loops is explained.
 
@@ -52,7 +52,7 @@ Each algorithm, if applied once, allows the transition from a configuration $U_{
 
 \subsection{Metropolis Algorithm}
 The first algorithm presented is the Metropolis algorithm. It is not very much efficient and usually it is not used in simulations, however it contains the fundamental steps that are present in some of the more advanced algorithms and it is quite easy to understand.
-For this reasons it is ususally viewed as the \emph{``ancestor''} of all Monte Carlo algorithms and it is present in every textbook on the subject.\\
+For this reasons it is usually viewed as the \emph{``ancestor''} of all Monte Carlo algorithms and it is present in every textbook on the subject.\\
 This algorithm consists in two steps that implement in one of the most simple ways the detailed balance condition \eqref{2:DetailedBalance}:
 \begin{enumerate}[label=\arabic*)]
     \item A candidate configuration $\beta$ is chosen, according to some \emph{a priori} selection probability $T_0(\beta|\alpha)$, where $\alpha=U_{n-1}$.
@@ -205,14 +205,43 @@ The observables presented below are the plaquettes and Polyakov loops, because t
 The mean value of the plaquette, indicated as $\plaq$, is obtained by evaluating expression \eqref{1:Plaquette} for all possible plaquette in the lattice, summing all the results and taking the trace of the result, divided by the total number of plaquettes present in the lattice.
 In formulae:
 \begin{equation}
-    \plaq = \frac{1}{12 N TL_xL_yL_z} \sum_{x\in\Lambda} \sum_{\mu=0}^3 \sum_{\substack{\nu=0 \\ \nu\neq\mu}}^3 \Re\Tr U_{\mu\nu}(x) \label{2:LatticePlaquette}
+    \plaq = \frac{1}{12 N n_s} \sum_{x\in\Lambda} \sum_{\mu=0}^3 \sum_{\substack{\nu=0 \\ \nu\neq\mu}}^3 \Re\Tr U_{\mu\nu}(x) \label{2:LatticePlaquette}
 \end{equation}
-where $N$ is the number of colors (the same $N$ in $\SUN$), $12=4\cdot3$ is the total number of ways of choosing the first direction $\mu$ times the number of possible ways of choosing the second direction $\nu$, and $TL_1L_2L_3$ is the number of sites of the lattice.\\
+where $N$ is the number of color charges (the same $N$ in $\SUN$), $12=4\cdot3$ is the total number of ways of choosing the first direction $\mu$ times the number of possible ways of choosing the second direction $\nu$, and $n_s=TL_1L_2L_3$ is the total number of sites of the lattice.\\
 The expectation value of the plaquette is important because it is directly linked to the Wilson action, thus it gives an intuition of the thermalization of the lattice.
 
 \subsection{Polyakov Loops}
 Polyakov loops are another important observable that will be evaluated in the simulations.
-In particular, the product of two Polyakov loops, that is a function of the static quark potential, will be used, as explained in \eqref{1:PolyakovPotential}.
-In order to achieve better statistics, the translational invariance of the lattice is exploited, by computing the so-called \emph{nonzero momentum Polyakov correlators}.
+In particular, the product of two Polyakov loops will be considered, in order to obtain the static quark potential, as explained in \eqref{1:PolyakovPotential}.\\
+In order to achieve better statistics, the discrete translational invariance of the lattice is exploited, by computing the so-called \emph{nonzero momentum Polyakov correlators}:
+because of this invariance, the quantity $\expval{P(0)P^\dagger(x)}$, with $x\in\Lambda$ is the same as $\expval{P(y)P^\dagger(x+y)}$ $\forall y\in\Lambda$, therefore the expectation value is obtained as
+\begin{equation}
+    \expval{P(0)P^\dagger(x)} = \frac{1}{n_s} \sum_{y\in\Lambda} \expval{P(y)P^\dagger(x+y)} \label{2:nonzeroMomPolyakov}
+\end{equation}
+In this way, from the same configuration, more smaples of the same quantity can be obtained, making the average more statistically accurate.
 
-\section{Brief Scheme of a Simulation}
+\section{Summary of a Simulation}
+Now that the Monte Carlo algorithms and the way observables are ``read'' from the lattice have been described, a brief explanation on how a full simulation works is presented.
+
+\subsection{Initialization}
+The first step is the initialization: the program reads from a file the size of the lattice (the number of sites in each direction: $t$, $x$, $y$, $z$), the parameter $\beta$ (that is the same in the Wilson action \eqref{1:WilsonAction}), the thermalization time $t_{TH}$, the reunitarization period $t_U$, the number of measurements to be made $n_M$, the number of updates to be done between each measurement $n_{BM}$ and the start type, either fully ordered (cold start) or totally random (hot start).
+The number of color charges and other parameters, like the type of measurements that have to be made are set in the source code of the program.
+Then, according to these parameters, the variables are initialized to the proper value and the simulation can begin.
+
+\subsection{Thermalization}
+The thermalization step is needed, as anticipated before, to advance the Markov process up to equilibrium configurations.
+This is done by updating the configuration with the Monte Carlo algorithms until the number of updates equals the thermalization time $t_{TH}$ indicated in the input file.
+Every update step consists of a certain number of heat bath steps followed by another number of overrelaxation iterations.
+Both these numbers are set in the source code and for these simulations $1$ iteration of heat bath and $3$ of overrelaxation have been used.\\
+The thermalization time is determined by looking, in other simulations, at the behaviour of some observables in different types of start: for instance, when some observable from a cold start assumes a mean value compatible to the one obtained from a hot start, the system is assumed as thermalized.\\
+The thermalization time $t_{TH}$ is then set as $2$ or $3$ times the number of steps needed to achieve thermalization, in order to keep a certain margin of confidence.\\
+Additionally, every $t_U$ iterations, all the lattice link variables are \emph{reunitarized}, that means that each one matrix is checked, and eventually corrected, that it still is unitary (\ie $U^\dagger=U^{-1}$), because unitarity can be lost due to computer roundig errors.
+After each update step, the mean value of the plaquette is written to a file.
+
+\subsection{Measurements}
+After the lattice has achieved thermalization, observables can finally be measured.
+Each observable is computed once, according to the methods illustrated in the previous section, and written to a file, then the system is updated a number of times equal to $n_{BM}$, with a reunitarization process every $t_U$ updates, in the same way as the thermalization step.
+This process is iterated until the observables are measured $n_M$ times.\\
+After that, the simulation is concluded.
+
+\section{Statistical Analysis}
