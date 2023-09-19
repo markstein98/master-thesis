@@ -22,10 +22,10 @@
 \contentsline {subsubsection}{\numberline {2.3.1.1}Application to SU(N) Gauge Theories}{16}{subsubsection.2.3.1.1}%
 \contentsline {subsection}{\numberline {2.3.2}Heat Bath Algorithm}{17}{subsection.2.3.2}%
 \contentsline {subsection}{\numberline {2.3.3}Overrelaxation Algorithm}{19}{subsection.2.3.3}%
-\contentsline {section}{\numberline {2.4}Measurements}{19}{section.2.4}%
-\contentsline {subsection}{\numberline {2.4.1}Plaquettes}{19}{subsection.2.4.1}%
-\contentsline {subsection}{\numberline {2.4.2}Polyakov Loops}{19}{subsection.2.4.2}%
-\contentsline {section}{\numberline {2.5}Brief Scheme of a Simulation}{19}{section.2.5}%
+\contentsline {section}{\numberline {2.4}Measurements}{20}{section.2.4}%
+\contentsline {subsection}{\numberline {2.4.1}Plaquettes}{20}{subsection.2.4.1}%
+\contentsline {subsection}{\numberline {2.4.2}Polyakov Loops}{20}{subsection.2.4.2}%
+\contentsline {section}{\numberline {2.5}Brief Scheme of a Simulation}{20}{section.2.5}%
 \contentsline {chapter}{\numberline {3}Gauge Theories Simulation on non-hypercubic lattice F4}{21}{chapter.3}%
 \contentsline {chapter}{\numberline {4}Simulation Results}{23}{chapter.4}%
 \contentsline {chapter}{\numberline {5}Conclusions}{25}{chapter.5}%

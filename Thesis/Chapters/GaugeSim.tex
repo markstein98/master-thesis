@@ -140,7 +140,7 @@ Using this representation, the Haar measure in \eqref{2:DistrProbHBX} can be wri
 where a well known property of the Dirac delta function has been used.\\
 The volume element can be rewritten in terms of the components of the vector $x$:
 \begin{equation}
-    \dd^4x = \dd x_0\dd\abs{x}\abs{x}^2\underbrace{\dd(\cos\theta)\dd\phi}_{\dd^2\Omega} \label{2:VolumeElemParam}
+    \dd^4x = \dd x_0\dd\abs{x}\abs{x}^2\underbrace{\dd(\cos\theta)\dd\varphi}_{\dd^2\Omega} \label{2:VolumeElemParam}
 \end{equation}
 Plugging back into \eqref{2:HaarMeasureHB} and integrating out the $\abs{\bm{x}}$ thanks to the delta functions (actually, only the first one contributes, as $x_i^2\leq1$ $\forall i$), the Haar measure takes the form:
 \begin{equation}
@@ -148,10 +148,10 @@ Plugging back into \eqref{2:HaarMeasureHB} and integrating out the $\abs{\bm{x}}
 \end{equation}
 Then, in terms of the variables, the probability distribution becomes:
 \begin{equation}
-    \dd P(X) = \frac1{2\pi^2} \dd x_0 \dd\cos\theta \dd\phi \sqrt{1-x_0^2} \exp\pr{\frac\beta2 \sqrt{\det(A)}x_0} \label{2:DistrProbHBXSimplified}
+    \dd P(X) = \frac1{2\pi^2} \dd x_0 \dd\cos\theta \dd\varphi \sqrt{1-x_0^2} \exp\pr{\frac\beta2 \sqrt{\det(A)}x_0} \label{2:DistrProbHBXSimplified}
 \end{equation}
-with $x_0\in[-1,1]$, $\cos\theta\in[-1,1]$, $\phi\in[0,2\pi)$, where $\Tr(X)=2x_0$ has been used.\\
-Thus, the problem of generating a matrix $X$ distributed according to \eqref{2:DistrProbHBX} has been reduced to the determination of three random variables $x_0$, $\theta$, $\phi$, whose distribution factorizes, so they can be determined independetly from each other.
+with $x_0\in[-1,1]$, $\cos\theta\in[-1,1]$, $\varphi\in[0,2\pi)$, where $\Tr(X)=2x_0$ has been used.\\
+Thus, the problem of generating a matrix $X$ distributed according to \eqref{2:DistrProbHBX} has been reduced to the determination of three random variables $x_0$, $\theta$, $\varphi$, whose distribution factorizes, so they can be determined independetly from each other.
 The random variable $x_0$, being distributed according to $\sqrt{1-x_0^2} \exp\pr{\frac\beta2 \sqrt{\det(A)}x_0}$, is determined through the auxiliary variable $\lambda\in[0,1]$ such that $x_0 = 1-2\lambda^2$, therefore
 \begin{equation}
     \dd x_0\sqrt{1-x_0^2} \exp\pr{\frac\beta2 \sqrt{\det(A)}x_0} \varpropto \dd\lambda\lambda^2\sqrt{1-\lambda^2} \exp\pr{-\beta \sqrt{\det(A)}\lambda^2} \label{2:LambdaDistrHB}
@@ -166,13 +166,34 @@ and accepted with an accept/reject step using the square root function
 \end{equation}
 There are several algorithms that can perform this computation in an efficient way~\cite{1998art, luscher1994portable}.\\
 After this, the length $\abs{x} = \sqrt{1-x_0^2}$ is computed, in order to determine the remaining variables.\\
-The variables $\cos\theta$ and $\phi$ are uniformely distributed, therefore a possible way of proceeding is by generating three random uniformely distributed numbers $r_1$, $r_2$ and $r_3$ in the interval $[-1,1)$ and accepting them only if $r_1^2+r_2^2+r_3^2\leq1$.
+The variables $\cos\theta$ and $\varphi$ are uniformely distributed, therefore a possible way of proceeding is by generating three random uniformely distributed numbers $r_1$, $r_2$ and $r_3$ in the interval $[-1,1)$ and accepting them only if $r_1^2+r_2^2+r_3^2\leq1$.
 Then, the $3$-vector $(r_1,r_2,r_3)$ is normalized to length $\abs{x}$ computed before, obtaining $\bm{x} = (x_1,x_2,x_3)$.\\
 After these steps, the vector $x=(x_0,\bm{x})$ can be used to generate the matrix $X$ according to \eqref{2:DistrProbHBX}, using representation \eqref{2:SU2Repr}, thus the new link variable can be obtained.\\
 This algorithm rapidly leads the Markov process to a minimum of the action, however the risk of ``getting stuck'' on a local minimum is present.
-For this reason, it is usually combined with the overrelaxation algorithm, discussed below.
+For this reason, it is usually combined with the overrelaxation algorithm discussed below.
 
 \subsection{Overrelaxation Algorithm}
+The overrelaxation algorithm tries to change the variables as much as possible, exploiting the property that new configuration are always accepted if they do not change the action, as can be seen in \eqref{2:MetropolisAccProbSymm}.
+The case with gauge group $\Uem$ is the simplest one: the group element can be written as $U=e^{\i\varphi}$, the sum of staples becomes $A=\rho e^{\i\alpha}$ and the local action can be wirtten as:
+\begin{equation}
+    S[U]_{loc} = \frac\beta2 \Re(UA) = \frac\beta2 \rho \Re(e^{\i\varphi}e^{\i\alpha}) = \frac\beta2\rho\cos(\varphi+\alpha) \label{2:SlocORU1}  
+\end{equation}
+The reflection $\varphi+\alpha\to-\varphi-\alpha$ or the change $\varphi+\alpha\to2\pi-\varphi-2\alpha$ leave the local action invariant, thus a change of this type is always accepted.
+For a non-Abelian group, this change is performed through the ansatz:
+\begin{equation}
+    U \to U' = V^\dagger U^\dagger V^\dagger \label{2:ORTransf}
+\end{equation}
+where $V$ is a gauge group element chosen such that the local action is invariant.
+The selection probability for a transformation of this kind is symmetric, as can be easily proven by inverting \eqref{2:ORTransf}, obtaining $U = V^\dagger U'^\dagger V^\dagger$.\\
+For the gauge group $\SU(2)$, the matrix $V$ is chosen proportional to the sum of staples: $V=\frac{A}{\sqrt{\det(A)}}$, like in \eqref{2:SumOverStaplesSU2}.
+Because of this,
+\begin{equation}
+    \Tr(U'A) = \Tr(V^\dagger U^\dagger V^\dagger \sqrt{\det(A)} V) = \sqrt{\det(A)} \Tr(V^\dagger U^\dagger) = \Tr(A^\dagger U^\dagger) = \Tr(UA) \label{2:ORTrace}
+\end{equation}
+therefore the choice for $U'$ leaves the action invariant.
+In case $\det(A)=0$, any random link variable is accepted.\\
+As the overrelaxation algorithm leaves the action invariant, it moves the Markov chain in the subspace of constant action, called \emph{micro-canonical} ensemble, thus it is not ergodic: it does not visit every possible point in the configuration space if given enough time.
+For this reason, it needs to be used in combination with other updating algorithms, such as some steps of the Metropolis or heat bath algorithm.
 
 \section{Measurements}
 
