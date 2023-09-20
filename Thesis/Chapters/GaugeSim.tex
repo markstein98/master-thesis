@@ -258,7 +258,11 @@ whose estimators can be:
     \hat{O} =& \frac1N\sum_{i=1}^N o_i \label{2:ExpVal}\\
     \hvariance_O =& \frac1{N-1}\sum_{i=1}^N\pr{o_i-\hat{O}}^2 \label{2:Variance}
 \end{align}
-If the values are uncorrelated,
+These results hold true both for correlated and uncorrelated datasets.
+\vspace*{\baselineskip}
+
+\subsection{Uncorrelated Data}
+If the values are uncorrelated, the product $\expval{o_io_j}$ factorizes
 \begin{equation}
     \expval{o_io_j} = \expval{o_i}\expval{o_j} = \expval{O}^2 \qquad \forall i\neq j \label{2:UncorrVariance}
 \end{equation}
@@ -281,3 +285,38 @@ Therefore, for $N$ uncorrelated measurements, the standard deviation $\sigma$, \
     \hat{O}\pm\sigma \quad \text{with} \quad \sigma=\frac{\hat{\sigma}_O}{\sqrt{N}} \label{2:FinalMeasureUncorr}
 \end{equation}
 As can be easily seen, the statistical error decreases $\varpropto1/\sqrt{N}$ with the number of uncorrelated configurations $N$.
+
+\subsection{Correlated Data}
+However, not every data sample is statistically uncorrelated and, since in this case it is taken from a computer-time series in the Monte Carlo simulation, the correlation between the data depends on the Monte Carlo algorithms and how many times they have been iterated between each measurement.
+If the data sample is correlated, the \emph{autocorrelation function}
+\begin{equation}
+    C_O(t) = C_O(o_i,o_{i+t}) = \expval{\pr{o_i-\expval{o_i}}\pr{o_{i+t}-\expval{o_{i+t}}}} = \expval{o_io_{i+t}}-\expval{o_i}\expval{o_{i+t}} \label{2:CorrFunc}
+\end{equation}
+is nonvanishing.
+Note that $C_O(0)=\variance_O$.
+Typically, the normalized correlation function $\Gamma_O(t)$ exhibits an exponential behaviour for large $t$:
+\begin{equation}
+    \Gamma_O(t) \equiv \frac{C_O(t)}{C_O(0)} \underset{t\to+\infty}{\approx} e^{-t/\tau_O} \label{2:NormCorrFun}
+\end{equation}
+where $\tau_O$ is called the exponential autocorrelation time for the observable $O$.
+The exponential autocorrelation time $\tau$ is the supremum of the values $\tau_O$ for all possible observables:
+\begin{equation}
+    \tau = \sup_O \tau_O \label{2:AutocorrTime}
+\end{equation}
+Hence, for the correlated case, the second line of \eqref{2:CorrVarMean} can be continued as follows, using \eqref{2:CorrFunc}:
+\begin{align*}
+    \variance_{\hat{O}} =& \frac1{N^2}\expval{\sum_{i,j=1}^N\pr{o_i-\expval{O}}\pr{o_j-\expval{O}}} = \\
+    =& \frac1{N^2} \sum_{i,j=1}^N C_O(\abs{i-j}) = \frac1{N^2} \sum_{t=-(N-1)}^{N-1}\sum_{k=1}^{N-\abs{t}}C_O(\abs{t}) = \\
+    =& \sum_{t=-N}^N \frac{N-\abs{t}}{N^2}C_O(\abs{t}) = \frac{C_O(0)}{N}\sum_{t=-N}^N \Gamma_O(\abs{t})\underbrace{\pr{1-\frac{\abs{t}}{N}}}_{\to1} \simeq \\
+    \simeq& \frac{\variance_O}{N}2\pr{\frac12+\sum_{t=1}^N \Gamma_O(t)} \equiv \frac{\variance_O}{N} 2 \tau_{O,int} \numthis\label{2:VarianceCorr}
+\end{align*}
+where the \emph{integrated autocorrelation time} has been introduced as:
+\begin{equation}
+    \tau_{O,int} \equiv \frac12+\sum_{t=1}^N\Gamma_O(t) \simeq \int_0^\infty e^{-t/\tau}\dd t = \tau \label{2:IntAutocorrTime}
+\end{equation}
+Usually $\tau_{O,int}$ is extimated taking at least $1000\tau_{O,int}$ data values starting with small size lattices and proceeding to larger sizes and evaluating $\Gamma(t)$.\\
+The variance computed in this way is larger than the one computed using \eqref{2:VarianceRelation}, therefore for the correlated case the value of an observable $O$ is given by
+\begin{equation}
+    \hat{O}\pm\sigma_O \qquad\text{with}\qquad \sigma_O = \sqrt{\frac2N\tau_{O,int}\hvariance_O} \label{2:FinalMeasureCorr}
+\end{equation}
+
