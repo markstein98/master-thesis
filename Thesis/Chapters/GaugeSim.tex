@@ -245,3 +245,39 @@ This process is iterated until the observables are measured $n_M$ times.\\
 After that, the simulation is concluded.
 
 \section{Statistical Analysis}
+In this final section, an overview on the analysis of the data collected from the simulations is given.
+After a run of the program is finished, usually one has a few thousands expectation values of each observable, obtained in different configurations of the fields.
+The average of these values is used as an indicator for each observable, with its own statistical error.
+Let us assume that the values $(o_1,\dots,o_N)$ of some observable $O$ have been computed from a Markov sequence of Monte Carlo generated configurations in equilibrium.
+The expectation value and variance of these variables are the same:
+\begin{equation}
+    \expval{o_i} = \expval{O} \qquad \variance_{o_i} = \expval{\pr{o_i-\expval{o_i}}^2} = \variance_O
+\end{equation}
+whose estimators can be:
+\begin{align}
+    \hat{O} =& \frac1N\sum_{i=1}^N o_i \label{2:ExpVal}\\
+    \hvariance_O =& \frac1{N-1}\sum_{i=1}^N\pr{o_i-\hat{O}}^2 \label{2:Variance}
+\end{align}
+If the values are uncorrelated,
+\begin{equation}
+    \expval{o_io_j} = \expval{o_i}\expval{o_j} = \expval{O}^2 \qquad \forall i\neq j \label{2:UncorrVariance}
+\end{equation}
+and the variance $\hvariance_O$ allows to determine the statistical error of $\hat{O}$.
+In fact, the sample mean value \eqref{2:ExpVal} is itself a random variable, since its value may change from one set of $N$ configurations to another.
+Its variance is:
+\begin{align*}
+    \variance_{\hat{O}} =& \expval{\pr{\hat{O}-\expval{O}}^2} = \expval{\pr{\frac1N\sum_{i+1}^N\pr{o_i-\expval{O}}}^2} = \\
+    =& \frac1{N^2}\expval{\sum_{i,j=1}^N\pr{o_i-\expval{O}}\pr{o_j-\expval{O}}} = \\
+    =& \frac1{N^2}\expval{\sum_{i=1}^No_i^2} + \frac1{N^2}\expval{\sum_{i\neq j}o_io_j} -\frac2N\expval{O}\sum_{i=1}^No_i +\frac1{N^2}\expval{\sum_{i,j=1}^N\expval{O}^2} =\\
+    =& \frac1N\expval{O^2} +\frac1{N^2}\sum_{i\neq j}\expval{o_io_j} -2\expval{O}^2 +\expval{O}^2 = \\
+    \variance_{\hat{O}} =& \frac1N\expval{O^2} -\expval{O}^2 +\frac1{N^2}\sum_{i\neq j}\expval{o_io_j} \numthis\label{2:CorrVarMean}
+\end{align*}
+For uncorrelated $o_i$, the last two terms cancel each other because of \eqref{2:UncorrVariance} and
+\begin{equation}
+    \variance_{\hat{O}} = \frac1N\variance_O \label{2:VarianceRelation}
+\end{equation}
+Therefore, for $N$ uncorrelated measurements, the standard deviation $\sigma$, \ie the statistical error, is $\sigma_{\hat{O}}$ and the final result is
+\begin{equation}
+    \hat{O}\pm\sigma \quad \text{with} \quad \sigma=\frac{\hat{\sigma}_O}{\sqrt{N}} \label{2:FinalMeasureUncorr}
+\end{equation}
+As can be easily seen, the statistical error decreases $\varpropto1/\sqrt{N}$ with the number of uncorrelated configurations $N$.
