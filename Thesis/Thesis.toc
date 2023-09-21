@@ -18,13 +18,13 @@
 \contentsline {section}{\numberline {2.1}Introduction}{13}{section.2.1}%
 \contentsline {section}{\numberline {2.2}Markov Processes}{14}{section.2.2}%
 \contentsline {section}{\numberline {2.3}Monte Carlo Algorithms}{15}{section.2.3}%
-\contentsline {subsection}{\numberline {2.3.1}Metropolis Algorithm}{15}{subsection.2.3.1}%
-\contentsline {subsubsection}{\numberline {2.3.1.1}Application to SU(N) Gauge Theories}{16}{subsubsection.2.3.1.1}%
-\contentsline {subsection}{\numberline {2.3.2}Heat Bath Algorithm}{17}{subsection.2.3.2}%
+\contentsline {subsection}{\numberline {2.3.1}Metropolis Algorithm}{16}{subsection.2.3.1}%
+\contentsline {subsubsection}{\numberline {2.3.1.1}Application to SU(N) Gauge Theories}{17}{subsubsection.2.3.1.1}%
+\contentsline {subsection}{\numberline {2.3.2}Heat Bath Algorithm}{18}{subsection.2.3.2}%
 \contentsline {subsection}{\numberline {2.3.3}Overrelaxation Algorithm}{19}{subsection.2.3.3}%
 \contentsline {section}{\numberline {2.4}Measurements}{20}{section.2.4}%
 \contentsline {subsection}{\numberline {2.4.1}Plaquettes}{20}{subsection.2.4.1}%
-\contentsline {subsection}{\numberline {2.4.2}Polyakov Loops}{20}{subsection.2.4.2}%
+\contentsline {subsection}{\numberline {2.4.2}Polyakov Loops}{21}{subsection.2.4.2}%
 \contentsline {section}{\numberline {2.5}Summary of a Simulation}{21}{section.2.5}%
 \contentsline {subsection}{\numberline {2.5.1}Initialization}{21}{subsection.2.5.1}%
 \contentsline {subsection}{\numberline {2.5.2}Thermalization}{21}{subsection.2.5.2}%

@@ -16,12 +16,19 @@ Because of the probability density $\varpropto e^{-S[U_n]}$, only configurations
 For this reason, generating totally random gauge fields on the lattice links is not an efficient way to evaluate \eqref{2:ExpValObs}, as most of the $\prc{U_n}$ will have a very small Boltzmann factor (the $e^{-S[U_n]}$) and expression \eqref{2:ExpValObs} will give incorrect results unless a huge number (orders of magnitude higher than what is reasonably possible) of different configurations is tried.\\
 In order to avoid the evaluation of a great number of configurations that would contribute little-to-nothing to the observables' values, a sequence of configurations $\prc{U_n}$ is generated through a Markov chain process, built such that its stationary distribution minimizes the action $S[U]$. This process is usually called \emph{thermalization}.\\
 Every process of this type must begin from a starting configuration, usually chosen by the user.
-The starting configurations usually used are two: if the simulation begins with the fields in an ordered way (for example, all the gauge links set to the identity), the initial configuration is called \emph{cold start}, if the simulation begins with random gauge fields in every link, the initial configuration is called \emph{hot start}.
+The two mostly used starting configurations are: a \emph{cold start}, if the simulation begins with the fields in an ordered way (for example, all the gauge links set to the identity), or a \emph{hot start}, if the simulation begins with random gauge fields in every link.
 Of course, the Markov chain must have the same stationary distribution if the hot or cold start is chosen.\\
-In this chapter the main Monte Carlo algorithms used to thermalize the starting configuration are presented, then the method for evaluating some observables of interest, such as plaquettes and Polyakov loops is explained.
+In this chapter the main Monte Carlo algorithms used to thermalize the starting configuration are presented, then the methods used for evaluating some observables of interest, such as plaquettes and Polyakov loops, are explained.
 
 \section{Markov Processes}
 As anticipated before, a Markov chain is needed to evolve an arbitrary starting configuration $U_0$ up to a region of the configuration space with a relatively large Boltzmann factor $e^{-S}$, therefore with high probability.
+In Figure \eqref{2F:MarkovProcess} a scheme of a Markov chain is shown.
+\begin{figure}[!htbp]
+    \centering
+    \includegraphics[width=0.5\textwidth]{MarkovProcess.png}
+    \caption{Schematic representation of a motion throug the space of configurations through a Markov process.}
+    \label{2F:MarkovProcess}
+\end{figure}\\
 A Markov process is charaterized by a probability of transitioning from a configuration $\alpha$ to another configuration $\beta$ depending only on $\alpha$ and $\beta$ and not on the history of the process, namely the previous transitions that already occourred.
 In formulae, this is expressed as
 \begin{equation}
@@ -34,7 +41,7 @@ Being a transition probability, the matrix $T$ must obey the following equations
     \sum_{\beta}T(\beta|\alpha) =& 1 \qquad \forall \alpha \label{2:TPropNorm}
 \end{align}
 where \eqref{2:TPropProb} is a consequence of $T(\beta|\alpha)$ representing a probability, and \eqref{2:TPropNorm} means that the probability of transitioning to any configuration must be $1$ (of course, the case when $\alpha=\beta$ is included as well).\\
-In order for the stochastic process to not have any sink or source of probability, the following balance equation must be satisfied:
+In order for the stochastic process not to have any sink or source of probability, the following balance equation must be satisfied:
 \begin{equation}
     \sum_\alpha T(\beta|\alpha)P(\alpha) = \sum_\alpha T(\alpha|\beta)P(\beta) \label{2:BalanceEq}
 \end{equation}
@@ -47,11 +54,11 @@ A sufficient (but not necessary) condition to obey the balance equation \eqref{2
 Although it is not a necessary condition, most algorithms, including the ones discussed in the following section, satisfy it.
 
 \section{Monte Carlo Algorithms}
-Monte Carlo algorithms are a class of algorithms that, singularly or combined together, allow to advance the Markov chain, while satisfying the condition presented in the previous section.
+Monte Carlo algorithms are a class of algorithms that, singularly or combined together, allow to advance the Markov chain, while satisfying the balance condition \eqref{2:BalanceEq}.\\
 Each algorithm, if applied once, allows the transition from a configuration $U_{n-1}$ to a configuration $U_n$ (eventually the same as $U_{n-1}$). The repeated application of the algorithm allows to advance through the Markov chain.
 
 \subsection{Metropolis Algorithm}
-The first algorithm presented is the Metropolis algorithm. It is not very much efficient and usually it is not used in simulations, however it contains the fundamental steps that are present in some of the more advanced algorithms and it is quite easy to understand.
+The first algorithm presented is the Metropolis algorithm. It is not very much efficient and it is not often used in simulations unless for didactical purposes, however it contains the fundamental steps that are present in some of the more advanced algorithms and it is quite easy to understand.
 For this reasons it is usually viewed as the \emph{``ancestor''} of all Monte Carlo algorithms and it is present in every textbook on the subject.\\
 This algorithm consists in two steps that implement in one of the most simple ways the detailed balance condition \eqref{2:DetailedBalance}:
 \begin{enumerate}[label=\arabic*)]
@@ -63,7 +70,7 @@ This algorithm consists in two steps that implement in one of the most simple wa
           If it is not accepted, the unchanged configuration is considered again ($U_n=\alpha$) and the measurements are eventually made again.
 \end{enumerate}
 These two steps are repeated a sufficient amount of times up unitl the needed measurements are taken.\\
-Note that the fact that $P(\alpha) = \frac{e^{-S[\alpha]}}{Z} \varpropto e^{-S[\alpha]}$ has been used.\\
+Note that $P(\alpha) = \frac{e^{-S[\alpha]}}{Z} \varpropto e^{-S[\alpha]}$ has been used.\\
 The total transition probability $T$ is obtained through the product $T=T_0T_A$, as the two steps are independant from each other, and it is straightforward to see that it satisfies the detailed balance condition \eqref{2:DetailedBalance}:
 \begin{align*}
     T(\beta|\alpha)P(\alpha) =& \frac1Z T_0(\beta|\alpha)T_A(\beta|\alpha)\exp(-S[\alpha]) = \\
@@ -83,8 +90,9 @@ If the change in the action is local (it involves a single link variable), $\Del
 
 \subsubsection{Application to SU(N) Gauge Theories}
 For a $\SUN$ gauge theory, the algorithm is implemented in the following way.
-For each iteration, a single link is changed, then the acceptance probability is computed, a random number is extracted and, if it is less than the acceptance probability the change is accepted, otherwise it is rejceted. The algorithm is then iterated a certain number of times and measures are taken.\\
-The candidate link $U'_\mu(x)$ for step 1 is generated in the vicinity of the old value $U_\mu(x)$, in order to not have a too great $\Delta S$ that would lead to too low accentance rates.
+During each iteration, a single link is changed, then the acceptance probability is computed, a random number is extracted and, if it is less than the acceptance probability the change is accepted, otherwise it is rejceted.
+The algorithm is then iterated a certain number of times and measures are taken.\\
+The candidate link $U'_\mu(x)$ for step 1 is generated in the vicinity of the old value $U_\mu(x)$, in order not to have a too great $\Delta S$ that would lead to too low acceptance rates.
 This can be done by exploiting the property that the product of any two elements of $\SUN$ is still an element of $\SUN$, therefore extracting a matrix $X\in\SUN$ near the identity allows to write the candidate link as:
 \begin{equation}
     U'_\mu(x) = XU_\mu(x) \label{2:MetropolisCandidateLink}
@@ -93,8 +101,8 @@ The matrix $X$ is chosen such that it has the same probability as $X^{-1}$, this
 For this reason, only the variation of the action $\Delta S$ must be computed, where of course the action is the Wilson action \eqref{1:WilsonAction}.
 In particular, only the plaquettes containing the candidate link must be evaluated: the change in the action is local, so all the other plaquettes will have the same value both before and after the change of the link.
 Hence $\Delta S = S[U'_\mu(x)]_{loc}-S[U_\mu(x)]_{loc}$.\\
-In a SH lattice, each link is shared between $6$ plaquettes.
-For each plaquette the change of the action is given by the change of the link, while the product of the other three gauge links, that is called \emph{staple} and will be indicated as $P_i$, remains unchanged.
+In a SH lattice, each link is shared between $6$ plaquettes, in $4$ spacetime dimensions.
+For each plaquette the change of its value is given by the change of the link, while the product of the other three gauge links, that is called \emph{staple} and will be indicated as $P_i$, remains unchanged.\\
 Therefore, the local contribution to the action can be computed as:
 \begin{equation*}
     S[U_\mu(x)]_{loc} = \frac\beta{2N} \sum_{i=1}^6 \Re\Tr\prs{\id-U_\mu(x)P_i} = \frac\beta{2N} \Re\Tr\prs{6\id-U_\mu(x)\sum_{i=1}^6P_i}
@@ -116,22 +124,23 @@ The heat bath algorithm is an \emph{enhanced} version of the Metropolis algorith
 \end{equation}
 where $\dd U$ denotes the Haar integration measure of the gauge group and $A$ is computed according to \eqref{2:SumOverStaples}.
 This probability distribution can be computationally quite demanding, but has the advantage that, unlike the Metropolis algorithm, the link variable always changes.\\
-The implementation details depend on the gauge group, for this reason, the heat bath method for the gauge group $\SU(2)$ will be now explained\footnote{As matrixes of $\SUN$ can be built using $\SU(2)$ matrixes, the general case is just a little more complicated, but it follows the same principles.}.
+The implementation details depend on the gauge group, for this reason, the heat bath method for the gauge group $\SU(2)$ will be now explained\footnote{As matrixes of $\SUN$ can be ``built'' combining $\SU(2)$ matrixes, the general case is just a little more complicated, but it follows the same principles.}.\\
 Since the sum of any two $\SU(2)$ elements is proportional to another $\SU(2)$ element, the sum of all staples $A$ \eqref{2:SumOverStaples} can be written in the form
 \begin{equation}
     A = V\sqrt{\det(A)} \qquad\text{with}\qquad V\in\SU(2) \label{2:SumOverStaplesSU2}
 \end{equation}
 where it can be proven that $\det(A)\geq0$.
+If $\det(A)=0$, a random link variable is generated, otherwise the matrix $V$ is well-defined.
 Plugging into \eqref{2:DistrProbHB} and using the invariance of the Haar measure under trasformation of the origin of the group space ($\dd U = \dd (UV) = \dd X$), the distribution probability of the matrix $X=UV$ is
 \begin{equation}
     \dd P(X) = \dd X \exp(\frac\beta{2N}\sqrt{\det(A)}\Re\Tr[X]) \label{2:DistrProbHBX}
 \end{equation}
-If a matrix $X$ distributed according to \eqref{2:DistrProbHBX} is generated, then the new candidate link, distributed according to \eqref{2:DistrProbHB}, is obtained as $U'_\mu(x) = XV^\dagger = \frac1{\sqrt{\det(A)}}XA^\dagger$.\\
+If a matrix $X$, distributed according to \eqref{2:DistrProbHBX}, is generated, then the new candidate link, distributed according to \eqref{2:DistrProbHB}, is obtained as $U'_\mu(x) = XV^\dagger = \frac1{\sqrt{\det(A)}}XA^\dagger$.\\
 Any $U\in\SU(2)$ matrix can be written in the following representation, using $4$ real numbers:
 \begin{equation}
     U=x_0\id+\i \bm{x} \cdot \bm{\sigma} \qquad\text{with}\qquad \det(U)=\abs{x}^2=\sum_{i=0}^3x_i^2=1 \label{2:SU2Repr}
 \end{equation}
-where $\bm\sigma=\pr{\sigma_1,\sigma_2,\sigma_3}$ is a vector built using the Pauli matrices and $x=(x_0,\bm{x})$ can be seen as a normalized $4$-compnents vector.
+where $\bm\sigma=\pr{\sigma_1,\sigma_2,\sigma_3}$ is a vector built using the Pauli matrixes and $x=(x_0,\bm{x})$ can be seen as a normalized $4$-compnents vector.
 Using this representation, the Haar measure in \eqref{2:DistrProbHBX} can be written as:
 \begin{align*}
     \dd X =& \frac1{\pi^2} \dd^4x \delta\pr{x_0^2+\bm{x}-1} =\\
@@ -140,7 +149,7 @@ Using this representation, the Haar measure in \eqref{2:DistrProbHBX} can be wri
 where a well known property of the Dirac delta function has been used.\\
 The volume element can be rewritten in terms of the components of the vector $x$:
 \begin{equation}
-    \dd^4x = \dd x_0\dd\abs{x}\abs{x}^2\underbrace{\dd(\cos\theta)\dd\varphi}_{\dd^2\Omega} \label{2:VolumeElemParam}
+    \dd^4x = \dd x_0\dd\abs{\bm{x}}\abs{\bm{x}}^2\underbrace{\dd(\cos\theta)\dd\varphi}_{\dd^2\Omega} \label{2:VolumeElemParam}
 \end{equation}
 Plugging back into \eqref{2:HaarMeasureHB} and integrating out the $\abs{\bm{x}}$ thanks to the delta functions (actually, only the first one contributes, as $x_i^2\leq1$ $\forall i$), the Haar measure takes the form:
 \begin{equation}
@@ -148,10 +157,10 @@ Plugging back into \eqref{2:HaarMeasureHB} and integrating out the $\abs{\bm{x}}
 \end{equation}
 Then, in terms of the variables, the probability distribution becomes:
 \begin{equation}
-    \dd P(X) = \frac1{2\pi^2} \dd x_0 \dd\cos\theta \dd\varphi \sqrt{1-x_0^2} \exp\pr{\frac\beta2 \sqrt{\det(A)}x_0} \label{2:DistrProbHBXSimplified}
+    \dd P(X) = \frac1{2\pi^2} \dd x_0 \dd(\cos\theta) \dd\varphi \sqrt{1-x_0^2} \exp\pr{\frac\beta2 \sqrt{\det(A)}x_0} \label{2:DistrProbHBXSimplified}
 \end{equation}
 with $x_0\in[-1,1]$, $\cos\theta\in[-1,1]$, $\varphi\in[0,2\pi)$, where $\Tr(X)=2x_0$ has been used.\\
-Thus, the problem of generating a matrix $X$ distributed according to \eqref{2:DistrProbHBX} has been reduced to the determination of three random variables $x_0$, $\theta$, $\varphi$, whose distribution factorizes, so they can be determined independetly from each other.
+Thus, the problem of generating a matrix $X$ distributed according to \eqref{2:DistrProbHBX} has been reduced to the determination of three random variables $x_0$, $\theta$, $\varphi$, whose distributions factorize, so they can be determined independetly from each other.\\
 The random variable $x_0$, being distributed according to $\sqrt{1-x_0^2} \exp\pr{\frac\beta2 \sqrt{\det(A)}x_0}$, is determined through the auxiliary variable $\lambda\in[0,1]$ such that $x_0 = 1-2\lambda^2$, therefore
 \begin{equation}
     \dd x_0\sqrt{1-x_0^2} \exp\pr{\frac\beta2 \sqrt{\det(A)}x_0} \varpropto \dd\lambda\lambda^2\sqrt{1-\lambda^2} \exp\pr{-\beta \sqrt{\det(A)}\lambda^2} \label{2:LambdaDistrHB}
@@ -170,15 +179,15 @@ The variables $\cos\theta$ and $\varphi$ are uniformely distributed, therefore a
 Then, the $3$-vector $(r_1,r_2,r_3)$ is normalized to length $\abs{x}$ computed before, obtaining $\bm{x} = (x_1,x_2,x_3)$.\\
 After these steps, the vector $x=(x_0,\bm{x})$ can be used to generate the matrix $X$ according to \eqref{2:DistrProbHBX}, using representation \eqref{2:SU2Repr}, thus the new link variable can be obtained.\\
 This algorithm rapidly leads the Markov process to a minimum of the action, however the risk of ``getting stuck'' on a local minimum is present.
-For this reason, it is usually combined with the overrelaxation algorithm discussed below.
+For this reason, it is usually combined with other algorithms, like the overrelaxation algorithm.
 
 \subsection{Overrelaxation Algorithm}
-The overrelaxation algorithm tries to change the variables as much as possible, exploiting the property that new configuration are always accepted if they do not change the action, as can be seen in \eqref{2:MetropolisAccProbSymm}.
+The overrelaxation algorithm tries to change the link variables as much as possible, exploiting the property that new configurations are always accepted if they do not change the action, as can be seen in \eqref{2:MetropolisAccProbSymm}.\\
 The case with gauge group $\Uem$ is the simplest one: the group element can be written as $U=e^{\i\varphi}$, the sum of staples becomes $A=\rho e^{\i\alpha}$ and the local action can be wirtten as:
 \begin{equation}
     S[U]_{loc} = \frac\beta2 \Re(UA) = \frac\beta2 \rho \Re(e^{\i\varphi}e^{\i\alpha}) = \frac\beta2\rho\cos(\varphi+\alpha) \label{2:SlocORU1}  
 \end{equation}
-The reflection $\varphi+\alpha\to-\varphi-\alpha$ or the change $\varphi+\alpha\to2\pi-\varphi-2\alpha$ leave the local action invariant, thus a change of this type is always accepted.
+The reflection $\varphi+\alpha\to-\varphi-\alpha$ or the change $\varphi+\alpha\to2\pi-\varphi-2\alpha$ leaves the local action invariant, thus a change of this type is always accepted.
 For a non-Abelian group, this change is performed through the ansatz:
 \begin{equation}
     U \to U' = V^\dagger U^\dagger V^\dagger \label{2:ORTransf}
@@ -193,7 +202,7 @@ Because of this,
 therefore the choice for $U'$ leaves the action invariant.
 In case $\det(A)=0$, any random link variable is accepted.\\
 As the overrelaxation algorithm leaves the action invariant, it moves the Markov chain in the subspace of constant action, called \emph{micro-canonical} ensemble, thus it is not ergodic: it does not visit every possible point in the configuration space if given enough time.
-For this reason, it needs to be used in combination with other updating algorithms, such as some steps of the Metropolis or heat bath algorithm.
+For this reason, it needs to be used in combination with other updating algorithms, such as some steps of the Metropolis or heat bath algorithms.
 
 \section{Measurements}
 In this section, the techiniques used to compute the value of some observables are explained.
@@ -246,8 +255,8 @@ After that, the simulation is concluded.
 
 \section{Statistical Analysis}
 In this final section, an overview on the analysis of the data collected from the simulations is given.
-After a run of the program is finished, usually one has a few thousands expectation values of each observable, obtained in different configurations of the fields.
-The average of these values is used as an indicator for each observable, with its own statistical error.
+After a run of the program is finished, one usually has a few thousands expectation values of each observable, obtained in different configurations of the fields.
+The average of these values is used as an indicator for each observable, with its own statistical error.\\
 Let us assume that the values $(o_1,\dots,o_N)$ of some observable $O$ have been computed from a Markov sequence of Monte Carlo generated configurations in equilibrium.
 The expectation value and variance of these variables are the same:
 \begin{equation}
@@ -258,8 +267,7 @@ whose estimators can be:
     \hat{O} =& \frac1N\sum_{i=1}^N o_i \label{2:ExpVal}\\
     \hvariance_O =& \frac1{N-1}\sum_{i=1}^N\pr{o_i-\hat{O}}^2 \label{2:Variance}
 \end{align}
-These results hold true both for correlated and uncorrelated datasets.
-\vspace*{\baselineskip}
+These results hold true for both correlated and uncorrelated datasets.
 
 \subsection{Uncorrelated Data}
 If the values are uncorrelated, the product $\expval{o_io_j}$ factorizes
@@ -293,7 +301,7 @@ If the data sample is correlated, the \emph{autocorrelation function}
     C_O(t) = C_O(o_i,o_{i+t}) = \expval{\pr{o_i-\expval{o_i}}\pr{o_{i+t}-\expval{o_{i+t}}}} = \expval{o_io_{i+t}}-\expval{o_i}\expval{o_{i+t}} \label{2:CorrFunc}
 \end{equation}
 is nonvanishing.
-Note that $C_O(0)=\variance_O$.
+Note that $C_O(0)=\variance_O$.\\
 Typically, the normalized correlation function $\Gamma_O(t)$ exhibits an exponential behaviour for large $t$:
 \begin{equation}
     \Gamma_O(t) \equiv \frac{C_O(t)}{C_O(0)} \underset{t\to+\infty}{\approx} e^{-t/\tau_O} \label{2:NormCorrFun}
@@ -312,11 +320,10 @@ Hence, for the correlated case, the second line of \eqref{2:CorrVarMean} can be 
 \end{align*}
 where the \emph{integrated autocorrelation time} has been introduced as:
 \begin{equation}
-    \tau_{O,int} \equiv \frac12+\sum_{t=1}^N\Gamma_O(t) \simeq \int_0^\infty e^{-t/\tau}\dd t = \tau \label{2:IntAutocorrTime}
+    \tau_{O,int} \equiv \frac12+\sum_{t=1}^N\Gamma_O(t) \underset{N\to\infty}{\simeq} \int_0^\infty e^{-t/\tau}\dd t = \tau \label{2:IntAutocorrTime}
 \end{equation}
-Usually $\tau_{O,int}$ is extimated taking at least $1000\tau_{O,int}$ data values starting with small size lattices and proceeding to larger sizes and evaluating $\Gamma(t)$.\\
+Usually $\tau_{O,int}$ is extimated taking at least $1000\tau_{O,int}$ data values starting with small size lattices and proceeding to larger sizes while evaluating $\Gamma(t)$.\\
 The variance computed in this way is larger than the one computed using \eqref{2:VarianceRelation}, therefore for the correlated case the value of an observable $O$ is given by
 \begin{equation}
     \hat{O}\pm\sigma_O \qquad\text{with}\qquad \sigma_O = \sqrt{\frac2N\tau_{O,int}\hvariance_O} \label{2:FinalMeasureCorr}
 \end{equation}
-
