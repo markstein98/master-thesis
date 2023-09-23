@@ -21,17 +21,19 @@
 \contentsline {subsection}{\numberline {2.3.1}Metropolis Algorithm}{16}{subsection.2.3.1}%
 \contentsline {subsubsection}{\numberline {2.3.1.1}Application to SU(N) Gauge Theories}{17}{subsubsection.2.3.1.1}%
 \contentsline {subsection}{\numberline {2.3.2}Heat Bath Algorithm}{18}{subsection.2.3.2}%
-\contentsline {subsection}{\numberline {2.3.3}Overrelaxation Algorithm}{19}{subsection.2.3.3}%
-\contentsline {section}{\numberline {2.4}Measurements}{20}{section.2.4}%
-\contentsline {subsection}{\numberline {2.4.1}Plaquettes}{20}{subsection.2.4.1}%
+\contentsline {subsection}{\numberline {2.3.3}Overrelaxation Algorithm}{20}{subsection.2.3.3}%
+\contentsline {section}{\numberline {2.4}Measurements}{21}{section.2.4}%
+\contentsline {subsection}{\numberline {2.4.1}Plaquettes}{21}{subsection.2.4.1}%
 \contentsline {subsection}{\numberline {2.4.2}Polyakov Loops}{21}{subsection.2.4.2}%
 \contentsline {section}{\numberline {2.5}Summary of a Simulation}{21}{section.2.5}%
-\contentsline {subsection}{\numberline {2.5.1}Initialization}{21}{subsection.2.5.1}%
-\contentsline {subsection}{\numberline {2.5.2}Thermalization}{21}{subsection.2.5.2}%
+\contentsline {subsection}{\numberline {2.5.1}Initialization}{22}{subsection.2.5.1}%
+\contentsline {subsection}{\numberline {2.5.2}Thermalization}{22}{subsection.2.5.2}%
 \contentsline {subsection}{\numberline {2.5.3}Measurements}{22}{subsection.2.5.3}%
 \contentsline {section}{\numberline {2.6}Statistical Analysis}{22}{section.2.6}%
-\contentsline {subsection}{\numberline {2.6.1}Uncorrelated Data}{22}{subsection.2.6.1}%
-\contentsline {subsection}{\numberline {2.6.2}Correlated Data}{23}{subsection.2.6.2}%
-\contentsline {chapter}{\numberline {3}Gauge Theories Simulation on non-hypercubic lattice F4}{25}{chapter.3}%
+\contentsline {subsection}{\numberline {2.6.1}Uncorrelated Data}{23}{subsection.2.6.1}%
+\contentsline {subsection}{\numberline {2.6.2}Correlated Data}{24}{subsection.2.6.2}%
+\contentsline {chapter}{\numberline {3}Gauge Theories Simulations on Non-Hypercubic Lattice}{25}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Rotational Invariance Restoration}{25}{section.3.1}%
+\contentsline {section}{\numberline {3.2}Non-Hypercubic Lattice}{26}{section.3.2}%
 \contentsline {chapter}{\numberline {4}Simulation Results}{27}{chapter.4}%
 \contentsline {chapter}{\numberline {5}Conclusions}{29}{chapter.5}%

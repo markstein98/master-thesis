@@ -185,21 +185,21 @@
     \endentry
     \entry{SCHLINGEMANN_1999}{article}{}
       \name{author}{1}{}{%
-        {{hash=4e5fb1a775eac344a3763162a9ae5b9b}{%
-           family={SCHLINGEMANN},
+        {{hash=5a86ece5656700859439e2068b404208}{%
+           family={Schlingemann},
            familyi={S\bibinitperiod},
-           given={DIRK},
+           given={Dirk},
            giveni={D\bibinitperiod}}}%
       }
       \list{publisher}{1}{%
         {World Scientific Pub Co Pte Lt}%
       }
-      \strng{namehash}{4e5fb1a775eac344a3763162a9ae5b9b}
-      \strng{fullhash}{4e5fb1a775eac344a3763162a9ae5b9b}
-      \strng{bibnamehash}{4e5fb1a775eac344a3763162a9ae5b9b}
-      \strng{authorbibnamehash}{4e5fb1a775eac344a3763162a9ae5b9b}
-      \strng{authornamehash}{4e5fb1a775eac344a3763162a9ae5b9b}
-      \strng{authorfullhash}{4e5fb1a775eac344a3763162a9ae5b9b}
+      \strng{namehash}{5a86ece5656700859439e2068b404208}
+      \strng{fullhash}{5a86ece5656700859439e2068b404208}
+      \strng{bibnamehash}{5a86ece5656700859439e2068b404208}
+      \strng{authorbibnamehash}{5a86ece5656700859439e2068b404208}
+      \strng{authornamehash}{5a86ece5656700859439e2068b404208}
+      \strng{authorfullhash}{5a86ece5656700859439e2068b404208}
       \field{sortinit}{2}
       \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
       \field{labelnamesource}{author}
@@ -207,7 +207,7 @@
       \field{journaltitle}{Reviews in Mathematical Physics}
       \field{month}{10}
       \field{number}{09}
-      \field{title}{{FROM} {EUCLIDEAN} {FIELD} {THEORY} {TO} {QUANTUM} {FIELD} {THEORY}}
+      \field{title}{From Euclidean Field Theory to Quantum Field Theory}
       \field{volume}{11}
       \field{year}{1999}
       \field{pages}{1151\bibrangedash 1178}
@@ -423,6 +423,40 @@
       \field{year}{1994}
       \field{pages}{100\bibrangedash 110}
       \range{pages}{11}
+    \endentry
+    \entry{Lang:1982tj}{article}{}
+      \name{author}{2}{}{%
+        {{hash=41ad5d61f8023da9d50a30a90ce7676b}{%
+           family={Lang},
+           familyi={L\bibinitperiod},
+           given={C.\bibnamedelimi B.},
+           giveni={C\bibinitperiod\bibinitdelim B\bibinitperiod}}}%
+        {{hash=bb554e45182886300ec8e5b8ff42b549}{%
+           family={Rebbi},
+           familyi={R\bibinitperiod},
+           given={C.},
+           giveni={C\bibinitperiod}}}%
+      }
+      \strng{namehash}{a806e540639cb64bdfbae4d7219b7fb8}
+      \strng{fullhash}{a806e540639cb64bdfbae4d7219b7fb8}
+      \strng{bibnamehash}{a806e540639cb64bdfbae4d7219b7fb8}
+      \strng{authorbibnamehash}{a806e540639cb64bdfbae4d7219b7fb8}
+      \strng{authornamehash}{a806e540639cb64bdfbae4d7219b7fb8}
+      \strng{authorfullhash}{a806e540639cb64bdfbae4d7219b7fb8}
+      \field{sortinit}{7}
+      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Phys. Lett.}
+      \field{note}{[, 322 (1982)]}
+      \field{title}{Potential and Restoration of Rotational Symmetry in SU(2) Lattice Gauge Theory}
+      \field{volume}{B115}
+      \field{year}{1982}
+      \field{pages}{137}
+      \range{pages}{1}
+      \verb{doi}
+      \verb 10.1016/0370-2693(82)90813-9
+      \endverb
     \endentry
   \enddatalist
 \endrefsection

@@ -1,2 +1,32 @@
-% \pagestyle{fancy}
-\chapter{Gauge Theories Simulation on non-hypercubic lattice F4}
+\pagestyle{myFancy}
+\chapter{Gauge Theories Simulations on Non-Hypercubic Lattice}
+
+\section{Rotational Invariance Restoration}
+The restoration of spacetime symmetries in the continuum limit is an important aspect of lattice field theory.
+Minkowskian spacetime is invariant under the action of the Poincaré group, that includes translations, rotations in the $3$-dimensional space, and boosts.
+When performing the Wick rotation, boosts become rotations in the planes formed by each one of the \emph{spacelike} axis and the euclidean time.
+The euclidean spacetime is therefore invariant, in the continuum, under translations:
+\begin{equation}
+    x^\mu \to x^\mu + \varepsilon^\mu \label{3:TranslCont}
+\end{equation}
+and under rotations in $4$ dimensions:
+\begin{equation}
+    x^\mu \to R^\mu_\nu x^\nu \qquad\text{with}\qquad R\in\SO(4) \label{3:RotCont}
+\end{equation}
+These invariances do not hold true anymore if the spacetime is discretized: a generic lattice is, in fact, invariant only under translations of multiples of the lattice spacing $a$:
+\begin{equation}
+    x \to x + a\mu \qquad\text{with}\qquad x\in\Lambda \label{3:TraslDiscr}
+\end{equation}
+and under certain rotations:
+\begin{equation}
+    x \to \Gamma x \qquad\text{with}\qquad x\in\Lambda, \Gamma\in G_\Lambda \label{3:RotDiscr}
+\end{equation}
+where $G_\Lambda\subset\SO(4)$ is a discrete subset of the full rotational group $\SO(4)$ that depends on the lattice $\Lambda$.
+For example, $\Lambda=\Lambda_{SH}$ is a SH lattice, then $G_{\Lambda_{SH}}$ is the $384$-elements group with all possible reflections on every coordinate plane and rotations of multiples of $90^\degree$ around each one of the $4$ axis.
+The fact that the symmetries between the discrete and the continuum cases are different is not a problem itself, as long as when approaching the continuum limit the lattice symmetries tend to the continuum ones.
+This is the case for the translational symmetry: if $a\to0$, \eqref{3:TraslDiscr} becomes \eqref{3:TranslCont}.
+However, the rotational symmetry is not restored when the continuum limit is taken (\eqref{3:RotDiscr} does not become \eqref{3:RotCont} when $a\to0$), as the Simple Hypercubic lattice is invariant under rotations of multiples of $90^\degree$ independently from the value of the lattice spacing.
+For this reason, studies on the restoration of rotational symmetry have been made, through the computation of rotational invariant quantities.
+An example of these studies is the 1982 article of Lang and Rebbi~\cite{Lang:1982tj}, where the static quark potential $V(r)$, obtained from the correlator of two Polyakov loops (see \eqref{1:PolyakovPotential}), at different lattice spacings has been studied.
+
+\section{Non-Hypercubic Lattice}
