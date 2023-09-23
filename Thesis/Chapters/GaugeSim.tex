@@ -103,6 +103,44 @@ In particular, only the plaquettes containing the candidate link must be evaluat
 Hence $\Delta S = S[U'_\mu(x)]_{loc}-S[U_\mu(x)]_{loc}$.\\
 In a SH lattice, each link is shared between $6$ plaquettes, in $4$ spacetime dimensions.
 For each plaquette the change of its value is given by the change of the link, while the product of the other three gauge links, that is called \emph{staple} and will be indicated as $P_i$, remains unchanged.\\
+\begin{figure}[!htbp]
+    \centering
+    \begin{tikzpicture}
+        \filldraw[black]  (0,0) circle (3pt) node[anchor=north east]{$x$};
+        \filldraw[black]  (0,3) circle (3pt) node[anchor=south east]{$x+\hat\mu$};
+        \filldraw[black]  (3,0) circle (3pt) node[anchor=north west]{$x+\hat\nu$};
+        \filldraw[black]  (3,3) circle (3pt) node[anchor=south west]{$x+\hat\mu+\hat\nu$};
+        \filldraw[black] (-3,0) circle (3pt) node[anchor=north east]{$x-\hat\nu$};
+        \filldraw[black] (-3,3) circle (3pt) node[anchor=south east]{$x+\hat\mu-\hat\nu$};
+        \draw[ultra thick] (0,-0.5) -- (0,0);
+        \draw[color=blue,ultra thick,->] (0,0) -- (1.5,0);
+        \draw[color=blue,ultra thick   ] (1.5,0) -- (3,0);
+        \draw[ultra thick]  (3.5,0) -- (3,0);
+        \draw[ultra thick] (3,-0.5) -- (3,0);
+        \draw[color=blue,ultra thick,->] (3,0) -- (3,1.5) node[anchor=west]{$P^\dagger_i(x)$};
+        \draw[color=blue,ultra thick   ] (3,1.5) -- (3,3);
+        \draw[ultra thick]  (3.5,3) -- (3,3);
+        \draw[ultra thick]  (3,3.5) -- (3,3);
+        \draw[color=blue,ultra thick,->] (3,3) -- (1.5,3);
+        \draw[color=blue,ultra thick   ] (1.5,3) -- (0,3);
+        \draw[ultra thick]  (0,3.5) -- (0,3);
+        \draw[color=red,ultra thick,->] (0,0) -- (0,1.5) node[anchor=east]{$U_\mu(x)$};
+        \draw[color=red,ultra thick   ] (0,1.5) -- (0,3);
+        
+        \draw[color=blue,ultra thick,->] (0,0) -- (-1.5,0);
+        \draw[color=blue,ultra thick   ] (-1.5,0) -- (-3,0);
+        \draw[ultra thick]  (-3.5,0) -- (-3,0);
+        \draw[ultra thick] (-3,-0.5) -- (-3,0);
+        \draw[color=blue,ultra thick,->] (-3,0) -- (-3,1.5) node[anchor=east]{$P^\dagger_j(x)$};
+        \draw[color=blue,ultra thick   ] (-3,1.5) -- (-3,3);
+        \draw[ultra thick]  (-3.5,3) -- (-3,3);
+        \draw[ultra thick]  (-3,3.5) -- (-3,3);
+        \draw[color=blue,ultra thick,->] (-3,3) -- (-1.5,3);
+        \draw[color=blue,ultra thick   ] (-1.5,3) -- (-0,3);
+    \end{tikzpicture}
+    \caption{Example of a link (\textcolor{red}{red}) with two of its staples (\textcolor{blue}{blue}).}
+    \label{2F:Staple}
+\end{figure}\\
 Therefore, the local contribution to the action can be computed as:
 \begin{equation*}
     S[U_\mu(x)]_{loc} = \frac\beta{2N} \sum_{i=1}^6 \Re\Tr\prs{\id-U_\mu(x)P_i} = \frac\beta{2N} \Re\Tr\prs{6\id-U_\mu(x)\sum_{i=1}^6P_i}
