@@ -2377,7 +2377,9 @@
     <bcf:citekey order="5" intorder="1">1998art</bcf:citekey>
     <bcf:citekey order="5" intorder="2">luscher1994portable</bcf:citekey>
     <bcf:citekey order="6" intorder="1">Lang:1982tj</bcf:citekey>
-    <bcf:citekey order="7" intorder="1">Celmaster:1982ht</bcf:citekey>
+    <bcf:citekey order="7" intorder="1">adams1996lectures</bcf:citekey>
+    <bcf:citekey order="8" intorder="1">Neuberger:1987kt</bcf:citekey>
+    <bcf:citekey order="9" intorder="1">Celmaster:1982ht</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="none">

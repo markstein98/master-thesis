@@ -430,6 +430,76 @@
       \verb 10.1016/0370-2693(82)90813-9
       \endverb
     \endentry
+    \entry{adams1996lectures}{book}{}
+      \name{author}{3}{}{%
+        {{hash=3692b7705c0a00b88a736b125125a6cd}{%
+           family={Adams},
+           familyi={A\bibinitperiod},
+           given={J.F.},
+           giveni={J\bibinitperiod}}}%
+        {{hash=70e3fea42521cc065a5df2eb5b68d30e}{%
+           family={Mahmud},
+           familyi={M\bibinitperiod},
+           given={Z.},
+           giveni={Z\bibinitperiod}}}%
+        {{hash=4dc2a153233e5e04e4bb94e172d8bfeb}{%
+           family={Mimura},
+           familyi={M\bibinitperiod},
+           given={M.},
+           giveni={M\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {University of Chicago Press}%
+      }
+      \strng{namehash}{a3214f397b2367802a16909cf6a2b603}
+      \strng{fullhash}{a3214f397b2367802a16909cf6a2b603}
+      \strng{bibnamehash}{a3214f397b2367802a16909cf6a2b603}
+      \strng{authorbibnamehash}{a3214f397b2367802a16909cf6a2b603}
+      \strng{authornamehash}{a3214f397b2367802a16909cf6a2b603}
+      \strng{authorfullhash}{a3214f397b2367802a16909cf6a2b603}
+      \field{sortinit}{7}
+      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{isbn}{978-0-22600-527-0}
+      \field{series}{Chicago Lectures in Mathematics}
+      \field{title}{Lectures on Exceptional Lie Groups}
+      \field{year}{1996}
+      \verb{urlraw}
+      \verb https://books.google.it/books?id=a3XCft6dubIC
+      \endverb
+      \verb{url}
+      \verb https://books.google.it/books?id=a3XCft6dubIC
+      \endverb
+    \endentry
+    \entry{Neuberger:1987kt}{article}{}
+      \name{author}{1}{}{%
+        {{hash=1e22528c0dd4cbd51b463dbb5b19182f}{%
+           family={Neuberger},
+           familyi={N\bibinitperiod},
+           given={Herbert},
+           giveni={H\bibinitperiod}}}%
+      }
+      \strng{namehash}{1e22528c0dd4cbd51b463dbb5b19182f}
+      \strng{fullhash}{1e22528c0dd4cbd51b463dbb5b19182f}
+      \strng{bibnamehash}{1e22528c0dd4cbd51b463dbb5b19182f}
+      \strng{authorbibnamehash}{1e22528c0dd4cbd51b463dbb5b19182f}
+      \strng{authornamehash}{1e22528c0dd4cbd51b463dbb5b19182f}
+      \strng{authorfullhash}{1e22528c0dd4cbd51b463dbb5b19182f}
+      \field{sortinit}{8}
+      \field{sortinithash}{a231b008ebf0ecbe0b4d96dcc159445f}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Phys. Lett.}
+      \field{title}{Spinless Fields on {$F_4$} Lattices}
+      \field{volume}{B199}
+      \field{year}{1987}
+      \field{pages}{536}
+      \range{pages}{1}
+      \verb{doi}
+      \verb 10.1016/0370-2693(87)91623-6
+      \endverb
+    \endentry
     \entry{Celmaster:1982ht}{article}{}
       \name{author}{1}{}{%
         {{hash=050bc6ad2b05c9e62695d1b061ba5aba}{%
@@ -444,8 +514,8 @@
       \strng{authorbibnamehash}{050bc6ad2b05c9e62695d1b061ba5aba}
       \strng{authornamehash}{050bc6ad2b05c9e62695d1b061ba5aba}
       \strng{authorfullhash}{050bc6ad2b05c9e62695d1b061ba5aba}
-      \field{sortinit}{7}
-      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
+      \field{sortinit}{9}
+      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{Phys. Rev.}

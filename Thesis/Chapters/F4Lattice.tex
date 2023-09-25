@@ -73,20 +73,9 @@ In section\secref{Sec1:SHLattice} the Simple Hypercubic lattice has been defined
 Of course, it is not the only possible choice, although it is the simplest.
 In fact, in order to further investigate the restoration of rotational symmetry and to make better predictions on rotational invariant quantities, other types of lattices have been used to simulate lattice field theories.
 
-\subsection{Body-Centered Tesseract}
+\subsection{Body-Centered Tesseract\label{Sec3:BCT}}
 For example, the Body-Centered Tesseract (BCT) has been used for simulation of Yang-Mills theories.
-It consists of packing the spacetime with tesseracts, as the name suggests, but considering both the corners and the centers of every hypercube as lattice sites.
-Every site has, therefore, $24$ nearest neighbours: $16$ are identified by all possible sign permutations of $\pr{\pm\frac12,\pm\frac12,\pm\frac12,\pm\frac12}$, the $8$ remaining are the ones of the SH lattice.
-The cell of this lattice is known as $24$-cell, shown in Figure \eqref{3F:24cell}, and the plaquettes are triangular.
-\begin{figure}[!htbp]
-    \centering
-    \includegraphics[width=0.33\textwidth]{24cell.png}
-    \caption{Bidimensional projection of the $24$-cell.}
-    \label{3F:24cell}
-\end{figure}\\
-In~\cite{Celmaster:1982ht}, Celmaster presented the first computations for an $\SU(2)$ theory on a BCT.
-
-
+It consists of packing the spacetime with tesseracts, as the name suggests, but considering both the corners and the centers of every hypercube as lattice sites (see Figure \eqref{3F:ScBccCells} for a tridimensional representation of a cubic cell \eqref{3F:CubicCell} and a body-centered cubic cell \eqref{3F:BCCubicCell}).\\
 \begin{figure}[!htbp]
     \centering
     \hspace{0.1\textwidth}
@@ -104,4 +93,40 @@ In~\cite{Celmaster:1982ht}, Celmaster presented the first computations for an $\
     \hspace{0.2\textwidth}
     \caption{Tridimensional representation of a simple cubic cell (\ref{3F:CubicCell}) and a body-centered one (\ref{3F:BCCubicCell}).}
     \label{3F:ScBccCells}
-\end{figure}
+\end{figure}\\
+Every site of the BCT lattice has, therefore, $24$ nearest neighbours: $16$ are identified by all possible sign permutations of $\pr{\pm\frac12,\pm\frac12,\pm\frac12,\pm\frac12}$, the $8$ remaining are the ones of the SH lattice.
+The cell of this lattice is known as $24$-cell, shown in Figure \eqref{3F:24cell}, and the plaquettes are triangular.
+\begin{figure}[!htbp]
+    \centering
+    \includegraphics[width=0.33\textwidth]{24cell.png}
+    \caption{Bidimensional projection of the $24$-cell.}
+    \label{3F:24cell}
+\end{figure}\\
+This lattice has been used for simulations of $\SU(2)$ Yang-Mills theories, as will be explained later.
+
+\subsection{\spFtext Coroots Lattice}
+\spFtext is one of the five exceptional simple Lie groups, with Dynkin diagram \dynkin F4.
+A more detailed explanation of exceptional Lie groups and algebras can be found in~\cite{adams1996lectures}.
+Its root lattice is a $4$-dimensional body-centered hypercubic lattice, a BCT, while its dual, that is called the \spFtext coroots lattice, is the $4$-dimensional lattice with the symmetry group of highest order.
+Each site of this lattice has $48$ nearest neighbours:
+\begin{itemize}
+    \item $24$ corresponding to the roots of \spFtext, individuated by all possible sign and position permutations of $(\pm1,\pm1,0,0)$;\
+    \item $24$ corresponding to the coroots, the roots' dual vectors, individuated by\
+    \begin{itemize}
+        \item[$\circ$] the $8$ possible sign and coordinate permutations of $(\pm1,0,0,0)$\
+        \item[$\circ$] the $16$ possible sign permutations of $\pr{\pm\frac12,\pm\frac12,\pm\frac12,\pm\frac12}$\
+    \end{itemize}
+\end{itemize}
+This lattice is made up of two BCT lattices: the first one is the dual lattice, that is the same as\secref{Sec3:BCT}, the other is the root lattice, that is a BCT with lattice spacing $\sqrt2$ as can be seen as represented in Figure \eqref{3:F4cell}.
+\begin{figure}[!htbp]
+    \centering
+    \includegraphics[width=0.33\textwidth]{F4_root_lattice.png}
+    \caption{Bidimensional projection of the elementary cell of the \spFtext coroots lattice.\\
+             In \textcolor{red}{red} are represented the roots and in \textcolor{yellow}{yellow} the coroots.}
+    \label{3:F4cell}
+\end{figure}\\
+This lattice has been used in literature to simulate scalar field theories\cite{Neuberger:1987kt}.
+
+\section{Simulations on Higher Symmetric Lattice}
+In~\cite{Celmaster:1982ht}, Celmaster presented the first computations for an $\SU(2)$ theory on a BCT.
+

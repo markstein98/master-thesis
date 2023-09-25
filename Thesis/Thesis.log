@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Arch Linux) (preloaded format=pdflatex 2023.8.28)  25 SEP 2023 11:42
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Arch Linux) (preloaded format=pdflatex 2023.8.28)  25 SEP 2023 18:53
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1525,10 +1525,147 @@ File: pgfmodulematrix.code.tex 2023-01-15 v3.1.10 (3.1.10)
 (/usr/share/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrary
 topaths.code.tex
 File: tikzlibrarytopaths.code.tex 2023-01-15 v3.1.10 (3.1.10)
-)))) (/usr/share/texmf-dist/tex/latex/relsize/relsize.sty
+))) (/usr/share/texmf-dist/tex/latex/relsize/relsize.sty
 Package: relsize 2013/03/29 ver 4.1
+))
+(/usr/share/texmf-dist/tex/latex/dynkin-diagrams/dynkin-diagrams.sty
+Package: dynkin-diagrams 2021/04/04 Dynkin diagrams
+
+(/usr/share/texmf-dist/tex/generic/xstring/xstring.sty
+(/usr/share/texmf-dist/tex/generic/xstring/xstring.tex
+\integerpart=\count513
+\decimalpart=\count514
 )
-(./Chapters/Settings.tex
+Package: xstring 2023/01/14 v1.85 String manipulations (CT)
+)
+(/usr/share/texmf/tex/latex/pgfopts/pgfopts.sty
+Package: pgfopts 2014/07/10 v2.1a LaTeX package options with pgfkeys
+\pgfopts@list@add@a@toks=\toks46
+\pgfopts@list@add@b@toks=\toks47
+)
+(/usr/share/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrary
+arrows.code.tex
+File: tikzlibraryarrows.code.tex 2023-01-15 v3.1.10 (3.1.10)
+
+(/usr/share/texmf-dist/tex/generic/pgf/libraries/pgflibraryarrows.code.tex
+File: pgflibraryarrows.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\arrowsize=\dimen322
+))
+(/usr/share/texmf-dist/tex/generic/pgf/libraries/pgflibraryarrows.meta.code.tex
+File: pgflibraryarrows.meta.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgfarrowinset=\dimen323
+\pgfarrowlength=\dimen324
+\pgfarrowwidth=\dimen325
+\pgfarrowlinewidth=\dimen326
+)
+(/usr/share/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrary
+backgrounds.code.tex
+File: tikzlibrarybackgrounds.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgf@layerbox@background=\box87
+\pgf@layerboxsaved@background=\box88
+)
+(/usr/share/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrary
+calc.code.tex
+File: tikzlibrarycalc.code.tex 2023-01-15 v3.1.10 (3.1.10)
+)
+(/usr/share/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrary
+decorations.markings.code.tex
+(/usr/share/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrary
+decorations.code.tex
+(/usr/share/texmf-dist/tex/generic/pgf/modules/pgfmoduledecorations.code.tex
+\pgfdecoratedcompleteddistance=\dimen327
+\pgfdecoratedremainingdistance=\dimen328
+\pgfdecoratedinputsegmentcompleteddistance=\dimen329
+\pgfdecoratedinputsegmentremainingdistance=\dimen330
+\pgf@decorate@distancetomove=\dimen331
+\pgf@decorate@repeatstate=\count515
+\pgfdecorationsegmentamplitude=\dimen332
+\pgfdecorationsegmentlength=\dimen333
+)
+\tikz@lib@dec@box=\box89
+)
+(/usr/share/texmf-dist/tex/generic/pgf/libraries/decorations/pgflibrarydecorati
+ons.markings.code.tex))
+(/usr/share/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrary
+decorations.pathreplacing.code.tex
+(/usr/share/texmf-dist/tex/generic/pgf/libraries/decorations/pgflibrarydecorati
+ons.pathreplacing.code.tex))
+(/usr/share/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrary
+decorations.pathmorphing.code.tex
+(/usr/share/texmf-dist/tex/generic/pgf/libraries/decorations/pgflibrarydecorati
+ons.pathmorphing.code.tex))
+(/usr/share/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrary
+fit.code.tex
+File: tikzlibraryfit.code.tex 2023-01-15 v3.1.10 (3.1.10)
+)
+(/usr/share/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrary
+patterns.code.tex
+File: tikzlibrarypatterns.code.tex 2023-01-15 v3.1.10 (3.1.10)
+
+(/usr/share/texmf-dist/tex/generic/pgf/libraries/pgflibrarypatterns.code.tex
+File: pgflibrarypatterns.code.tex 2023-01-15 v3.1.10 (3.1.10)
+))
+(/usr/share/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrary
+shadows.code.tex
+File: tikzlibraryshadows.code.tex 2023-01-15 v3.1.10 (3.1.10)
+
+(/usr/share/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrary
+fadings.code.tex
+File: tikzlibraryfadings.code.tex 2023-01-15 v3.1.10 (3.1.10)
+
+(/usr/share/texmf-dist/tex/generic/pgf/libraries/pgflibraryfadings.code.tex
+File: pgflibraryfadings.code.tex 2023-01-15 v3.1.10 (3.1.10)
+)))
+\pgf@layerbox@Dynkin behind=\box90
+\pgf@layerboxsaved@Dynkin behind=\box91
+\dynkinOverrideRoot=\count516
+\dynkin@rpo=\count517
+\c@dynkinRootNo=\count518
+\dynkin@onesbit=\count519
+\dynkin@twosbit=\count520
+\dynkin@rank=\count521
+\dynkin@rank@minus@one=\count522
+\dynkin@rank@minus@two=\count523
+\dynkin@rank@minus@three=\count524
+\dynkin@nodes=\count525
+\dynkin@ply=\count526
+\dynkin@drpo=\count527
+\dynkin@where=\count528
+\dynkin@first@root@no=\count529
+\dynkin@second@root@no=\count530
+\dynkin@Root@Numbr=\count531
+\dynkin@string@length=\count532
+\dynkin@Root@Numbrpo=\count533
+\defaultpgflinewidth=\skip135
+\dynkin@lenny=\count534
+\dynkin@Root@Number=\count535
+\@dynkin@from@root=\count536
+\@dynkin@to@root=\count537
+\dynkin@r=\count538
+\dynkin@root@no=\count539
+\dynkin@order@temp=\count540
+\dynkin@order@temp@b=\count541
+\tempDynkinReorder=\count542
+\test@bit@a=\count543
+\test@bit@b=\count544
+\replaceNthCounter=\count545
+\replacementN=\count546
+\dynkin@where=\count547
+\dynkin@nodes@minus@one=\count548
+\pipebmo=\count549
+\pipefpo=\count550
+\pipe@end=\count551
+\start@pipe=\count552
+\dynkin@h=\count553
+\dynkin@hpo=\count554
+\dynkin@afterfold=\count555
+\dynkin@nrts=\count556
+\dynkin@countdown=\count557
+\dynkin@bmo=\count558
+\dynkin@bmo=\count559
+\dynkin@height@minus@one=\count560
+\dynkin@nodes@minus@one=\count561
+) (./Chapters/Settings.tex
 Package hyperref Info: Option `colorlinks' set `true' on input line 7.
 ) (./Chapters/Commands.tex)
 Package translations Info: No language package found. I am going to use `englis
@@ -1559,17 +1696,17 @@ LaTeX Font Info:    ... okay on input line 10.
 
 (/usr/share/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count513
-\scratchdimen=\dimen322
-\scratchbox=\box87
-\nofMPsegments=\count514
-\nofMParguments=\count515
-\everyMPshowfont=\toks46
-\MPscratchCnt=\count516
-\MPscratchDim=\dimen323
-\MPnumerator=\count517
-\makeMPintoPDFobject=\count518
-\everyMPtoPDFconversion=\toks47
+\scratchcounter=\count562
+\scratchdimen=\dimen334
+\scratchbox=\box92
+\nofMPsegments=\count563
+\nofMParguments=\count564
+\everyMPshowfont=\toks48
+\MPscratchCnt=\count565
+\MPscratchDim=\dimen335
+\MPnumerator=\count566
+\makeMPintoPDFobject=\count567
+\everyMPtoPDFconversion=\toks49
 ) (/usr/share/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
@@ -1581,7 +1718,7 @@ e
 ))
 LaTeX Info: Command `\dddot' is already robust on input line 10.
 LaTeX Info: Command `\ddddot' is already robust on input line 10.
-\c@lstlisting=\count519
+\c@lstlisting=\count568
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: hyperref package is loaded.
 Package caption Info: End \AtBeginDocument code.
@@ -1616,7 +1753,7 @@ Package biblatex Info: ... file 'Thesis.bbl' found.
 Package biblatex Info: Reference section=0 on input line 10.
 Package biblatex Info: Reference segment=0 on input line 10.
  (./Chapters/CoverITAuc.tex
-<./pics/logo.png, id=151, 2724.579pt x 2845.2699pt>
+<./pics/logo.png, id=183, 2724.579pt x 2845.2699pt>
 File: ./pics/logo.png Graphic file (type png)
 <use ./pics/logo.png>
 Package pdftex.def Info: ./pics/logo.png  used on input line 3.
@@ -2482,7 +2619,7 @@ LaTeX Font Info:    No math alphabet change to frozen version normal on input l
 ine 202.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
 ine 203.
-<./pics/Lattice.png, id=342, 470.50781pt x 470.50781pt>
+<./pics/Lattice.png, id=376, 470.50781pt x 470.50781pt>
 File: ./pics/Lattice.png Graphic file (type png)
 <use ./pics/Lattice.png>
 Package pdftex.def Info: ./pics/Lattice.png  used on input line 206.
@@ -2580,7 +2717,7 @@ LaTeX Font Info:    No math alphabet change to frozen version normal on input l
 ine 244.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
 ine 245.
-<./pics/linkVariables.png, id=361, 760.34062pt x 106.89937pt>
+<./pics/linkVariables.png, id=395, 760.34062pt x 106.89937pt>
 File: ./pics/linkVariables.png Graphic file (type png)
 <use ./pics/linkVariables.png>
 Package pdftex.def Info: ./pics/linkVariables.png  used on input line 247.
@@ -3330,7 +3467,7 @@ LaTeX Font Info:    No math alphabet change to frozen version normal on input l
 ine 334.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
 ine 335.
-<./pics/WilsonLoops.png, id=420, 602.25pt x 173.14688pt>
+<./pics/WilsonLoops.png, id=454, 602.25pt x 173.14688pt>
 File: ./pics/WilsonLoops.png Graphic file (type png)
 <use ./pics/WilsonLoops.png>
 Package pdftex.def Info: ./pics/WilsonLoops.png  used on input line 338.
@@ -3440,7 +3577,7 @@ LaTeX Font Info:    No math alphabet change to frozen version normal on input l
 ine 24.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
 ine 24.
-<./pics/MarkovProcess.png, id=448, 392.21532pt x 278.54062pt>
+<./pics/MarkovProcess.png, id=483, 392.21532pt x 278.54062pt>
 File: ./pics/MarkovProcess.png Graphic file (type png)
 <use ./pics/MarkovProcess.png>
 Package pdftex.def Info: ./pics/MarkovProcess.png  used on input line 28.
@@ -4689,7 +4826,7 @@ LaTeX Font Info:    No math alphabet change to frozen version normal on input l
 ine 42.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
 ine 42.
-<./pics/LangRebbi_a.png, id=596, 271.0125pt x 316.18124pt>
+<./pics/LangRebbi_a.png, id=630, 271.0125pt x 316.18124pt>
 File: ./pics/LangRebbi_a.png Graphic file (type png)
 <use ./pics/LangRebbi_a.png>
 Package pdftex.def Info: ./pics/LangRebbi_a.png  used on input line 49.
@@ -4708,7 +4845,7 @@ LaTeX Font Info:    No math alphabet change to frozen version normal on input l
 ine 50.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
 ine 50.
-<./pics/LangRebbi_b.png, id=597, 316.18124pt x 316.18124pt>
+<./pics/LangRebbi_b.png, id=631, 316.18124pt x 316.18124pt>
 File: ./pics/LangRebbi_b.png Graphic file (type png)
 <use ./pics/LangRebbi_b.png>
 Package pdftex.def Info: ./pics/LangRebbi_b.png  used on input line 55.
@@ -4758,49 +4895,96 @@ ine 68.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
 ine 68.
  [26]
-LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 79.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 79.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 79.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 79.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 80.
-<./pics/24cell.png, id=618, 328.22626pt x 328.22626pt>
-File: ./pics/24cell.png Graphic file (type png)
-<use ./pics/24cell.png>
-Package pdftex.def Info: ./pics/24cell.png  used on input line 83.
-(pdftex.def)             Requested size: 150.23138pt x 150.22964pt.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 84.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 84.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input l
-ine 87.
- [27 <./pics/LangRebbi_a.png> <./pics/LangRebbi_b.png>]
-<./pics/CubicCell.png, id=628, 359.84438pt x 364.36125pt>
+<./pics/CubicCell.png, id=654, 359.84438pt x 364.36125pt>
 File: ./pics/CubicCell.png Graphic file (type png)
 <use ./pics/CubicCell.png>
-Package pdftex.def Info: ./pics/CubicCell.png  used on input line 94.
+Package pdftex.def Info: ./pics/CubicCell.png  used on input line 83.
 (pdftex.def)             Requested size: 113.81102pt x 115.24141pt.
-<./pics/BodyCenteredCubicCell.png, id=629, 359.84438pt x 364.36125pt>
+<./pics/BodyCenteredCubicCell.png, id=655, 359.84438pt x 364.36125pt>
 File: ./pics/BodyCenteredCubicCell.png Graphic file (type png)
 <use ./pics/BodyCenteredCubicCell.png>
-Package pdftex.def Info: ./pics/BodyCenteredCubicCell.png  used on input line 1
-00.
+Package pdftex.def Info: ./pics/BodyCenteredCubicCell.png  used on input line 8
+9.
 (pdftex.def)             Requested size: 113.81102pt x 115.24141pt.
-) [28 <./pics/24cell.png> <./pics/CubicCell.png (PNG copy)> <./pics/BodyCentere
-dCubicCell.png (PNG copy)>] (./Chapters/SimulationResults.tex
-Chapter 4.
-) [29
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 97.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 97.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 97.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 97.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 98.
+<./pics/24cell.png, id=661, 328.22626pt x 328.22626pt>
+File: ./pics/24cell.png Graphic file (type png)
+<use ./pics/24cell.png>
+Package pdftex.def Info: ./pics/24cell.png  used on input line 101.
+(pdftex.def)             Requested size: 150.23138pt x 150.22964pt.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 102.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 102.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 105.
+ [27 <./pics/LangRebbi_a.png> <./pics/LangRebbi_b.png>]
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 107.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 108.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 110.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 110.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 110.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 111.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 113.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 113.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 113.
+ [28 <./pics/CubicCell.png (PNG copy)> <./pics/BodyCenteredCubicCell.png (PNG c
+opy)> <./pics/24cell.png>]
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 114.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 116.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 116.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 116.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 117.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 117.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 117.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 120.
+<./pics/F4_root_lattice.png, id=681, 718.93594pt x 718.93594pt>
+File: ./pics/F4_root_lattice.png Graphic file (type png)
+<use ./pics/F4_root_lattice.png>
+Package pdftex.def Info: ./pics/F4_root_lattice.png  used on input line 123.
+(pdftex.def)             Requested size: 150.23138pt x 150.22406pt.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 125.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 125.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 131.
+) [29 <./pics/F4_root_lattice.png>]
+(./Chapters/SimulationResults.tex [30
 
-] (./Chapters/Conclusions.tex [30
+]
+Chapter 4.
+) [31] (./Chapters/Conclusions.tex [32
 
 ]
 Chapter 5.
-) [31] (./Chapters/Bibliography.tex) [32
+) [33] (./Chapters/Bibliography.tex) [34
 
 ]
 LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 2
@@ -4827,7 +5011,7 @@ LaTeX Font Info:    No math alphabet change to frozen version normal on input l
 ine 2.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
 ine 2.
- [33]
+ [35]
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
 ine 2.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
@@ -4836,21 +5020,27 @@ LaTeX Font Info:    No math alphabet change to frozen version normal on input l
 ine 2.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
 ine 2.
- [34] (./Thesis.aux)
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 2.
+ [36] (./Thesis.aux)
 Package rerunfilecheck Info: File `Thesis.out' has not changed.
-(rerunfilecheck)             Checksum: 3A1B8392797804F54E8886BA30D4C911;6347.
+(rerunfilecheck)             Checksum: BBAC8EB597B2EADBC9776B46D46E7867;6783.
 Package logreq Info: Writing requests to 'Thesis.run.xml'.
 \openout1 = `Thesis.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 40271 strings out of 477985
- 784688 string characters out of 5840058
+ 43517 strings out of 477985
+ 873953 string characters out of 5840058
  1881388 words of memory out of 5000000
- 59543 multiletter control sequences out of 15000+600000
+ 62708 multiletter control sequences out of 15000+600000
  692299 words of font info for 195 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 89i,21n,83p,1151b,1993s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 89i,21n,100p,1151b,1993s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmib10.pfb></usr/share
 /texmf-dist/fonts/type1/public/doublestroke/dsrom12.pfb></usr/share/texmf-dist/
 fonts/type1/public/doublestroke/dsrom8.pfb></usr/share/texmf-dist/fonts/type1/p
@@ -4875,10 +5065,10 @@ type1/public/mathabx-type1/mathb12.pfb></usr/share/texmf-dist/fonts/type1/publi
 c/mathabx-type1/mathx10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/
 symbols/msam10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/symbols/m
 sbm10.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfxc2074.pfb>
-Output written on Thesis.pdf (40 pages, 1777940 bytes).
+Output written on Thesis.pdf (42 pages, 2017767 bytes).
 PDF statistics:
- 888 PDF objects out of 1000 (max. 8388607)
- 726 compressed objects within 8 object streams
- 204 named destinations out of 1000 (max. 500000)
- 351 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 946 PDF objects out of 1000 (max. 8388607)
+ 764 compressed objects within 8 object streams
+ 211 named destinations out of 1000 (max. 500000)
+ 468 words of extra memory for PDF output out of 10000 (max. 10000000)
 

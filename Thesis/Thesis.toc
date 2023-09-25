@@ -36,5 +36,7 @@
 \contentsline {subsection}{\numberline {3.1.1}Rotational Invariance of the Static Quark Potential}{26}{subsection.3.1.1}%
 \contentsline {section}{\numberline {3.2}Other Types of Lattice}{27}{section.3.2}%
 \contentsline {subsection}{\numberline {3.2.1}Body-Centered Tesseract}{27}{subsection.3.2.1}%
-\contentsline {chapter}{\numberline {4}Simulation Results}{29}{chapter.4}%
-\contentsline {chapter}{\numberline {5}Conclusions}{31}{chapter.5}%
+\contentsline {subsection}{\numberline {3.2.2}$\mathit {F}_4$ Coroots Lattice}{28}{subsection.3.2.2}%
+\contentsline {section}{\numberline {3.3}Simulations on Higher Symmetric Lattice}{29}{section.3.3}%
+\contentsline {chapter}{\numberline {4}Simulation Results}{31}{chapter.4}%
+\contentsline {chapter}{\numberline {5}Conclusions}{33}{chapter.5}%
