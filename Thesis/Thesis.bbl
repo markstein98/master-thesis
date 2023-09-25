@@ -349,40 +349,12 @@
       \verb https://books.google.it/books?id=2ee7AQAAQBAJ
       \endverb
     \endentry
-    \entry{Celmaster:1982ht}{article}{}
-      \name{author}{1}{}{%
-        {{hash=050bc6ad2b05c9e62695d1b061ba5aba}{%
-           family={Celmaster},
-           familyi={C\bibinitperiod},
-           given={William},
-           giveni={W\bibinitperiod}}}%
-      }
-      \strng{namehash}{050bc6ad2b05c9e62695d1b061ba5aba}
-      \strng{fullhash}{050bc6ad2b05c9e62695d1b061ba5aba}
-      \strng{bibnamehash}{050bc6ad2b05c9e62695d1b061ba5aba}
-      \strng{authorbibnamehash}{050bc6ad2b05c9e62695d1b061ba5aba}
-      \strng{authornamehash}{050bc6ad2b05c9e62695d1b061ba5aba}
-      \strng{authorfullhash}{050bc6ad2b05c9e62695d1b061ba5aba}
-      \field{sortinit}{5}
-      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{journaltitle}{Phys. Rev.}
-      \field{title}{{Gauge Theories on the Body - Centered Hypercubic Lattice}}
-      \field{volume}{D26}
-      \field{year}{1982}
-      \field{pages}{2955}
-      \range{pages}{1}
-      \verb{doi}
-      \verb 10.1103/PhysRevD.26.2955
-      \endverb
-    \endentry
     \entry{1998art}{book}{}
       \list{publisher}{1}{%
         {Pearson Education}%
       }
-      \field{sortinit}{6}
-      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
+      \field{sortinit}{5}
+      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
       \field{labeltitlesource}{title}
       \field{isbn}{9788177583359}
       \field{number}{v. 2}
@@ -412,8 +384,8 @@
       \strng{authorbibnamehash}{16aa001e4f0bcc4883c1f09f0fe106b7}
       \strng{authornamehash}{16aa001e4f0bcc4883c1f09f0fe106b7}
       \strng{authorfullhash}{16aa001e4f0bcc4883c1f09f0fe106b7}
-      \field{sortinit}{6}
-      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
+      \field{sortinit}{5}
+      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{Computer physics communications}
@@ -443,8 +415,8 @@
       \strng{authorbibnamehash}{a806e540639cb64bdfbae4d7219b7fb8}
       \strng{authornamehash}{a806e540639cb64bdfbae4d7219b7fb8}
       \strng{authorfullhash}{a806e540639cb64bdfbae4d7219b7fb8}
-      \field{sortinit}{7}
-      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
+      \field{sortinit}{6}
+      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{Phys. Lett.}
@@ -456,6 +428,34 @@
       \range{pages}{1}
       \verb{doi}
       \verb 10.1016/0370-2693(82)90813-9
+      \endverb
+    \endentry
+    \entry{Celmaster:1982ht}{article}{}
+      \name{author}{1}{}{%
+        {{hash=050bc6ad2b05c9e62695d1b061ba5aba}{%
+           family={Celmaster},
+           familyi={C\bibinitperiod},
+           given={William},
+           giveni={W\bibinitperiod}}}%
+      }
+      \strng{namehash}{050bc6ad2b05c9e62695d1b061ba5aba}
+      \strng{fullhash}{050bc6ad2b05c9e62695d1b061ba5aba}
+      \strng{bibnamehash}{050bc6ad2b05c9e62695d1b061ba5aba}
+      \strng{authorbibnamehash}{050bc6ad2b05c9e62695d1b061ba5aba}
+      \strng{authornamehash}{050bc6ad2b05c9e62695d1b061ba5aba}
+      \strng{authorfullhash}{050bc6ad2b05c9e62695d1b061ba5aba}
+      \field{sortinit}{7}
+      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Phys. Rev.}
+      \field{title}{{Gauge Theories on the Body - Centered Hypercubic Lattice}}
+      \field{volume}{D26}
+      \field{year}{1982}
+      \field{pages}{2955}
+      \range{pages}{1}
+      \verb{doi}
+      \verb 10.1103/PhysRevD.26.2955
       \endverb
     \endentry
   \enddatalist

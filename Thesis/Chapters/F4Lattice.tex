@@ -1,7 +1,7 @@
 \pagestyle{myFancy}
 \chapter{Gauge Theories Simulations on Non-Hypercubic Lattice}
 
-\section{Rotational Invariance Restoration}
+\section{Spacetime Symmetries Restoration}
 The restoration of spacetime symmetries in the continuum limit is an important aspect of lattice field theory.
 Minkowskian spacetime is invariant under the action of the Poincaré group, that includes translations, rotations in the $3$-dimensional space, and boosts.
 When performing the Wick rotation, boosts become rotations in the planes formed by each one of the \emph{spacelike} axis and the euclidean time.
@@ -11,7 +11,7 @@ The euclidean spacetime is therefore invariant, in the continuum, under translat
 \end{equation}
 and under rotations in $4$ dimensions:
 \begin{equation}
-    x^\mu \to R^\mu_\nu x^\nu \qquad\text{with}\qquad R\in\SO(4) \label{3:RotCont}
+    x^\mu \to R^\mu_\nu x^\nu \qquad\text{with}\qquad R\in\Orot(4) \label{3:RotCont}
 \end{equation}
 These invariances do not hold true anymore if the spacetime is discretized: a generic lattice is, in fact, invariant only under translations of multiples of the lattice spacing $a$:
 \begin{equation}
@@ -21,12 +21,87 @@ and under certain rotations:
 \begin{equation}
     x \to \Gamma x \qquad\text{with}\qquad x\in\Lambda, \Gamma\in G_\Lambda \label{3:RotDiscr}
 \end{equation}
-where $G_\Lambda\subset\SO(4)$ is a discrete subset of the full rotational group $\SO(4)$ that depends on the lattice $\Lambda$.
-For example, $\Lambda=\Lambda_{SH}$ is a SH lattice, then $G_{\Lambda_{SH}}$ is the $384$-elements group with all possible reflections on every coordinate plane and rotations of multiples of $90^\degree$ around each one of the $4$ axis.
+where $G_\Lambda\subset\Orot(4)$ is a discrete subset of the full rotational group $\Orot(4)$ that depends on the lattice $\Lambda$.
+For example, $\Lambda=\Lambda_{SH}$ is a SH lattice, then $G_{\Lambda_{SH}}$ is the $384$-elements group with all possible reflections on every coordinate plane and rotations of multiples of $90^\degree$ around each one of the $4$ axis.\\
 The fact that the symmetries between the discrete and the continuum cases are different is not a problem itself, as long as when approaching the continuum limit the lattice symmetries tend to the continuum ones.
 This is the case for the translational symmetry: if $a\to0$, \eqref{3:TraslDiscr} becomes \eqref{3:TranslCont}.
-However, the rotational symmetry is not restored when the continuum limit is taken (\eqref{3:RotDiscr} does not become \eqref{3:RotCont} when $a\to0$), as the Simple Hypercubic lattice is invariant under rotations of multiples of $90^\degree$ independently from the value of the lattice spacing.
+However, the rotational symmetry is not restored when the continuum limit is taken (\eqref{3:RotDiscr} does not become \eqref{3:RotCont} when $a\to0$), as the Simple Hypercubic lattice is invariant under rotations of multiples of $90^\degree$ independently from the value of the lattice spacing.\\
 For this reason, studies on the restoration of rotational symmetry have been made, through the computation of rotational invariant quantities.
-An example of these studies is the 1982 article of Lang and Rebbi~\cite{Lang:1982tj}, where the static quark potential $V(r)$, obtained from the correlator of two Polyakov loops (see \eqref{1:PolyakovPotential}), at different lattice spacings has been studied.
 
-\section{Non-Hypercubic Lattice}
+\subsection{Rotational Invariance of the Static Quark Potential}
+An example of these studies is the 1982 article of Lang and Rebbi~\cite{Lang:1982tj}, where the static quark potential $V(r)$, obtained from the correlator of two Polyakov loops (see \eqref{1:PolyakovPotential}), has been studied at different lattice spacings.
+Through simulations of $\SU(2)$ lattice gauge theories the potential
+\begin{equation}
+    V(r) = -T\ln\expval{P^\dagger(r)P(0)} \label{3:LangRebbiPotential}
+\end{equation}
+has been obtained for different values of $r=(r_x, r_y, r_z)$ on lattices extending for $n_s$ lattice spacings in each of the space directions and $n_t$ lattice sites in the time direction.
+Furthermore, the full gauge group $\SU(2)$ has been approximated by its discrete icosahedral subgroup $\tilde{Y}$ in order to improve the efficiency of the computation.
+The varoius (about $1000$) potentials obtained for each site $r$ have then been fitted according to the expression
+\begin{equation}
+    V(r) = c_0 + c_1/r + c_2r \label{3:LangRebbiPotentialFit}
+\end{equation}
+Finally, a representation of the equipotential surfaces of expression \eqref{3:LangRebbiPotentialFit} have been plotted in Figure \eqref{3F:LangRebbi}.
+\begin{figure}[!htbp]
+    \centering
+    \hfill
+    \begin{subfigure}[b]{0.45\textwidth}
+        \centering
+        \includegraphics[width=0.857\textwidth]{LangRebbi_a.png}
+        \caption{$\beta=2$, $n_s=8$, $n_t=4$.}
+        \label{3F:LangRebbiA}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.45\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{LangRebbi_b.png}
+        \caption{$\beta=2.25$, $n_s=16$, $n_t=6$.}
+        \label{3F:LangRebbiB}
+    \end{subfigure}
+    \hfill
+    \caption{Representation of equipotential surfaces for larger (\ref{3F:LangRebbiA}) and smaller (\ref{3F:LangRebbiB}) lattice spacing.}
+    \label{3F:LangRebbi}
+\end{figure}\\
+In Figure \eqref{3F:LangRebbiA} a lattice with $n_s=8$, $n_t=4$ and $\beta=\frac4{g^2}=2$ has been used, while Figure \eqref{3F:LangRebbiB} has been obtained with data from a lattice with $n_s=16$, $n_t=6$ and $\beta=2.25$.
+As the lattice spacing depends, in first approximation, from $\beta$ in the following way:
+\begin{equation}
+    a(\beta) \approx e^{-\frac{12\pi^2}{11N^2}\beta} = e^{-\frac{3\pi^2}{11}\beta} \label{3:BetaLatticeSpacing} 
+\end{equation}
+the first plot corresponds to a higher value of $a$ than the second one\footnote{The rigorous determination of the lattice spacing is a rather compliacted matter that will not be explained further, as it is not the purpose of this project.}.\\
+As can be easily seen, by lowering the lattice spacing equipotential surfaces tend to become circles, therefore the rotational invariance, that is broken in the lattice for any value of the lattice spacing, gets restored in the expectation value of the observables, making lattice field theory a \emph{``good''} theory capable of making meaningful predictions.
+
+\section{Other Types of Lattice\label{Sec3:Lattices}}
+In section\secref{Sec1:SHLattice} the Simple Hypercubic lattice has been defined.
+Of course, it is not the only possible choice, although it is the simplest.
+In fact, in order to further investigate the restoration of rotational symmetry and to make better predictions on rotational invariant quantities, other types of lattices have been used to simulate lattice field theories.
+
+\subsection{Body-Centered Tesseract}
+For example, the Body-Centered Tesseract (BCT) has been used for simulation of Yang-Mills theories.
+It consists of packing the spacetime with tesseracts, as the name suggests, but considering both the corners and the centers of every hypercube as lattice sites.
+Every site has, therefore, $24$ nearest neighbours: $16$ are identified by all possible sign permutations of $\pr{\pm\frac12,\pm\frac12,\pm\frac12,\pm\frac12}$, the $8$ remaining are the ones of the SH lattice.
+The cell of this lattice is known as $24$-cell, shown in Figure \eqref{3F:24cell}, and the plaquettes are triangular.
+\begin{figure}[!htbp]
+    \centering
+    \includegraphics[width=0.33\textwidth]{24cell.png}
+    \caption{Bidimensional projection of the $24$-cell.}
+    \label{3F:24cell}
+\end{figure}\\
+In~\cite{Celmaster:1982ht}, Celmaster presented the first computations for an $\SU(2)$ theory on a BCT.
+
+
+\begin{figure}[!htbp]
+    \centering
+    \hspace{0.1\textwidth}
+    \begin{subfigure}[b]{0.25\textwidth}
+        \includegraphics[width=\textwidth]{CubicCell.png}
+        \caption{Simple cube.}
+        \label{3F:CubicCell}
+    \end{subfigure}
+    \hspace{0.2\textwidth}
+    \begin{subfigure}[b]{0.25\textwidth}
+        \includegraphics[width=\textwidth]{BodyCenteredCubicCell.png}
+        \caption{Body-centered cube.}
+        \label{3F:BCCubicCell}
+    \end{subfigure}
+    \hspace{0.2\textwidth}
+    \caption{Tridimensional representation of a simple cubic cell (\ref{3F:CubicCell}) and a body-centered one (\ref{3F:BCCubicCell}).}
+    \label{3F:ScBccCells}
+\end{figure}
