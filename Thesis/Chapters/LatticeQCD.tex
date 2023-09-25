@@ -28,7 +28,7 @@ It can now be easily checked by direct computation that this action is invariant
 \end{align*}
 where $\alpha$ is a constant that does not depend on the spacetime coordinate $x$, because if $\alpha$ was a function of $x$, the kinetic term of the action \eqref{1:FreeQEDFermionAction} would not be invariant under such transformation.
 
-\subsection{Quantum Electrodynamics\label{Sec:QED}}
+\subsection{Quantum Electrodynamics\label{Sec1:QED}}
 As the free field theory itself is non interacting, it does not provide any real-world prediction, so it is useful to write an interacting action where the spinor field is coupled, for instance, to a vector field $A_\mu$, \ie the photon.
 One way to implement this interaction is to ask for local, instead of global, invariance of the action \eqref{1:FreeQEDFermionAction} under the phase transformation \eqref{1:PhaseTransform}, where now $\alpha=\alpha(x)$.
 In order to do so, the covariant derivative has to be defined as follows:
@@ -63,7 +63,7 @@ The term that broke the local phase invariance of the action \eqref{1:FreeQEDFer
     =& \dV\pr{\i\psibar\slashed{\partial}\psi-m\psibar\psi- g \psibar\slashed{A}\psi - \frac14\Fmunu F^{\mu\nu}} = S_{QED}
 \end{align*}
 
-\subsection{Non-Abelian Gauge Theories\label{Sec:NonAbelianGaugeTheories}}
+\subsection{Non-Abelian Gauge Theories\label{Sec1:NonAbelianGaugeTheories}}
 Let us now consider a theory with $N$ fermions, all with the same mass $m$, described by the spinorial fields $\psi_i(x)$ with $i=1, \dots, N$.
 These $N$ fermions represent the $N$ possible charges of the same particle\footnote{For example, if $N=3$ the $3$ possible charges are the color charges of QCD, as will be shown later.} and are not to be confused with, for instance, the different possible flavors of the quarks, that describe different particles with different masses.\\
 Its free action is:
@@ -80,7 +80,7 @@ if $U$ is any (constant) $N\times N$ matrix such that $UU^\dagger = U^\dagger U 
 For this reason, this transformation is also called a global $\UN$ transformation.
 The phase transformation \eqref{1:PhaseTransform} is the particular case where $U=e^{-\i\alpha}\in\Uem$, that is the only Abelian (commutative) unitary group.\\
 As $\UN = \SUN\otimes\Uem$ $\forall N>1$, $U\in\SUN$ instead of $U\in\UN$ can be imposed, and will be from now on, without loss of generality.\\
-In an analogous way to what has been done in\secref{Sec:QED}, this invariance can be made local by implementing a proper covariant derivative, similar to \eqref{1:QEDCovDeriv}.
+In an analogous way to what has been done in\secref{Sec1:QED}, this invariance can be made local by implementing a proper covariant derivative, similar to \eqref{1:QEDCovDeriv}.
 In order to do so, the infinitesimal $\SUN$ transformation has to be considered:
 \begin{equation}
     U_{ij}(x) = \delta_{ij} + \i\theta^a(x)\pr{T^a}_{ij} + O(\theta^2) \label{1:InfinitesimalSUN}
@@ -198,8 +198,8 @@ Formally:
     \Lambda =\left\{\left.\sum _{i=1}^{D}c_{i}v_{i}\;\right\vert \;c_{i}\in \mathbb {Z} \right\} \label{1:genericLattice}
 \end{equation}
 
-\subsubsection{Simple Hypercubic Lattice}
-If the basis $\prc{v_i}$ is taken to be orthonormal, the lattice is called \emph{Simple Hypercubic}\footnote{The word \emph{simple} is used to make a distinction with the Body-Centered Hypercubic lattice.}.\\
+\subsubsection{Simple Hypercubic Lattice\label{Sec1:SHLattice}}
+If the basis $\prc{v_i}$ is taken to be orthonormal, the lattice is called \emph{Simple Hypercubic}\footnote{The word \emph{simple} is used to make a distinction with the Body-Centered Hypercubic lattice presented in\secref{Sec3:Lattices}.}.\\
 In Figure \eqref{1F:cubicLattice} is represented a portion of a Simple Hypercubic lattice in $D=3$.
 \begin{figure}[!htbp]
     \centering
@@ -212,37 +212,6 @@ This means that a SH lattice can be seen as a tassellation of the spacetime with
 Each point of the lattice has $8$ nearest neighbours that are identified by the vectors obtained through all possible permutations of position and sign of $(\pm1,0,0,0)$.\\
 The plaquette (the simplest bidimensional figure) is a square.
 This will be important when implementing gauge theories on the lattice.
-\begin{figure}[!htbp]
-    \centering
-    \hspace{0.1\textwidth}
-    \begin{subfigure}[b]{0.25\textwidth}
-        \includegraphics[width=\textwidth]{CubicCell.png}
-        \caption{Simple cube.}
-        \label{1F:CubicCell}
-    \end{subfigure}
-    \hspace{0.2\textwidth}
-    \begin{subfigure}[b]{0.25\textwidth}
-        \includegraphics[width=\textwidth]{BodyCenteredCubicCell.png}
-        \caption{Body-centered cube.}
-        \label{1F:BCCubicCell}
-    \end{subfigure}
-    \hspace{0.2\textwidth}
-    \caption{Tridimensional representation of a simple cubic cell (\ref{1F:CubicCell}) and a body-centered one (\ref{1F:BCCubicCell}).}
-    \label{1F:ScBccCells}
-\end{figure}
-
-\subsubsection{Body-Centered Tesseract}
-The SH lattice is not, of course, the only possible choice of a lattice in $4$ spacetime dimensions.
-Another common choice, already used to simulate gauge theories~\cite{Celmaster:1982ht}, is the Body-Centered Tesseract (BCT).
-It consists of packing the spacetime with tesseracts, as the name suggests, but considering both the corners and the centers of every hypercube as lattice sites.
-Every site has, therefore, $24$ nearest neighbours: $16$ are identified by all possible sign permutations of $\pr{\pm\frac12,\pm\frac12,\pm\frac12,\pm\frac12}$, the $8$ remaining are the ones of the SH lattice.
-The cell of this lattice is known as $24$-cell, shown in Figure \eqref{1F:24cell}, and the plaquettes are triangular.
-\begin{figure}[!htbp]
-    \centering
-    \includegraphics[width=0.33\textwidth]{24cell.png}
-    \caption{Bidimensional projection of the $24$-cell.}
-    \label{1F:24cell}
-\end{figure}
 
 \subsection{Scalar Fields on the Simple Hypercubic Lattice}
 Let us consider a simple hypercubic lattice $\Lambda_{SH}$ extending over $L=L_1=L_2=L_3$ lattice spacings in the spatial directions and over $T=L_0$ lattice spacings in the temporal direction.
@@ -268,7 +237,7 @@ Assuming a self-interaction potential $V(\phi)=\frac\lambda{4!}\phi^4$, the acti
 A similar approach will be used in the following section to obtain the action for Yang-Mills theories.
 
 \subsection{Gauge Fields on the Simple Hypercubic Lattice}
-Let us now take into consideration a Yang-Mills theory, as in\secref{Sec:NonAbelianGaugeTheories}, with gauge group $\SUN$.
+Let us now take into consideration a Yang-Mills theory, as in\secref{Sec1:NonAbelianGaugeTheories}, with gauge group $\SUN$.
 As anticipated before, gauge fields, being vector fields, can assume value only on links between sites of the lattice.\\
 One could naively think that putting gauge vectors $A_\mu(x)$ on the links is enough, but this would explicitly break gauge invariance.
 For this reason, Wilson's idea was to put the gauge group (and not algebra) elements, namely $U_\mu(x) = e^{\i a g A_\mu(x)}$, on the links.\\
