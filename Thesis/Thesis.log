@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Arch Linux) (preloaded format=pdflatex 2023.8.28)  26 SEP 2023 16:59
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Arch Linux) (preloaded format=pdflatex 2023.8.28)  26 SEP 2023 17:55
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -5058,6 +5058,38 @@ LaTeX Font Info:    No math alphabet change to frozen version normal on input l
 ine 150.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input l
 ine 153.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 155.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 155.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 155.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 155.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 157.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 157.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 158.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 159.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 159.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 159.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 159.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 161.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 161.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 162.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 162.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input l
+ine 162.
 ) [30{/usr/share/texmf-dist/fonts/enc/dvips/lm/lm-mathex.enc}] (./Chapters/Simu
 lationResults.tex
 Chapter 4.
@@ -5131,10 +5163,10 @@ Package logreq Info: Writing requests to 'Thesis.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 43538 strings out of 477985
- 874555 string characters out of 5840058
+ 43543 strings out of 477985
+ 874617 string characters out of 5840058
  1881388 words of memory out of 5000000
- 62721 multiletter control sequences out of 15000+600000
+ 62724 multiletter control sequences out of 15000+600000
  692299 words of font info for 195 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
  89i,21n,100p,1151b,1993s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -5164,10 +5196,10 @@ are/texmf-dist/fonts/type1/public/mathabx-type1/mathx10.pfb></usr/share/texmf-d
 ist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/share/texmf-dist/fonts
 /type1/public/amsfonts/symbols/msbm10.pfb></usr/share/texmf-dist/fonts/type1/pu
 blic/cm-super/sfxc2074.pfb>
-Output written on Thesis.pdf (42 pages, 2036912 bytes).
+Output written on Thesis.pdf (42 pages, 2038989 bytes).
 PDF statistics:
- 984 PDF objects out of 1000 (max. 8388607)
- 798 compressed objects within 8 object streams
- 218 named destinations out of 1000 (max. 500000)
+ 988 PDF objects out of 1000 (max. 8388607)
+ 801 compressed objects within 9 object streams
+ 220 named destinations out of 1000 (max. 500000)
  484 words of extra memory for PDF output out of 10000 (max. 10000000)
 

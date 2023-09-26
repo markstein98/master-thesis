@@ -146,9 +146,17 @@ and the kinetic energy of \eqref{3:ScalarActionF4} at infinite volume is:
     \text{K.E.} =& \frac1{6(2\pi)^4} \int\dd^4k \abs{\tilde\phi(k)}^2\pr{\sum_\mu\pr{1-\cos(k_\mu)} +\sum_\pm\pr{1-\cos(\frac{k_1\pm k_2\pm k_3\pm k_4}{2})}} =\\
     =& \dots = \frac{1}{12(2\pi)^4} \int\dd^4k \abs{\tilde\phi(k)}^2\pr{k^2-\frac{1}{72}k^4+O(k^6)} \numthis\label{3:ScalarKE}
 \end{align*}
-The fact that the fourth order term is proportional to the square of the second order one is a feature of all symmetry-preserving lattice actions.
+The fact that the fourth order term is proportional to the square of the second order one is a feature of all symmetry-preserving lattice actions.\\
 This work lead to some analytical~\cite{Bhanot:1990zd} and numerical~\cite{Bhanot:1990ai} results and to an upper bound prediction for the mass of the Higgs boson~\cite{Heller:1990sg} more than $20$ years before its actual discovery.
 
 \subsection{Gauge Theories on BCT Lattice}
 In~\cite{Celmaster:1982ht}, Celmaster presented the first computations for an $\SU(2)$ theory on a BCT.
-
+Being a different lattice, a new action has to be defined and one that is invariant under the BCT group and with the correct classical continuum limit is:
+\begin{equation}
+    S_{BCT} = \frac1{2g^2} \sum_\bigtriangleup \Re\Tr \Utriang \label{3:BCTAction}
+\end{equation}
+where $\Utriang$ is the triangular plaquette, defined as
+\begin{equation}
+    \Utriang = U_v(x)U_w(x+\hat{v})U_{-v-w}(x+\hat{v}+\hat{w}) = U_v(x)U_w(x+\hat{v})U^\dagger_{v+w}(x) \label{3:PlaqTriang}
+\end{equation}
+where $v$ and $w$ are labels indicating the possible nearest-neighbours directions, described in\secref{Sec3:BCT}, such that $v+w$ is a valid direction.
