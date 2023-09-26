@@ -500,6 +500,122 @@
       \verb 10.1016/0370-2693(87)91623-6
       \endverb
     \endentry
+    \entry{Bhanot:1990zd}{article}{}
+      \name{author}{4}{}{%
+        {{hash=2d4c972739482cc157f01c79439ba2de}{%
+           family={Bhanot},
+           familyi={B\bibinitperiod},
+           given={G.},
+           giveni={G\bibinitperiod}}}%
+        {{hash=b86b45b7a219978d15f932f49e68f1f4}{%
+           family={Bitar},
+           familyi={B\bibinitperiod},
+           given={K.},
+           giveni={K\bibinitperiod}}}%
+        {{hash=2e9ce2d09f0979839bad59c4d9775ff2}{%
+           family={Heller},
+           familyi={H\bibinitperiod},
+           given={Urs\bibnamedelima M.},
+           giveni={U\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
+        {{hash=aac8b4e91388d0c0b23afff5c2ad37d3}{%
+           family={Neuberger},
+           familyi={N\bibinitperiod},
+           given={H.},
+           giveni={H\bibinitperiod}}}%
+      }
+      \strng{namehash}{1268c751213b1cd0703238ae7f66bdad}
+      \strng{fullhash}{12a8358c34ff03c95ba8f258b2b39cee}
+      \strng{bibnamehash}{1268c751213b1cd0703238ae7f66bdad}
+      \strng{authorbibnamehash}{1268c751213b1cd0703238ae7f66bdad}
+      \strng{authornamehash}{1268c751213b1cd0703238ae7f66bdad}
+      \strng{authorfullhash}{12a8358c34ff03c95ba8f258b2b39cee}
+      \field{extraname}{1}
+      \field{sortinit}{9}
+      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Nucl. Phys.}
+      \field{title}{{{$\phi^4$} on {$F_4$}: Analytical Results}}
+      \field{volume}{B343}
+      \field{year}{1990}
+      \field{pages}{467\bibrangedash 506}
+      \range{pages}{40}
+      \verb{doi}
+      \verb 10.1016/0550-3213(90)90479-W
+      \endverb
+    \endentry
+    \entry{Bhanot:1990ai}{article}{}
+      \name{author}{4}{}{%
+        {{hash=7c3e3025d4165b562cf02bbedff9ab11}{%
+           family={Bhanot},
+           familyi={B\bibinitperiod},
+           given={Gyan},
+           giveni={G\bibinitperiod}}}%
+        {{hash=ff01c8bf4611c75ceb162d0b51bb1358}{%
+           family={Bitar},
+           familyi={B\bibinitperiod},
+           given={Khalil},
+           giveni={K\bibinitperiod}}}%
+        {{hash=2e9ce2d09f0979839bad59c4d9775ff2}{%
+           family={Heller},
+           familyi={H\bibinitperiod},
+           given={Urs\bibnamedelima M.},
+           giveni={U\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
+        {{hash=1e22528c0dd4cbd51b463dbb5b19182f}{%
+           family={Neuberger},
+           familyi={N\bibinitperiod},
+           given={Herbert},
+           giveni={H\bibinitperiod}}}%
+      }
+      \strng{namehash}{00cb55270a0498e0a1f4346fb3d58058}
+      \strng{fullhash}{ef32930357ccb21f9a478ab94d1a6e7d}
+      \strng{bibnamehash}{00cb55270a0498e0a1f4346fb3d58058}
+      \strng{authorbibnamehash}{00cb55270a0498e0a1f4346fb3d58058}
+      \strng{authornamehash}{00cb55270a0498e0a1f4346fb3d58058}
+      \strng{authorfullhash}{ef32930357ccb21f9a478ab94d1a6e7d}
+      \field{extraname}{2}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Nucl. Phys.}
+      \field{title}{{{$\phi^4$} on {$F_4$}: Numerical results}}
+      \field{volume}{B353}
+      \field{year}{1991}
+      \field{pages}{551\bibrangedash 564}
+      \range{pages}{14}
+      \verb{doi}
+      \verb 10.1016/0550-3213(91)90348-2
+      \endverb
+    \endentry
+    \entry{Heller:1990sg}{article}{}
+      \name{author}{1}{}{%
+        {{hash=2e9ce2d09f0979839bad59c4d9775ff2}{%
+           family={Heller},
+           familyi={H\bibinitperiod},
+           given={Urs\bibnamedelima M.},
+           giveni={U\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
+      }
+      \strng{namehash}{2e9ce2d09f0979839bad59c4d9775ff2}
+      \strng{fullhash}{2e9ce2d09f0979839bad59c4d9775ff2}
+      \strng{bibnamehash}{2e9ce2d09f0979839bad59c4d9775ff2}
+      \strng{authorbibnamehash}{2e9ce2d09f0979839bad59c4d9775ff2}
+      \strng{authornamehash}{2e9ce2d09f0979839bad59c4d9775ff2}
+      \strng{authorfullhash}{2e9ce2d09f0979839bad59c4d9775ff2}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Nucl. Phys. B Proc. Suppl.}
+      \field{title}{Higgs mass bound on an F(4) lattice}
+      \field{volume}{20}
+      \field{year}{1991}
+      \field{pages}{609\bibrangedash 612}
+      \range{pages}{4}
+      \verb{doi}
+      \verb 10.1016/0920-5632(91)90985-N
+      \endverb
+    \endentry
     \entry{Celmaster:1982ht}{article}{}
       \name{author}{1}{}{%
         {{hash=050bc6ad2b05c9e62695d1b061ba5aba}{%
@@ -514,8 +630,8 @@
       \strng{authorbibnamehash}{050bc6ad2b05c9e62695d1b061ba5aba}
       \strng{authornamehash}{050bc6ad2b05c9e62695d1b061ba5aba}
       \strng{authorfullhash}{050bc6ad2b05c9e62695d1b061ba5aba}
-      \field{sortinit}{9}
-      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{Phys. Rev.}

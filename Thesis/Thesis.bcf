@@ -2379,7 +2379,10 @@
     <bcf:citekey order="6" intorder="1">Lang:1982tj</bcf:citekey>
     <bcf:citekey order="7" intorder="1">adams1996lectures</bcf:citekey>
     <bcf:citekey order="8" intorder="1">Neuberger:1987kt</bcf:citekey>
-    <bcf:citekey order="9" intorder="1">Celmaster:1982ht</bcf:citekey>
+    <bcf:citekey order="9" intorder="1">Bhanot:1990zd</bcf:citekey>
+    <bcf:citekey order="10" intorder="1">Bhanot:1990ai</bcf:citekey>
+    <bcf:citekey order="11" intorder="1">Heller:1990sg</bcf:citekey>
+    <bcf:citekey order="12" intorder="1">Celmaster:1982ht</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="none">

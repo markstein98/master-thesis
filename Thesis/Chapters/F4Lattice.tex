@@ -102,7 +102,7 @@ The cell of this lattice is known as $24$-cell, shown in Figure \eqref{3F:24cell
     \caption{Bidimensional projection of the $24$-cell.}
     \label{3F:24cell}
 \end{figure}\\
-This lattice has been used for simulations of $\SU(2)$ Yang-Mills theories, as will be explained later.
+This lattice has a $1152$-elements symmetry group $G_{\Lambda_{BCT}}$, allowing a lot more rotations and reflections than the $384$ of the SH lattice.
 
 \subsection{\spFtext Coroots Lattice}
 \spFtext is one of the five exceptional simple Lie groups, with Dynkin diagram \dynkin F4.
@@ -122,11 +122,33 @@ This lattice is made up of two BCT lattices: the first one is the dual lattice, 
     \centering
     \includegraphics[width=0.33\textwidth]{F4_root_lattice.png}
     \caption{Bidimensional projection of the elementary cell of the \spFtext coroots lattice.\\
-             In \textcolor{red}{red} are represented the roots and in \textcolor{yellow}{yellow} the coroots.}
+             The roots are represented in red and the coroots in yellow.}
     \label{3:F4cell}
 \end{figure}\\
-This lattice has been used in literature to simulate scalar field theories\cite{Neuberger:1987kt}.
+This lattice has a $2304$-elements symmetry group $G_{\Lambda_{\spF}}$, twice as the BCT symmetry group.
 
-\section{Simulations on Higher Symmetric Lattice}
+\section{Simulations on Higher Symmetric Lattices}
+These lattices have been used, in literature, to perform Monte Carlo simulations of quantum field theories.
+
+\subsection{Scalar Fields on \spFtext Lattice}
+In~\cite{Neuberger:1987kt}, Neuberger presented the formulation of scalar fields in terms of the \spFtext lattice, where he discretized the action \eqref{1:ScalarActionEuclidean} assuming the simplest nearest neighbours interaction:
+\begin{equation}
+    S = \frac16\sum_{<xy>\in\Lambda}\pr{\phi(x)-\phi(y)}^2 +\sum_{x\in\Lambda}\pr{\frac12m^2\phi^2(x)+\frac\lambda4\phi^4(x)} \label{3:ScalarActionF4}
+\end{equation}
+where $<xy>$ indicates sum over nearest neighbours.\\
+The Fourier transformation of the field $\phi(x)$ in the limit of infinte lattice volume is given by:
+\begin{align*}
+    \tilde\phi(k) =& \dV e^{\i k \cdot x} \phi(x) \\
+    \phi(x) =& \frac1{2(2\pi)^4} \int\dd^4k e^{-\i k \cdot x} \tilde\phi(k)
+\end{align*}
+and the kinetic energy of \eqref{3:ScalarActionF4} at infinite volume is:
+\begin{align*}
+    \text{K.E.} =& \frac1{6(2\pi)^4} \int\dd^4k \abs{\tilde\phi(k)}^2\pr{\sum_\mu\pr{1-\cos(k_\mu)} +\sum_\pm\pr{1-\cos(\frac{k_1\pm k_2\pm k_3\pm k_4}{2})}} =\\
+    =& \dots = \frac{1}{12(2\pi)^4} \int\dd^4k \abs{\tilde\phi(k)}^2\pr{k^2-\frac{1}{72}k^4+O(k^6)} \numthis\label{3:ScalarKE}
+\end{align*}
+The fact that the fourth order term is proportional to the square of the second order one is a feature of all symmetry-preserving lattice actions.
+This work lead to some analytical~\cite{Bhanot:1990zd} and numerical~\cite{Bhanot:1990ai} results and to an upper bound prediction for the mass of the Higgs boson~\cite{Heller:1990sg} more than $20$ years before its actual discovery.
+
+\subsection{Gauge Theories on BCT Lattice}
 In~\cite{Celmaster:1982ht}, Celmaster presented the first computations for an $\SU(2)$ theory on a BCT.
 
