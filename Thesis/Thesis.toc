@@ -40,5 +40,7 @@
 \contentsline {section}{\numberline {3.3}Simulations on Higher Symmetric Lattices}{29}{section.3.3}%
 \contentsline {subsection}{\numberline {3.3.1}Scalar Fields on $\mathit {F}_4$ Lattice}{29}{subsection.3.3.1}%
 \contentsline {subsection}{\numberline {3.3.2}Gauge Theories on BCT Lattice}{30}{subsection.3.3.2}%
-\contentsline {chapter}{\numberline {4}Simulation Results}{31}{chapter.4}%
-\contentsline {chapter}{\numberline {5}Conclusions}{33}{chapter.5}%
+\contentsline {subsubsection}{\numberline {3.3.2.1}Average Plaquette Value on BCT}{31}{subsubsection.3.3.2.1}%
+\contentsline {subsubsection}{\numberline {3.3.2.2}String Tension}{32}{subsubsection.3.3.2.2}%
+\contentsline {chapter}{\numberline {4}Simulation Results}{33}{chapter.4}%
+\contentsline {chapter}{\numberline {5}Conclusions}{35}{chapter.5}%

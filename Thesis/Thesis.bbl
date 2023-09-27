@@ -630,6 +630,7 @@
       \strng{authorbibnamehash}{050bc6ad2b05c9e62695d1b061ba5aba}
       \strng{authornamehash}{050bc6ad2b05c9e62695d1b061ba5aba}
       \strng{authorfullhash}{050bc6ad2b05c9e62695d1b061ba5aba}
+      \field{extraname}{1}
       \field{sortinit}{1}
       \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
       \field{labelnamesource}{author}
@@ -642,6 +643,148 @@
       \range{pages}{1}
       \verb{doi}
       \verb 10.1103/PhysRevD.26.2955
+      \endverb
+    \endentry
+    \entry{Celmaster:1983hs}{article}{}
+      \name{author}{1}{}{%
+        {{hash=050bc6ad2b05c9e62695d1b061ba5aba}{%
+           family={Celmaster},
+           familyi={C\bibinitperiod},
+           given={William},
+           giveni={W\bibinitperiod}}}%
+      }
+      \strng{namehash}{050bc6ad2b05c9e62695d1b061ba5aba}
+      \strng{fullhash}{050bc6ad2b05c9e62695d1b061ba5aba}
+      \strng{bibnamehash}{050bc6ad2b05c9e62695d1b061ba5aba}
+      \strng{authorbibnamehash}{050bc6ad2b05c9e62695d1b061ba5aba}
+      \strng{authornamehash}{050bc6ad2b05c9e62695d1b061ba5aba}
+      \strng{authorfullhash}{050bc6ad2b05c9e62695d1b061ba5aba}
+      \field{extraname}{2}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Phys. Rev. Lett.}
+      \field{title}{Evidence for Improved Scaling on a Body Centered Hypercubic Lattice}
+      \field{volume}{52}
+      \field{year}{1984}
+      \field{pages}{403}
+      \range{pages}{1}
+      \verb{doi}
+      \verb 10.1103/PhysRevLett.52.403
+      \endverb
+    \endentry
+    \entry{Celmaster:1983vy}{article}{}
+      \name{author}{1}{}{%
+        {{hash=050bc6ad2b05c9e62695d1b061ba5aba}{%
+           family={Celmaster},
+           familyi={C\bibinitperiod},
+           given={William},
+           giveni={W\bibinitperiod}}}%
+      }
+      \strng{namehash}{050bc6ad2b05c9e62695d1b061ba5aba}
+      \strng{fullhash}{050bc6ad2b05c9e62695d1b061ba5aba}
+      \strng{bibnamehash}{050bc6ad2b05c9e62695d1b061ba5aba}
+      \strng{authorbibnamehash}{050bc6ad2b05c9e62695d1b061ba5aba}
+      \strng{authornamehash}{050bc6ad2b05c9e62695d1b061ba5aba}
+      \strng{authorfullhash}{050bc6ad2b05c9e62695d1b061ba5aba}
+      \field{extraname}{3}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Phys. Rev.}
+      \field{title}{{The Average Plaquette of SU(2) Gauge Theory on a Body Centered Hypercubic Lattice}}
+      \field{volume}{D28}
+      \field{year}{1983}
+      \field{pages}{2076}
+      \range{pages}{1}
+      \verb{doi}
+      \verb 10.1103/PhysRevD.28.2076
+      \endverb
+    \endentry
+    \entry{CELMASTER1985415}{article}{}
+      \name{author}{2}{}{%
+        {{hash=bc914ddd54fefb976fa80d479b120764}{%
+           family={Celmaster},
+           familyi={C\bibinitperiod},
+           given={W.},
+           giveni={W\bibinitperiod}}}%
+        {{hash=f32bf2d000e3e70bc446821ef9117891}{%
+           family={Moriarty},
+           familyi={M\bibinitperiod},
+           given={K.J.M.},
+           giveni={K\bibinitperiod}}}%
+      }
+      \strng{namehash}{0c9eb61aab7e419ba9aa18d78f920433}
+      \strng{fullhash}{0c9eb61aab7e419ba9aa18d78f920433}
+      \strng{bibnamehash}{0c9eb61aab7e419ba9aa18d78f920433}
+      \strng{authorbibnamehash}{0c9eb61aab7e419ba9aa18d78f920433}
+      \strng{authornamehash}{0c9eb61aab7e419ba9aa18d78f920433}
+      \strng{authorfullhash}{0c9eb61aab7e419ba9aa18d78f920433}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{0010-4655}
+      \field{journaltitle}{Computer Physics Communications}
+      \field{number}{4}
+      \field{title}{Monte Carlo simulation of pure SU(2) gauge theory on a body-centered hypercubic lattice}
+      \field{volume}{34}
+      \field{year}{1985}
+      \field{pages}{415\bibrangedash 425}
+      \range{pages}{11}
+      \verb{doi}
+      \verb https://doi.org/10.1016/0010-4655(85)90069-4
+      \endverb
+      \verb{urlraw}
+      \verb https://www.sciencedirect.com/science/article/pii/0010465585900694
+      \endverb
+      \verb{url}
+      \verb https://www.sciencedirect.com/science/article/pii/0010465585900694
+      \endverb
+    \endentry
+    \entry{Konig:1983dg}{article}{}
+      \name{author}{4}{}{%
+        {{hash=c46ddd036f7fb564882fca2ef12201bb}{%
+           family={Konig},
+           familyi={K\bibinitperiod},
+           given={A.},
+           giveni={A\bibinitperiod}}}%
+        {{hash=422fc7c59122a5808f871f812faef04e}{%
+           family={Mutter},
+           familyi={M\bibinitperiod},
+           given={K.\bibnamedelimi H.},
+           giveni={K\bibinitperiod\bibinitdelim H\bibinitperiod}}}%
+        {{hash=b5cb91ba015bb00e48a456b3161b88b0}{%
+           family={Paech},
+           familyi={P\bibinitperiod},
+           given={J.},
+           giveni={J\bibinitperiod}}}%
+        {{hash=9357ac779f048b3512ec95aad9a80930}{%
+           family={Schilling},
+           familyi={S\bibinitperiod},
+           given={K.},
+           giveni={K\bibinitperiod}}}%
+      }
+      \strng{namehash}{a60beb0cf88d1c152cbe82c1e18f2e40}
+      \strng{fullhash}{3060b1092782a0284c2accfd40695c35}
+      \strng{bibnamehash}{a60beb0cf88d1c152cbe82c1e18f2e40}
+      \strng{authorbibnamehash}{a60beb0cf88d1c152cbe82c1e18f2e40}
+      \strng{authornamehash}{a60beb0cf88d1c152cbe82c1e18f2e40}
+      \strng{authorfullhash}{3060b1092782a0284c2accfd40695c35}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Phys. Lett. B}
+      \field{title}{Correlation Length for SU(3) Gauge Theory on an 8**4 Lattice}
+      \field{volume}{138}
+      \field{year}{1984}
+      \field{pages}{410\bibrangedash 412}
+      \range{pages}{3}
+      \verb{doi}
+      \verb 10.1016/0370-2693(84)91929-4
       \endverb
     \endentry
   \enddatalist

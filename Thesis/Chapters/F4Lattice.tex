@@ -151,12 +151,61 @@ This work lead to some analytical~\cite{Bhanot:1990zd} and numerical~\cite{Bhano
 
 \subsection{Gauge Theories on BCT Lattice}
 In~\cite{Celmaster:1982ht}, Celmaster presented the first computations for an $\SU(2)$ theory on a BCT.
-Being a different lattice, a new action has to be defined and one that is invariant under the BCT group and with the correct classical continuum limit is:
+Being a different lattice, where the plaquette is a triangle and not a square, like in the SH case, a new action has to be defined and one that is invariant under the BCT group and with the correct classical continuum limit is:
 \begin{equation}
-    S_{BCT} = \frac1{2g^2} \sum_\bigtriangleup \Re\Tr \Utriang \label{3:BCTAction}
+    S_{BCT} = \frac1{2g^2} \sum_\bigtriangleup \Re\Tr \Utriang = \frac\beta8 \sum_\bigtriangleup \Re\Tr \Utriang \label{3:BCTAction}
 \end{equation}
 where $\Utriang$ is the triangular plaquette, defined as
 \begin{equation}
     \Utriang = U_v(x)U_w(x+\hat{v})U_{-v-w}(x+\hat{v}+\hat{w}) = U_v(x)U_w(x+\hat{v})U^\dagger_{v+w}(x) \label{3:PlaqTriang}
 \end{equation}
 where $v$ and $w$ are labels indicating the possible nearest-neighbours directions, described in\secref{Sec3:BCT}, such that $v+w$ is a valid direction.
+\begin{figure}[!hbtp]
+    \centering
+    \begin{tikzpicture}
+        \filldraw[black]  (0,0) circle (3pt) node[anchor=north east]{$x$};
+        \filldraw[black]  (2,0) circle (3pt) node[anchor=north west]{$x+\hat{v}$};
+        \filldraw[black]  (1,1.732) circle (3pt) node[anchor=south]{$x+\hat{v}+\hat{w}$};
+        \draw[ultra thick,->] (0,0) -- (1,0) node[anchor=north]{$U_v(x)$};
+        \draw[ultra thick   ] (1,0) -- (2,0);
+        \draw[ultra thick,->] (2,0) -- (1.5,0.866) node[anchor=south west]{$U_w(x+\hat{v})$};
+        \draw[ultra thick   ] (1.5,0.866) -- (1,1.732);
+        \draw[ultra thick,->] (1,1.732) -- (0.5,0.866) node[anchor=south east]{$U^\dagger_{v+w}(x)$};
+        \draw[ultra thick   ] (0.5,0.866) -- (0,0);
+    \end{tikzpicture}
+    \caption{Schematization of an elementary triangular plaquette.}
+    \label{3F:PlaqTriang}
+\end{figure}\\
+For example, if $v=(+1,0,0,0)$ and $w=(0,+1,0,0)$, then they add up to $v+w=(+1,+1,0,0)$, that is not one of the nearest-neighbours vectors, whereas $v=(+1,0,0,0)$ and $w=\pr{-\frac12,+\frac12,-\frac12,+\frac12}$ add up to $v+w=\pr{+\frac12,+\frac12,-\frac12,+\frac12}$, that is a valid direction.
+In Figure \eqref{3F:PlaqTriang} an example of an elementary triangular plaquette is shown.\\
+There are $96$ such triangles touching each site and each edge is shared between $8$ triangles.
+By comparison, on the SH lattice there are $24$ elementary square plaquettes touching each site and each edge is contiguous to $6$ squares.\\
+In~\cite{Celmaster:1983hs} and~\cite{Celmaster:1983vy} Celmaster presented the first simulation results for the $\SU(2)$ gauge theory on the BCT lattice, explaining the algorithm used for the simulations in \cite{CELMASTER1985415}.
+
+\subsubsection{Average Plaquette Value on BCT}
+In~\cite{Celmaster:1983vy} a study on the average value of the plaquette is presented: it is plotted \wrt $\beta$ in Figure \eqref{3F:AvgPlaqBCTSH}.\\
+As can be seen, the BCT average plaquette better follows the strong and weak coupling expansions, that are analytical approximations valid, respectively, for $\beta\to0$ ($\Leftrightarrow g\to\infty$) and for $\beta\to\infty$ ($\Leftrightarrow g\to0$).
+\begin{figure}[!htbp]
+    \centering
+    \begin{subfigure}[b]{0.475\textwidth}
+        \includegraphics[width=\textwidth]{AvgPlaq1.png}
+        \caption{Comparison between $\expval{W_\bigtriangleup}$ on BCT and SH lattices. The short-dashed lines represent weak and strong coupling expansions.}
+        \label{3F:AvgPlaqBCTSH}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[b]{0.475\textwidth}
+        \includegraphics[width=\textwidth]{AvgPlaq2.png}
+        \caption{Dependence of $\expval{W_\bigtriangleup}$ on boundary conditions in different BCT lattices, with different boundary conditions.}
+        \label{3F:AvgPlaqBoundary}
+    \end{subfigure}
+    \caption{Average value of the plaquette $\expval{W_\bigtriangleup}$ on a BCT lattice as a function of $\beta$.}
+\end{figure}\\
+In the same article the influence of the boundary conditions on the average value of the plaquette is also investigated.
+Three different boundary conditions are simulated: periodic, that means that lattice has the topology of a $4$-dimensional torus, free, that means that links on the boundary are free to assume any $\SU(2)$ value, and fixed, that means that links on the boundary are constrained to assume a certain $\SU(2)$ value.
+The results are plotted in Figure \eqref{3F:AvgPlaqBoundary}.\\
+From the plot, it can be seen that $\expval{W_\bigtriangleup}_{free} \leq \expval{W_\bigtriangleup}_{periodic} \leq \expval{W_\bigtriangleup}_{fixed}$, which is an inequality discussed by Mütter and Schilling in~\cite{Konig:1983dg}.\\
+It is also pointed that computer runtime of BCT simulations was slower by a factor of approximately $2.5$ than SH simulations, but this is compensated by having $3$ times as many degrees of freedom, that become $\frac{11}{3}$ as many if a gauge fixing is done, and $\frac{16}{3}$ as many plaquettes for each site.
+Furthermore, having $12$ symmetry axes instead of $4$ provides a higher symmetry of the observables allowing better checks on computations.
+
+\subsubsection{String Tension}
+In~\cite{Celmaster:1983hs} the $\SU(2)$ string tension is obtained from measurements of Wilson loops on a $6^4$ BCT lattice.
