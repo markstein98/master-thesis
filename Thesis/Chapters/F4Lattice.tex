@@ -40,7 +40,7 @@ The varoius (about $1000$) potentials obtained for each site $r$ have then been 
 \begin{equation}
     V(r) = c_0 + c_1/r + c_2r \label{3:LangRebbiPotentialFit}
 \end{equation}
-Finally, a representation of the equipotential surfaces of expression \eqref{3:LangRebbiPotentialFit} have been plotted in Figure \eqref{3F:LangRebbi}.
+Finally, a representation of the equipotential surfaces of expression \eqref{3:LangRebbiPotentialFit} has been plotted in Figure \eqref{3F:LangRebbi}.
 \begin{figure}[!htbp]
     \centering
     \hfill
@@ -151,7 +151,7 @@ This work lead to some analytical~\cite{Bhanot:1990zd} and numerical~\cite{Bhano
 
 \subsection{Gauge Theories on BCT Lattice}
 In~\cite{Celmaster:1982ht}, Celmaster presented the first computations for an $\SU(2)$ theory on a BCT.
-Being a different lattice, where the plaquette is a triangle and not a square, like in the SH case, a new action has to be defined and one that is invariant under the BCT group and with the correct classical continuum limit is:
+Being a different lattice, where the plaquette is a triangle and not a square, a new action has to be defined: one that is invariant under the BCT group, with the correct classical continuum limit is:
 \begin{equation}
     S_{BCT} = \frac1{2g^2} \sum_\bigtriangleup \Re\Tr \Utriang = \frac\beta8 \sum_\bigtriangleup \Re\Tr \Utriang \label{3:BCTAction}
 \end{equation}
@@ -160,6 +160,7 @@ where $\Utriang$ is the triangular plaquette, defined as
     \Utriang = U_v(x)U_w(x+\hat{v})U_{-v-w}(x+\hat{v}+\hat{w}) = U_v(x)U_w(x+\hat{v})U^\dagger_{v+w}(x) \label{3:PlaqTriang}
 \end{equation}
 where $v$ and $w$ are labels indicating the possible nearest-neighbours directions, described in\secref{Sec3:BCT}, such that $v+w$ is a valid direction.
+\begin{comment}
 \begin{figure}[!hbtp]
     \centering
     \begin{tikzpicture}
@@ -172,6 +173,23 @@ where $v$ and $w$ are labels indicating the possible nearest-neighbours directio
         \draw[ultra thick   ] (1.5,0.866) -- (1,1.732);
         \draw[ultra thick,->] (1,1.732) -- (0.5,0.866) node[anchor=south east]{$U^\dagger_{v+w}(x)$};
         \draw[ultra thick   ] (0.5,0.866) -- (0,0);
+    \end{tikzpicture}
+    \caption{Schematization of an elementary triangular plaquette.}
+    \label{3F:PlaqTriang}
+\end{figure}\\
+\end{comment}
+\begin{figure}[!hbtp]
+    \centering
+    \begin{tikzpicture}
+        \filldraw[black]  (0,0) circle (3pt) node[anchor=north east]{$x$};
+        \filldraw[black]  (3,0) circle (3pt) node[anchor=north west]{$x+\hat{v}$};
+        \filldraw[black]  (1.5,2.598) circle (3pt) node[anchor=south]{$x+\hat{v}+\hat{w}$};
+        \draw[ultra thick,->] (0,0) -- (1.5,0) node[anchor=north]{$U_v(x)$};
+        \draw[ultra thick   ] (1.5,0) -- (3,0);
+        \draw[ultra thick,->] (3,0) -- (2.25,1.299) node[anchor=south west]{$U_w(x+\hat{v})$};
+        \draw[ultra thick   ] (2.25,1.299) -- (1.5,2.598);
+        \draw[ultra thick,->] (1.5,2.598) -- (0.75,1.299) node[anchor=south east]{$U^\dagger_{v+w}(x)$};
+        \draw[ultra thick   ] (0.75,1.299) -- (0,0);
     \end{tikzpicture}
     \caption{Schematization of an elementary triangular plaquette.}
     \label{3F:PlaqTriang}
@@ -204,8 +222,36 @@ In the same article the influence of the boundary conditions on the average valu
 Three different boundary conditions are simulated: periodic, that means that lattice has the topology of a $4$-dimensional torus, free, that means that links on the boundary are free to assume any $\SU(2)$ value, and fixed, that means that links on the boundary are constrained to assume a certain $\SU(2)$ value.
 The results are plotted in Figure \eqref{3F:AvgPlaqBoundary}.\\
 From the plot, it can be seen that $\expval{W_\bigtriangleup}_{free} \leq \expval{W_\bigtriangleup}_{periodic} \leq \expval{W_\bigtriangleup}_{fixed}$, which is an inequality discussed by Mütter and Schilling in~\cite{Konig:1983dg}.\\
-It is also pointed that computer runtime of BCT simulations was slower by a factor of approximately $2.5$ than SH simulations, but this is compensated by having $3$ times as many degrees of freedom, that become $\frac{11}{3}$ as many if a gauge fixing is done, and $\frac{16}{3}$ as many plaquettes for each site.
-Furthermore, having $12$ symmetry axes instead of $4$ provides a higher symmetry of the observables allowing better checks on computations.
+It is also pointed out that computer runtime of BCT simulations was slower by a factor of approximately $2.5$ than SH simulations, but this is compensated by having $3$ times as many degrees of freedom, that become $\frac{11}{3}$ as many if a gauge fixing is done, and $\frac{16}{3}$ as many plaquettes for each site.
+Furthermore, having $12$ symmetry axes instead of $4$ provides a higher symmetry of the observables allowing for better checks on computations.
 
 \subsubsection{String Tension}
-In~\cite{Celmaster:1983hs} the $\SU(2)$ string tension is obtained from measurements of Wilson loops on a $6^4$ BCT lattice.
+In~\cite{Celmaster:1983hs} the $\SU(2)$ string tension is obtained from measurements of ratios of Wilson loops on a $6^4$ BCT lattice.\\
+On a BCT lattice, there are two types of Wilson loops:
+\begin{itemize}
+    \item Rectangular Wilson loops $W_R(n,m)=\frac12\expval{\Tr U_R(n,m)}$\
+    \item Triangular Wilson loops $W_T(n)=\frac12\expval{\Tr U_T(n)}$
+\end{itemize}
+where $U_R(n,m)$ is the product of link variables over an $n\times m$ rectangle and $U_T(n)$ is the product of link variables over an equilateral triangle of side $n$.\\
+Assuming that Wilson loops are fitted by:
+\begin{equation}
+    W = e^{-\sigma A -b(\text{perimeter}) +\text{const.}} \label{3:WilsonFit}
+\end{equation}
+where $A$ is the area of the loop, then the string tension $\sigma$ can be obtained through logarithmic ratios:
+\begin{align}
+    \chi(2) =& -\ln(\frac{W_R(1,1)W_R(2,2)}{W_R^2(1,2)}) \\
+    R_T(3) =& -\frac{2}{\sqrt3}\ln(\frac{W_T(1)W_T(3)}{W_T^2(2)})
+\end{align}
+Results of the simulations are plotted in Figure \eqref{3F:LogLoopRatios}, assuming no correlations between loop fluctuations in the computation of the error bars.
+\begin{figure}[!htbp]
+    \centering
+    \includegraphics[width=0.4\textwidth]{LogarithmicRatios.png}
+    \caption{$\SU(2)$ logarithmic loop ratios as a function of $\beta$ on a $6^4$ BCT lattice.}
+    \label{3F:LogLoopRatios}
+\end{figure}\\
+The logarithmic loop ratio $\chi(2)$ agrees with the asymptotic freedom curve in the region $2.68\leq\beta\leq2.84$ far better than any other result obtained with simulations on SH lattices.
+This is a consequence of the fact that the BCT action has smaller $O(a^2)$ corrections than usual at small $\beta$, therefore finite-spacing corrections are smaller for this action than for others previously examined.
+Therefore, BCT lattices with less sites than SH lattices could be used to obtain data with the same accuracy, at a given lattice spacing $a$.
+In the article is stated that, if the lattice spacing is sent $a\to a/2$, a SH lattice would require $16$ times as more sites in order to keep the physical size of the Wilson loop constant, while if the same operation is done on a BCT lattice, the increment in the number of sites would be much less, using about $16$ times less CPU time than the Wilson action.\\
+Furthermore, $R_T(3)$ is compatible with $\chi(2)$ within error bars: this is a confirmation of the area-law dependence of equation \eqref{3:WilsonFit}.\\
+In conclusion, simulations on BCT lattices provide better results, with more rotational invariance than those on other lattices, at a cost of a slightly higher computational time.
