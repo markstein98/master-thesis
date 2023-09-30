@@ -31,7 +31,7 @@
 \contentsline {section}{\numberline {2.6}Statistical Analysis}{22}{section.2.6}%
 \contentsline {subsection}{\numberline {2.6.1}Uncorrelated Data}{23}{subsection.2.6.1}%
 \contentsline {subsection}{\numberline {2.6.2}Correlated Data}{24}{subsection.2.6.2}%
-\contentsline {chapter}{\numberline {3}Gauge Theories Simulations on Non-Hypercubic Lattice}{25}{chapter.3}%
+\contentsline {chapter}{\numberline {3}Symmetries and Non-Hypercubic Lattices}{25}{chapter.3}%
 \contentsline {section}{\numberline {3.1}Spacetime Symmetries Restoration}{25}{section.3.1}%
 \contentsline {subsection}{\numberline {3.1.1}Rotational Invariance of the Static Quark Potential}{26}{subsection.3.1.1}%
 \contentsline {section}{\numberline {3.2}Other Types of Lattice}{27}{section.3.2}%
@@ -41,6 +41,8 @@
 \contentsline {subsection}{\numberline {3.3.1}Scalar Fields on $\mathit {F}_4$ Lattice}{29}{subsection.3.3.1}%
 \contentsline {subsection}{\numberline {3.3.2}Gauge Theories on BCT Lattice}{30}{subsection.3.3.2}%
 \contentsline {subsubsection}{\numberline {3.3.2.1}Average Plaquette Value on BCT}{31}{subsubsection.3.3.2.1}%
-\contentsline {subsubsection}{\numberline {3.3.2.2}String Tension}{32}{subsubsection.3.3.2.2}%
-\contentsline {chapter}{\numberline {4}Simulation Results}{35}{chapter.4}%
+\contentsline {subsubsection}{\numberline {3.3.2.2}String Tension}{31}{subsubsection.3.3.2.2}%
+\contentsline {chapter}{\numberline {4}Simulations Results}{35}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Rotational Invariance Restoration}{35}{section.4.1}%
+\contentsline {section}{\numberline {4.2}BCT Lattice Code}{35}{section.4.2}%
 \contentsline {chapter}{\numberline {5}Conclusions}{37}{chapter.5}%
