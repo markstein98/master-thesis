@@ -1,3 +1,7 @@
 */*.kate-swp
 Thesis/preview.pdf
 Thesis/generatePreview.sh
+Thesis.zip
+packThesis.sh
+unpackThesis.sh
+ThesisNew/
