@@ -787,6 +787,82 @@
       \verb 10.1016/0370-2693(84)91929-4
       \endverb
     \endentry
+    \entry{Panero:2009tv}{article}{}
+      \name{author}{1}{}{%
+        {{hash=23c77a5cf08a26bfafe04e05a061c008}{%
+           family={Panero},
+           familyi={P\bibinitperiod},
+           given={Marco},
+           giveni={M\bibinitperiod}}}%
+      }
+      \strng{namehash}{23c77a5cf08a26bfafe04e05a061c008}
+      \strng{fullhash}{23c77a5cf08a26bfafe04e05a061c008}
+      \strng{bibnamehash}{23c77a5cf08a26bfafe04e05a061c008}
+      \strng{authorbibnamehash}{23c77a5cf08a26bfafe04e05a061c008}
+      \strng{authornamehash}{23c77a5cf08a26bfafe04e05a061c008}
+      \strng{authorfullhash}{23c77a5cf08a26bfafe04e05a061c008}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{eprintclass}{hep-lat}
+      \field{eprinttype}{arXiv}
+      \field{journaltitle}{Phys. Rev. Lett.}
+      \field{title}{{Thermodynamics of the QCD plasma and the large-N limit}}
+      \field{volume}{103}
+      \field{year}{2009}
+      \field{pages}{232001}
+      \range{pages}{1}
+      \verb{doi}
+      \verb 10.1103/PhysRevLett.103.232001
+      \endverb
+      \verb{eprint}
+      \verb 0907.3719
+      \endverb
+    \endentry
+    \entry{Mykkanen:2012ri}{article}{}
+      \name{author}{3}{}{%
+        {{hash=99d66bcd378d018c5b71b92bd2ae7acc}{%
+           family={Mykkänen},
+           familyi={M\bibinitperiod},
+           given={Anne},
+           giveni={A\bibinitperiod}}}%
+        {{hash=23c77a5cf08a26bfafe04e05a061c008}{%
+           family={Panero},
+           familyi={P\bibinitperiod},
+           given={Marco},
+           giveni={M\bibinitperiod}}}%
+        {{hash=17a85af9315b70bfe5fff7b83f21b14c}{%
+           family={Rummukainen},
+           familyi={R\bibinitperiod},
+           given={Kari},
+           giveni={K\bibinitperiod}}}%
+      }
+      \strng{namehash}{2467b7fd123925d271c39b226d175e73}
+      \strng{fullhash}{2467b7fd123925d271c39b226d175e73}
+      \strng{bibnamehash}{2467b7fd123925d271c39b226d175e73}
+      \strng{authorbibnamehash}{2467b7fd123925d271c39b226d175e73}
+      \strng{authornamehash}{2467b7fd123925d271c39b226d175e73}
+      \strng{authorfullhash}{2467b7fd123925d271c39b226d175e73}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{eprintclass}{hep-lat}
+      \field{eprinttype}{arXiv}
+      \field{journaltitle}{JHEP}
+      \field{title}{{Casimir scaling and renormalization of Polyakov loops in large-N gauge theories}}
+      \field{volume}{1205}
+      \field{year}{2012}
+      \field{pages}{069}
+      \range{pages}{1}
+      \verb{doi}
+      \verb 10.1007/JHEP05(2012)069
+      \endverb
+      \verb{eprint}
+      \verb 1202.2762
+      \endverb
+    \endentry
   \enddatalist
 \endrefsection
 \endinput

@@ -44,5 +44,5 @@
 \contentsline {subsubsection}{\numberline {3.3.2.2}String Tension}{33}{subsubsection.3.3.2.2}%
 \contentsline {chapter}{\numberline {4}Simulations Results}{35}{chapter.4}%
 \contentsline {section}{\numberline {4.1}Rotational Invariance Restoration}{35}{section.4.1}%
-\contentsline {section}{\numberline {4.2}BCT Lattice Code}{35}{section.4.2}%
+\contentsline {section}{\numberline {4.2}BCT Lattice Code}{36}{section.4.2}%
 \contentsline {chapter}{\numberline {5}Conclusions}{37}{chapter.5}%
