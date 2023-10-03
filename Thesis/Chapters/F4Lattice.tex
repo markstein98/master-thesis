@@ -28,7 +28,7 @@ This is the case for the translational symmetry: if $a\to0$, \eqref{3:TraslDiscr
 However, the rotational symmetry is not restored (at least, not naively) when the continuum limit is taken: (\eqref{3:RotDiscr} does not become \eqref{3:RotCont} when $a\to0$), as the Simple Hypercubic lattice is invariant under rotations of multiples of $90^\degree$ independently from the value of the lattice spacing.\\
 However, the restoration of continuum symmetries is more subtle than this intuition: in the lattice theory, it typically happens that the terms breaking the continuum rotational symmetry down to its discrete subgroup that is manifest on the lattice are actually suppressed by powers of the lattice spacing in the $a\to 0$ limit. This suppression, however, may fail, if the coefficients of the terms associated with higher powers of $a$ are, instead, divergent in the continuum limit. For this reason, studies on the restoration of rotational symmetry have been made, through the computation of quantities that are expected to exhibit rotational invariance in the continuum theory.
 
-\subsection{Rotational Invariance of the Static Quark Potential}
+\subsection{Rotational Invariance of the Static Quark Potential\label{Sec3:RotInv}}
 An example of these studies is provided by a 1982 article by Lang and Rebbi~\cite{Lang:1982tj}, where the static quark potential $V(r)$, obtained from the correlator of two Polyakov loops (see \eqref{1:PolyakovPotential}), was studied at different lattice spacings in the $\SU(2)$ lattice gauge theories. The potential
 \begin{equation}
     V(r) = -T\ln\expval{P^\dagger(r)P(0)} \label{3:LangRebbiPotential}
@@ -39,7 +39,7 @@ The various (about $1000$) potentials obtained for each site $r$ were then fitte
 \begin{equation}
     V(r) = c_0 + c_1/r + c_2r \label{3:LangRebbiPotentialFit}
 \end{equation}
-A representation of the equipotential surfaces of expression \eqref{3:LangRebbiPotentialFit} is reproduced in Figure \eqref{3F:LangRebbi}.
+A representation of the equipotential surfaces of expression \eqref{3:LangRebbiPotentialFit} is reproduced in \figref{3F:LangRebbi}.
 \begin{figure}[!htbp]
     \centering
     \hfill
@@ -59,7 +59,7 @@ A representation of the equipotential surfaces of expression \eqref{3:LangRebbiP
     \caption{Representation of equipotential surfaces for larger (\ref{3F:LangRebbiA}) and smaller (\ref{3F:LangRebbiB}) lattice spacing.}
     \label{3F:LangRebbi}
 \end{figure}\\
-In Figure \eqref{3F:LangRebbiA} a lattice with $n_s=8$, $n_t=4$ and $\beta=\frac4{g^2}=2$ was used, while Figure \eqref{3F:LangRebbiB} was obtained from data obtained on a lattice with $n_s=16$, $n_t=6$ and $\beta=2.25$.
+In \figref{3F:LangRebbiA} a lattice with $n_s=8$, $n_t=4$ and $\beta=\frac4{g^2}=2$ was used, while \figref{3F:LangRebbiB} was obtained from data obtained on a lattice with $n_s=16$, $n_t=6$ and $\beta=2.25$.
 Given that, at the leading order in perturbation theory, the lattice spacing depends on $\beta$ in the following way:
 \begin{equation}
     a(\beta) \approx e^{-\frac{12\pi^2}{11N^2}\beta} = e^{-\frac{3\pi^2}{11}\beta} \label{3:BetaLatticeSpacing} 
@@ -68,13 +68,13 @@ the first plot corresponds to a higher value of $a$ than the second one\footnote
 As can be easily seen, by lowering the lattice spacing equipotential surfaces tend to become circles, therefore the rotational invariance, that is broken in the lattice for any value of the lattice spacing, gets restored in the expectation value of the observables, making lattice field theory a \emph{``good''} theory capable of making meaningful predictions.
 
 \section{Other Types of Lattice\label{Sec3:Lattices}}
-In section\secref{Sec1:SHLattice} the Simple Hypercubic lattice has been defined.
+In \secref{Sec1:SHLattice} the Simple Hypercubic lattice has been defined.
 Of course, it is not the only possible choice, although it is the simplest.
 In fact, in order to further investigate the restoration of rotational symmetry and to make better predictions on rotational invariant quantities, other types of lattices have been used to simulate lattice field theories.
 
 \subsection{Body-Centered Tesseract\label{Sec3:BCT}}
 For example, the Body-Centered Tesseract (BCT) has been used for simulation of Yang-Mills theories.
-It consists of packing the spacetime with tesseracts, as the name suggests, but considering both the corners and the centers of every hypercube as lattice sites (see Figure \eqref{3F:ScBccCells} for a tridimensional representation of a cubic cell \eqref{3F:CubicCell} and a body-centered cubic cell \eqref{3F:BCCubicCell}).\\
+It consists of packing the spacetime with tesseracts, as the name suggests, but considering both the corners and the centers of every hypercube as lattice sites (see \figref{3F:ScBccCells} for a tridimensional representation of a cubic cell \eqref{3F:CubicCell} and a body-centered cubic cell \eqref{3F:BCCubicCell}).\\
 \begin{figure}[!htbp]
     \centering
     \hspace{0.1\textwidth}
@@ -94,7 +94,7 @@ It consists of packing the spacetime with tesseracts, as the name suggests, but 
     \label{3F:ScBccCells}
 \end{figure}\\
 Every site of the BCT lattice has, therefore, $24$ nearest neighbours: $16$ are identified by all possible sign permutations of $\pr{\pm\frac12,\pm\frac12,\pm\frac12,\pm\frac12}$, the $8$ remaining are the ones of the SH lattice.
-The cell of this lattice is known as $24$-cell, shown in Figure \eqref{3F:24cell}, and the plaquettes are triangular.
+The cell of this lattice is known as $24$-cell, shown in \figref{3F:24cell}, and the plaquettes are triangular.
 \begin{figure}[!htbp]
     \centering
     \includegraphics[width=0.33\textwidth]{24cell.png}
@@ -116,7 +116,7 @@ Each site of this lattice has $48$ nearest neighbours:
         \item[$\circ$] the $16$ possible sign permutations of $\pr{\pm\frac12,\pm\frac12,\pm\frac12,\pm\frac12}$\
     \end{itemize}
 \end{itemize}
-This lattice is made up of two BCT lattices: the first one is the dual lattice, that is the same as\secref{Sec3:BCT}, the other is the root lattice, that is a BCT with lattice spacing $\sqrt2$ as can be seen as represented in Figure \eqref{3:F4cell}.
+This lattice is made up of two BCT lattices: the first one is the dual lattice, that is the same as \secref{Sec3:BCT}, the other is the root lattice, that is a BCT with lattice spacing $\sqrt2$ as can be seen as represented in \figref{3:F4cell}.
 \begin{figure}[!htbp]
     \centering
     \includegraphics[width=0.33\textwidth]{F4_root_lattice.png}
@@ -158,7 +158,7 @@ where $\Utriang$ is the triangular plaquette, defined as
 \begin{equation}
     \Utriang = U_v(x)U_w(x+\hat{v})U_{-v-w}(x+\hat{v}+\hat{w}) = U_v(x)U_w(x+\hat{v})U^\dagger_{v+w}(x) \label{3:PlaqTriang}
 \end{equation}
-where $v$ and $w$ are labels indicating the possible nearest-neighbour directions, described in\secref{Sec3:BCT}, such that $v+w$ is a valid direction.
+where $v$ and $w$ are labels indicating the possible nearest-neighbour directions, described in \secref{Sec3:BCT}, such that $v+w$ is a valid direction.
 \begin{comment}
 \begin{figure}[!hbtp]
     \centering
@@ -194,13 +194,13 @@ where $v$ and $w$ are labels indicating the possible nearest-neighbour direction
     \label{3F:PlaqTriang}
 \end{figure}\\
 For example, if $v=(+1,0,0,0)$ and $w=(0,+1,0,0)$, then they add up to $v+w=(+1,+1,0,0)$, that is not one of the nearest-neighbours vectors, whereas $v=(+1,0,0,0)$ and $w=\pr{-\frac12,+\frac12,-\frac12,+\frac12}$ add up to $v+w=\pr{+\frac12,+\frac12,-\frac12,+\frac12}$, that is a valid direction.
-In Figure \eqref{3F:PlaqTriang} an example of an elementary triangular plaquette is shown.\\
+In \figref{3F:PlaqTriang}, an example of an elementary triangular plaquette is shown.\\
 There are $96$ such triangles touching each site, and each edge is shared by $8$ triangles.
 By comparison, on the SH lattice there are $24$ elementary square plaquettes touching each site and each edge is contiguous to $6$ squares.\\
 In~\cite{Celmaster:1983hs} and~\cite{Celmaster:1983vy} Celmaster presented the first simulation results for the $\SU(2)$ gauge theory on the BCT lattice, explaining the algorithm used for the simulations in \cite{CELMASTER1985415}.
 
 \subsubsection{Average Plaquette Value on BCT}
-In~\cite{Celmaster:1983vy} a study on the average value of the plaquette was presented: it is plotted \wrt $\beta$ in Figure \eqref{3F:AvgPlaqBCTSH}.\\
+In~\cite{Celmaster:1983vy} a study on the average value of the plaquette was presented: it is plotted \wrt $\beta$ in \figref{3F:AvgPlaqBCTSH}.\\
 As can be seen, the BCT average plaquette better follows the strong and weak coupling expansions, that are analytical approximations valid, respectively, for $\beta\to0$ ($\Leftrightarrow g\to\infty$) and for $\beta\to\infty$ ($\Leftrightarrow g\to0$).
 \begin{figure}[!htbp]
     \centering
@@ -219,7 +219,7 @@ As can be seen, the BCT average plaquette better follows the strong and weak cou
 \end{figure}\\
 In the same article the influence of the boundary conditions on the average value of the plaquette was also investigated.
 Three different types of boundary conditions were considered: periodic, that means that lattice has the topology of a $4$-dimensional torus, free, that means that links on the boundary are free to take any $\SU(2)$ value, and fixed, that means that links on the boundary are constrained to take a certain $\SU(2)$ value.
-The results are plotted in Figure \eqref{3F:AvgPlaqBoundary}.\\
+The results are plotted in \figref{3F:AvgPlaqBoundary}.\\
 From the plot, it can be seen that $\expval{W_\bigtriangleup}_{free} \leq \expval{W_\bigtriangleup}_{periodic} \leq \expval{W_\bigtriangleup}_{fixed}$, which is an inequality discussed by Mütter and Schilling in~\cite{Konig:1983dg}.\\
 It was also pointed out that the computing time of BCT simulations was larger by a factor of approximately $2.5$ as compared with SH simulations: this is due to having $3$ times as many degrees of freedom, that become $\frac{11}{3}$ as many if a gauge fixing is done, and $\frac{16}{3}$ as many plaquettes for each site.
 However, having $12$ symmetry axes instead of $4$ provides a higher symmetry of the observables allowing for better checks on computations.
@@ -241,7 +241,7 @@ where $A$ is the area of the loop, then the string tension $\sigma$ can be obtai
     \chi(2) =& -\ln(\frac{W_R(1,1)W_R(2,2)}{W_R^2(1,2)}) \\
     R_T(3) =& -\frac{2}{\sqrt3}\ln(\frac{W_T(1)W_T(3)}{W_T^2(2)})
 \end{align}
-Results of the simulations are plotted in Figure \eqref{3F:LogLoopRatios}, assuming no correlations between loop fluctuations in the computation of the error bars.
+Results of the simulations are plotted in \figref{3F:LogLoopRatios}, assuming no correlations between loop fluctuations in the computation of the error bars.
 \begin{figure}[!htbp]
     \centering
     \includegraphics[width=0.4\textwidth]{LogarithmicRatios.png}
