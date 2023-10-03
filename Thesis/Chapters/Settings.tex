@@ -24,7 +24,13 @@
     \begingroup%
     \hypersetup{linkcolor=black}%
     {Section \ref{#1}}%
-    \endgroup
+    \endgroup%
+}
+
+\newcommand{\figref}[1]{%
+    \begingroup%
+    {Figure \eqref{#1}}%
+    \endgroup%
 }
 
 \newcommand*{\justifyheading}{\raggedleft}
