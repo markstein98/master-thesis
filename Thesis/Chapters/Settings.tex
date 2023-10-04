@@ -23,13 +23,14 @@
 \newcommand{\secref}[1]{%
     \begingroup%
     \hypersetup{linkcolor=black}%
-    {Section \ref{#1}}%
+    {\hyperref[#1]{Section \ref*{#1}}}%
     \endgroup%
 }
 
 \newcommand{\figref}[1]{%
     \begingroup%
-    {Figure \ref{#1}}%
+    \hypersetup{linkcolor=black}%
+    {\hyperref[#1]{Figure \ref*{#1}}}%
     \endgroup%
 }
 
