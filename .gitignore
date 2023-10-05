@@ -5,3 +5,9 @@ Thesis.zip
 packThesis.sh
 unpackThesis.sh
 ThesisNew/
+Thesis/Thesis.aux
+Thesis/Thesis.bcf
+Thesis/Thesis.log
+Thesis/Thesis.out
+Thesis/Thesis.synctex.gz
+Thesis/Thesis.toc
