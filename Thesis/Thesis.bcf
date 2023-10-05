@@ -2392,6 +2392,7 @@
     <bcf:citekey order="19" intorder="1">Panero:2009tv</bcf:citekey>
     <bcf:citekey order="19" intorder="2">Mykkanen:2012ri</bcf:citekey>
     <bcf:citekey order="20" intorder="1">Lang:1982tj</bcf:citekey>
+    <bcf:citekey order="21" intorder="1">Lang:1982tj</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="none">
