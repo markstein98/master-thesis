@@ -169,3 +169,64 @@ It is interesting to note the resemblance of \figref{4F:PotentialRestoration} wi
 Note also that the values of $\beta$ used in these simulations were slightly higher than the ones used in \cite{Lang:1982tj}, in order to have a smaller lattice spacing that allowed a finer determination of the potential.
 
 \section{BCT Lattice}
+The code used for simulations on SH lattices has been adapted to simulate $\SUN$ gauge theories on the BCT lattice.
+
+\subsection{Formulation of the Algorithm}
+The first obvious change was the number of sites: being body-centered, this lattice has twice the sites of a SH with the same dimensions.\\
+Let us assume the lattice has $L_\mu$ sites in the $\mu=t,x,y,z$ direction.
+The total number of sites is, therefore, $N_{sites}=L_tL_xL_yL_z$ for a SH lattice and $N_{sites}=2L_tL_xL_yL_z$ for a BCT.
+
+\subsubsection{Lattice Sites}
+Each site has coordinates $(t,x,y,z)$ where $t = 0, 1, \dots, L_t-1$, $x = 0, 1, \dots, L_x-1$, $y = 0, 1, \dots, L_y-1$ and $z = 0, 1, \dots, L_z-1$ if the lattice is a simple hypercube.
+In the old code, each site was individuated by an integer $0 \leq s < N_{sites}$ obtained through the following computation:
+\begin{equation}
+    s = z + L_z\pr{y + L_y\pr{x + L_xt}} \label{4:siteIndexSH}
+\end{equation}
+and the coordinates could be obtained as:
+\begin{align*}
+    z =& s \mod L_z \\
+    y =& \frac{s - z}{L_z} \mod L_y \\
+    x =& \pr{\pr{\frac{s - z}{L_z} - y}/L_y} \mod L_x \\
+    t =& \pr{\pr{\frac{s - z}{L_z} - y}/L_y - x}/L_x \numthis\label{4:siteIndexSHinverted}
+\end{align*}
+On a BCT lattice, each site has either all integer or all semi-integer coordinates.\\
+If they are all integer, $s$ is computed as:
+\begin{equation}
+    s = 2\pr{z + L_z\pr{y + L_y\pr{x + L_xt}}} \label{4:siteIndexBCTeven}
+\end{equation}
+Otherwise, it is computed as:
+\begin{equation}
+    s = 1 + 2\pr{\prs{z} + L_z\pr{\prs{y} + L_y\pr{\prs{x} + L_x\prs{t}}}} \label{4:siteIndexBCTodd}
+\end{equation}
+where $\prs{x}$ represents the \emph{integer part} of $x$.\\
+The inverted relation is the same as \eqref{4:siteIndexSHinverted}, but with $s$ replaced with $s/2$ if $s$ is even, otherwise, if $s$ is odd, it becomes:
+\begin{align*}
+    z =& \pr{\frac{s-1}{2} \mod L_z} + 0.5 \\
+    y =& \pr{\frac{\frac{s-1}{2} - \prs{z}}{L_z} \mod L_y} + 0.5 \\
+    x =& \pr{\pr{\pr{\frac{\frac{s-1}{2} - \prs{z}}{L_z} - \prs{y}}/L_y} \mod L_x} + 0.5 \\
+    t =& \pr{\pr{\pr{\frac{\frac{s-1}{2} - \prs{z}}{L_z} - \prs{y}}/L_y - \prs{x}}/L_x} + 0.5 \numthis\label{4:siteIndexBCToddInverted}
+\end{align*}
+In the code, the integer $s$ is stored in the variable \texttt{site} and the coordinates $t$, $x$, $y$, $z$ are always stored in integer variables as their integer part.
+An additional variable \texttt{halfInt}, that can only assume $0$ or $1$ values, is used to keep track if the coordinates are actual integers or semi-integers.
+
+\subsubsection{Directions}
+Another important part is how the different possible directions are referrd to in the code.
+Each site in the SH lattice has only $8$ nearest neighbours, individuated by $4$ different directions, the vectors $\pr{1,0,0,0}$ (direction $0$), $\pr{0,1,0,0}$ (direction $1$), $\pr{0,0,1,0}$ (direction $2$), $\pr{0,0,0,1}$ (direction $3$), and their opposites.
+In the old version of the code, two arrays of dimension $4N_{sites}$, \texttt{neighbour\_plus} and \texttt{neighbour\_minus}, were used to keep track of each site's nearest neighbours.\\
+As explained in \secref{Sec3:BCT}, each site has $24$ nearest neighbours, in $12$ different directions.
+The two arrays are therefore changed to size $12N_{sites}$, where the first $4$ directions ($0$ to $3$) are the same as the SH lattice and the $8$ new directions are:
+\begin{center}
+\begin{tabular}{ |c|c|c| }
+    \hline
+    Direction & \texttt{dir\_plus}  & \texttt{dir\_minus}  \\\hline\hline
+    4  & $\pr{+1/2,+1/2,+1/2,+1/2}$ & $\pr{-1/2,-1/2,-1/2,-1/2}$ \\\hline
+    5  & $\pr{+1/2,+1/2,+1/2,-1/2}$ & $\pr{-1/2,-1/2,-1/2,+1/2}$ \\\hline
+    6  & $\pr{+1/2,+1/2,-1/2,+1/2}$ & $\pr{-1/2,-1/2,+1/2,-1/2}$ \\\hline
+    7  & $\pr{+1/2,-1/2,+1/2,+1/2}$ & $\pr{-1/2,+1/2,-1/2,-1/2}$ \\\hline
+    8  & $\pr{-1/2,+1/2,+1/2,+1/2}$ & $\pr{+1/2,-1/2,-1/2,-1/2}$ \\\hline
+    9  & $\pr{+1/2,+1/2,-1/2,-1/2}$ & $\pr{-1/2,-1/2,+1/2,+1/2}$ \\\hline
+    10 & $\pr{+1/2,-1/2,-1/2,+1/2}$ & $\pr{-1/2,+1/2,+1/2,-1/2}$ \\\hline
+    11 & $\pr{+1/2,-1/2,+1/2,-1/2}$ & $\pr{-1/2,+1/2,-1/2,+1/2}$ \\\hline
+\end{tabular}
+\end{center}
+This is done in
