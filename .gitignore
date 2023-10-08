@@ -6,8 +6,11 @@ packThesis.sh
 unpackThesis.sh
 ThesisNew/
 Thesis/Thesis.aux
+Thesis/Thesis.bbl
 Thesis/Thesis.bcf
+Thesis/Thesis.blg
 Thesis/Thesis.log
 Thesis/Thesis.out
+Thesis/Thesis.run.xml
 Thesis/Thesis.synctex.gz
 Thesis/Thesis.toc
