@@ -41,6 +41,20 @@
     \endgroup%
 }
 
+\newcommand{\tabref}[1]{%
+    \begingroup%
+    \hypersetup{linkcolor=black}%
+    {\hyperref[#1]{Table \ref*{#1}}}%
+    \endgroup%
+}
+
+\newcommand{\coderef}[2]{%
+    \begingroup%
+    \hypersetup{linkcolor=black}%
+    {\hyperref[#1]{\texttt{#2}}}%
+    \endgroup%
+}
+
 \newcommand*{\justifyheading}{\raggedleft}
 
 \newcommand*{\blankpage}{%

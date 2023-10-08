@@ -211,22 +211,69 @@ An additional variable \texttt{halfInt}, that can only assume $0$ or $1$ values,
 
 \subsubsection{Directions}
 Another important part is how the different possible directions are referrd to in the code.
-Each site in the SH lattice has only $8$ nearest neighbours, individuated by $4$ different directions, the vectors $\pr{1,0,0,0}$ (direction $0$), $\pr{0,1,0,0}$ (direction $1$), $\pr{0,0,1,0}$ (direction $2$), $\pr{0,0,0,1}$ (direction $3$), and their opposites.
+Each site in the SH lattice has only $8$ nearest neighbours, individuated by $4$ different directions, the vectors $\pr{1,0,0,0}$, $\pr{0,1,0,0}$, $\pr{0,0,1,0}$, $\pr{0,0,0,1}$ (direction $3$), and their opposites.\\
 In the old version of the code, two arrays of dimension $4N_{sites}$, \texttt{neighbour\_plus} and \texttt{neighbour\_minus}, were used to keep track of each site's nearest neighbours.\\
 As explained in \secref{Sec3:BCT}, each site has $24$ nearest neighbours, in $12$ different directions.
-The two arrays are therefore changed to size $12N_{sites}$, where the first $4$ directions ($0$ to $3$) are the same as the SH lattice and the $8$ new directions are:
-\begin{center}
-\begin{tabular}{ |c|c|c| }
-    \hline
-    Direction & \texttt{dir\_plus}  & \texttt{dir\_minus}  \\\hline\hline
-    4  & $\pr{+1/2,+1/2,+1/2,+1/2}$ & $\pr{-1/2,-1/2,-1/2,-1/2}$ \\\hline
-    5  & $\pr{+1/2,+1/2,+1/2,-1/2}$ & $\pr{-1/2,-1/2,-1/2,+1/2}$ \\\hline
-    6  & $\pr{+1/2,+1/2,-1/2,+1/2}$ & $\pr{-1/2,-1/2,+1/2,-1/2}$ \\\hline
-    7  & $\pr{+1/2,-1/2,+1/2,+1/2}$ & $\pr{-1/2,+1/2,-1/2,-1/2}$ \\\hline
-    8  & $\pr{-1/2,+1/2,+1/2,+1/2}$ & $\pr{+1/2,-1/2,-1/2,-1/2}$ \\\hline
-    9  & $\pr{+1/2,+1/2,-1/2,-1/2}$ & $\pr{-1/2,-1/2,+1/2,+1/2}$ \\\hline
-    10 & $\pr{+1/2,-1/2,-1/2,+1/2}$ & $\pr{-1/2,+1/2,+1/2,-1/2}$ \\\hline
-    11 & $\pr{+1/2,-1/2,+1/2,-1/2}$ & $\pr{-1/2,+1/2,-1/2,+1/2}$ \\\hline
-\end{tabular}
-\end{center}
-This is done in
+The two arrays are therefore changed to size $12N_{sites}$, with the following index convention:
+\begin{table}[!htbp]
+    \centering
+    \begin{tabular}{ |c|c|c| }
+        \hline
+        Direction & \texttt{dir\_plus}  & \texttt{dir\_minus}  \\\hline\hline
+        0  & $\pr{  +1,   0,   0,   0}$ & $\pr{  -1,   0,   0,   0}$ \\\hline
+        1  & $\pr{   0,  +1,   0,   0}$ & $\pr{   0,  -1,   0,   0}$ \\\hline
+        2  & $\pr{   0,   0,  +1,   0}$ & $\pr{   0,   0,  -1,   0}$ \\\hline
+        3  & $\pr{   0,   0,   0,  +1}$ & $\pr{   0,   0,   0,  -1}$ \\\hline
+        4  & $\pr{+1/2,+1/2,+1/2,+1/2}$ & $\pr{-1/2,-1/2,-1/2,-1/2}$ \\\hline
+        5  & $\pr{+1/2,+1/2,+1/2,-1/2}$ & $\pr{-1/2,-1/2,-1/2,+1/2}$ \\\hline
+        6  & $\pr{+1/2,+1/2,-1/2,+1/2}$ & $\pr{-1/2,-1/2,+1/2,-1/2}$ \\\hline
+        7  & $\pr{+1/2,-1/2,+1/2,+1/2}$ & $\pr{-1/2,+1/2,-1/2,-1/2}$ \\\hline
+        8  & $\pr{-1/2,+1/2,+1/2,+1/2}$ & $\pr{+1/2,-1/2,-1/2,-1/2}$ \\\hline
+        9  & $\pr{+1/2,+1/2,-1/2,-1/2}$ & $\pr{-1/2,-1/2,+1/2,+1/2}$ \\\hline
+        10 & $\pr{+1/2,-1/2,-1/2,+1/2}$ & $\pr{-1/2,+1/2,+1/2,-1/2}$ \\\hline
+        11 & $\pr{+1/2,-1/2,+1/2,-1/2}$ & $\pr{-1/2,+1/2,-1/2,+1/2}$ \\\hline
+    \end{tabular}
+    \caption{Directions index convention for the BCT lattice.}
+    \label{4T:DirsBCT}
+\end{table}\\
+This is done in the initialization routine, in file \coderef{A1:initialize117}{initialize.cc}, from line \texttt{117} to line \texttt{672}.
+In the \texttt{neighbour\_plus} array nearest neighbours in \emph{positive} directions for each site are saved, where sites are represented stored in the integer variable \texttt{next\_site} explained in \eqref{4:siteIndexBCTeven} and \eqref{4:siteIndexBCTodd}.
+In the \texttt{neighbour\_minus} array nearest neighbours in \emph{negative} directions for each site are saved.
+
+\subsubsection{Staples}
+The central part of the algorithm is the computation of the staples.
+As explained in \secref{Sec3:BCTlatticeGaugeTheories}, using action \eqref{3:BCTAction}, the plaquettes are triangular, therefore the staples are computed in a different way than the case of the SH lattice.\\
+For this reason, an array, called \texttt{stapleDirs}, is used to keep track of all possible staples that can be formed for any of the $12$ possible directions (this was not necessary in the SH case as staples were easier to be computed, since there were far less possible directions).
+In lines \texttt{743} to \texttt{1063} of \coderef{A1:initialize743}{initialize.cc} this array is initialized in the following way: for each direction, $4$ couples of directions are given.
+A plus sign indicates a direction from the \texttt{dir\_plus} coloumn of \tabref{4T:DirsBCT}, while a minus sign indicates a direction from the \texttt{dir\_minus} coloumn of the same table.
+Direction $0$ is indicated as $24$ in order to distinguish between $\pr{+1,0,0,0}$ and $\pr{-1,0,0,0}$, since $+0=-0$.\\
+Each of the four couples is such that the vector sum of the two directions forming the staple is equal to the vector representing the direction on which the considered link is defined.
+For example, in line \texttt{746}, the first staple of \texttt{dir}$=0$, that is represented by $\pr{+1,0,0,0}$, is formed by directions $+4$ and $-8$, which correspond respectively to vectors $\pr{+1/2,+1/2,+1/2,+1/2}$ and $\pr{+1/2,-1/2,-1/2,-1/2}$.
+As can be easily checked, $\pr{+1/2,+1/2,+1/2,+1/2}+\pr{+1/2,-1/2,-1/2,-1/2}=\pr{+1,0,0,0}$.\\
+In \secref{Sec3:BCTlatticeGaugeTheories} is stated that ``each edge is shared between $8$ triangles'', meaning that for each direction there must be $8$ different staples.
+The $4$ missing are obtained from the ones already written, the \emph{positive} staples, by exchanging the first direction with the second (of each couple) and will be referred to as \emph{negative} staples\footnote{This is a reminiscence of the old version of the code, where \emph{positive} and \emph{negative} staples were not independent from each other, therefore were computed in two different routines in order to avoid overcounting when evaluating the plaquettes. This is not necessary anymore on the BCT lattice, as \emph{positive} and \emph{negative} staples are not counted twice.}.\\
+In \figref{4F:Staples} a visual representation of this process is shown.
+\begin{figure}[!htbp]
+    \centering
+    \begin{tikzpicture}
+        \filldraw[black]  (0,0) circle (3pt);
+        \filldraw[black]  (0,3) circle (3pt);
+        \filldraw[black]  (2.598,1.5) circle (3pt);
+        \filldraw[black]  (-2.598,1.5) circle (3pt);
+        \draw[ultra thick,->] (0,0) -- (0,1.5) node[anchor=west]{\texttt{mu}};
+        \draw[ultra thick   ] (0,1.5) -- (0,3);
+        
+        \draw[blue, ultra thick,->] (0,0) -- (2.598/2,1.5/2) node[text=black, anchor=north west]{\texttt{dir1}};
+        \draw[blue, ultra thick   ] (2.598/2,1.5/2) -- (2.598,1.5) node[anchor=west]{\texttt{pstaple}};
+        \draw[blue, ultra thick,->] (2.598,1.5) -- (2.598/2,1.5+1.5/2) node[text=black, anchor=south west]{\texttt{dir2}};
+        \draw[blue, ultra thick   ] (2.598/2,1.5+1.5/2) -- (0,3);
+        
+        \draw[red, ultra thick,->] (0,0) -- (-2.598/2,1.5/2) node[text=black, anchor=north east]{\texttt{dir2}};
+        \draw[red, ultra thick   ] (-2.598/2,1.5/2) -- (-2.598,1.5) node[anchor=east]{\texttt{nstaple}};
+        \draw[red, ultra thick,->] (-2.598,1.5) -- (-2.598/2,1.5+1.5/2) node[text=black, anchor=south east]{\texttt{dir1}};
+        \draw[red, ultra thick   ] (-2.598/2,1.5+1.5/2) -- (0,3);
+    \end{tikzpicture}
+    \caption{Representation of a \emph{positive} staple (\textcolor{blue}{\texttt{pstaple}}) and a \emph{negative} staple (\textcolor{red}{\texttt{nstaple}}). \texttt{dir1} and \texttt{dir2} represent the two directions forming the staple and \texttt{mu} represent the direction on which is defined the link variable considered.}
+    \label{4F:Staples}
+\end{figure}\\
+Staples are then evaluated by dedicated routines, \coderef{A1:pstaple}{f4pstaple.cc} and \coderef{A1:nstaple}{f4nstaple.cc} for \emph{positive} and \emph{negative} staples respectively.
