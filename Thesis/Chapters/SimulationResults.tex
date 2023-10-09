@@ -1,21 +1,21 @@
 \pagestyle{myFancy}
-\chapter{Simulations Results}
+\chapter{Simulation Results}
 In this chapter original results from simulations are presented.
 The code used to perform such simulations is based on the code originally developed for the calculations presented in refs.~\cite{Panero:2009tv,Mykkanen:2012ri}.
 
 \section{Rotational Invariance Restoration}
-This first section has the aim to reproduce the rotational invariance restoration of~\cite{Lang:1982tj} for the continuous group $\SU(2)$ (and not for the discrete icosahedral group $\tilde{Y}$, like explained in \secref{Sec3:RotInv}).\\
-This is done by evaluating the correlator of two Polyakov loops as explained in \secref{Sec2:PolyakovLoops}, computed on two different lattices with two different values of $\beta$, corresponding to two different lattice spacings.
+This first section has the aim to reproduce the rotational invariance restoration of ref.~\cite{Lang:1982tj} for the continuous group $\SU(2)$ (and not for its discrete icosahedral subgroup $\tilde{Y}$, like explained in \secref{Sec3:RotInv}).\\
+This is done by evaluating the correlator of two Polyakov loops as discussed in \secref{Sec2:PolyakovLoops}, computed on two different lattices with two different values of $\beta$, corresponding to two different lattice spacings.
 
-\subsection{Simulations Setup}
-The lattices are taken to be periodic in every direction, with $n_s$ sites in each space direction ($n_s=n_x=n_y=n_z$) and $n_t$ sites in the time direction.
+\subsection{Setup of the Simulations}
+The lattices are taken to be periodic in every direction, with $n_s$ sites in each spatial direction ($n_s=n_x=n_y=n_z$) and $n_t$ sites in the time direction.
 The lattice has, therefore, $n_s^3n_t$ sites.\\
-The simulations are run from a cold start, with $2500$ thermalization steps, where each Monte Carlo step is composed of $1$ heat bath step followed by $3$ overrelaxation steps.
-Since the plaquette is observed to thermalize after $O(10)$ steps in preliminary simulations with both hot and cold starts, $2500$ thermalization steps are enough to ensure full thermalization.\\
-After that, $20000$ measurements are taken of every possible independent correlator between two Polyakov loops, with $100$ updates between each measurement.\\
-On a lattice with $n_s$ spatial sites in each direction, only couples of Polyakov loops whose distance, in each spatial direction, is $\leq n_s/2$ are independent: for example a couple of Polyakov loops extending for $n_s/2+1$ sites in a certain direction is equivalent to the hermitian conjugate of a couple extending for $n_s/2-1$ sites, because of the periodic boundary conditions (see \eqref{2:nonzeroMomPolyakov}).
-But, since the Polyakov loops correlator expectation value is real, they have the same numerical value.\\
-In \figref{4F:PolyakovPeriodic} is represented a graphical visualization of this fact.
+The simulations are run starting from a cold configuration, with $2500$ thermalization steps, where each Monte Carlo step is composed of one heat-bath step followed by three overrelaxation steps.
+While the plaquette is observed to thermalize very quickly, after $O(10)$ steps in preliminary simulations with both hot and cold starts, we estimate $2500$ thermalization steps to be enough to ensure full thermalization of the configurations.\\
+After thermalization, $20000$ measurements are taken of every possible independent correlator between two Polyakov loops, with $100$ updates between each measurement.\\
+On a lattice with $n_s$ spatial sites in each direction, only pairs of Polyakov loops whose distance, in each spatial direction, is less than or equal to $n_s/2$ are independent: for example a pair of Polyakov loops extending for $n_s/2+1$ sites in a certain direction is equivalent to the Hermitian conjugate of a couple extending for $n_s/2-1$ sites, because of the periodic boundary conditions (see \eqref{2:nonzeroMomPolyakov}).
+But, since the Polyakov loop correlator expectation value is real, they have the same numerical value.\\
+\figref{4F:PolyakovPeriodic} represents a graphical visualization of this fact.
 \begin{figure}[!htbp]
     \centering
     \begin{subfigure}[b]{0.48\textwidth}
@@ -66,22 +66,23 @@ In \figref{4F:PolyakovPeriodic} is represented a graphical visualization of this
             \draw[very thick,red] (4,2) node[anchor=south]{$n_s/2-1$};
         \end{tikzpicture}
     \end{subfigure}
-    \caption{The correlator of two Polyakov loops distant $n_s/2+1$ sites (left) is equal to the hermitian conjugate of the correlator of two Polyakov loops distant $n_s/2-1$ sites (right), \ie $\expval{P(x)P^\dagger\pr{x+\frac{n_s}{2}+1}}=\expval{P\pr{x-\pr{\frac{n_s}{2}-1}}P^\dagger(x)}^\dagger$.}
+    \caption{The correlator of two Polyakov loops separated by $n_s/2+1$ sites (left) is equal to the Hermitian conjugate of the correlator of two Polyakov loops at a distance of $n_s/2-1$ sites (right), \ie $\expval{P(x)P^\dagger\pr{x+\frac{n_s}{2}+1}}=\expval{P\pr{x-\pr{\frac{n_s}{2}-1}}P^\dagger(x)}^\dagger$.}
     \label{4F:PolyakovPeriodic}
 \end{figure}\\
-Therefore, only Polyakov correlators extending from size $(0,0,0)$ to size $(n_s/2,n_s/2,n_s/2)$ are considered.
-Correlators of the same size are then averaged together and the uncorrelated empirical standard deviation is computed as an estimate of the error.
+Therefore, we only consider correlators of pairs of Polyakov loops whose spatial separations are given by the lattice vectors lying within a cube of size $n_s$ having the origin $(0,0,0)$ as a vertex.
+Correlators associated with the same separation vector are then averaged together, to increase statistics.
+%and the uncorrelated empirical standard deviation is computed as an estimate of the error.
 
 \subsection{Analysis of Data}
-After checking that each correlator's mean value is real (its imaginary part is compatible with $0$), these averages are used to compute the potential, in units of the lattice spacing $a$, as:
+After checking that each correlator's mean value is real (the imaginary part necessarily has to be compatible with $0$ within machine precision), these averages are used to compute the potential, in units of the inverse of the lattice spacing $a$, as:
 \begin{equation}
     V(x,y,z) = -\frac{1}{n_t}\ln\expval{P(0)P^\dagger(x,y,z)} \label{4:Potential}
 \end{equation}
 where $(x,y,z)\in\prc{(0,0,0),\dots,\pr{\frac{n_s}{2},\frac{n_s}{2},\frac{n_s}{2}}}$.
 The standard deviation is computed with the usual error propagation formula.\\
-Graphics like \figref{3F:LangRebbi} are obtained considering a section of the lattices used, specifically the $xy$-plane, that is done by plotting only values of $V(x,y,z=0)$.\\
-In order to verify that there are no anisotropies, all the three coordinate planes are plotted in \figref{4F:PotentialPlanes}.\\
-Corresponding points in each plane are compatible with each other within the standard deviation and there is no visible difference between different coordinate planes.
+Plots like \figref{3F:LangRebbi} are obtained considering a section of the lattices used, specifically the $xy$-plane, that is done by plotting only values of $V(x,y,z=0)$.\\
+In order to verify that there are no anisotropies, all the three main coordinate planes are plotted in \figref{4F:PotentialPlanes}.\\
+The values obtained for corresponding points in each plane are compatible with each other within their statistical uncertainties and there is no visible difference between different coordinate planes.
 This justifies choosing arbitrarily one plane for each lattice.
 \begin{figure}[!htbp]
     \centering
@@ -160,25 +161,23 @@ This justifies choosing arbitrarily one plane for each lattice.
     \caption{Rotational invariance restoration of the static quark potential.}
     \label{4F:PotentialRestoration}
 \end{figure}\\
-In order to give a more ``complete'' view, data from \figref{4F:PotentialPlanes48xy} and \figref{4F:PotentialPlanes616xy} is reflected relative to the $x$ and $y$ axis, obtaining the plots in \figref{4F:PotentialRestoration}.\\
-In both \figref{4F:PotentialPlanes} and \figref{4F:PotentialRestoration} correlators of Polyakov loops far from the origin (the ones represented by blue dots, with values of the potential $\gtrsim 1.4$) were compatible with each other.
+In order to give a more ``complete'' view, the data from \figref{4F:PotentialPlanes48xy} and \figref{4F:PotentialPlanes616xy} are reflected relative to the $x$ and $y$ axes, obtaining the plots in \figref{4F:PotentialRestoration}.\\
+In both \figref{4F:PotentialPlanes} and \figref{4F:PotentialRestoration} correlators of Polyakov loops far from the origin (the ones represented by blue dots, with values of the potential in lattice units larger than approximately $1.4$) were found to be compatible with each other.
 The interesting parts of these graphics are, therefore, the dots up to the dark green shade.
 
 \subsection{Final Remarks}
-It is interesting to note the resemblance of \figref{4F:PotentialRestoration} with \figref{3F:LangRebbi}, although they are obtained in different ways and for different gauge groups.
-Note also that the values of $\beta$ used in these simulations were slightly higher than the ones used in \cite{Lang:1982tj}, in order to have a smaller lattice spacing that allowed a finer determination of the potential.
+It is interesting to note the resemblance of \figref{4F:PotentialRestoration} with \figref{3F:LangRebbi}, although they are obtained in different ways and, in fact, even for different gauge groups (albeit one is a relatively dense subgroup of the other).
+Note also that the values of $\beta$ we used in our simulations were slightly largr than the ones used in ref.~\cite{Lang:1982tj}, in order to have a smaller lattice spacing and to allow a finer determination of the potential.
 
 \section{BCT Lattice}
 The code used for simulations on SH lattices has been adapted to simulate $\SUN$ gauge theories on the BCT lattice.
 
 \subsection{Formulation of the Algorithm}
-The first obvious change was the number of sites: being body-centered, this lattice has twice the sites of a SH with the same dimensions.\\
-Let us assume the lattice has $L_\mu$ sites in the $\mu=t,x,y,z$ direction.
-The total number of sites is, therefore, $N_{sites}=L_tL_xL_yL_z$ for a SH lattice and $N_{sites}=2L_tL_xL_yL_z$ for a BCT.
+The first obvious change was the number of sites: being body-centered, this lattice has twice the sites of a SH with the same sizes along the four main Euclidean axes: if the lattice has $L_\mu$ sites in the $\mu=t,x,y,z$ direction, the total number of sites is, thus, $N_{sites}=L_tL_xL_yL_z$ for a SH lattice and $N_{sites}=2L_tL_xL_yL_z$ for a BCT.
 
 \subsubsection{Lattice Sites}
 Each site has coordinates $(t,x,y,z)$ where $t = 0, 1, \dots, L_t-1$, $x = 0, 1, \dots, L_x-1$, $y = 0, 1, \dots, L_y-1$ and $z = 0, 1, \dots, L_z-1$ if the lattice is a simple hypercube.
-In the old code, each site was individuated by an integer $0 \leq s < N_{sites}$ obtained through the following computation:
+In the original code, each site was uniquely identified by an integer $0 \leq s < N_{sites}$ obtained through the following computation:
 \begin{equation}
     s = z + L_z\pr{y + L_y\pr{x + L_xt}} \label{4:siteIndexSH}
 \end{equation}
@@ -189,7 +188,7 @@ and the coordinates could be obtained as:
     x =& \pr{\pr{\frac{s - z}{L_z} - y}/L_y} \mod L_x \\
     t =& \pr{\pr{\frac{s - z}{L_z} - y}/L_y - x}/L_x \numthis\label{4:siteIndexSHinverted}
 \end{align*}
-On a BCT lattice, each site has either all integer or all semi-integer coordinates.\\
+On a BCT lattice, each site has either all integer or all half-integer coordinates.\\
 If they are all integer, $s$ is computed as:
 \begin{equation}
     s = 2\pr{z + L_z\pr{y + L_y\pr{x + L_xt}}} \label{4:siteIndexBCTeven}
@@ -199,21 +198,21 @@ Otherwise, it is computed as:
     s = 1 + 2\pr{\prs{z} + L_z\pr{\prs{y} + L_y\pr{\prs{x} + L_x\prs{t}}}} \label{4:siteIndexBCTodd}
 \end{equation}
 where $\prs{x}$ represents the \emph{integer part} of $x$.\\
-The inverted relation is the same as \eqref{4:siteIndexSHinverted}, but with $s$ replaced with $s/2$ if $s$ is even, otherwise, if $s$ is odd, it becomes:
+The inverse relation is the same as \eqref{4:siteIndexSHinverted}, but with $s$ replaced with $s/2$ if $s$ is even, otherwise, if $s$ is odd, it becomes:
 \begin{align*}
-    z =& \pr{\frac{s-1}{2} \mod L_z} + 0.5 \\
-    y =& \pr{\frac{\frac{s-1}{2} - \prs{z}}{L_z} \mod L_y} + 0.5 \\
-    x =& \pr{\pr{\pr{\frac{\frac{s-1}{2} - \prs{z}}{L_z} - \prs{y}}/L_y} \mod L_x} + 0.5 \\
-    t =& \pr{\pr{\pr{\frac{\frac{s-1}{2} - \prs{z}}{L_z} - \prs{y}}/L_y - \prs{x}}/L_x} + 0.5 \numthis\label{4:siteIndexBCToddInverted}
+    z =& \pr{\frac{s-1}{2} \mod L_z} + \frac12 \\
+    y =& \pr{\frac{\frac{s-1}{2} - \prs{z}}{L_z} \mod L_y} + \frac12 \\
+    x =& \pr{\pr{\pr{\frac{\frac{s-1}{2} - \prs{z}}{L_z} - \prs{y}}/L_y} \mod L_x} + \frac12 \\
+    t =& \pr{\pr{\pr{\frac{\frac{s-1}{2} - \prs{z}}{L_z} - \prs{y}}/L_y - \prs{x}}/L_x} + \frac12 \numthis\label{4:siteIndexBCToddInverted}
 \end{align*}
 In the code, the integer $s$ is stored in the variable \texttt{site} and the coordinates $t$, $x$, $y$, $z$ are always stored in integer variables as their integer part.
-An additional variable \texttt{halfInt}, that can only assume $0$ or $1$ values, is used to keep track if the coordinates are actual integers or semi-integers.
+An additional variable \texttt{halfInt}, that can only take values $0$ or $1$, is used to keep track whether the coordinates are integer or half-integer.
 
 \subsubsection{Directions}
-Another important part is how the different possible directions are referrd to in the code.
-Each site in the SH lattice has only $8$ nearest neighbours, individuated by $4$ different directions, the vectors $\pr{1,0,0,0}$, $\pr{0,1,0,0}$, $\pr{0,0,1,0}$, $\pr{0,0,0,1}$ (direction $3$), and their opposites.\\
-In the old version of the code, two arrays of dimension $4N_{sites}$, \texttt{neighbour\_plus} and \texttt{neighbour\_minus}, were used to keep track of each site's nearest neighbours.\\
-As explained in \secref{Sec3:BCT}, each site has $24$ nearest neighbours, in $12$ different directions.
+Another important part of the implementation of the lattice geometry in the code is how the different possible directions are referred to.
+Each site in the SH lattice has only $8$ nearest neighbours, identified by $4$ different directions, the vectors $\pr{1,0,0,0}$ (direction $0$), $\pr{0,1,0,0}$ (direction $1$), $\pr{0,0,1,0}$ (direction $2$), $\pr{0,0,0,1}$ (direction $3$), and their opposites.\\
+In the original version of the code, two arrays of dimension $4N_{sites}$, \texttt{neighbour\_plus} and \texttt{neighbour\_minus}, were used to store each site's nearest neighbours.\\
+As explained in \secref{Sec3:BCT}, each site of the BCT lattice, instead, has $24$ nearest neighbours, in $12$ different directions.
 The two arrays are therefore changed to size $12N_{sites}$, with the following index convention:
 \begin{table}[!htbp]
     \centering
@@ -242,16 +241,16 @@ In the \texttt{neighbour\_minus} array nearest neighbours in \emph{negative} dir
 
 \subsubsection{Staples}
 The central part of the algorithm is the computation of the staples.
-As explained in \secref{Sec3:BCTlatticeGaugeTheories}, using action \eqref{3:BCTAction}, the plaquettes are triangular, therefore the staples are computed in a different way than the case of the SH lattice.\\
+As explained in \secref{Sec3:BCTlatticeGaugeTheories}, using action \eqref{3:BCTAction}, the plaquettes are triangular, therefore the staples are computed in a different way than in the case of the SH lattice.\\
 For this reason, an array, called \texttt{stapleDirs}, is used to keep track of all possible staples that can be formed for any of the $12$ possible directions (this was not necessary in the SH case as staples were easier to be computed, since there were far less possible directions).
-In lines \texttt{743} to \texttt{1063} of \coderef{A1:initialize743}{initialize.cc} this array is initialized in the following way: for each direction, $4$ couples of directions are given.
+In lines \texttt{743} to \texttt{1063} of \coderef{A1:initialize743}{initialize.cc} this array is initialized in the following way: for each direction, $4$ pairs of directions are given.
 A plus sign indicates a direction from the \texttt{dir\_plus} coloumn of \tabref{4T:DirsBCT}, while a minus sign indicates a direction from the \texttt{dir\_minus} coloumn of the same table.
-Direction $0$ is indicated as $24$ in order to distinguish between $\pr{+1,0,0,0}$ and $\pr{-1,0,0,0}$, since $+0=-0$.\\
-Each of the four couples is such that the vector sum of the two directions forming the staple is equal to the vector representing the direction on which the considered link is defined.
+Direction $0$ is labelled as $24$ in order to ensure that $\pr{+1,0,0,0}$ and $\pr{-1,0,0,0}$ are treated as distinct (whereas that would not be the case, if it was denoted by $0$, since $+0=-0$).\\
+Each of the four pairs is such that the vector sum of the two directions forming the staple is equal to the vector representing the direction on which the considered link is defined.
 For example, in line \texttt{746}, the first staple of \texttt{dir}$=0$, that is represented by $\pr{+1,0,0,0}$, is formed by directions $+4$ and $-8$, which correspond respectively to vectors $\pr{+1/2,+1/2,+1/2,+1/2}$ and $\pr{+1/2,-1/2,-1/2,-1/2}$.
 As can be easily checked, $\pr{+1/2,+1/2,+1/2,+1/2}+\pr{+1/2,-1/2,-1/2,-1/2}=\pr{+1,0,0,0}$.\\
-In \secref{Sec3:BCTlatticeGaugeTheories} is stated that ``each edge is shared between $8$ triangles'', meaning that for each direction there must be $8$ different staples.
-The $4$ missing are obtained from the ones already written, the \emph{positive} staples, by exchanging the first direction with the second (of each couple) and will be referred to as \emph{negative} staples\footnote{This is a reminiscence of the old version of the code, where \emph{positive} and \emph{negative} staples were not independent from each other, therefore were computed in two different routines in order to avoid overcounting when evaluating the plaquettes. This is not necessary anymore on the BCT lattice, as \emph{positive} and \emph{negative} staples are not counted twice.}.\\
+In \secref{Sec3:BCTlatticeGaugeTheories} it is stated that ``each edge is shared between eight triangles'', meaning that for each direction there must be eight different staples.
+The four remaining ones are obtained from the ones already written, the \emph{positive} staples, by exchanging the first direction of each pair with the second and will be referred to as \emph{negative} staples\footnote{This is a reminiscence of the original version of the code, where \emph{positive} and \emph{negative} staples were not independent from each other, therefore were computed in two different routines in order to avoid over-counting when evaluating the plaquettes. This is not necessary anymore on the BCT lattice, as \emph{positive} and \emph{negative} staples are not counted twice.}.\\
 In \figref{4F:Staples} a visual representation of this process is shown.
 \begin{figure}[!htbp]
     \centering
