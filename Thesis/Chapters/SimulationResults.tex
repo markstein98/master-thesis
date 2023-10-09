@@ -12,7 +12,7 @@ The lattices are taken to be periodic in every direction, with $n_s$ sites in ea
 The lattice has, therefore, $n_s^3n_t$ sites.\\
 The simulations are run starting from a cold configuration, with $2500$ thermalization steps, where each Monte Carlo step is composed of one heat-bath step followed by three overrelaxation steps.
 While the plaquette is observed to thermalize very quickly, after $O(10)$ steps in preliminary simulations with both hot and cold starts, we estimate $2500$ thermalization steps to be enough to ensure full thermalization of the configurations.\\
-After thermalization, $20000$ measurements are taken of every possible independent correlator between two Polyakov loops, with $100$ updates between each measurement.\\
+After thermalization, $20000$ measurements are taken of every possible independent correlator between two Polyakov loops, with $2$ updates between each measurement.\\
 On a lattice with $n_s$ spatial sites in each direction, only pairs of Polyakov loops whose distance, in each spatial direction, is less than or equal to $n_s/2$ are independent: for example a pair of Polyakov loops extending for $n_s/2+1$ sites in a certain direction is equivalent to the Hermitian conjugate of a couple extending for $n_s/2-1$ sites, because of the periodic boundary conditions (see \eqref{2:nonzeroMomPolyakov}).
 But, since the Polyakov loop correlator expectation value is real, they have the same numerical value.\\
 \figref{4F:PolyakovPeriodic} represents a graphical visualization of this fact.
@@ -111,7 +111,7 @@ This justifies choosing arbitrarily one plane for each lattice.
             \label{4F:PotentialPlanes48yz}
         \end{subfigure}
         \addtocounter{subfigure}{-1}
-        \caption{Lattice with $n_s=4$, $n_s=8$, $\beta=2.20$.}
+        \caption{Lattice with $n_t=4$, $n_s=8$, $\beta=2.20$.}
         \label{4F:PotentialPlanes48}
     \end{subfigure}\\
     \vspace{\baselineskip}
@@ -140,7 +140,7 @@ This justifies choosing arbitrarily one plane for each lattice.
             \label{4F:PotentialPlanes616yz}
         \end{subfigure}
         \addtocounter{subfigure}{-1}
-        \caption{Lattice with $n_s=6$, $n_s=16$, $\beta=2.35$.}
+        \caption{Lattice with $n_t=6$, $n_s=16$, $\beta=2.35$.}
         \label{4F:PotentialPlanes616}
     \end{subfigure}
     \caption{Plots of the static quark potential in the three coordinate planes for two different lattices. The colored scale represent the potential in lattice spacing units.}
@@ -150,12 +150,12 @@ This justifies choosing arbitrarily one plane for each lattice.
     \centering
     \begin{subfigure}[b]{0.48\textwidth}
         \includegraphics[width=\textwidth]{nt4_ns8_beta2.20/RotSymm.png}
-        \caption{Lattice with $n_s=4$, $n_s=8$, $\beta=2.20$.}
+        \caption{Lattice with $n_t=4$, $n_s=8$, $\beta=2.20$.}
         \label{4F:PotentialRestorationLargea}
     \end{subfigure}
     \begin{subfigure}[b]{0.48\textwidth}
         \includegraphics[width=\textwidth]{nt6_ns16_beta2.35/RotSymm.png}
-        \caption{Lattice with $n_s=6$, $n_s=16$, $\beta=2.35$.}
+        \caption{Lattice with $n_t=6$, $n_s=16$, $\beta=2.35$.}
         \label{4F:PotentialRestorationSmalla}
     \end{subfigure}
     \caption{Rotational invariance restoration of the static quark potential.}
@@ -286,3 +286,54 @@ In the code's normalization factor appears also \texttt{Ncol} that is needed to 
 For the BCT lattice the code is not very different, as the principle is the same: the number of sites and of directions were changed to the ones of the BCT lattice, the staples were computed with the dedicated routines described earlier, and the normalization factor was changed to \texttt{nStaples} times \texttt{nlinks}, where \texttt{nStaples} is the number of plaquettes for each link and \texttt{nlinks} is the total number of links in the considered lattice.
 
 \subsection{Numerical Results}
+This code has been used to perform simulations of $\SU(2)$ gauge theories, in particular the mean value of the triangular plaquette (the real part of the trace of \eqref{3:PlaqTriang}) has been studied.
+
+\subsubsection{Plaquette Mean Value vs Computer Time}
+Simulations have been run starting from cold configurations: $2000$ measurements have been taken for $4$ different values of $\beta=1,2,4,8$, without thermalization, in order to study the convergence of the plaquette's average value.\\
+The simulations were run on two different lattices and $1$ update, composed of one heat bath step followed by thrree overrelaxation steps, have been made between each measurement.\\
+Results are shown in \figref{4F:PlaqIterBCT}.
+\begin{figure}[!htbp]
+    \centering
+    \begin{subfigure}[b]{0.49\textwidth}
+        \includegraphics[width=\textwidth]{plaquetteSmallBCT.png}
+        \caption{Lattice with $n_t=4$, $n_s=8$.}
+        \label{4F:PlaqIterSmallBCT}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.49\textwidth}
+        \includegraphics[width=\textwidth]{plaquetteBigBCT.png}
+        \caption{Lattice with $n_t=6$, $n_s=16$.}
+        \label{4F:PlaqIterBigBCT}
+    \end{subfigure}
+    \caption{Average value of the triangular plaquette on BCT lattices as a function of the number of iterations. The different colors represent different values of $\beta$.}
+    \label{4F:PlaqIterBCT}
+\end{figure}\\
+In both figures it is clear that the plaquette thermalizes almost instantly (only the first values are very different from the others).
+The lattice with more sites has far smaller statistical fluctuations.\\
+The same simulation has been run on a SH lattice, computing the mean value of the rectangular plaquette \eqref{2:LatticePlaquette}, in order to make a comparison.\\
+Results are shown in \figref{4F:PlaqIterSH}.
+\begin{figure}[!htbp]
+    \centering
+    \begin{subfigure}[b]{0.49\textwidth}
+        \includegraphics[width=\textwidth]{plaquetteSmallSH.png}
+        \caption{Lattice with $n_t=4$, $n_s=8$.}
+        \label{4F:PlaqIterSmallSH}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.49\textwidth}
+        \includegraphics[width=\textwidth]{plaquetteBigSH.png}
+        \caption{Lattice with $n_t=6$, $n_s=16$.}
+        \label{4F:PlaqIterBigSH}
+    \end{subfigure}
+    \caption{Average value of the rectangular plaquette on SH lattices as a function of the number of iterations. The different colors represent different values of $\beta$.}
+    \label{4F:PlaqIterSH}
+\end{figure}\\
+Here it can be seen that mean values of the plaquette are more distant from each other than in the BCT case.
+They also have smaller fluctuations, albeit the fact that they get smaller by increasing the lattice number of sites is observed in both the SH and BCT cases.
+
+\subsubsection{Plaquette Mean Value vs $\beta$}
+The mean value of the last $1000$ values of each dataset has also been computed, in order to study the behaviour of the average plaquette with respect to $\beta$.
+\begin{figure}[!htbp]
+    \centering
+    \includegraphics[width=0.5\textwidth]{PlaquetteBetaBCT.png}
+    \caption{Mean value of the plaquette as a function of $\beta$. The purple data is from the smaller lattice ($n_t=4$, $n_s=8$), the green one is from the bigger lattice ($n_t=6$, $n_s=16$).}
+\end{figure}
+
