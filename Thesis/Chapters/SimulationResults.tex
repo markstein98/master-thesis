@@ -276,3 +276,13 @@ In \figref{4F:Staples} a visual representation of this process is shown.
     \label{4F:Staples}
 \end{figure}\\
 Staples are then evaluated by dedicated routines, \coderef{A1:pstaple}{f4pstaple.cc} and \coderef{A1:nstaple}{f4nstaple.cc} for \emph{positive} and \emph{negative} staples respectively.
+Their value is used each time the algorithm performs a heat bath or an overrelaxation step, as illustrated in \secref{Sec2:MonteCarlo}, and each time the plaquette needs to be evaluated.
+
+\subsubsection{Plaquette}
+In the original version of the code, plaquettes were evaluated by a dedicated routine, \coderef{A1:plaquette}{plaquette.cc}, that summed over all possible plaquettes and, after taking the real part of its trace, divided by a normalization factor (in order to compute the mean value).\\
+The normalization factor is the total number of possible plaquettes, obtained as $D(D-1)N_{sites}$, where $D$, the number of spacetime dimensions, is the number of possible ways of choosing the ``first'' direction $\mu$ and $D-1$ is the number of possible ways of choosing the ``second'' direction $\nu$.
+This is done in line \texttt{71} of \coderef{A1:plaquette}{plaquette.cc}.
+In the code's normalization factor appears also \texttt{Ncol} that is needed to ensure proper normalization of the trace.\\
+For the BCT lattice the code is not very different, as the principle is the same: the number of sites and of directions were changed to the ones of the BCT lattice, the staples were computed with the dedicated routines described earlier, and the normalization factor was changed to \texttt{nStaples} times \texttt{nlinks}, where \texttt{nStaples} is the number of plaquettes for each link and \texttt{nlinks} is the total number of links in the considered lattice.
+
+\subsection{Numerical Results}
