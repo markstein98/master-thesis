@@ -288,9 +288,9 @@ For the BCT lattice the code is not very different, as the principle is the same
 \subsection{Numerical Results}
 This code has been used to perform simulations of $\SU(2)$ gauge theories, in particular the mean value of the triangular plaquette (the real part of the trace of \eqref{3:PlaqTriang}) has been studied.
 
-\subsubsection{Plaquette Mean Value vs Computer Time}
-Simulations have been run starting from cold configurations: $2000$ measurements have been taken for $4$ different values of $\beta=1,2,4,8$, without thermalization, in order to study the convergence of the plaquette's average value.\\
-The simulations were run on two different lattices and $1$ update, composed of one heat bath step followed by thrree overrelaxation steps, have been made between each measurement.\\
+\subsubsection{Plaquette Mean Value as a Function of Computer Time}
+Simulations have been run starting from cold configurations: $2000$ measurements have been taken for four different values of $\beta=1,2,4,8$, without thermalization, in order to study the convergence of the plaquette's average value.\\
+The simulations were run on two different lattices and one update, composed of one heat bath step followed by thrree overrelaxation steps, was made between each measurement.\\
 Results are shown in \figref{4F:PlaqIterBCT}.
 \begin{figure}[!htbp]
     \centering
@@ -307,8 +307,8 @@ Results are shown in \figref{4F:PlaqIterBCT}.
     \caption{Average value of the triangular plaquette on BCT lattices as a function of the number of iterations. The different colors represent different values of $\beta$.}
     \label{4F:PlaqIterBCT}
 \end{figure}\\
-In both figures it is clear that the plaquette thermalizes almost instantly (only the first values are very different from the others).
-The lattice with more sites has far smaller statistical fluctuations.\\
+In both figures it is clear that the plaquette thermalizes very quickly (only the first few values are significantly different from the others); this is expected, since, like on the hypercubic lattice, the plaquette is a very local quantity, which can be efficiently sampled by the local updates used in the code.
+One can also observe that the results from the lattice with most sites have the smallest statistical fluctuations: an effect due to volume averaging.\\
 The same simulation has been run on a SH lattice, computing the mean value of the rectangular plaquette \eqref{2:LatticePlaquette}, in order to make a comparison.\\
 Results are shown in \figref{4F:PlaqIterSH}.
 \begin{figure}[!htbp]
@@ -327,7 +327,7 @@ Results are shown in \figref{4F:PlaqIterSH}.
     \label{4F:PlaqIterSH}
 \end{figure}\\
 Here it can be seen that mean values of the plaquette are more distant from each other than in the BCT case.
-They also have smaller fluctuations, albeit the fact that they get smaller by increasing the lattice number of sites is observed in both the SH and BCT cases.
+They also have smaller fluctuations, albeit the fact that they get smaller by increasing the number of sites of the lattice is observed in both the SH and BCT cases.
 
 \subsubsection{Plaquette Mean Value vs $\beta$}
 The mean value of each dataset of \figref{4F:PlaqIterBCT} has also been computed, with the aim of studying the behaviour of the average plaquette with respect to $\beta$.
@@ -338,17 +338,18 @@ In the computation of the means, only the last $1000$ values have been taken int
     \caption{Mean value of the triangular plaquette on BCT lattices as a function of $\beta$. The purple data is from the smaller lattice ($n_t=4$, $n_s=8$), the green one is from the bigger lattice ($n_t=6$, $n_s=16$).}
     \label{4F:PlaqBetaBCT}
 \end{figure}\\
-As anticipated, statistical fluctuations of the lattice with a greater number of sites are smaller, thus its error bars are shorter than error bars of points obtained from datasets of the lattice with fewer points.\\
-\figref{4F:PlaqBetaBCT} highlights two main problems: plaquette mean values from lattices of different size are not compatible with each other for the same value of $\beta$ and increasing the value of $\beta$ results in a small increase in the mean value of the plaquette, at values far less than expected (in fact, this graphic should result in something similar to \figref{3F:AvgPlaqBCTSH}).\\
-Although the first problem could be ``circumvented'' by considering the autocorrelation of the data, thus increasing the error bars, the second one has not a simple explanation and leads to think that there could be a possible bug in the code.\\
-Again, in order to make a comparison, the same plot has been reproduced for the SH lattice, using the last $1000$ data from each dataset of \figref{4F:PlaqIterBCT}.\\
-Results are shown in \figref{4F:PlaqBetaSH}.
-\begin{figure}[!htbp]
-    \centering
-    \includegraphics[width=0.5\textwidth]{PlaquetteBetaSH.png}
-    \caption{Mean value of the rectangular plaquette on SH lattices as a function of $\beta$. The purple data is from the smaller lattice ($n_t=4$, $n_s=8$), the green one is from the bigger lattice ($n_t=6$, $n_s=16$).}
-    \label{4F:PlaqBetaSH}
-\end{figure}
-This plot makes even more evident the problems mentioned before: in SH lattices, error bars are orders of magnitude smaller than those of BCT lattices and the average value of the plaquettes does not evidently depend on the size of the lattice.
-Furthermore, increasing $\beta$ (therefore decreasing the coupling constant $g$, \ie weakening the interaction) makes the averages tend to $1$, much more than the data obtained from BCT lattices and a lot more in accordance with \figref{3F:AvgPlaqBCTSH}.\\
-This is probably due to an error in the code, that needs to be investigated further.
+As anticipated, statistical fluctuations of the lattice with a larger number of sites are smaller, thus the statistical uncertainties are smaller than error bars of points obtained from datasets of the lattice with fewer points.\\
+\figref{4F:PlaqBetaBCT} reveals that, for these simulations, the plaquette mean values from lattices of different size are not compatible with each other for the same value of $\beta$, and that the dependence on $\beta$ appears not to be compatible with continuum-scaling behavior yet. For this reason, the data cannot be directly compared with \figref{3F:AvgPlaqBCTSH}, which was independently obtained with a different algorithm (and including some different normalizations, too). In fact, it is worth emphasizing that (assuming that there are no bugs in the code) it is only in the continuum limit that the results obtained from different lattice simulations should converge to the same limit.\\
+As a side remark, one should also consider that, while the Monte~Carlo history of the average plaquette does not reveal exceedingly long autocorrelation times, some autocorrelation may still be present in the sample of configurations used for this preliminary analysis; in order to study this possibility in a more systematic way, one should carry out a careful analysis of other observables, too -- including, in particular, those that are of non-local nature, since typically they are most severely affected by autocorrelation problems. A typical example could be the topological charge, which (in simulations on standard hypercubic lattices) is notorious for its dramatically long autocorrelation times on fine lattices~\cite{Schaefer:2010hu}. While a systematic study of this quantity could potentially yield further motivation to carry out simulations on a BCT lattice (where better recovery of rotational symmetry can be achieved at coarser lattice spacings), this is clearly beyond the scope of the present M.Sc. thesis work, and we leave it for a dedicated future project~\cite{Aliberti:2024soa}.
+%Although the first problem could be ``circumvented'' by considering the autocorrelation of the data, thus increasing the error bars, the second one has not a simple explanation and leads to think that there could be a possible bug in the code.\\
+%Again, in order to make a comparison, the same plot has been reproduced for the SH lattice, using the last $1000$ data from each dataset of \figref{4F:PlaqIterBCT}.\\
+%Results are shown in \figref{4F:PlaqBetaSH}.
+%\begin{figure}[!htbp]
+%    \centering
+%    \includegraphics[width=0.5\textwidth]{PlaquetteBetaSH.png}
+%    \caption{Mean value of the rectangular plaquette on SH lattices as a function of $\beta$. The purple data is from the smaller lattice ($n_t=4$, $n_s=8$), the green one is from the bigger lattice ($n_t=6$, $n_s=16$).}
+%    \label{4F:PlaqBetaSH}
+%\end{figure}
+%This plot makes even more evident the problems mentioned before: in SH lattices, error bars are orders of magnitude smaller than those of BCT lattices and the average value of the plaquettes does not evidently depend on the size of the lattice.
+%Furthermore, increasing $\beta$ (therefore decreasing the coupling constant $g$, \ie weakening the interaction) makes the averages tend to $1$, much more than the data obtained from BCT lattices and a lot more in accordance with \figref{3F:AvgPlaqBCTSH}.\\
+%This is probably due to an error in the code, that needs to be investigated further.
