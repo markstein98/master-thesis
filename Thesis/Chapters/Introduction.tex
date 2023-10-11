@@ -1,26 +1,26 @@
 \pagestyle{myFancy}
 \chapter{Introduction}
 
-Quantum Chromodynamics is the most reliable theory of strong interactions that is known.
-It is formulated in terms of quarks and gluons, that are believed to be the basic degrees of freedom that make up hadronic matter.\\
-QCD has been very successful in predicting large momentum transfer phenomena, where the coupling constant $\alpha_s$ is \emph{small} and perturbation theory can be applied.
-However, due to its non-perturbative behaviour at generic values of the coupling constant (for example, at the scale of the hadronic world, where $\alpha_s\approx1$), a non-perturbative approach is essential to be able to perform reliable predictions.
+As a constituent of the Standard Model of elementary particle physics, Quantum Chromodynamics (QCD) is the currently accepted theory of strong interactions. It is a quantum field theory and a non-Abelian gauge theory; it describes relativistic fields whose quantum excitations are quarks and gluons, that are believed to be the basic degrees of freedom that make up hadronic matter.
+
+As a matter of fact, QCD has been very successful in describing processes involving large momentum transfer, where, owing to the property of asymptotic freedom~\cite{Gross:1973id, Politzer:1973fx}, the coupling constant $\alpha_s$ is \emph{small} and perturbation theory can be applied.
+However, perturbative QCD computations are no longer applicable at or below energy scales of the order of some hundreds~MeV, at which the running coupling $\alpha_s$ becomes large. In fact, the physical spectrum of the theory is determined by phenomena of strictly non-perturbative nature, namely confinement of ``color'' charges into color-singlet states, and the dynamical breaking of chiral symmetry. Finally, a purely perturbative approach could not capture various important aspects of the phenomenology arising from QCD, including, for instance, some topologically non-trivial configurations of the fields. For these reasons, a non-perturbative approach is essential to be able to perform reliable predictions.
 
 Lattice field theory provides a method for evaluating matrix elements of any operator in a non-perturbative way.
-It is formulated on a discrete Euclidean space-time grid and has two main advantages.
-First, the discrete space-time lattice acts as a non-perturbative regularization scheme, providing an ultraviolet momenta cutoff at $\pi/a$ at finite values of the lattice spacing $a$.
-Beisdes, renormalized quantities have a finite, well-behaved limit as $a\to0$.\\
+It is formulated on a discrete Euclidean space-time grid of finite spacing $a$ and has two main advantages.
+First, the discrete space-time lattice acts as a gauge-invariant, non-perturbative regularization scheme, providing an ultraviolet momenta cutoff at $\pi/a$ at finite values of the lattice spacing.
+Besides, renormalized quantities have a finite, well-behaved limit as $a\to0$.\\
 Second, lattice quantum field theory can be simulated on computers using methods analogous to the ones used for Statistical Mechanics systems.
-These simulations are used to compute estimates of correlation fucntions of the quantum field theory, allowing us to predict observables that can, eventually, be experimentally verified.
+These simulations are used to compute estimates of various correlation functions of the quantum field theory, allowing one to predict observables that can, eventually, be experimentally verified.
 
-The discretization of the space-time explicitly breaks the Poincaré invariance to a certain discrete subgroup whose order depends on the type of discretization chosen.
+The discretization of the space-time explicitly breaks the Poincar\'e invariance to a discrete subgroup, whose nature depends on the type of discretization chosen.
 Usually, the lattice used to discretize the space-time is a $4$-dimensional hypercube, that has a relatively small symmetry group.\\
-For this reason, the goal of this M.Sc. thesis work is to study and develop a program capable of simulating $\SUN$ Yang-Mills theories on a lattice with higher symmetry than the hypercubic one, starting from the code originally developed for hypercubic lattices presented in refs.~\cite{Panero:2009tv,Mykkanen:2012ri}.\\
-This work focuses on purely gluonic lattice QCD only, as fermions are computationally more challenging to implement.
+For this reason, the goal of this M.Sc. thesis work is to study the formulation of $\SUN$ Yang-Mills theories on a lattice with higher symmetry than the hypercubic one, and to develop a numerical code to compute the expectation values of various differente observables in this lattice theory. Our code is based on the routines that were used for the lattice calculations in refs.~\cite{Panero:2009tv,Mykkanen:2012ri}, that will be adapted to carry out simulations on a more symmetric lattice.\\
+This work focuses on the purely gluonic sector of lattice QCD only, as fermions are computationally more challenging to implement.
 
-In \chapref{Chap:LatticeQCD} lattice field theory is presented analytically, after providing a summary of quantum field theory in the first part of the chapter, in order to show the conventions used.
+In \chapref{Chap:LatticeQCD} lattice field theory is presented analytically, after providing a summary of quantum field theory in the first part of the chapter, which also includes a summary of the conventions used in this work.
 
-In \chapref{Chap:GaugeSim} the most common techniques of simulating a lattice gauge theory are explained: starting from a brief overview on Markov chains, the principal algorithms used to simulate the gauge fields are presented, explaining how observables are measured and how the data is analyzed.
+In \chapref{Chap:GaugeSim} the most common techniques for the  simulation of a lattice gauge theory are explained: starting from a brief overview on Markov chains, the principal algorithms used to simulate the gauge fields are presented, explaining how observables are measured and how the data is analyzed.
 
 \chapref{Chap:F4Lattice} contains an overview space-time symmetries, both in the continuum and in the discrete case, dealing with the problem of their restoration in the continuum limit.
 After that, other lattices with higher order symmetry groups are presented and current results in literature of simulations of lattice field theories on them are shown.
