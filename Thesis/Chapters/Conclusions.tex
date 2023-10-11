@@ -1,2 +1,23 @@
-% \pagestyle{fancy}
+\pagestyle{myFancy}
 \chapter{Conclusions}
+
+The restoration of space-time symmetries in the continuum limit is a very important aspect of lattice quantum chromodynamics.
+Unlike translational invariance, that in the continuum limit is restored in a naive way, rotational invariance is broken down to a discrete subgroup.
+The symmetry breaking terms of rotational invariance are suppressed by some powers of the lattice spacing $a$ in the $a\to0$ limit, that depend on the lattice chosen for the discretization of the space-time.
+Its restoration can be observed in the expectation value of some quantities that are rotational invariant, like the static quark potential, as shown in \secref{Sec4:RotInv} where a study on the symmetry restoration of the potential of an $\SU(2)$ Yang-Mills theory has been made.
+
+For this reason, discretizing the space-time on a lattice with higher symmetry than the usual hypercubic one could allow the restoration of the rotational symmetry of these quantities at higher values of the lattice spacing.
+
+The code presented in \secref{Sec4:Code} is the result of a preliminary study on the simulations of $\SUN$ Yang-Mills theories on a Body Centered Tesseract (BCT) lattice, that has three times the number of symmetries than the hypercubic lattice, and that could easily be extended to the \spFtext coroots lattice, which has six times the number of symmetries than the hypercubic lattice.
+This study included the definition of an action, different from the Wilson action used in hypercubic lattice simulations, in terms of the smallest triangular plaquettes that can be defined on the BCT.
+
+Simulations of $\SU(2)$ Yang-Mills theory on a BCT lattice have shown a quick thermalization of the mean value of the plaquette and the reduction of the entity of statistical fluctuations.
+Both these effects were expected, the first one because of the locality of the observable, the second one because of the volume averaging effect.
+This is a sign that the algorithm is well-behaving, at least under these aspects.
+
+Plots of the plaquette mean values as functions of $\beta$ (that is inverse proportional to the square of the coupling constant $g$), on the other hand, showed that mean values obtained from simulations on different size lattices are not compatible with each other, for the same value of the interaction strength.
+This could mean that, with the action used, these values of beta are far from the continuum limit, assuming there are no bugs in the code.
+In fact observables from different simulations should converge to the same limit only while approaching the continuum.
+
+This work sets the basis for future studies on the subject, in particular the systematic study of quantities with longer autocorrelation times than the plaquette, like the topological charge, could yield better results than the hypercubic lattice ones.
+Another interesting study could be the evaluation of the static quark potential, like has already been done for the hypercubic lattice, in order to check if the recovery of rotational invariance occurs at larger lattice spacings.
