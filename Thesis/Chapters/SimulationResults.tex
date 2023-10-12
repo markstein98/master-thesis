@@ -4,15 +4,18 @@ In this chapter original results from simulations are presented.
 The code used to perform such simulations is based on the code originally developed for the calculations presented in refs.~\cite{Panero:2009tv,Mykkanen:2012ri}.
 
 \section{Rotational Invariance Restoration\label{Sec4:RotInv}}
-This first section has the aim to reproduce the rotational invariance restoration of ref.~\cite{Lang:1982tj} for the continuous group $\SU(2)$ (and not for its discrete icosahedral subgroup $\tilde{Y}$, like explained in \secref{Sec3:RotInv}).\\
+This first section has the aim to reproduce the rotational invariance restoration of ref.~\cite{Lang:1982tj} for the continuous group $\SU(2)$ (and not for its discrete icosahedral subgroup $\tilde{Y}$, like explained in \secref{Sec3:RotInv}).
+
 This is done by evaluating the correlator of two Polyakov loops as discussed in \secref{Sec2:PolyakovLoops}, computed on two different lattices with two different values of $\beta$, corresponding to two different lattice spacings.
 
 \subsection{Setup of the Simulations}
 The lattices are taken to be periodic in every direction, with $n_s$ sites in each spatial direction ($n_s=n_x=n_y=n_z$) and $n_t$ sites in the time direction.
-The lattice has, therefore, $n_s^3n_t$ sites.\\
+The lattice has, therefore, $n_s^3n_t$ sites.
+
 The simulations are run starting from a cold configuration, with $2500$ thermalization steps, where each Monte Carlo step is composed of one heat-bath step followed by three overrelaxation steps.
 While the plaquette is observed to thermalize very quickly, after $O(10)$ steps in preliminary simulations with both hot and cold starts, we estimate $2500$ thermalization steps to be enough to ensure full thermalization of the configurations.\\
-After thermalization, $20000$ measurements are taken of every possible independent correlator between two Polyakov loops, with $2$ updates between each measurement.\\
+After thermalization, $20000$ measurements are taken of every possible independent correlator between two Polyakov loops, with $2$ updates between each measurement.
+
 On a lattice with $n_s$ spatial sites in each direction, only pairs of Polyakov loops whose distance, in each spatial direction, is less than or equal to $n_s/2$ are independent: for example a pair of Polyakov loops extending for $n_s/2+1$ sites in a certain direction is equivalent to the Hermitian conjugate of a couple extending for $n_s/2-1$ sites, because of the periodic boundary conditions (see \eqref{2:nonzeroMomPolyakov}).
 But, since the Polyakov loop correlator expectation value is real, they have the same numerical value.\\
 \figref{4F:PolyakovPeriodic} represents a graphical visualization of this fact.
@@ -79,9 +82,11 @@ After checking that each correlator's mean value is real (the imaginary part nec
     V(x,y,z) = -\frac{1}{n_t}\ln\expval{P(0)P^\dagger(x,y,z)} \label{4:Potential}
 \end{equation}
 where $(x,y,z)\in\prc{(0,0,0),\dots,\pr{\frac{n_s}{2},\frac{n_s}{2},\frac{n_s}{2}}}$.
-The standard deviation is computed with the usual error propagation formula.\\
+The standard deviation is computed with the usual error propagation formula.
+
 Plots like \figref{3F:LangRebbi} are obtained considering a section of the lattices used, specifically the $xy$-plane, that is done by plotting only values of $V(x,y,z=0)$.\\
-In order to verify that there are no anisotropies, all the three main coordinate planes are plotted in \figref{4F:PotentialPlanes}.\\
+In order to verify that there are no anisotropies, all the three main coordinate planes are plotted in \figref{4F:PotentialPlanes}.
+
 The values obtained for corresponding points in each plane are compatible with each other within their statistical uncertainties and there is no visible difference between different coordinate planes.
 This justifies choosing arbitrarily one plane for each lattice.
 \begin{figure}[!htbp]
@@ -161,13 +166,14 @@ This justifies choosing arbitrarily one plane for each lattice.
     \caption{Rotational invariance restoration of the static quark potential.}
     \label{4F:PotentialRestoration}
 \end{figure}\\
-In order to give a more ``complete'' view, the data from \figref{4F:PotentialPlanes48xy} and \figref{4F:PotentialPlanes616xy} are reflected relative to the $x$ and $y$ axes, obtaining the plots in \figref{4F:PotentialRestoration}.\\
+In order to give a more ``complete'' view, the data from \figref{4F:PotentialPlanes48xy} and \figref{4F:PotentialPlanes616xy} are reflected relative to the $x$ and $y$ axes, obtaining the plots in \figref{4F:PotentialRestoration}.
+
 In both \figref{4F:PotentialPlanes} and \figref{4F:PotentialRestoration} correlators of Polyakov loops far from the origin (the ones represented by blue dots, with values of the potential in lattice units larger than approximately $1.4$) were found to be compatible with each other.
 The interesting parts of these graphics are, therefore, the dots up to the dark green shade.
 
 \subsection{Final Remarks}
 It is interesting to note the resemblance of \figref{4F:PotentialRestoration} with \figref{3F:LangRebbi}, although they are obtained in different ways and, in fact, even for different gauge groups (albeit one is a relatively dense subgroup of the other).
-Note also that the values of $\beta$ we used in our simulations were slightly largr than the ones used in ref.~\cite{Lang:1982tj}, in order to have a smaller lattice spacing and to allow a finer determination of the potential.
+Note also that the values of $\beta$ we used in our simulations were slightly larger than the ones used in ref.~\cite{Lang:1982tj}, in order to have a smaller lattice spacing and to allow a finer determination of the potential.
 
 \section{BCT Lattice\label{Sec4:Code}}
 The code used for simulations on SH lattices has been adapted to simulate $\SUN$ gauge theories on the BCT lattice.
@@ -210,7 +216,8 @@ An additional variable \texttt{halfInt}, that can only take values $0$ or $1$, i
 
 \subsubsection{Directions}
 Another important part of the implementation of the lattice geometry in the code is how the different possible directions are referred to.
-Each site in the SH lattice has only $8$ nearest neighbours, identified by $4$ different directions, the vectors $\pr{1,0,0,0}$ (direction $0$), $\pr{0,1,0,0}$ (direction $1$), $\pr{0,0,1,0}$ (direction $2$), $\pr{0,0,0,1}$ (direction $3$), and their opposites.\\
+Each site in the SH lattice has only $8$ nearest neighbours, identified by $4$ different directions, the vectors $\pr{1,0,0,0}$ (direction $0$), $\pr{0,1,0,0}$ (direction $1$), $\pr{0,0,1,0}$ (direction $2$), $\pr{0,0,0,1}$ (direction $3$), and their opposites.
+
 In the original version of the code, two arrays of dimension $4N_{sites}$, \texttt{neighbour\_plus} and \texttt{neighbour\_minus}, were used to store each site's nearest neighbours.\\
 As explained in \secref{Sec3:BCT}, each site of the BCT lattice, instead, has $24$ nearest neighbours, in $12$ different directions.
 The two arrays are therefore changed to size $12N_{sites}$, with the following index convention:
@@ -243,12 +250,15 @@ In the \texttt{neighbour\_minus} array nearest neighbours in \emph{negative} dir
 The central part of the algorithm is the computation of the staples.
 As explained in \secref{Sec3:BCTlatticeGaugeTheories}, using action \eqref{3:BCTAction}, the plaquettes are triangular, therefore the staples are computed in a different way than in the case of the SH lattice.\\
 For this reason, an array, called \texttt{stapleDirs}, is used to keep track of all possible staples that can be formed for any of the $12$ possible directions (this was not necessary in the SH case as staples were easier to be computed, since there were far less possible directions).
+
 In lines \texttt{743} to \texttt{1063} of \coderef{A1:initialize743}{initialize.cc} this array is initialized in the following way: for each direction, $4$ pairs of directions are given.
-A plus sign indicates a direction from the \texttt{dir\_plus} coloumn of \tabref{4T:DirsBCT}, while a minus sign indicates a direction from the \texttt{dir\_minus} coloumn of the same table.
-Direction $0$ is labelled as $24$ in order to ensure that $\pr{+1,0,0,0}$ and $\pr{-1,0,0,0}$ are treated as distinct (whereas that would not be the case, if it was denoted by $0$, since $+0=-0$).\\
+A plus sign indicates a direction from the \texttt{dir\_plus} column of \tabref{4T:DirsBCT}, while a minus sign indicates a direction from the \texttt{dir\_minus} column of the same table.
+Direction $0$ is labelled as $24$ in order to ensure that $\pr{+1,0,0,0}$ and $\pr{-1,0,0,0}$ are treated as distinct (whereas that would not be the case, if it was denoted by $0$, since $+0=-0$).
+
 Each of the four pairs is such that the vector sum of the two directions forming the staple is equal to the vector representing the direction on which the considered link is defined.
 For example, in line \texttt{746}, the first staple of \texttt{dir}$=0$, that is represented by $\pr{+1,0,0,0}$, is formed by directions $+4$ and $-8$, which correspond respectively to vectors $\pr{+1/2,+1/2,+1/2,+1/2}$ and $\pr{+1/2,-1/2,-1/2,-1/2}$.
-As can be easily checked, $\pr{+1/2,+1/2,+1/2,+1/2}+\pr{+1/2,-1/2,-1/2,-1/2}=\pr{+1,0,0,0}$.\\
+As can be easily checked, $\pr{+1/2,+1/2,+1/2,+1/2}+\pr{+1/2,-1/2,-1/2,-1/2}=\pr{+1,0,0,0}$.
+
 In \secref{Sec3:BCTlatticeGaugeTheories} it is stated that ``each edge is shared between eight triangles'', meaning that for each direction there must be eight different staples.
 The four remaining ones are obtained from the ones already written, the \emph{positive} staples, by exchanging the first direction of each pair with the second and will be referred to as \emph{negative} staples\footnote{This is a reminiscence of the original version of the code, where \emph{positive} and \emph{negative} staples were not independent from each other, therefore were computed in two different routines in order to avoid over-counting when evaluating the plaquettes. This is not necessary anymore on the BCT lattice, as \emph{positive} and \emph{negative} staples are not counted twice.}.\\
 In \figref{4F:Staples} a visual representation of this process is shown.
@@ -280,17 +290,19 @@ Their value is used each time the algorithm performs a heat bath or an overrelax
 
 \subsubsection{Plaquette}
 In the original version of the code, plaquettes were evaluated by a dedicated routine, \coderef{A1:plaquette}{plaquette.cc}, that summed over all possible plaquettes and, after taking the real part of its trace, divided by a normalization factor (in order to compute the mean value).\\
-The normalization factor is the total number of possible plaquettes, obtained as $D(D-1)N_{sites}$, where $D$, the number of spacetime dimensions, is the number of possible ways of choosing the ``first'' direction $\mu$ and $D-1$ is the number of possible ways of choosing the ``second'' direction $\nu$.
+The normalization factor is the total number of possible plaquettes, obtained as $D(D-1)N_{sites}$, where $D$, the number of space-time dimensions, is the number of possible ways of choosing the ``first'' direction $\mu$ and $D-1$ is the number of possible ways of choosing the ``second'' direction $\nu$.
 This is done in line \texttt{71} of \coderef{A1:plaquette}{plaquette.cc}.
-In the code's normalization factor appears also \texttt{Ncol} that is needed to ensure proper normalization of the trace.\\
+In the code's normalization factor appears also \texttt{Ncol} that is needed to ensure proper normalization of the trace.
+
 For the BCT lattice the code is not very different, as the principle is the same: the number of sites and of directions were changed to the ones of the BCT lattice, the staples were computed with the dedicated routines described earlier, and the normalization factor was changed to \texttt{nStaples} times \texttt{nlinks}, where \texttt{nStaples} is the number of plaquettes for each link and \texttt{nlinks} is the total number of links in the considered lattice.
 
 \subsection{Numerical Results}
 This code has been used to perform simulations of $\SU(2)$ gauge theories, in particular the mean value of the triangular plaquette (the real part of the trace of \eqref{3:PlaqTriang}) has been studied.
 
 \subsubsection{Plaquette Mean Value as a Function of Computer Time}
-Simulations have been run starting from cold configurations: $2000$ measurements have been taken for four different values of $\beta=1,2,4,8$, without thermalization, in order to study the convergence of the plaquette's average value.\\
-The simulations were run on two different lattices and one update, composed of one heat bath step followed by thrree overrelaxation steps, was made between each measurement.\\
+Simulations have been run starting from cold configurations: $2000$ measurements have been taken for four different values of $\beta=1,2,4,8$, without thermalization, in order to study the convergence of the plaquette's average value.
+
+The simulations were run on two different lattices and one update, composed of one heat bath step followed by three overrelaxation steps, was made between each measurement.
 Results are shown in \figref{4F:PlaqIterBCT}.
 \begin{figure}[!htbp]
     \centering
@@ -308,7 +320,8 @@ Results are shown in \figref{4F:PlaqIterBCT}.
     \label{4F:PlaqIterBCT}
 \end{figure}\\
 In both figures it is clear that the plaquette thermalizes very quickly (only the first few values are significantly different from the others); this is expected, since, like on the hypercubic lattice, the plaquette is a very local quantity, which can be efficiently sampled by the local updates used in the code.
-One can also observe that the results from the lattice with most sites have the smallest statistical fluctuations: an effect due to volume averaging.\\
+One can also observe that the results from the lattice with most sites have the smallest statistical fluctuations: an effect due to volume averaging.
+
 The same simulation has been run on a SH lattice, computing the mean value of the rectangular plaquette \eqref{2:LatticePlaquette}, in order to make a comparison.\\
 Results are shown in \figref{4F:PlaqIterSH}.
 \begin{figure}[!htbp]
@@ -325,7 +338,8 @@ Results are shown in \figref{4F:PlaqIterSH}.
     \end{subfigure}
     \caption{Average value of the rectangular plaquette on SH lattices as a function of the number of iterations. The different colors represent different values of $\beta$.}
     \label{4F:PlaqIterSH}
-\end{figure}\\
+\end{figure}
+
 Here it can be seen that mean values of the plaquette are more distant from each other than in the BCT case.
 They also have smaller fluctuations, albeit the fact that they get smaller by increasing the number of sites of the lattice is observed in both the SH and BCT cases.
 
@@ -339,8 +353,13 @@ In the computation of the means, only the last $1000$ values have been taken int
     \label{4F:PlaqBetaBCT}
 \end{figure}\\
 As anticipated, statistical fluctuations of the lattice with a larger number of sites are smaller, thus the statistical uncertainties are smaller than error bars of points obtained from datasets of the lattice with fewer points.\\
-\figref{4F:PlaqBetaBCT} reveals that, for these simulations, the plaquette mean values from lattices of different size are not compatible with each other for the same value of $\beta$, and that the dependence on $\beta$ appears not to be compatible with continuum-scaling behavior yet. For this reason, the data cannot be directly compared with \figref{3F:AvgPlaqBCTSH}, which was independently obtained with a different algorithm (and including some different normalizations, too). In fact, it is worth emphasizing that (assuming that there are no bugs in the code) it is only in the continuum limit that the results obtained from different lattice simulations should converge to the same limit.\\
-As a side remark, one should also consider that, while the Monte~Carlo history of the average plaquette does not reveal exceedingly long autocorrelation times, some autocorrelation may still be present in the sample of configurations used for this preliminary analysis; in order to study this possibility in a more systematic way, one should carry out a careful analysis of other observables, too -- including, in particular, those that are of non-local nature, since typically they are most severely affected by autocorrelation problems. A typical example could be the topological charge, which (in simulations on standard hypercubic lattices) is notorious for its dramatically long autocorrelation times on fine lattices~\cite{Schaefer:2010hu}. While a systematic study of this quantity could potentially yield further motivation to carry out simulations on a BCT lattice (where better recovery of rotational symmetry can be achieved at coarser lattice spacings), this is clearly beyond the scope of the present M.Sc. thesis work, and we leave it for a dedicated future project~\cite{Aliberti:2024soa}.
+\figref{4F:PlaqBetaBCT} reveals that, for these simulations, the plaquette mean values from lattices of different size are not compatible with each other for the same value of $\beta$, and that the dependence on $\beta$ appears not to be compatible with continuum-scaling behavior yet.
+For this reason, the data cannot be directly compared with \figref{3F:AvgPlaqBCTSH}, which was independently obtained with a different algorithm (and including some different normalizations, too).
+In fact, it is worth emphasizing that (assuming that there are no bugs in the code) it is only in the continuum limit that the results obtained from different lattice simulations should converge to the same limit.
+
+As a side remark, one should also consider that, while the Monte~Carlo history of the average plaquette does not reveal exceedingly long autocorrelation times, some autocorrelation may still be present in the sample of configurations used for this preliminary analysis; in order to study this possibility in a more systematic way, one should carry out a careful analysis of other observables, too -- including, in particular, those that are of non-local nature, since typically they are most severely affected by autocorrelation problems.
+A typical example could be the topological charge, which (in simulations on standard hypercubic lattices) is notorious for its dramatically long autocorrelation times on fine lattices~\cite{Schaefer:2010hu}.
+While a systematic study of this quantity could potentially yield further motivation to carry out simulations on a BCT lattice (where better recovery of rotational symmetry can be achieved at coarser lattice spacings), this is clearly beyond the scope of the present M.Sc. thesis work, and we leave it for a dedicated future project~\cite{Aliberti:2024soa}.
 %Although the first problem could be ``circumvented'' by considering the autocorrelation of the data, thus increasing the error bars, the second one has not a simple explanation and leads to think that there could be a possible bug in the code.\\
 %Again, in order to make a comparison, the same plot has been reproduced for the SH lattice, using the last $1000$ data from each dataset of \figref{4F:PlaqIterBCT}.\\
 %Results are shown in \figref{4F:PlaqBetaSH}.

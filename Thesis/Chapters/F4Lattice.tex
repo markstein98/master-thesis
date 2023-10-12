@@ -1,11 +1,11 @@
 \pagestyle{myFancy}
 \chapter{Symmetries and Non-Hypercubic Lattices\label{Chap:F4Lattice}}
 
-\section{Spacetime Symmetry Restoration}
-The restoration of spacetime symmetries in the continuum limit is an important aspect of lattice field theory.
-Minkowskian spacetime is invariant under the action of the Poincaré group, that includes translations, rotations in the $3$-dimensional space, and boosts.
+\section{Space-time Symmetry Restoration}
+The restoration of space-time symmetries in the continuum limit is an important aspect of lattice field theory.
+Minkowskian space-time is invariant under the action of the Poincaré group, that includes translations, rotations in the $3$-dimensional space, and boosts.
 When performing the Wick rotation, boosts become rotations in the planes formed by each spatial axis and the Euclidean time.
-The Euclidean spacetime is therefore invariant, in the continuum, under translations:
+The Euclidean space-time is therefore invariant, in the continuum, under translations:
 \begin{equation}
     x^\mu \to x^\mu + \varepsilon^\mu \label{3:TranslCont}
 \end{equation}
@@ -22,11 +22,14 @@ and under certain rotations:
     x \to \Gamma x \qquad\text{with}\qquad x\in\Lambda, \Gamma\in G_\Lambda \label{3:RotDiscr}
 \end{equation}
 where $G_\Lambda\subset\Orot(4)$ is a discrete subset of the full rotational group $\Orot(4)$ that depends on the lattice $\Lambda$.
-For example, $\Lambda=\Lambda_{SH}$ is a SH lattice, then $G_{\Lambda_{SH}}$ is the $384$-elements group with all possible reflections on every coordinate plane and rotations of multiples of $90^\degree$ around each one of the $4$ axis.\\
+For example, $\Lambda=\Lambda_{SH}$ is a SH lattice, then $G_{\Lambda_{SH}}$ is the $384$-elements group with all possible reflections on every coordinate plane and rotations of multiples of $90^\degree$ around each one of the $4$ axis.
+
 The fact that the symmetries in the lattice theory and in the continuum theory are different is not a problem in itself, as long as when approaching the continuum limit the symmetries of the continuum theory are recovered.
 This is the case for the translational symmetry: if $a\to0$, \eqref{3:TraslDiscr} becomes \eqref{3:TranslCont}.
-However, the rotational symmetry is not restored (at least, not naively) when the continuum limit is taken: (\eqref{3:RotDiscr} does not become \eqref{3:RotCont} when $a\to0$), as the Simple Hypercubic lattice is invariant under rotations of multiples of $90^\degree$ independently from the value of the lattice spacing.\\
-However, the restoration of continuum symmetries is more subtle than this intuition: in the lattice theory, it typically happens that the terms breaking the continuum rotational symmetry down to its discrete subgroup that is manifest on the lattice are actually suppressed by powers of the lattice spacing in the $a\to 0$ limit. This suppression, however, may fail, if the coefficients of the terms associated with higher powers of $a$ are, instead, divergent in the continuum limit. For this reason, studies on the restoration of rotational symmetry have been made, through the computation of quantities that are expected to exhibit rotational invariance in the continuum theory.
+However, the rotational symmetry is not restored (at least, not naively) when the continuum limit is taken: (\eqref{3:RotDiscr} does not become \eqref{3:RotCont} when $a\to0$), as the Simple Hypercubic lattice is invariant under rotations of multiples of $90^\degree$ independently from the value of the lattice spacing.
+
+However, the restoration of continuum symmetries is more subtle than this intuition: in the lattice theory, it typically happens that the terms breaking the continuum rotational symmetry down to its discrete subgroup that is manifest on the lattice are actually suppressed by powers of the lattice spacing in the $a\to 0$ limit.
+This suppression, however, may fail, if the coefficients of the terms associated with higher powers of $a$ are, instead, divergent in the continuum limit. For this reason, studies on the restoration of rotational symmetry have been made, through the computation of quantities that are expected to exhibit rotational invariance in the continuum theory.
 
 \subsection{Rotational Invariance of the Static Quark Potential\label{Sec3:RotInv}}
 An example of these studies is provided by a 1982 article by Lang and Rebbi~\cite{Lang:1982tj}, where the static quark potential $V(r)$, obtained from the correlator of two Polyakov loops (see \eqref{1:PolyakovPotential}), was studied at different lattice spacings in the $\SU(2)$ lattice gauge theories. The potential
@@ -39,7 +42,7 @@ The various (about $1000$) potentials obtained for each site $r$ were then fitte
 \begin{equation}
     V(r) = c_0 + c_1/r + c_2r \label{3:LangRebbiPotentialFit}
 \end{equation}
-A representation of the equipotential surfaces of expression \eqref{3:LangRebbiPotentialFit} is reproduced in \figref{3F:LangRebbi}.
+A representation of the equipotential surfaces of \eqref{3:LangRebbiPotentialFit} is reproduced in \figref{3F:LangRebbi}.
 \begin{figure}[!htbp]
     \centering
     \hfill
@@ -59,12 +62,13 @@ A representation of the equipotential surfaces of expression \eqref{3:LangRebbiP
     \caption{Representation of equipotential surfaces for larger (\ref{3F:LangRebbiA}) and smaller (\ref{3F:LangRebbiB}) lattice spacing.}
     \label{3F:LangRebbi}
 \end{figure}\\
-In \figref{3F:LangRebbiA} a lattice with $n_s=8$, $n_t=4$ and $\beta=\frac4{g^2}=2$ was used, while \figref{3F:LangRebbiB} was obtained from data obtained on a lattice with $n_s=16$, $n_t=6$ and $\beta=2.25$.
+In \figref{3F:LangRebbiA}, a lattice with $n_s=8$, $n_t=4$ and $\beta=\frac4{g^2}=2$ was used, while \figref{3F:LangRebbiB} was obtained from data obtained on a lattice with $n_s=16$, $n_t=6$ and $\beta=2.25$.
 Given that, at the leading order in perturbation theory, the lattice spacing depends on $\beta$ in the following way:
 \begin{equation}
     a(\beta) \approx e^{-\frac{12\pi^2}{11N^2}\beta} = e^{-\frac{3\pi^2}{11}\beta} \label{3:BetaLatticeSpacing} 
 \end{equation}
-the first plot corresponds to a higher value of $a$ than the second one\footnote{The rigorous determination of the lattice spacing is a rather compliacted matter that will not be explained further, as it is not the purpose of this project.}.\\
+the first plot corresponds to a higher value of $a$ than the second one\footnote{The rigorous determination of the lattice spacing is a rather complicated matter that will not be explained further, as it is not the purpose of this project.}.
+
 As can be easily seen, by lowering the lattice spacing equipotential surfaces tend to become circles, therefore the rotational invariance, that is broken in the lattice for any value of the lattice spacing, gets restored in the expectation value of the observables, making lattice field theory a \emph{``good''} theory capable of making meaningful predictions.
 
 \section{Other Types of Lattice\label{Sec3:Lattices}}
@@ -74,7 +78,7 @@ In fact, in order to further investigate the restoration of rotational symmetry 
 
 \subsection{Body-Centered Tesseract\label{Sec3:BCT}}
 For example, the Body-Centered Tesseract (BCT) has been used for simulation of Yang-Mills theories.
-It consists of packing the spacetime with tesseracts, as the name suggests, but considering both the corners and the centers of every hypercube as lattice sites (see \figref{3F:ScBccCells} for a tridimensional representation of a cubic cell \eqref{3F:CubicCell} and a body-centered cubic cell \eqref{3F:BCCubicCell}).\\
+It consists of packing the space-time with tesseracts, as the name suggests, but considering both the corners and the centers of every hypercube as lattice sites (see \figref{3F:ScBccCells} for a tridimensional representation of a cubic cell \eqref{3F:CubicCell} and a body-centered cubic cell \eqref{3F:BCCubicCell}).
 \begin{figure}[!htbp]
     \centering
     \hspace{0.1\textwidth}
@@ -145,7 +149,8 @@ and the kinetic energy of \eqref{3:ScalarActionF4} at infinite volume is:
     \text{K.E.} =& \frac1{6(2\pi)^4} \int\dd^4k \abs{\tilde\phi(k)}^2\pr{\sum_\mu\pr{1-\cos(k_\mu)} +\sum_\pm\pr{1-\cos(\frac{k_1\pm k_2\pm k_3\pm k_4}{2})}} =\\
     =& \frac{1}{12(2\pi)^4} \int\dd^4k \abs{\tilde\phi(k)}^2\pr{k^2-\frac{1}{72}k^4+O(k^6)} \numthis\label{3:ScalarKE}
 \end{align*}
-The fact that the fourth-order term is proportional to the square of the second-order one is a signature of the symmetry-preserving nature of this lattice action.\\
+The fact that the fourth-order term is proportional to the square of the second-order one is a signature of the symmetry-preserving nature of this lattice action.
+
 This work lead to some analytical~\cite{Bhanot:1990zd} and numerical~\cite{Bhanot:1990ai} results and to an upper bound prediction on the mass of the Higgs boson~\cite{Heller:1990sg} more than $20$ years before its actual discovery.
 
 \subsection{Gauge Theories on the BCT Lattice\label{Sec3:BCTlatticeGaugeTheories}}
@@ -194,9 +199,11 @@ where $v$ and $w$ are labels indicating the possible nearest-neighbour direction
     \label{3F:PlaqTriang}
 \end{figure}\\
 For example, if $v=(+1,0,0,0)$ and $w=(0,+1,0,0)$, then they add up to $v+w=(+1,+1,0,0)$, that is not one of the nearest-neighbours vectors, whereas $v=(+1,0,0,0)$ and $w=\pr{-\frac12,+\frac12,-\frac12,+\frac12}$ add up to $v+w=\pr{+\frac12,+\frac12,-\frac12,+\frac12}$, that is a valid direction.
-In \figref{3F:PlaqTriang}, an example of an elementary triangular plaquette is shown.\\
+In \figref{3F:PlaqTriang}, an example of an elementary triangular plaquette is shown.
+
 There are $96$ such triangles touching each site, and each edge is shared by $8$ triangles.
-By comparison, on the SH lattice there are $24$ elementary square plaquettes touching each site and each edge is contiguous to $6$ squares.\\
+By comparison, on the SH lattice there are $24$ elementary square plaquettes touching each site and each edge is contiguous to $6$ squares.
+
 In~\cite{Celmaster:1983hs} and~\cite{Celmaster:1983vy} Celmaster presented the first simulation results for the $\SU(2)$ gauge theory on the BCT lattice, explaining the algorithm used for the simulations in \cite{CELMASTER1985415}.
 
 \subsubsection{Average Plaquette Value on BCT}
@@ -219,7 +226,8 @@ As can be seen, the BCT average plaquette better follows the strong and weak cou
 \end{figure}\\
 In the same article the influence of the boundary conditions on the average value of the plaquette was also investigated.
 Three different types of boundary conditions were considered: periodic, that means that lattice has the topology of a $4$-dimensional torus, free, that means that links on the boundary are free to take any $\SU(2)$ value, and fixed, that means that links on the boundary are constrained to take a certain $\SU(2)$ value.
-The results are plotted in \figref{3F:AvgPlaqBoundary}.\\
+The results are plotted in \figref{3F:AvgPlaqBoundary}.
+
 From the plot, it can be seen that $\expval{W_\bigtriangleup}_{free} \leq \expval{W_\bigtriangleup}_{periodic} \leq \expval{W_\bigtriangleup}_{fixed}$, which is an inequality discussed by Mütter and Schilling in~\cite{Konig:1983dg}.\\
 It was also pointed out that the computing time of BCT simulations was larger by a factor of approximately $2.5$ as compared with SH simulations: this is due to having $3$ times as many degrees of freedom, that become $\frac{11}{3}$ as many if a gauge fixing is done, and $\frac{16}{3}$ as many plaquettes for each site.
 However, having $12$ symmetry axes instead of $4$ provides a higher symmetry of the observables allowing for better checks on computations.
@@ -231,7 +239,8 @@ On a BCT lattice, there are two types of Wilson loops:
     \item Rectangular Wilson loops $W_R(n,m)=\frac12\expval{\Tr U_R(n,m)}$\
     \item Triangular Wilson loops $W_T(n)=\frac12\expval{\Tr U_T(n)}$
 \end{itemize}
-where $U_R(n,m)$ is the product of link variables over an $n\times m$ rectangle and $U_T(n)$ is the product of link variables over an equilateral triangle of side $n$.\\
+where $U_R(n,m)$ is the product of link variables over an $n\times m$ rectangle and $U_T(n)$ is the product of link variables over an equilateral triangle of side $n$.
+
 Assuming that Wilson loops are fitted by:
 \begin{equation}
     W = e^{-\sigma A -b(\text{perimeter}) +\text{const.}} \label{3:WilsonFit}
@@ -252,5 +261,6 @@ The logarithmic loop ratio $\chi(2)$ agrees with the asymptotic freedom curve in
 This is a consequence of the fact that the BCT action has smaller $O(a^2)$ corrections than usual at small $\beta$, therefore finite-spacing corrections are smaller for this action than for the action on a SH lattice.
 Therefore, BCT lattices with less sites than SH lattices could be used to obtain data with the same accuracy, at a given physical hypervolume.\\
 %In the article it was pointed out that, if the lattice spacing is sent $a\to a/2$, a SH lattice would require $16$ times as many sites in order to keep the physical size of the Wilson loop constant, while if the same operation is done on a BCT lattice, the increment in the number of sites would be much less, using about $16$ times less CPU time than the Wilson action.\\
-Furthermore, $R_T(3)$ is compatible with $\chi(2)$ within the statistical uncertainties: this is a confirmation of the area-law dependence of equation \eqref{3:WilsonFit}.\\
+Furthermore, $R_T(3)$ is compatible with $\chi(2)$ within the statistical uncertainties: this is a confirmation of the area-law dependence of equation \eqref{3:WilsonFit}.
+
 In conclusion, simulations on BCT lattices provide better results, with more rotational invariance than those on other lattices, at a cost of a (slightly) higher computational time.

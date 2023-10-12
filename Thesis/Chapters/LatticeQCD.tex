@@ -1,7 +1,8 @@
 \pagestyle{myFancy}
 \chapter{Yang-Mills Theories on the Lattice\label{Chap:LatticeQCD}}
 \section{The Yang-Mills Continuum Action}
-The aim of this chapter is to review the discretization of the Yang-Mills action on a hypercubic lattice in $4$ dimensions. In order to do so, the action is obtained firstly in the continuum, beginning from the simplest gauge theory, Quantum Electrodynamics.\\
+The aim of this chapter is to review the discretization of the Yang-Mills action on a hypercubic lattice in $4$ dimensions.
+In order to do so, the action is obtained firstly in the continuum, beginning from the simplest gauge theory, Quantum Electrodynamics.\\
 This first section is based on material that can be found in standard textbooks on quantum field theory \cite{srednicki2007quantum, peskin1995introduction, weinberg1995quantum, kaku1993quantum, ramond1997field}.
 
 \subsection{Scalar Fields}
@@ -28,7 +29,7 @@ It can now be easily checked by direct computation that this action is invariant
     \psi(x) &\rightarrow \psi'(x) = e^{-\i\alpha}\psi(x) \numthis\label{1:PhaseTransform} \\
     \psibar(x) &\rightarrow \psibar'(x) = \psibar(x) e^{\i\alpha}
 \end{align*}
-where $\alpha$ is a real number that does not depend on the spacetime coordinate $x$; note that, if $\alpha$ were a function of $x$, then the kinetic term of the action \eqref{1:FreeQEDFermionAction} would not be invariant under such transformation.
+where $\alpha$ is a real number that does not depend on the space-time coordinate $x$; note that, if $\alpha$ were a function of $x$, then the kinetic term of the action \eqref{1:FreeQEDFermionAction} would not be invariant under such transformation.
 
 \subsection{Quantum Electrodynamics\label{Sec1:QED}}
 As the free field theory itself is non-interacting, it does not provide any real-world prediction, so it is useful to write an interacting action where the spinor field is coupled, to the vector field $A_\mu$, \ie the photon.
@@ -80,16 +81,18 @@ This action is invariant under the global transformation:
 \end{align*}
 if $U$ is any (constant) $N\times N$ matrix such that $UU^\dagger = U^\dagger U = \id \Leftrightarrow U^\dagger=U^{-1}$, or in other words, if $U\in\UN$.
 For this reason, this transformation is also called a global $\UN$ transformation.
-The phase transformation \eqref{1:PhaseTransform} is the particular case where $U=e^{-\i\alpha}\in\Uem$, which is the only Abelian (commutative) unitary group.\\
+The phase transformation \eqref{1:PhaseTransform} is the particular case where $U=e^{-\i\alpha}\in\Uem$, which is the only Abelian (commutative) unitary group.
 %As $\UN = \SUN\otimes\Uem$ $\forall N>1$, $U\in\SUN$ instead of $U\in\UN$ can be imposed, and will be from now on, without loss of generality.\\
-In fact, the internal symmetry relevant for the strong nuclear interaction (in which the spinor fields describe quarks, with $N=3$ color charges) is not based on the $\UN$, but rather on the $\SUN$ group: the reason is that, by imposing the constraint of the determinant being equal to one, one can construct invariant states by the totally antisymmetric combination of three quarks, which corresponds to a baryon.\\
-In an analogous way to what has been done in \secref{Sec1:QED}, the $\SUN$ invariance can be made local by implementing a proper covariant derivative, similar to \eqref{1:QEDCovDeriv}.
+
+In fact, the internal symmetry relevant for the strong nuclear interaction (in which the spinor fields describe quarks, with $N=3$ color charges) is not based on the $\UN$, but rather on the $\SUN$ group: the reason is that, by imposing the constraint of the determinant being equal to one, one can construct invariant states by the totally antisymmetric combination of three quarks, which corresponds to a baryon.
+
+In an analogous way to what has been done in \secref{Sec1:QED}, the $\SUN$ invariance can be made local by implementing a proper covariant derivative, similar to \eqref{1:QEDCovDeriv}.\\
 In order to do so, the infinitesimal $\SUN$ transformation has to be considered:
 \begin{equation}
     U_{ij}(x) = \delta_{ij} + \i\theta^a(x)\pr{T^a}_{ij} + O(\theta^2) \label{1:InfinitesimalSUN}
 \end{equation}
 where the indices $i$ and $j$ run from $1$ to $N$ (as before) and the index $a$ runs from $1$ to $N^2-1$ (the dimension of the group $\SUN$).
-The matrices $T^a$ are the $N^2-1$ generators of $\sun$ (the Lie algebra of $\SUN$), thus they are $\NxN$ hermitean and traceless, which obey the commutation relations:
+The matrices $T^a$ are the $N^2-1$ generators of $\sun$ (the Lie algebra of $\SUN$), thus they are $\NxN$ hermitian and traceless, which obey the commutation relations:
 \begin{equation}
     \comm{T^a}{T^b} = \i f^{abc}T^c \label{1:StrConstSUN}
 \end{equation}
@@ -107,7 +110,7 @@ The covariant derivative, therefore, is written as:
 \begin{equation}
     D_\mu \equiv \partial_\mu + \i g \A_\mu(x) \label{1:CovDeriv}
 \end{equation}
-where an $N\times N$ identity matrix $\id$ multiplying $\partial_\mu$ has to be understood, and $\A_\mu(x)$ is a gauge field of $\SUN$, \ie a traceless, hermitean $N\times N$ matrix, or, in other words, $\A_\mu(x)\in\sun$.\\
+where an $N\times N$ identity matrix $\id$ multiplying $\partial_\mu$ has to be understood, and $\A_\mu(x)$ is a gauge field of $\SUN$, \ie a traceless, hermitian $N\times N$ matrix, or, in other words, $\A_\mu(x)\in\sun$.\\
 The covariant derivative can be written more explicitly acting on the set of spinors $\psi_i$:
 \begin{equation*}
     \pr{D_\mu}_{ij}\psi_j = \partial_\mu \id_{ij}\psi_j + \i g \pr{\A_\mu(x)}_{ij}\psi_j
@@ -155,24 +158,27 @@ In fact a gauge invariant action, called Yang-Mills action, is:
 \begin{equation}
     S_{YM} = -\frac12\dV\Tr\pr{\Fmunu F^{\mu\nu}} \label{1:YMAction}
 \end{equation}
-because of the ciclic property of the trace.\footnote{Actually, a term proportional to $\det\pr{\Fmunu^a F^{a\mu\nu}}$ would be gauge invariant as well, but it would not be a suitable kinetic term as it would involve terms of higher order than $2$ in the components $\Fmunu^a$}
+because of the cyclic property of the trace.\footnote{Actually, a term proportional to $\det\pr{\Fmunu^a F^{a\mu\nu}}$ would be gauge invariant as well, but it would not be a suitable kinetic term as it would involve terms of higher order than $2$ in the components $\Fmunu^a$}
 This action can be written in components, using \eqref{1:FmunuComp} and the trace property \eqref{1:NormCondSUN}:
 \begin{equation}
     S_{YM} = -\frac12\dV\Tr\pr{\Fmunu^a F^{b\mu\nu}T^aT^b} = -\frac14\dV\Fmunu^a F^{a\mu\nu} \label{1:YMActionComp}
 \end{equation}
 Here, there are two remarks that need to be done.
-The first one is that, if the gauge group is taken to be $\Uem$, the action \eqref{1:YMActionComp} reduces to \eqref{1:FreeMaxwellAction}, as $a=1$ because the group $\Uem$ has only $1$ generator.
-The second one is that, if non-Abelian gauge groups are taken into consideration, this action naturally introduces self-interacting cubic and quartic terms, because the structure constants $f^{abc}$ are non-vanishing. This is, for example, the case for the group $\SU(3)$, that is used to describe gluon interaction, \ie Quantum Chromodynamics (QCD).
+The first one is that, if the gauge group is taken to be $\Uem$, the action \eqref{1:YMActionComp} reduces to \eqref{1:FreeMaxwellAction}, as $a=1$ because the group $\Uem$ has only $1$ generator.\\
+The second one is that, if non-Abelian gauge groups are taken into consideration, this action naturally introduces self-interacting cubic and quartic terms, because the structure constants $f^{abc}$ are non-vanishing. This is, for example, the case for the group $\SU(3)$, that is used to describe gluon interaction, \ie Quantum Chromodynamics (QCD).\\
 These self-interactions make the the Yang-Mills action interesting to be studied even alone, without any other fermionic or bosonic interacting field, as it will be shown later.
 \begin{comment}
 \\Everything that has been said for $\SUN$ can be also extended to $\mathit{SO}(N)$ by replacing \emph{unitary} with \emph{orthogonal} and \emph{traceless} with \emph{antisymmetric}. In fact, this discussion can be made for every compact\footnote{Compactness, \ie $\Tr{T^aT^b}$ positive defined, is required in order to have a bounded from below Hamiltonian.} group, such as the symplectic group $\mathit{Sp}(2N)$ and the five exceptional Lie groups $\mathit{G}(2)$, $\spF$, $\mathit{E}(6)$, $\mathit{E}(7)$ and $\mathit{E}(8)$.
 \end{comment}
 
 \subsection{Wick Rotation}
-Up to now, actions were written in Minkowskian spacetime, where $\eta_{\mu\nu} = \diag(-1,1,1,1)$. In order to have a positive-defined metric $\eta_{\mu\nu} = \delta_{\mu\nu}$ a Wick rotation can be performed by re-defining the time coordinate to be $\tau = \i t = \i x^0$, as is rigorously proven in \cite{SCHLINGEMANN_1999}.
+Up to now, actions were written in Minkowskian space-time, where $\eta_{\mu\nu} = \diag(-1,1,1,1)$.
+In order to have a positive-defined metric $\eta_{\mu\nu} = \delta_{\mu\nu}$ a Wick rotation can be performed by re-defining the time coordinate to be $\tau = \i t = \i x^0$, as is rigorously proven in \cite{SCHLINGEMANN_1999}.
+
 The principle behind Wick rotation is that the time coordinate is promoted to be a complex number and the integration (in the action) from $-\infty$ to $\infty$ is made to be from $-\i\infty$ to $+\i\infty$ through a rotation of $\frac\pi2$ in the complex plane, assuming that correlators and other physical quantities do not present singularities in the first and third quadrant of the complex plane of $t$.
-This rotation is not only a matter of convenience, in fact it is needed in perturbative QFT for the computation of (otherwise oscillating) functional integrals and in lattice field theory because a Minkowskian lattice cannot be rigorously defined.\\
-The relation between the Minkowski actions written before and the Euclidean actions is $S^M = \i S^E$, because $\dd^4x^E = \i \dd^4x^M$.\\
+This rotation is not only a matter of convenience, in fact it is needed in perturbative QFT for the computation of (otherwise oscillating) functional integrals and in lattice field theory because a Minkowskian lattice cannot be rigorously defined.
+
+The relation between the Minkowski actions written before and the Euclidean actions is $S^M = \i S^E$, because $\dd^4x^E = \i \dd^4x^M$.
 Thus, the Euclidean actions are\footnote{Note that they are not the same as their Minkowskian counterpart, as some redefinitions of the fields and the $\gamma$ matrices have been implicitly made, in order to make the respective theories well-defined.}:
 \begin{align}
     S^E[\phi] =& \dV \pr{\frac12\partial^\mu\phi\partial_\mu\phi-\frac12m^2\phi^2+V(\phi)} \label{1:ScalarActionEuclidean}\\
@@ -188,13 +194,17 @@ After the Wick rotation, quantum field theory can be studied perturbatively thro
     Z = \int\DD\varphi e^{\i S^M[\varphi]} = \int\DD\varphi e^{-S^E[\varphi]}
 \end{equation*}
 has become non-oscillating.
-This approach, however, works well only if the coupling constants are \emph{small enough} and does not allow to obtain non-perturbative results, \ie physical quantities that depend on essential singularities in the coupling constant.\\
+This approach, however, works well only if the coupling constants are \emph{small enough} and does not allow to obtain non-perturbative results, \ie physical quantities that depend on essential singularities in the coupling constant.
 %, like glueballs for Yang-Mills theories.\\
-For this reason, a non-perturbative approach has to be taken into consideration and one possibility is Lattice Field Theory: the spacetime is discretized to a lattice, with lattice spacing $a$, and the fields can assume different values only on particular parts of the lattice.
-More in detail, a scalar field is defined on lattice sites, a vector field is defined on links between sites and objects with $k$ indices are defined on $k$-simplexes.\\
-If the limit $a\to0$ is taken, the theory must reproduce results obtained in the continuum, like the ones obtained in perturbation theory in the regime where it can be applied; note that the presence of a discrete spacetime provides a natural cutoff for the momenta, allowing one to take ultraviolet divergences under control, although they need to be taken into consideration when approaching the continuum limit.\\
+
+For this reason, a non-perturbative approach has to be taken into consideration and one possibility is Lattice Field Theory: the space-time is discretized to a lattice, with lattice spacing $a$, and the fields can assume different values only on particular parts of the lattice.
+More in detail, a scalar field is defined on lattice sites, a vector field is defined on links between sites and objects with $k$ indices are defined on $k$-simplexes.
+
+If the limit $a\to0$ is taken, the theory must reproduce results obtained in the continuum, like the ones obtained in perturbation theory in the regime where it can be applied; note that the presence of a discrete spacetime provides a natural cutoff for the momenta, allowing one to take ultraviolet divergences under control, although they need to be taken into consideration when approaching the continuum limit.
+
 In this section, based on standard quantum field theory textbooks cited before and lattice field theory textbooks \cite{Montvay:1994cy, Gattringer:2010zz, DeGrand:2006zz}, the regularization of the previous quantum field theories on a Simple Hypercubic (SH) lattice is presented.
 A more detailed description of the geometric properties of the figures mentioned below can be found in \cite{coxeter2012regular}.
+
 \subsection{Lattice}
 A lattice $\Lambda$ in $\R^D$ is defined as the set of all possible linear combinations with integer coefficients of the vectors $\prc{v_i}$, which form a basis of $\R^D$.
 Formally:
@@ -220,6 +230,7 @@ This will be important when implementing gauge theories on the lattice.
 \subsection{Scalar Fields on the Simple Hypercubic Lattice}
 Let us consider a simple hypercubic lattice $\Lambda_{SH}$ extending over $L=L_1=L_2=L_3$ lattice spacings in the spatial directions and over $T=L_0$ lattice spacings in the temporal direction.
 Let us also consider a scalar field $\phi(x)$, in order to introduce some useful tools that will be needed later.
+
 As anticipated in the beginning of this section, a scalar field is defined on the sites of the lattice, therefore $x\in\Lambda_{SH}$, and let us assume, for simplicity, that the field satisfies periodic boundary conditions in all the four directions, therefore $\phi(x+a\hat\mu L_\mu)=\phi(x)$.
 The Fourier transform of the field can be written as
 \begin{equation}
@@ -242,9 +253,11 @@ A similar approach will be used in the following section to obtain the action fo
 
 \subsection{Gauge Fields on the Simple Hypercubic Lattice}
 Let us now take into consideration a Yang-Mills theory, as in \secref{Sec1:NonAbelianGaugeTheories}, with gauge group $\SUN$.
-As anticipated before, gauge fields, being vector fields, are defined on the links between sites of the lattice.\\
+As anticipated before, gauge fields, being vector fields, are defined on the links between sites of the lattice.
+
 One could naively think that putting gauge vectors $A_\mu(x)$ on the links is enough, but this would explicitly break gauge invariance.
-For this reason, Wilson's idea was to put the gauge group (and not algebra) elements, namely $U_\mu(x) = e^{\i a g A_\mu(x)}$, on the links.\\
+For this reason, Wilson's idea was to put the gauge group (and not algebra) elements, namely $U_\mu(x) = e^{\i a g A_\mu(x)}$, on the links.
+
 The field $U_\mu(x)$ lives on the link connecting the site $x$ with the site $x+a\hat\mu$, therefore the link is oriented and link variables in negative directions can also be defined:\\
 $U_{-\mu}(x) \equiv U^\dagger_\mu(x-a\hat\mu)$.
 \begin{figure}[!htbp]
@@ -257,8 +270,9 @@ Under a gauge transformation, the fields $U_\mu$ transform according to the foll
     U_\mu(x)\rightarrow \Omega(x) U_\mu(x) \Omega^\dagger(x+a\hat\mu) \label{1:GaugeTransformLinkVariable}
 \end{equation}
 where $\Omega(x)$ is any $\SUN$ matrix at the point $x$ on the lattice.
-As a consequence of this relation, the trace of any product of links forming a closed path is a gauge-invariant quantity, thanks to the cyclic property of the trace.\\
-With this in mind, Wilson's idea was to choose the simplest closed path possible: the plaquette, that in the simple hypercubic lattice is a square.
+As a consequence of this relation, the trace of any product of links forming a closed path is a gauge-invariant quantity, thanks to the cyclic property of the trace.
+
+With this in mind, Wilson's idea was to choose the simplest closed path possible: the plaquette, that in the simple hypercubic lattice is a square.\\
 The product of link variables along a square plaquette is defined in the following way (the lattice spacing $a$ is set $=1$ for brevity of notation):
 \begin{align*}
     U_{\mu\nu}(x) \equiv& U_\mu(x)U_\nu(x+\hat\mu)U_{-\mu}(x+\hat\mu+\hat\nu)U_{-\nu}(x+\hat\nu) =\\
@@ -268,7 +282,7 @@ Thus a gauge-invariant action, called Wilson action, can be written as follows:
 \begin{equation}
     S_W[U]=\frac\beta{2N}\sum_{x\in\Lambda}\sum_{\mu<\nu}\Re\Tr[\id-U_{\mu\nu}(x)] \label{1:WilsonAction}
 \end{equation}
-where $\beta$ is a parameter that is going to be set in the following passages, $N$ the number of color charges (the same $N$ in $\SUN$), the real part is needed to enforce invariance under charge conjugation, and $U_{\mu\nu}$ is the plaquette of \eqref{1:Plaquette}.\\
+where $\beta$ is a parameter that is going to be set in the following passages, $N$ the number of color charges (the same $N$ in $\SUN$), the real part is needed to enforce invariance under charge conjugation, and $U_{\mu\nu}$ is the plaquette of \eqref{1:Plaquette}.
 \begin{figure}[!htbp]
     \centering
     \begin{tikzpicture}
@@ -295,8 +309,9 @@ where $\beta$ is a parameter that is going to be set in the following passages, 
     \end{tikzpicture}
     \caption{Link variables building a plaquette $U_{\mu\nu}(x)$.}
     \label{1F:Plaquette}
-\end{figure}\\
-In the following part, the naive continuum limit is taken, showing that the Wilson action reduces to the Yang-Mills action of \eqref{1:YMActionEuclidean} when $a\to0$.
+\end{figure}
+
+In the following part, the naive continuum limit is taken, showing that the Wilson action reduces to the Yang-Mills action of \eqref{1:YMActionEuclidean} when $a\to0$.\\
 Let us start by defining an auxiliary field $B_\mu(x)$:
 \begin{equation}
     B_\mu(x) = a g A^a_\mu(x)T^a \label{1:BField}
@@ -352,11 +367,13 @@ A Polyakov loop is thus defined as a line at a fixed spatial position $\vec{x}=(
     P(\vec{x}) \equiv \Tr\prs{\prod_{t=0}^{T-1} U_0(t,\vec{x})} \label{1:PolyakovLoop}
 \end{equation}
 The Polyakov loop has a lot of interesting properties: its physical interpretation is the world-line of a single static quark, therefore its expectation value is an order parameter of the deconfinement transition, as well as of a new global symmetry, called \emph{center symmetry}, arising from the periodicity of the time direction.\\
-This means that, if the system is confined (namely, isolated quarks and gluons do not exist as asymptotic states of the theory), its expectation value is $0$, while if the system is deconfined, $\expval{P(\vec{x})}\neq0$.\\
+This means that, if the system is confined (namely, isolated quarks and gluons do not exist as asymptotic states of the theory), its expectation value is $0$, while if the system is deconfined, $\expval{P(\vec{x})}\neq0$.
+
 Another property, that will be used in the simulations, is that the expectation value of the product of two Polyakov loops at distance $r=a\abs{\vec{x}-\vec{y}}$ is a function of the static quark-antiquark potential $V(r)$, as indicated below:
 \begin{equation}
     \expval{P(\vec{x})P^\dagger(\vec{y})} \varpropto e^{-TaV(r)}\pr{1+O(e^{-Ta\Delta E})} \label{1:PolyakovPotential}
 \end{equation}
 where $\Delta E$ is the difference between $V(r)$ and the first excited energy level of the quark-antiquark pair.\\
-The value of the potential $V(r)$ will be used, in this project, to study the recovery of rotational invariance when approaching the continuum limit.\\
+The value of the potential $V(r)$ will be used, in this project, to study the recovery of rotational invariance when approaching the continuum limit.
+
 In the following chapter we will discuss various methods to perform computer simulations of lattice field theory and to obtain numerical estimates for the expectation values of quantities such as the plaquette, Wilson and Polyakov loops.
