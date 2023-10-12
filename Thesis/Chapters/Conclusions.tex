@@ -1,23 +1,37 @@
 \pagestyle{myFancy}
 \chapter{Conclusions}
 
-The restoration of space-time symmetries in the continuum limit is a very important aspect of lattice quantum chromodynamics.
-Unlike translational invariance, that in the continuum limit is restored in a naive way, rotational invariance is broken down to a discrete subgroup.
-The symmetry breaking terms of rotational invariance are suppressed by some powers of the lattice spacing $a$ in the $a\to0$ limit, that depend on the lattice chosen for the discretization of the space-time.
-Its restoration can be observed in the expectation value of some quantities that are rotational invariant, like the static quark potential, as shown in \secref{Sec4:RotInv} where a study on the symmetry restoration of the potential of an $\SU(2)$ Yang-Mills theory has been made.
+In this M.Sc. thesis work, we addressed the problem of the restoration of the correct space-time symmetries in the continuum limit of lattice field theory.
+Given the paramount relevance of space-time symmetries in quantum field theory, the correct restoration of such symmetries when the lattice spacing $a$ is sent to zero is a very important requirement, in order to obtain the correct physics from lattice calculations.
 
-For this reason, discretizing the space-time on a lattice with higher symmetry than the usual hypercubic one could allow the restoration of the rotational symmetry of these quantities at higher values of the lattice spacing.
+Unlike translational invariance, that on a regular lattice is broken down to translations by integer multiples of the lattice spacing $a$ (so that continuous translations are naively recovered in the $a \to 0$ limit), rotational invariance is broken down to a discrete subgroup that \emph{does not} depend on $a$, but only on the geometry of the lattice, making the effective restoration of rotational invariance in the continuum limit non-trivial.
 
-The code presented in \secref{Sec4:Code} is the result of a preliminary study on the simulations of $\SUN$ Yang-Mills theories on a Body Centered Tesseract (BCT) lattice, that has three times the number of symmetries than the hypercubic lattice, and that could easily be extended to the \spFtext coroots lattice, which has six times the number of symmetries than the hypercubic lattice.
-This study included the definition of an action, different from the Wilson action used in hypercubic lattice simulations, in terms of the smallest triangular plaquettes that can be defined on the BCT.
+Indeed, the symmetry-breaking terms of rotational invariance are expected to be suppressed by some positive powers of the lattice spacing in the $a\to 0$ limit, but the nature of these symmetry-breaking terms, as well as the form and magnitude of their coefficients, depend on the lattice chosen for the discretization of the space-time.
 
-Simulations of $\SU(2)$ Yang-Mills theory on a BCT lattice have shown a quick thermalization of the mean value of the plaquette and the reduction of the entity of statistical fluctuations.
+For this reason, in the present M.Sc. thesis we compared the lattice discretization of four-dimensional Euclidean space based on a hypercubic lattice, with one based on the lattice of roots of the Lie algebra of the generators of the exceptional simple Lie group $\spF$, which features more vectors and is the most symmetric regular lattice existing in four dimensions.
+This type of lattice is also known as Body-Centered Tesseract (BCT).
+
+To monitor the restoration of rotational symmetry at the non-perturbative level, which is particularly important for quantum chromodynamics and for other strongly coupled non-Abelian gauge theories, we studied the expectation value of some quantities that are expected to be rotationally invariant in the continuum theory, like the static quark potential.
+In particular, as we discussed in \secref{Sec4:RotInv}, we focused on the rotational symmetry restoration for the potential associated to a pair of static color sources in (purely gluonic) $\SU(2)$ Yang-Mills theory.
+
+Regularizing QCD on a lattice with higher symmetry than the usual hypercubic one could allow the restoration of the rotational symmetry of the various physical quantities on lattices with a coarser spacing.
+This would potentially have obvious advantages in terms of computational costs (for a fixed physical hypervolume, the number of degrees of freedom of the lattice theory scales like the fourth power of the inverse lattice spacing), in particular in view of the severe autocorrelation times that affect topological quantities in lattice QCD simulations carried out on fine hypercubic lattices.
+
+After creating the original code presented in \secref{Sec4:Code} we carried out a preliminary study of the simulation of $\SUN$ Yang-Mills theories on the BCT lattice.
+In principle, our code could be easily extended to simulate the theory also on the \spFtext coroots lattice, which would correspond to include additional ``improvement terms'' in the lattice action, and could lead to an even more rapid restoration of the continuum symmetries.
+This gain may offset and possibly overcompensate for the increased computational costs due to the extra terms required in the update of lattice field configurations on a Euclidean grid with this type of geometry.
+
+Our numerical study, however, was limited to the BCT lattice; it included the definition of an action, different from the Wilson action used in hypercubic lattice simulations, in terms of the smallest triangular plaquettes that can be defined on the BCT.
+
+The simulations of $\SU(2)$ Yang-Mills theory on a BCT lattice that we carried out showed a quick thermalization of the mean value of the plaquette and the reduction of the magnitude of statistical fluctuations as the hypervolume is increased.
 Both these effects were expected, the first one because of the locality of the observable, the second one because of the volume averaging effect.
 This is a sign that the algorithm is well-behaving, at least under these aspects.
 
-Plots of the plaquette mean values as functions of $\beta$ (that is inverse proportional to the square of the coupling constant $g$), on the other hand, showed that mean values obtained from simulations on different size lattices are not compatible with each other, for the same value of the interaction strength.
-This could mean that, with the action used, these values of beta are far from the continuum limit, assuming there are no bugs in the code.
-In fact observables from different simulations should converge to the same limit only while approaching the continuum.
+Plots of the plaquette mean values as functions of the parameter $\beta$ (which is inversely proportional to the square of the bare coupling of the lattice theory $g$), on the other hand, showed that mean values obtained from simulations on lattices of different size were not fully compatible with each other: assuming that these results were not due to some subtle bug in the code (our code successfully passed all the main tests, including those related to gauge invariance of the results, etc., but this would not rule out the existence of some non-trivial undesired artifact in our numerical implementation of the lattice theory) this could mean that, with the action used, these values of $\beta$ are not yet close to the continuum limit.
+Alternatively, these effects may be indeed due to some actual ``physical'' property of this lattice theory: examples include the possible existence of so far unknown transition lines or crossover lines in the phase diagram having as axes the bare coupling of the lattice theory and the system sizes. As a matter of fact, a precise exploration of the phase diagram of this lattice theory and the location of points where continuous transitions exist remains an important task for future studies; indeed, observables from different simulations should converge to the same limit only while approaching the continuum, which means approaching a point in the phase diagram of the theory where the correlation length in units of the lattice spacing is divergent.
 
-This work sets the basis for future studies on the subject, in particular the systematic study of quantities with longer autocorrelation times than the plaquette, like the topological charge, could yield better results than the hypercubic lattice ones.
-Another interesting study could be the evaluation of the static quark potential, like has already been done for the hypercubic lattice, in order to check if the recovery of rotational invariance occurs at larger lattice spacings.
+To conclude, we remark that the work carried out in this M.Sc. thesis also sets the basis for future studies on this subject, in particular the systematic study of quantities with longer autocorrelation times than the plaquette, like the topological charge, could yield better results than those that at present can be obtained from simulations on the hypercubic lattice. A complete study of this problem will be presented elsewhere~\cite{Aliberti:2024soa}.
+
+Another interesting study could be a dedicated and detailed evaluation of the static quark potential, that has already been studied extensively on the hypercubic lattice, in order to check if the recovery of rotational invariance occurs at larger lattice spacings, and to quantify the gain in terms of computing time.
+
+Finally, given that QCD also includes quarks, beside gluons, in the future it would also be interesting to study the discretization of fermions on this highly symmetric lattice.
