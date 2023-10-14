@@ -21,3 +21,7 @@
 \newcommand{\dV}{\int\dd^4x}
 \newcommand{\id}{\mathds{1}}
 \newcommand{\degree}{^\circ}
+
+\let\oldCite\cite
+\renewcommand{\cite}[1]{\textsuperscript{[\oldCite{#1}]}}
+\renewcommand*{\nameyeardelim}{\addcomma\space}
