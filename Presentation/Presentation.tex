@@ -10,6 +10,94 @@
 \end{frame}
 
 \begin{frame}
+  \frametitle{The Strong Interaction}
+  \tikzstyle{this picture}+=[remember picture]
+  \centering
+\onslide<1->
+  Matter is made of 
+  \tikz[baseline]{
+    \node[fill=green!20, ellipse, anchor=base] (atoms)
+    {Atoms};
+  }\\
+\onslide<2->
+  \vspace{0.5\baselineskip}
+  \tikz[baseline]{
+    \node[fill=green!20, ellipse, anchor=base]
+    {Atoms};
+  }
+  are made of
+  \tikz[baseline]{
+    \node[fill=red!20, ellipse, anchor=base] (nuclei)
+    {Nuclei};
+  }
+  and
+  \tikz[baseline]{
+    \node[fill=yellow!20, ellipse, anchor=base] (electrons)
+    {Electrons};
+  }\\
+\onslide<3->
+  \vspace{0.5\baselineskip}
+  \tikz[baseline]{
+    \node[fill=red!20, ellipse, anchor=base]
+    {Nuclei};
+  }
+  are made of Protons and Neutrons,\\
+  composed of
+  \tikz[baseline]{
+    \node[fill=blue!20, ellipse, anchor=base] (quarks)
+    {Quarks};
+  }
+  and
+  \tikz[baseline]{
+    \node[fill=magenta!20, ellipse, anchor=base] (gluons)
+    {Gluons};
+  }
+  \vspace{\baselineskip}
+  
+  \begin{columns}[b]
+    \column{0.5\textwidth}
+\onslide<1->
+      \centering
+      \includegraphics[width=0.9\textwidth]{Strong_Force.png}
+    \column{0.5\textwidth}
+\onslide<4->
+      \centering
+      \tikz[baseline]{
+        \node[fill=blue!20, ellipse, anchor=base] (quarks)
+        {Quarks};
+      }
+      and
+      \tikz[baseline]{
+        \node[fill=magenta!20, ellipse, anchor=base] (gluons)
+        {Gluons};
+      }
+      Described by Quantum Chromodynamics (QCD)\\
+      \vspace{3.5\baselineskip}
+      {
+\onslide<1->
+      \raggedright
+      Image credits: NASA\cite{StrongForceImg}
+      }
+  \end{columns}
+\end{frame}
+
+\begin{frame}
+  \frametitle{The Strong Interaction}
+  \centering
+  \begin{columns}[c]
+    \column{0.5\textwidth}
+      \centering
+    \column{0.5\textwidth}
+      \centering
+      \begin{figure}[t]
+        \includegraphics[width=\textwidth]{CERN_Proton.jpg}
+        \caption{An artist's representation of a proton\cite{protonImg}.}
+      \end{figure}
+  \end{columns}
+\end{frame}
+
+\begin{comment}
+\begin{frame}
   \frametitle{Why Lattice Quantum Chromodynamics?}
   \centering
   In quantum field theory scattering amplitudes in the form
@@ -70,6 +158,7 @@
     \end{itemize}
   \end{columns}
 \end{frame}
+\end{comment}
 
 \begin{frame}
   \frametitle{What is a Lattice?}
