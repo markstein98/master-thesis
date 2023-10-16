@@ -1,13 +1,16 @@
 \hypersetup{
 	colorlinks=true,
-	linkcolor=teal,
-	filecolor=teal,      
-	urlcolor=teal,
+%	linkcolor=teal,
+%	filecolor=teal,      
+%	urlcolor=teal,
+	linkcolor=black,
+	filecolor=black,      
+	urlcolor=black,
 	citecolor=black,
 }
 
 \renewcommand\thefootnote{\textcolor{black}{\arabic{footnote}}}
-\colorlet{eqlink}{teal}
+\colorlet{eqlink}{black}
 \newcommand*{\SavedEqref}{}
 \let\SavedEqref\eqref
 \renewcommand*{\eqref}[1]{%
@@ -140,11 +143,16 @@
 
 \lstdefinestyle{CppStyle}{
     language=C++,
-    backgroundcolor=\color{background},
-    commentstyle=\color{Green},
-    keywordstyle=\color{Blue},
-    numberstyle=\tiny\color{Gray},
-    stringstyle=\color{Purple},
+%    backgroundcolor=\color{background},
+    backgroundcolor=\color{white},
+%    commentstyle=\color{Green},
+    commentstyle=\color{Gray},
+%    keywordstyle=\color{Blue},
+    keywordstyle=\bfseries\color{black},
+%    numberstyle=\tiny\color{Gray},
+    numberstyle=\tiny\color{black},
+%    stringstyle=\color{Purple},
+    stringstyle=\itshape\color{Gray},
     basicstyle=\ttfamily\footnotesize,
     breakatwhitespace=false,
     breaklines=true,
