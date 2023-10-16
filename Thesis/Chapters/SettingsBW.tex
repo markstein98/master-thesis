@@ -1,0 +1,172 @@
+\hypersetup{
+	colorlinks=true,
+%	linkcolor=teal,
+%	filecolor=teal,      
+%	urlcolor=teal,
+	linkcolor=black,
+	filecolor=black,      
+	urlcolor=black,
+	citecolor=black,
+}
+
+\renewcommand\thefootnote{\textcolor{black}{\arabic{footnote}}}
+\colorlet{eqlink}{black}
+\newcommand*{\SavedEqref}{}
+\let\SavedEqref\eqref
+\renewcommand*{\eqref}[1]{%
+	\begingroup
+	\hypersetup{
+		linkcolor=eqlink,
+		linkbordercolor=eqlink,
+	}%
+	\SavedEqref{#1}%
+	\endgroup
+} 
+
+\newcommand{\appref}[1]{%
+    \begingroup%
+    \hypersetup{linkcolor=black}%
+    {\hyperref[#1]{Appendix A}}%
+    \endgroup%
+}
+
+\newcommand{\chapref}[1]{%
+    \begingroup%
+    \hypersetup{linkcolor=black}%
+    {\hyperref[#1]{Chapter \ref*{#1}}}%
+    \endgroup%
+}
+
+\newcommand{\secref}[1]{%
+    \begingroup%
+    \hypersetup{linkcolor=black}%
+    {\hyperref[#1]{Section \ref*{#1}}}%
+    \endgroup%
+}
+
+\newcommand{\figref}[1]{%
+    \begingroup%
+    \hypersetup{linkcolor=black}%
+    {\hyperref[#1]{Figure \ref*{#1}}}%
+    \endgroup%
+}
+
+\newcommand{\tabref}[1]{%
+    \begingroup%
+    \hypersetup{linkcolor=black}%
+    {\hyperref[#1]{Table \ref*{#1}}}%
+    \endgroup%
+}
+
+\newcommand{\coderef}[2]{%
+    \begingroup%
+    \hypersetup{linkcolor=black}%
+    {\hyperref[#1]{\texttt{#2}}}%
+    \endgroup%
+}
+
+\newcommand*{\justifyheading}{\raggedleft}
+
+\newcommand*{\blankpage}{%
+    \newpage
+    \thispagestyle{empty}
+    \hbox{}
+    \newpage
+}
+
+\makeatletter
+\def\emptypage@emptypage{%
+    \hbox{}%
+    \blankpage%
+    \newpage%    
+}%
+\def\cleardoublepage{%
+        \clearpage%
+        \if@twoside%
+            \ifodd\c@page%
+                % do nothing
+            \else%
+%                \emptypage@emptypage%
+                \blankpage
+            \fi%
+        \fi%
+    }%
+\makeatother
+
+\DeclareFontShape{T1}{lmr}{bx}{sc} { <-> ssub * cmr/bx/sc }{}
+
+\titleformat{\chapter}[display]
+    {\bfseries\filleft}
+    {\fontsize{3\baselineskip}{3\baselineskip}\selectfont}{1ex}
+    {\fontsize{3\baselineskip}{4\baselineskip}\selectfont\thispagestyle{empty}}[\vspace*{\baselineskip}\titlerule\vspace*{\baselineskip}]
+
+\setcounter{tocdepth}{3}
+\setcounter{secnumdepth}{3}
+
+\renewcommand{\thefigure}{\thesection.\arabic{figure}}
+\renewcommand{\thetable}{\thesection.\arabic{table}}
+\renewcommand{\theequation}{\thesection.\arabic{equation}}
+
+\let\Chaptermark\chaptermark
+\def\chaptermark#1{\def\Chaptername{#1}\Chaptermark{#1}}
+\let\Sectionmark\sectionmark
+\def\sectionmark#1{\def\Sectionname{#1}\Sectionmark{#1}}
+\let\Subsectionmark\subsectionmark
+\def\subsectionmark#1{\def\Subsectionname{#1}\Subsectionmark{#1}}
+\fancypagestyle{myFancy}{
+    \fancyhf{}
+    \fancyhead[LE]{\nouppercase{Chapter\ \thechapter.\ \Chaptername}}
+    \fancyhead[RE]{\nouppercase{\it{Aliberti Marco}}}
+%    \fancyhead[LO]{\nouppercase{\it{Marco}}}
+    \fancyhead[RO]{\nouppercase{\thesection\ \Sectionname}}
+    \fancyfoot[RO]{\thepage}
+    \fancyfoot[LE]{\thepage}
+    \renewcommand{\headrulewidth}{0.5pt}
+    \renewcommand{\footrulewidth}{0.5pt}
+}
+\fancypagestyle{solopagina}{
+    \fancyhf{}
+    \renewcommand{\headrulewidth}{0pt}
+    \fancyfoot[r]{\thepage}
+}
+\setlength{\headheight}{15pt}
+
+\ExplSyntaxOn
+\msg_redirect_name:nnn { siunitx } { physics-pkg } { none }
+\ExplSyntaxOff
+
+\definecolor{Blue}{rgb}{0.2,0.2,0.9}
+\definecolor{Green}{rgb}{0,0.6,0}
+\definecolor{Gray}{rgb}{0.5,0.5,0.5}
+\definecolor{Purple}{rgb}{0.58,0,0.82}
+\definecolor{background}{rgb}{0.98,0.98,0.95}
+
+\lstdefinestyle{CppStyle}{
+    language=C++,
+%    backgroundcolor=\color{background},
+    backgroundcolor=\color{white},
+%    commentstyle=\color{Green},
+    commentstyle=\color{Gray},
+%    keywordstyle=\color{Blue},
+    keywordstyle=\bfseries\color{black},
+%    numberstyle=\tiny\color{Gray},
+    numberstyle=\tiny\color{black},
+%    stringstyle=\color{Purple},
+    stringstyle=\itshape\color{Gray},
+    basicstyle=\ttfamily\footnotesize,
+    breakatwhitespace=false,
+    breaklines=true,
+    captionpos=b,
+    keepspaces=true,
+    numbers=left,
+    numbersep=5pt,
+    showspaces=false,
+    showstringspaces=false,
+    showtabs=false,
+    tabsize=2
+}
+\lstset{inputpath=CppCode,style=CppStyle}
+
+\vbadness=3800
+
+\addbibresource{bibliography.bib}
