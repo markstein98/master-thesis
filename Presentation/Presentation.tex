@@ -82,16 +82,33 @@
 \end{frame}
 
 \begin{frame}
-  \frametitle{The Strong Interaction}
+  \frametitle{Quantum Chromodynamics (QCD)}
   \centering
+\onslide<1->
   \begin{columns}[c]
-    \column{0.5\textwidth}
+    \column{0.55\textwidth}
       \centering
-    \column{0.5\textwidth}
+      Described by an $\mathit{SU}(3)$ Yang-Mills theory
+      \begin{align*}
+        S =& \frac14\dV F^a_{\mu\nu}(x)F^{a\mu\nu}(x)\\
+        F^a_{\mu\nu} =& \partial_\mu A^a_\nu - \partial_\nu A^a_\mu -g f^a_{bc} A^b_\mu A^c_\nu
+      \end{align*}
+      \begin{itemize} 
+        \item<2-> $3$ color charges
+        \item<3-> Interesting purely-gluonic physics
+        \item<4-> Heavily non-perturbative nature (except for specific regimes)
+      \end{itemize}
+\onslide<5->
+      $\Big\Downarrow$\\
+      \vspace{0.5\baselineskip}
+      Lattice Field Theory
+    \column{0.45\textwidth}
       \centering
+\onslide<1->
       \begin{figure}[t]
         \includegraphics[width=\textwidth]{CERN_Proton.jpg}
         \caption{An artist's representation of a proton\cite{protonImg}.}
+        \vspace{0.5\baselineskip}
       \end{figure}
   \end{columns}
 \end{frame}
@@ -262,7 +279,7 @@
 \onslide<1->
   \begin{figure}
     \includegraphics[height=0.4\textheight]{wilsonLoop.png}
-    \caption{Gauge-invariant paths on a bidimensional lattice.\cite{SigdelDibakar2016}}
+    \caption{Gauge-invariant paths on a bidimensional lattice\cite{SigdelDibakar2016}.}
   \end{figure}
 \end{frame}
 
@@ -291,7 +308,24 @@
 \onslide<1->
   \begin{figure}
     \includegraphics[height=0.4\textheight]{wilsonLoop.png}
-    \caption{Gauge-invariant paths on a bidimensional lattice. \cite{SigdelDibakar2016}}
+    \caption{Gauge-invariant paths on a bidimensional lattice\cite{SigdelDibakar2016}.}
+  \end{figure}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Monte Carlo Simulations}
+  \centering
+  Computers are used to simulate Lattice Field Theories
+  \vspace{.5\baselineskip}
+  \begin{itemize}
+    \item<2-> Random configurations of link variables are generated.
+    \item<3-> Proper Monte Carlo algorithms evolve the configurations towards minimums of the action.
+    \item<4-> A great number of observables is evaluated and then their mean value is computed.
+  \end{itemize}
+  \vspace{.5\baselineskip}
+  \begin{figure}[b]
+    \includegraphics[width=.7\textwidth]{Leonardo.jpg}
+    \caption{A rendering of the CINECA Leonardo supercomputer\cite{LeonardoImg}.}
   \end{figure}
 \end{frame}
 
@@ -324,12 +358,12 @@
       \vspace{-\baselineskip}
 \onslide<3->
       \begin{align*}
-        x^\mu \rightarrow R^\mu_\nu x^\nu &\quad R\in SO(4) \\
+        x^\mu \rightarrow R^\mu_\nu x^\nu &\quad R\in \mathit{SO}(4) \\
         &\Downarrow \\
-        n \rightarrow \Gamma n &\quad \Gamma\in T
+        n \rightarrow \Gamma n &\quad \Gamma\in G_{\Lambda_{SH}}
       \end{align*}
     \end{exampleblock}
-    $T$: group of rotations of multiples of $90\degree$ around any axis.\\
+    $G_{\Lambda_{SH}}$: group of rotations of multiples of $90\degree$ around any axis.\\
     \vspace{0.6\baselineskip}
 \onslide<5->
     $\Gamma \xcancel{\rightarrow}R$ for $a\rightarrow0$
@@ -346,26 +380,29 @@
 
 \begin{frame}
   \frametitle{Rotational Invariance Restoration - Lang and Rebbi}
-  Equipotential surfaces become spheres as the continuum limit is approached.
+  Equipotential surfaces become spheres as the continuum limit is approached\cite{Lang:1982tj}.\\
+  The gauge group used was the discrete icosahedral subgroup $\tilde{Y}\subset\mathit{SU}(2)$.
   \begin{figure}
-    \includegraphics[width=.8\textwidth]{LangRebbi.png}
-    \caption{Restoration of rotational invariance from (a) $\beta=2$, $n_s=8$, $n_t=4$ to (b) $\beta=2.25$, $n_s=16$, $n_t=6$; the curves represent equipotential curves. \cite{Lang:1982tj}}
+    \includegraphics[width=.74\textwidth]{LangRebbi.png}
+    \caption{Restoration of rotational invariance from (a) $\beta=2$, $n_s=8$, $n_t=4$ to (b) $\beta=2.25$, $n_s=16$, $n_t=6$; the curves represent equipotential curves.}
   \end{figure}
 \end{frame}
 
 \begin{frame}
   \frametitle{Rotational Invariance Restoration}
-  Values of $\beta$ are slightly different from Lang and Rebbi's because $a(\beta)\approx\Lambda e^{-b_0\beta}$, with $\Lambda$, $b_0>0$\footnote{The simulation code is based on the code presented in refs.~\cite{Panero:2009tv,Mykkanen:2012ri}.}.
+  Results of simulations for gauge group $\mathit{SU}(2)$ with $20000$ measurements each\footnote{The simulation code is based on the code presented in refs.~\mycite{Panero:2009tv,Mykkanen:2012ri}.}.
+  Approach slightly different than Lang and Rebbi's.
+%  because $a(\beta)\approx\Lambda e^{-b_0\beta}$, with $\Lambda$, $b_0>0$
   \vspace{-0.5\baselineskip}
   \begin{columns}
   \column{0.4\textwidth}
     \begin{figure}
-      \includegraphics[width=\textwidth]{plots/XY_Plane_nt4_ns8_beta2.20_copied.png}
+      \includegraphics[width=\textwidth]{plots/RotSymm_nt4_ns8_beta2.20.png}
       \caption{Potential from $\beta=2.20$, $n_s=8$, $n_t=4$.}
     \end{figure}
   \column{0.4\textwidth}
     \begin{figure}
-      \includegraphics[width=\textwidth]{plots/XY_Plane_nt6_ns16_beta2.35_copied.png}
+      \includegraphics[width=\textwidth]{plots/RotSymm_nt6_ns16_beta2.35.png}
       \caption{Potential from $\beta=2.35$, $n_s=16$, $n_t=6$.}
     \end{figure}
   \end{columns}
@@ -380,7 +417,7 @@
 \onslide<1->
     \centering
       \begin{block}{\centering
-        Body Centered Tesseract \cite{Celmaster:1982ht}
+        Body Centered Tesseract
         }
         \begin{itemize}
           \item $24$ nearest neighbours
@@ -389,7 +426,7 @@
       \end{block}
       \begin{figure}
         \includegraphics[width=0.55\textwidth]{Tesseract.png}
-        \caption{Two-dimensional projection of a BCT. \cite{Celmaster:1982ht}}
+        \caption{Two-dimensional projection of a BCT\cite{Celmaster:1982ht}.}
       \end{figure}
     
     \column{0.02\textwidth}
@@ -397,7 +434,7 @@
 \onslide<2->
     \centering
       \begin{block}{\centering
-          $F_4$ coroots lattice \cite{Neuberger:1987kt}
+          $F_4$ coroots lattice\cite{Neuberger:1987kt}
           }
           \begin{itemize}
             \item $48$ nearest neighbours
@@ -406,7 +443,7 @@
         \end{block}
       \begin{figure}
         \includegraphics[width=0.55\textwidth]{F4_root_lattice.png}
-        \caption{Two-dimensional projection of a $F_4$ coroots lattice. \cite{f4image}}
+        \caption{Two-dimensional projection of a $F_4$ coroots lattice\cite{f4image}.}
       \end{figure}
   \end{columns}
 \onslide<1->
@@ -414,6 +451,106 @@
   The SH lattice has $8$ nearest neighbours and a $384$-element symmetry group.
 \end{frame}
 
+\begin{frame}
+  \frametitle{Simulations on SH Lattice}
+  \centering
+  \begin{columns}[c]
+    \column{.52\textwidth}
+    \centering
+    Wilson Action:
+    \begin{equation*}
+      S_W = \frac\beta{2N}\sum_{x\in\Lambda}\sum_{\mu<\nu}\mathfrak{Re}\Tr[\id-U_{\mu\nu}(x)]
+    \end{equation*}
+    Plaquette:
+    \begin{equation*}
+      U_{\mu\nu} = \textcolor<2->{red}{U_\mu(x)}\textcolor<2->{blue}{U_\nu(x+\hat\mu)U^\dagger_\mu(x+\hat\nu)U^\dagger_\nu(x)}
+    \end{equation*}
+  
+    \column{.48\textwidth}
+    \centering
+\onslide<1->
+    \begin{figure}[!htbp]
+      \centering
+      \begin{tikzpicture}
+        \filldraw[black] (0,0) circle (2.5pt) node[anchor=north east]{$x$};
+        \filldraw[black] (0,2.5) circle (2.5pt) node[anchor=south east]{$x+\hat\nu$};
+        \filldraw[black] (2.5,0) circle (2.5pt) node[anchor=north west]{$x+\hat\mu$};
+        \filldraw[black] (2.5,2.5) circle (2.5pt) node[anchor=south west]{$x+\hat\mu+\hat\nu$};
+        \draw[ultra thick] (-0.5,0) -- (0,0);
+        \draw[ultra thick] (0,-0.5) -- (0,0);
+        \draw[ultra thick,->] (0,0) -- (1.25,0) node[anchor=north]{$U_\mu(x)$};
+        \draw[ultra thick   ] (1.25,0) -- (2.5,0);
+        \draw[ultra thick]  (3,0) -- (2.5,0);
+        \draw[ultra thick] (2.5,-0.5) -- (2.5,0);
+        \draw[ultra thick,->] (2.5,0) -- (2.5,1.25) node[anchor=west]{$U_\nu(x+\hat\mu)$};
+        \draw[ultra thick   ] (2.5,1.25) -- (2.5,2.5);
+        \draw[ultra thick]  (3,2.5) -- (2.5,2.5);
+        \draw[ultra thick]  (2.5,3) -- (2.5,2.5);
+        \draw[ultra thick,->] (2.5,2.5) -- (1.25,2.5) node[anchor=south]{$U^\dagger_\mu(x+\hat\nu)$};
+        \draw[ultra thick   ] (1.25,2.5) -- (0,2.5);
+        \draw[ultra thick] (-0.5,2.5) -- (0,2.5);
+        \draw[ultra thick]  (0,3) -- (0,2.5);
+        \draw[ultra thick,->] (0,2.5) -- (0,1.25) node[anchor=east]{$U^\dagger_\nu(x)$};
+        \draw[ultra thick   ] (0,1.25) -- (0,0);
+      \end{tikzpicture}
+    \end{figure}
+  \end{columns}
+\onslide<2->
+  \begin{columns}[c]
+    \column{.3\textwidth}
+    \centering
+    $6$ staples for each link
+    
+    \column{.7\textwidth}
+    \centering
+    \begin{figure}[!htbp]
+      \centering
+      \begin{tikzpicture}
+        \filldraw[black]  (0,0) circle (2pt) node[anchor=north east]{$x$};
+        \filldraw[black]  (0,2) circle (2pt) node[anchor=south east]{$x+\hat\mu$};
+        \filldraw[black]  (2,0) circle (2pt) node[anchor=north west]{$x+\hat\nu$};
+        \filldraw[black]  (2,2) circle (2pt) node[anchor=south west]{$x+\hat\mu+\hat\nu$};
+        \filldraw[black] (-2,0) circle (2pt) node[anchor=north east]{$x-\hat\nu$};
+        \filldraw[black] (-2,2) circle (2pt) node[anchor=south east]{$x+\hat\mu-\hat\nu$};
+        \draw[ultra thick] (0,-0.5) -- (0,0);
+        \draw[color=blue,ultra thick,->] (0,0) -- (1,0);
+        \draw[color=blue,ultra thick   ] (1,0) -- (2,0);
+        \draw[ultra thick]  (2.5,0) -- (2,0);
+        \draw[ultra thick] (2,-0.5) -- (2,0);
+        \draw[color=blue,ultra thick,->] (2,0) -- (2,1);
+        %node[anchor=west]{$P^\dagger_i(x)$};
+        \draw[color=blue,ultra thick   ] (2,1) -- (2,2);
+        \draw[ultra thick]  (2.5,2) -- (2,2);
+        \draw[ultra thick]  (2,2.5) -- (2,2);
+        \draw[color=blue,ultra thick,->] (2,2) -- (1,2);
+        \draw[color=blue,ultra thick   ] (1,2) -- (0,2);
+        \draw[ultra thick]  (0,2.5) -- (0,2);
+        \draw[color=red,ultra thick,->] (0,0) -- (0,1) node[anchor=east]{$U_\mu(x)$};
+        \draw[color=red,ultra thick   ] (0,1) -- (0,2);
+        
+        \draw[color=blue,ultra thick,->] (0,0) -- (-1,0);
+        \draw[color=blue,ultra thick   ] (-1,0) -- (-2,0);
+        \draw[ultra thick]  (-2.5,0) -- (-2,0);
+        \draw[ultra thick] (-2,-0.5) -- (-2,0);
+        \draw[color=blue,ultra thick,->] (-2,0) -- (-2,1);
+        %node[anchor=east]{$P^\dagger_j(x)$};
+        \draw[color=blue,ultra thick   ] (-2,1) -- (-2,2);
+        \draw[ultra thick]  (-2.5,2) -- (-2,2);
+        \draw[ultra thick]  (-2,2.5) -- (-2,2);
+        \draw[color=blue,ultra thick,->] (-2,2) -- (-1,2);
+        \draw[color=blue,ultra thick   ] (-1,2) -- (-0,2);
+      \end{tikzpicture}
+  %    \caption{Example of a link (\textcolor{red}{red}) with two of its staples (\textcolor{blue}{blue}).}
+    \end{figure}
+  \end{columns}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Simulations on BCT Lattice}
+  \centering
+\end{frame}
+
+\begin{comment}
 \begin{frame}
   \frametitle{$F_4$ Coroots Lattice}
   \centering
@@ -477,6 +614,7 @@
     \includegraphics[width=\textwidth]{plots/XY_Plane_nt6_ns16_beta2.35_copied.png}
   \end{columns}
 \end{frame}
+\end{comment}
 
 \begin{frame}
   \centering
