@@ -452,6 +452,79 @@
 \end{frame}
 
 \begin{frame}
+  \frametitle{Body Centered Tesseract (BCT)}
+  \centering
+  \begin{columns}
+  \column{0.6\textwidth}
+    \begin{itemize}
+      \item<1->[\ding{228}] Obtained from Simple Hypercubic lattice considering also the centers;
+      \item<2->[\ding{228}] Elementary cell is the $24$-cell;
+      \item<3->[\ding{228}] Has $24$ nearest neighbours:
+      \begin{itemize}
+        \item<3-> The $8$ possible permutations of $\pr{\pm1,0,0,0}$
+        \item<3-> The $16$ vectors of the form $\pr{\pm\frac12,\pm\frac12,\pm\frac12,\pm\frac12}$
+      \end{itemize}
+      \vspace{0.25\baselineskip}
+      \item<4->[\ding{228}] Plaquettes are triangular;
+      \item<5->[\ding{228}] Contains the Simple Hypercubic lattice;
+      \item<6->[\ding{228}] Has been used to simulate $\mathit{SU}(2)$ Yang-Mills theories,\\in \mycite{Celmaster:1982ht}.
+    \end{itemize}
+
+  \column{0.4\textwidth}
+  \centering
+\onslide<1->
+    \begin{figure}
+      \includegraphics[width=\textwidth]{CellsCrop.png}
+      \caption{Cubic Cell (left) and BC Cubic Cell (right).}
+    \end{figure}
+    \vspace{-\baselineskip}
+\onslide<2->
+    \begin{figure}
+      \includegraphics[width=.5\textwidth]{Tesseract.png}
+      \caption{Bidimensional projection of the $24$-cell.}
+    \end{figure}
+  \end{columns}
+\end{frame}
+
+\begin{frame}
+  \frametitle{$F_4$ Coroots Lattice}
+  \centering
+  \begin{columns}
+  \column{0.6\textwidth}
+    \begin{itemize}
+      \item<1->[\ding{228}] Obtained from the roots lattice of the exceptional Lie algebra $F_4$ and its dual;
+      \item<2->[\ding{228}] Has $48$ nearest neighbours:
+      \begin{itemize}
+        \item The $24$ roots are all possible permutations of coordinate positions of $\pr{\pm1,\pm1,0,0}$
+        \vspace{0.25\baselineskip}
+        \item<3-> The $24$ dual roots (coroots) are:
+        \begin{itemize}
+          \item<3->[\ding{109}] The $8$ possible permutations of $\pr{\pm1,0,0,0}$
+          \item<3->[\ding{109}] The $16$ vectors of the form $\pr{\pm\frac12,\pm\frac12,\pm\frac12,\pm\frac12}$
+        \end{itemize}
+      \end{itemize}
+      \item<4->[\ding{228}] Exists only in $4$ dimensions;
+      \item<5->[\ding{228}] Is a more symmetric version of the BCT;
+      \item<6->[\ding{228}] Has been used only to simulate scalar fields, in \mycite{Neuberger:1987kt}.
+    \end{itemize}
+
+  \column{0.4\textwidth}
+\onslide<1->
+    \begin{figure}
+      \includegraphics[width=\textwidth]{F4_root_lattice.png}
+      \caption{
+\only<1>
+        {Bidimensional projection of the $F_4$ lattice.\vspace{2\baselineskip}}
+\only<2>
+        {The $24$ roots (\textcolor{red}{red}) of the $F_4$ lattice, projected on a bidimensional plane.\vspace{\baselineskip}}
+\only<3->
+        {The $24$ roots (\textcolor{red}{red}) and the $24$ coroots (\textcolor{yellow}{yellow}) of the $F_4$ lattice, projected on a bidimensional plane.}
+      }
+    \end{figure}
+  \end{columns}
+\end{frame}
+
+\begin{frame}
   \frametitle{Simulations on SH Lattice}
   \centering
   \begin{columns}[c]
@@ -497,11 +570,15 @@
   \end{columns}
 \onslide<2->
   \begin{columns}[c]
-    \column{.3\textwidth}
+    \column{.35\textwidth}
     \centering
-    $6$ staples for each link
+    \raggedleft
+    \tikz[baseline]{
+      \node[fill=green!20, ellipse, anchor=base] (atoms)
+      {$6$ staples for each link};
+    }
     
-    \column{.7\textwidth}
+    \column{.65\textwidth}
     \centering
     \begin{figure}[!htbp]
       \centering
@@ -547,52 +624,80 @@
 
 \begin{frame}
   \frametitle{Simulations on BCT Lattice}
-  \centering
-\end{frame}
-
-\begin{comment}
-\begin{frame}
-  \frametitle{$F_4$ Coroots Lattice}
-  \centering
-  \begin{columns}
-  \column{0.6\textwidth}
+  \centering\begin{columns}[c]
+    \column{.52\textwidth}
+    \centering
+    BCT Action:
+    \begin{equation*}
+      S_{BCT} = \frac\beta8 \sum_\bigtriangleup \mathfrak{Re}\Tr \Utriang
+    \end{equation*}
+    Plaquette:
+    \begin{equation*}
+      \Utriang = \textcolor<2->{red}{U_v(x)}\textcolor<2->{blue}{U_w(x+\hat{v})U^\dagger_{v+w}(x)}
+    \end{equation*}
+  
+    \column{.48\textwidth}
+    \centering
 \onslide<1->
-    \begin{itemize}
-      \item[\ding{228}] Obtained from the roots lattice of the exceptional Lie algebra $F_4$ and its dual;
+    \begin{figure}[!htbp]
+      \centering
+      \begin{tikzpicture}
+        \filldraw[black]  (0,0) circle (3pt) node[anchor=north east]{$x$};
+        \filldraw[black]  (2,0) circle (3pt) node[anchor=north west]{$x+\hat{v}$};
+        \filldraw[black]  (1,1.732) circle (3pt) node[anchor=south]{$x+\hat{v}+\hat{w}$};
+        \draw[ultra thick,->] (0,0) -- (1,0) node[anchor=north]{$U_v(x)$};
+        \draw[ultra thick   ] (1,0) -- (2,0);
+        \draw[ultra thick,->] (2,0) -- (1.5,0.866) node[anchor=south west]{$U_w(x+\hat{v})$};
+        \draw[ultra thick   ] (1.5,0.866) -- (1,1.732);
+        \draw[ultra thick,->] (1,1.732) -- (0.5,0.866) node[anchor=south east]{$U^\dagger_{v+w}(x)$};
+        \draw[ultra thick   ] (0.5,0.866) -- (0,0);
+      \end{tikzpicture}
+    \end{figure}
+  \end{columns}
+  \vspace{1.5\baselineskip}
+  
 \onslide<2->
-      \item[\ding{228}] Has $48$ nearest neighbours:
-      \begin{itemize}
-        \item The $24$ roots are all possible permutations of coordinate positions of $\pr{\pm1,\pm1,0,0}$
-        \vspace{0.25\baselineskip}
-\onslide<3->
-        \item The $24$ dual roots (coroots) are:
-        \begin{itemize}
-          \item[\ding{109}] The $8$ possible permutations of $\pr{\pm1,0,0,0}$
-          \item[\ding{109}] The $16$ vectors of the form $\pr{\pm\frac12,\pm\frac12,\pm\frac12,\pm\frac12}$
-        \end{itemize}
-      \end{itemize}
-\onslide<4->
-      \item[\ding{228}] Exists only in $4$ dimensions;
-\onslide<5->
-      \item[\ding{228}] Contains the Simple Hypercubic lattice and the BCT;
-\onslide<6->
-      \item[\ding{228}] Has been used only to simulate scalar fields, in \cite{Neuberger:1987kt}.
-    \end{itemize}
-
-  \column{0.4\textwidth}
-\onslide<1->
-    \begin{figure}
-      \includegraphics[width=\textwidth]{F4_root_lattice.png}
-      \caption{
-\only<2>
-        {The $24$ roots (\textcolor{red}{red}) of the $F_4$ lattice, projected on a bidimensional plane.\vspace{\baselineskip}}
-\only<3->
-        {The $24$ roots (\textcolor{red}{red}) and the $24$ coroots (\textcolor{yellow}{yellow}) of the $F_4$ lattice, projected on a bidimensional plane.}
-      }
+  \begin{columns}[c]
+    \column{.05\textwidth}
+    \column{.3\textwidth}
+    \centering
+    \tikz[baseline]{
+      \node[fill=green!20, ellipse, anchor=base] (atoms)
+      {$8$ staples for each link};
+    }
+    \column{.05\textwidth}
+    
+    \column{.6\textwidth}
+    \centering
+    \begin{figure}[!htbp]
+      \centering
+      \begin{tikzpicture}
+        \filldraw[black]  (0,0) circle (3pt);
+        \filldraw[black]  (0,2) circle (3pt);
+        \filldraw[black]  (2.598*2/3,1) circle (3pt);
+        \filldraw[black]  (-2.598*2/3,1) circle (3pt);
+        \draw[red, ultra thick,->] (0,0) -- (0,1) node[anchor=west]{$U_v(x)$};
+        \draw[red, ultra thick   ] (0,1) -- (0,2);
+        
+        \draw[blue, ultra thick,->] (0,0) -- (2.598/3,1.5/3);
+        %node[text=black, anchor=north west]{$w$};
+        \draw[blue, ultra thick   ] (2.598/3,1.5/3) -- (2.598*2/3,1);
+        \draw[blue, ultra thick,->] (2.598*2/3,1) -- (2.598/3,1.5*2/3+1.5/3);
+        %node[text=black, anchor=south west]{$u$};
+        \draw[blue, ultra thick   ] (2.598/3,1.5*2/3+1.5/3) -- (0,2);
+        
+        \draw[blue, ultra thick,->] (0,0) -- (-2.598/3,1.5/3);
+        %node[text=black, anchor=north east]{$u$};
+        \draw[blue, ultra thick   ] (-2.598/3,1.5/3) -- (-2.598*2/3,1.5*2/3);
+        \draw[blue, ultra thick,->] (-2.598*2/3,1) -- (-2.598/3,1.5*2/3+1.5/3);
+        %node[text=black, anchor=south east]{$w$};
+        \draw[blue, ultra thick   ] (-2.598/3,1.5*2/3+1.5/3) -- (0,2);
+      \end{tikzpicture}
     \end{figure}
   \end{columns}
 \end{frame}
 
+\begin{comment}
 \begin{frame}
   \frametitle{Work in Progress}
   \begin{columns}
