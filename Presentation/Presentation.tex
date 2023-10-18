@@ -697,6 +697,53 @@
   \end{columns}
 \end{frame}
 
+\begin{frame}
+  \frametitle{Simulation Results}
+  \centering
+  Average Plaquette as a function of Computer Time
+  \begin{columns}[c]
+    \column{.5\textwidth}
+      \begin{figure}
+        \includegraphics[width=\textwidth]{plaquetteSmallBCT.png}
+        \caption{Lattice with $n_t=4$, $n_s=8$.}
+      \end{figure}
+    
+    \column{.5\textwidth}
+      \begin{figure}
+        \includegraphics[width=\textwidth]{plaquetteBigBCT.png}
+        \caption{Lattice with $n_t=6$, $n_s=16$.}
+      \end{figure}
+  \end{columns}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Simulation Results}
+  \centering
+  Average Plaquette as a function of $\beta$\\
+  \vspace{\baselineskip}
+  \includegraphics[width=.5\textwidth]{plaquetteBetaBCT.png}\\
+  \vspace{\baselineskip}
+  Purple data is from a lattice with $n_t=4$, $n_s=8$.\\
+  Green data is from a lattice with $n_t=6$, $n_s=16$.
+\end{frame}
+
+\begin{frame}
+  \frametitle{Conclusions}
+  \centering
+  \begin{itemize}
+    \item<1->[\ding{228}] Several tests of consistency (gauge invariance, plaquette correctness, etc.) have been successfully made;
+    \item<2->[\ding{228}] Rapid convergence of the plaquette value has been observed;
+    \item<3->[\ding{228}] Plaquette value as a function of $\beta$ do not show expected results:
+    \begin{itemize}
+      \item<3-> Bigger error bars (w.r.t. SH lattice);
+      \item<4-> Different trend than results obtained with different simulations in literature\cite{Celmaster:1983vy};
+    \end{itemize}
+    \item<5->[\ding{228}] Possible explanation: values of $\beta$ used are far from the continuum limit (assuming there are no bugs in the code);
+    \item<6->[\ding{228}] Extension to $F_4$ lattice would add "improvement terms" and more symmetries;
+    \item<7->[\ding{228}] Rotational invariance studies could be made.
+  \end{itemize}
+\end{frame}
+
 \begin{comment}
 \begin{frame}
   \frametitle{Work in Progress}
