@@ -720,11 +720,27 @@
   \frametitle{Simulation Results}
   \centering
   Average Plaquette as a function of $\beta$\\
-  \vspace{\baselineskip}
-  \includegraphics[width=.5\textwidth]{plaquetteBetaBCT.png}\\
-  \vspace{\baselineskip}
-  Purple data is from a lattice with $n_t=4$, $n_s=8$.\\
-  Green data is from a lattice with $n_t=6$, $n_s=16$.
+  \vspace{.5\baselineskip}
+  \begin{columns}[t]
+    \centering
+    \column{.03\textwidth}
+    \column{.45\textwidth}
+      \centering
+      \includegraphics[width=\textwidth]{plaquetteBetaBCT.png}\\
+      \vspace{.5\baselineskip}
+      Purple data: $n_t=4$, $n_s=8$.\\
+      Green data: $n_t=6$, $n_s=16$.
+      
+\onslide<2->
+    \column{.04\textwidth}
+    \column{.45\textwidth}
+      \centering
+      \includegraphics[width=\textwidth]{avgPlaq1.png}\\
+      \vspace{.5\baselineskip}
+      Plot from \mycite{Celmaster:1983vy}.
+      
+    \column{.03\textwidth}
+  \end{columns}
 \end{frame}
 
 \begin{frame}
@@ -735,7 +751,7 @@
     \item<2->[\ding{228}] Rapid convergence of the plaquette value has been observed;
     \item<3->[\ding{228}] Plaquette value as a function of $\beta$ do not show expected results:
     \begin{itemize}
-      \item<3-> Bigger error bars (w.r.t. SH lattice);
+      \item<3-> Values for different lattices not compatible at the same value of $\beta$;
       \item<4-> Different trend than results obtained with different simulations in literature\cite{Celmaster:1983vy};
     \end{itemize}
     \item<5->[\ding{228}] Possible explanation: values of $\beta$ used are far from the continuum limit (assuming there are no bugs in the code);
