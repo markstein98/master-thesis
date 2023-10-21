@@ -91,7 +91,7 @@
       Described by an $\mathit{SU}(3)$ Yang-Mills theory
       \begin{align*}
         S =& \frac14\dV F^a_{\mu\nu}(x)F^{a\mu\nu}(x)\\
-        F^a_{\mu\nu} =& \partial_\mu A^a_\nu - \partial_\nu A^a_\mu -g f^a_{bc} A^b_\mu A^c_\nu
+        F^a_{\mu\nu} =& \partial_\mu A^a_\nu - \partial_\nu A^a_\mu -g \mathit{f}^a_{bc} A^b_\mu A^c_\nu
       \end{align*}
       \begin{itemize} 
         \item<2-> $3$ color charges
@@ -316,12 +316,26 @@
   \frametitle{Monte Carlo Simulations}
   \centering
   Computers are used to simulate Lattice Field Theories
-  \vspace{.5\baselineskip}
-  \begin{itemize}
-    \item<2-> Random configurations of link variables are generated.
-    \item<3-> Proper Monte Carlo algorithms evolve the configurations towards minimums of the action.
-    \item<4-> A great number of observables is evaluated and then their mean value is computed.
-  \end{itemize}
+  \vspace{-0.5\baselineskip}
+  \begin{columns}[t]
+  \column{.5\textwidth}
+    \begin{itemize}
+      \item<2-> Configurations of link variables are generated.
+      \item<3-> Monte Carlo algorithms evolve the configurations towards minimums of the action.
+    \end{itemize}
+    
+  \column{.5\textwidth}
+    \begin{itemize}
+      \item<4-> A great number $\mathcal{N}$ of observables is evaluated.
+    \end{itemize}
+    \vspace{\baselineskip}
+\onslide<4->
+    \begin{equation*}
+      \expval{O} \simeq \frac{1}{\mathcal{N}} \sum_{\prc{U_n}}O[U_n]
+    \end{equation*}
+  \end{columns}
+  
+\onslide<1->
   \vspace{.5\baselineskip}
   \begin{figure}[b]
     \includegraphics[width=.7\textwidth]{Leonardo.jpg}
@@ -755,8 +769,9 @@
       \item<4-> Different trend than results obtained with different simulations in literature\cite{Celmaster:1983vy};
     \end{itemize}
     \item<5->[\ding{228}] Possible explanation: values of $\beta$ used are far from the continuum limit (assuming there are no bugs in the code);
-    \item<6->[\ding{228}] Extension to $F_4$ lattice would add "improvement terms" and more symmetries;
-    \item<7->[\ding{228}] Rotational invariance studies could be made.
+    \vspace{.5\baselineskip}
+    \item<6->[\textcolor{green}{\ding{228}}] Extension to $F_4$ lattice would add "improvement terms" and more symmetries;
+    \item<7->[\textcolor{green}{\ding{228}}] Rotational invariance studies could be made intensively on CINECA supercomputers.
   \end{itemize}
 \end{frame}
 
